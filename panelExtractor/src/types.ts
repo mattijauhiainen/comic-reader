@@ -39,9 +39,10 @@ export interface PanelExtractionResult {
  * Configuration options for the panel extraction algorithm
  */
 export interface ExtractionOptions {
-  gutterThreshold?: number; // Brightness threshold for gutter detection (0-255, default: 240)
+  threshold?: number; // Binarization threshold (0-255, default: 127)
+  edgeMethod?: 'sobel' | 'canny'; // Edge detection algorithm (default: sobel)
   minPanelSize?: number; // Minimum panel dimension in pixels (default: 100)
-  minGutterWidth?: number; // Minimum gutter width in pixels (default: 5)
+  blurRadius?: number; // Gaussian blur radius in pixels (default: 2)
   rowTolerance?: number; // Y-distance tolerance for same row detection (default: 20)
   debug?: boolean; // Output debug visualization (default: false)
   outputPath?: string; // Custom output path for JSON file

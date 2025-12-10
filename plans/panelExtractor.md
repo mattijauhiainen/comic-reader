@@ -21,30 +21,32 @@ The panelExtractor is a TypeScript tool that analyzes comic book page images and
 
 ## Technical Approach
 
-### Primary Algorithm: Projection-Based Detection
+### Primary Algorithm: Contour-Based Detection
 
-For traditional grid layouts with white gutters, we'll use a projection-based approach:
+For comic layouts with irregular grids and varied panel sizes, we'll use a contour-based approach:
 
 1. **Image Preprocessing**
    - Load image using sharp
    - Convert to grayscale
-   - Apply slight blur to reduce noise
+   - Apply Gaussian blur to reduce noise (radius ~2px)
+   - Binarize image using threshold (convert to black/white)
 
-2. **Projection Analysis**
-   - Project pixel brightness values horizontally (sum each row)
-   - Project pixel brightness values vertically (sum each column)
-   - White gutters appear as peaks in projections
-   - Detect continuous white regions above brightness threshold
+2. **Edge Detection**
+   - Apply edge detection algorithm (Sobel or Canny)
+   - Produces binary edge map showing panel boundaries
+   - Edges appear where panels meet gutters
 
-3. **Gutter Detection**
-   - Identify horizontal gutter lines (white rows spanning most of width)
-   - Identify vertical gutter lines (white columns spanning most of height)
-   - Filter out noise by requiring minimum gutter width/height
+3. **Contour Detection**
+   - Find contours using border-following algorithm
+   - Trace connected edge pixels to form closed shapes
+   - Approximate contours to polygons using Douglas-Peucker algorithm
+   - Filter for roughly rectangular shapes (4-6 vertices)
 
 4. **Panel Boundary Extraction**
-   - Use detected gutters to divide image into rectangular regions
-   - Each region between gutters is a potential panel
-   - Filter out regions that are too small or too large
+   - Convert each valid contour to bounding box (x, y, width, height)
+   - Filter out panels that are too small (noise) or too large (false detections)
+   - Remove nested panels (keep only outermost bounding box)
+   - Handle overlapping panels by choosing the most rectangular one
 
 5. **Panel Ordering**
    - Group panels by vertical position (within tolerance for same row)
@@ -62,7 +64,8 @@ panelExtractor/
 ├── src/
 │   ├── index.ts          # CLI entry point
 │   ├── extractor.ts      # Core panel detection logic
-│   ├── projection.ts     # Projection-based algorithm
+│   ├── contours.ts       # Contour detection algorithm
+│   ├── edges.ts          # Edge detection (Sobel/Canny)
 │   ├── ordering.ts       # Panel sorting logic
 │   └── types.ts          # TypeScript type definitions
 └── test/
@@ -74,6 +77,8 @@ panelExtractor/
 
 - **sharp**: Fast image processing library (loading, preprocessing, pixel access)
 - **commander** (optional): CLI argument parsing
+
+**Note:** Edge detection and contour detection will be implemented in pure TypeScript without external dependencies. This keeps the tool lightweight and avoids native bindings.
 
 ## Data Structures
 
@@ -122,7 +127,7 @@ interface PanelExtractionResult {
   ],
   "metadata": {
     "extractedAt": "2025-12-09T14:30:00Z",
-    "algorithm": "projection"
+    "algorithm": "contour"
   }
 }
 ```
@@ -139,9 +144,10 @@ bun run extract <input-image> [options]
 
 ### Options
 - `-o, --output <path>`: Output JSON file path (default: same name as input with .json extension)
-- `--debug`: Output debug visualization showing detected panels
+- `--debug`: Output debug visualization showing detected panels and contours
 - `--min-panel-size <pixels>`: Minimum panel dimension (default: 100)
-- `--gutter-threshold <0-255>`: Brightness threshold for gutter detection (default: 240)
+- `--threshold <0-255>`: Binarization threshold (default: 127)
+- `--edge-method <sobel|canny>`: Edge detection algorithm (default: sobel)
 
 ### Examples
 ```bash
@@ -158,36 +164,47 @@ bun run extract page-01.jpg --debug
 ## Algorithm Parameters
 
 ### Tunable Parameters
-- **Gutter brightness threshold**: 240 (out of 255)
-- **Minimum gutter width**: 5 pixels
-- **Minimum panel size**: 100x100 pixels
-- **Maximum panel size**: 90% of image dimensions
-- **Row tolerance**: 20 pixels (panels within this Y-distance are considered same row)
+- **Binarization threshold**: 127 (out of 255) - separates panels from gutters
+- **Gaussian blur radius**: 2 pixels - noise reduction before edge detection
+- **Minimum panel size**: 100x100 pixels - filters out noise detections
+- **Maximum panel size**: 90% of image dimensions - filters out false full-page detections
+- **Contour approximation epsilon**: 0.02 * perimeter - polygon simplification tolerance
+- **Rectangularity threshold**: 0.8 - minimum ratio of contour area to bounding box area
+- **Row tolerance**: 20 pixels - panels within this Y-distance are considered same row
 
 ### Noise Reduction
-- Apply Gaussian blur with radius 2px before analysis
-- Require gutters to span at least 80% of perpendicular dimension
-- Filter out panels smaller than minimum size
+- Apply Gaussian blur with radius 2px before edge detection
+- Filter contours by minimum area (min panel size squared)
+- Require contours to be roughly rectangular (4-6 vertices after approximation)
+- Remove nested contours (keep outermost only)
 
 ## Edge Cases and Limitations
 
 ### Known Edge Cases
-1. **Bleeding panels**: Panel content extending into gutters
-   - Mitigation: Use brightness threshold rather than pure white detection
+1. **Panels without clear borders**: Borderless or bleeding panels
+   - Mitigation: Binarization helps create artificial edges from intensity changes
+   - May require manual threshold adjustment
 
-2. **Irregular gutters**: Non-uniform gutter widths
-   - Mitigation: Detect gutter centers rather than exact boundaries
+2. **Complex gutter patterns**: Decorative or textured gutters
+   - Mitigation: Edge detection focuses on intensity changes, not patterns
+   - Blur helps reduce texture noise
 
 3. **Splash pages**: Full-page single panel
-   - Mitigation: If no gutters detected, return entire page as single panel
+   - Mitigation: If no valid contours detected, return entire page as single panel
+   - Fallback behavior ensures graceful handling
 
-4. **Nested panels**: Panels within panels
-   - Limitation: Current algorithm doesn't support this
-   - Future: Could detect nested rectangles
+4. **Nested panels**: Panels within panels or insets
+   - Limitation: Current algorithm removes nested contours
+   - Returns outermost bounding box only
+   - Future: Could preserve nested hierarchy if needed
 
-5. **Non-rectangular panels**: Circular or irregular shapes
-   - Limitation: Returns bounding box only
+5. **Non-rectangular panels**: Circular, diagonal, or irregular shapes
+   - Limitation: Returns bounding box of contour
    - Acceptable: Bounding box still allows reader to zoom to region
+
+6. **Very thin gutters**: Minimal spacing between panels
+   - May be detected as single large panel
+   - Mitigation: Adjust edge detection sensitivity and threshold
 
 ### Out of Scope (Current Version)
 - Manga/right-to-left reading order
@@ -199,18 +216,23 @@ bun run extract page-01.jpg --debug
 ## Testing Strategy
 
 ### Unit Tests
-- Projection calculation correctness
-- Gutter detection with synthetic data
+- Edge detection kernel application (Sobel, Canny)
+- Contour tracing algorithm correctness
+- Polygon approximation (Douglas-Peucker)
+- Rectangularity filtering logic
 - Panel ordering logic
 
 ### Integration Tests
 - Process test images with known panel layouts
 - Compare output JSON against expected results
 - Verify panel ordering is correct
+- Test edge cases (splash pages, irregular layouts, nested panels)
 
 ### Manual Testing
-- Debug visualization mode to inspect detected panels
+- Debug visualization mode to inspect detected contours and panels
 - Test with various comic styles and layouts
+- Test with different threshold values
+- Validate with borderless panels and complex gutter patterns
 
 ## Implementation Phases
 
@@ -223,20 +245,28 @@ bun run extract page-01.jpg --debug
 6. Stub out core algorithm functions
 
 ### Phase 1b: Core Functionality
-1. Implement basic image loading and preprocessing
-2. Implement projection-based gutter detection
-3. Implement panel boundary extraction
-4. Implement panel ordering logic
-5. Basic testing with sample images
+1. Implement image loading and preprocessing (grayscale, blur, binarization)
+2. Implement edge detection (Sobel operator)
+3. Implement contour detection (border following algorithm)
+4. Implement contour filtering (rectangularity, size constraints)
+5. Implement panel ordering logic
+6. Basic testing with sample images
 
 ### Phase 2: Refinement
-1. Add debug visualization mode
-2. Comprehensive testing
+1. Add Canny edge detection as alternative to Sobel
+2. Add debug visualization mode (show contours and bounding boxes)
+3. Implement nested contour removal
+4. Add polygon approximation for better rectangle detection
+5. Comprehensive testing with various comic layouts
+6. Parameter tuning for different comic styles
 
 ## Success Criteria
 
 The panelExtractor will be considered successful if it can:
+- Detect panels in irregular grid layouts with varied sizes
 - Produce panels in correct reading order
-- Handle white gutters with minor content bleeding
+- Handle white gutters of different widths
+- Work with borderless/bleeding panels through edge detection
+- Gracefully handle splash pages and complex layouts
 - Provide clear error messages for unsupported layouts
 - Output valid, well-structured JSON

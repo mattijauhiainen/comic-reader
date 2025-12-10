@@ -1,12 +1,10 @@
-import sharp from 'sharp';
-import { detectGutters } from './projection.ts';
-import { orderPanels } from './ordering.ts';
+import sharp from "sharp";
 import type {
-  PanelExtractionResult,
+  Dimensions,
   ExtractionOptions,
   Panel,
-  Dimensions,
-} from './types.ts';
+  PanelExtractionResult,
+} from "./types.ts";
 
 /**
  * Main entry point for panel extraction
@@ -34,9 +32,10 @@ export async function extractPanels(
 
   console.log(`Image dimensions: ${dimensions.width}x${dimensions.height}`);
 
-  // TODO: Implement preprocessing (grayscale, blur)
-  // TODO: Implement gutter detection
-  // TODO: Implement panel boundary extraction
+  // TODO: Implement preprocessing (grayscale, blur, binarization)
+  // TODO: Implement edge detection (Sobel or Canny)
+  // TODO: Implement contour detection
+  // TODO: Implement panel boundary extraction from contours
   // TODO: Implement panel ordering
   // TODO: Implement debug visualization if requested
 
@@ -57,7 +56,7 @@ export async function extractPanels(
     panels,
     metadata: {
       extractedAt: new Date().toISOString(),
-      algorithm: 'projection',
+      algorithm: 'contour',
     },
   };
 
@@ -66,34 +65,39 @@ export async function extractPanels(
 
 /**
  * Preprocesses the image for panel detection
- * (grayscale conversion, blur for noise reduction)
+ * (grayscale conversion, blur, binarization)
  *
  * @param image - Sharp image instance
- * @returns Preprocessed image buffer
+ * @param options - Extraction options
+ * @returns Preprocessed image data (pixel array and dimensions)
  */
-async function preprocessImage(image: sharp.Sharp): Promise<Buffer> {
+async function preprocessImage(
+  image: sharp.Sharp,
+  options: ExtractionOptions
+): Promise<{ data: Uint8Array; width: number; height: number }> {
   // TODO: Implement preprocessing
   // - Convert to grayscale
-  // - Apply Gaussian blur (radius 2px)
+  // - Apply Gaussian blur (radius from options.blurRadius)
+  // - Binarize using threshold from options.threshold
   throw new Error('Not implemented');
 }
 
 /**
- * Extracts panel boundaries from detected gutters
+ * Extracts panel boundaries from detected contours
  *
+ * @param contours - Detected contours from edge detection
  * @param dimensions - Image dimensions
- * @param gutters - Detected horizontal and vertical gutters
  * @param options - Extraction options
  * @returns Array of unordered panels
  */
 function extractPanelBoundaries(
+  contours: any[], // TODO: Define contour type
   dimensions: Dimensions,
-  horizontalGutters: number[],
-  verticalGutters: number[],
   options: ExtractionOptions
 ): Panel[] {
   // TODO: Implement panel boundary extraction
-  // - Use gutters to divide image into rectangles
+  // - Convert contours to bounding boxes
   // - Filter out panels that are too small or too large
+  // - Remove nested panels
   throw new Error('Not implemented');
 }

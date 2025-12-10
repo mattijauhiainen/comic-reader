@@ -1,4 +1,4 @@
-import type { ProjectionData, Gutter, Dimensions } from './types.ts';
+import type { Dimensions, Gutter, ProjectionData } from "./types.ts";
 
 /**
  * Calculates horizontal and vertical projection data from image pixel data
@@ -9,12 +9,12 @@ import type { ProjectionData, Gutter, Dimensions } from './types.ts';
  */
 export function calculateProjections(
   pixelData: Uint8Array,
-  dimensions: Dimensions
+  dimensions: Dimensions,
 ): ProjectionData {
   // TODO: Implement projection calculation
   // - Sum pixel values for each row (horizontal projection)
   // - Sum pixel values for each column (vertical projection)
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
 
 /**
@@ -29,15 +29,15 @@ export function calculateProjections(
 export function detectGutters(
   projections: ProjectionData,
   dimensions: Dimensions,
-  threshold: number = 240,
-  minGutterWidth: number = 5
+  threshold = 240,
+  minGutterWidth = 5,
 ): { horizontal: Gutter[]; vertical: Gutter[] } {
   // TODO: Implement gutter detection
   // - Identify continuous white regions in projections
   // - Filter by brightness threshold
   // - Require minimum gutter width
   // - Require gutters to span at least 80% of perpendicular dimension
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
 
 /**
@@ -53,8 +53,8 @@ function findWhiteRegions(
   projection: number[],
   threshold: number,
   minWidth: number,
-  perpDimension: number
+  perpDimension: number,
 ): number[] {
   // TODO: Implement white region detection
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }

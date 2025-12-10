@@ -1,4 +1,4 @@
-import type { Panel } from './types.ts';
+import type { Panel } from "./types.ts";
 
 /**
  * Orders panels in reading order (left-to-right, top-to-bottom)
@@ -7,13 +7,13 @@ import type { Panel } from './types.ts';
  * @param rowTolerance - Y-distance tolerance for same row detection (default: 20px)
  * @returns Ordered array of panels with sequential IDs
  */
-export function orderPanels(panels: Panel[], rowTolerance: number = 20): Panel[] {
+export function orderPanels(panels: Panel[], rowTolerance = 20): Panel[] {
   // TODO: Implement panel ordering
   // - Group panels by vertical position (within tolerance for same row)
   // - Sort groups top-to-bottom
   // - Within each row, sort panels left-to-right
   // - Assign sequential IDs
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
 
 /**
@@ -25,7 +25,7 @@ export function orderPanels(panels: Panel[], rowTolerance: number = 20): Panel[]
  */
 function groupPanelsIntoRows(panels: Panel[], tolerance: number): Panel[][] {
   // TODO: Implement row grouping
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
 
 /**
@@ -36,5 +36,5 @@ function groupPanelsIntoRows(panels: Panel[], tolerance: number): Panel[][] {
  */
 function sortRowLeftToRight(row: Panel[]): Panel[] {
   // TODO: Implement left-to-right sorting
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
