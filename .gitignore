@@ -1,1 +1,17 @@
 **/node_modules
+
+# Biome
+.biome/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+*.swp
+*.swo
+*~
+
+# Debug outputs
+*-preprocessed.png
+*-debug.png

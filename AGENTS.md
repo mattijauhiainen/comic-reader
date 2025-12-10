@@ -15,3 +15,15 @@ When user triggers the next action, the reader will zoom in on that page to the 
 To support the reader, for each page, we need to find the bounding boxes of all the panels on that page. The `panelExtractor` contains a typescript program that can do this.
 
 Panel extractor will take as an input a path to an image file, and as an output will produce a JSON file which contains bounding boxes of each panel in that image file.
+
+## Development Guidelines
+
+### Code Formatting
+
+After making any code edits to TypeScript/JavaScript files, run the Biome formatter from the project directory:
+
+```bash
+bun run format
+```
+
+This ensures consistent code style across all projects in the repository.
