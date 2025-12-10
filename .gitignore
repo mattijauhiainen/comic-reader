@@ -4,7 +4,7 @@
 .biome/
 
 # OS files
-.DS_Store
+**/.DS_Store
 Thumbs.db
 
 # IDE
@@ -14,4 +14,6 @@ Thumbs.db
 
 # Debug outputs
 *-preprocessed.png
+*-preprocessed.json
 *-debug.png
+*-debug-*.png

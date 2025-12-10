@@ -10,7 +10,6 @@ interface CliOptions {
   debug?: boolean;
   minPanelSize: string;
   threshold: string;
-  edgeMethod: string;
   blurRadius: string;
   rowTolerance: string;
 }
@@ -30,11 +29,6 @@ program
     "Binarization threshold for separating panels from gutters",
     "127",
   )
-  .option(
-    "--edge-method <sobel|canny>",
-    "Edge detection algorithm",
-    "sobel",
-  )
   .option("--blur-radius <pixels>", "Gaussian blur radius for noise reduction", "2")
   .option("--row-tolerance <pixels>", "Y-distance tolerance for same row", "20")
   .action(async (inputImage: string, options: CliOptions) => {
@@ -46,7 +40,6 @@ program
         debug: options.debug || false,
         minPanelSize: Number.parseInt(options.minPanelSize),
         threshold: Number.parseInt(options.threshold),
-        edgeMethod: options.edgeMethod as 'sobel' | 'canny',
         blurRadius: Number.parseInt(options.blurRadius),
         rowTolerance: Number.parseInt(options.rowTolerance),
       };

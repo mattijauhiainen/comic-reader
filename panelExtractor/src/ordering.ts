@@ -8,12 +8,30 @@ import type { Panel } from "./types.ts";
  * @returns Ordered array of panels with sequential IDs
  */
 export function orderPanels(panels: Panel[], rowTolerance = 20): Panel[] {
-  // TODO: Implement panel ordering
-  // - Group panels by vertical position (within tolerance for same row)
-  // - Sort groups top-to-bottom
-  // - Within each row, sort panels left-to-right
-  // - Assign sequential IDs
-  throw new Error("Not implemented");
+  if (panels.length === 0) {
+    return [];
+  }
+
+  // Group panels into rows
+  const rows = groupPanelsIntoRows(panels, rowTolerance);
+
+  // Sort each row left-to-right
+  const sortedRows = rows.map(sortRowLeftToRight);
+
+  // Flatten and assign sequential IDs
+  const orderedPanels: Panel[] = [];
+  let id = 0;
+
+  for (const row of sortedRows) {
+    for (const panel of row) {
+      orderedPanels.push({
+        ...panel,
+        id: id++,
+      });
+    }
+  }
+
+  return orderedPanels;
 }
 
 /**
@@ -24,8 +42,33 @@ export function orderPanels(panels: Panel[], rowTolerance = 20): Panel[] {
  * @returns Array of panel rows
  */
 function groupPanelsIntoRows(panels: Panel[], tolerance: number): Panel[][] {
-  // TODO: Implement row grouping
-  throw new Error("Not implemented");
+  // Sort panels by Y position first
+  const sortedByY = [...panels].sort((a, b) => a.y - b.y);
+
+  const rows: Panel[][] = [];
+  let currentRow: Panel[] = [];
+  let rowY = sortedByY[0].y;
+
+  for (const panel of sortedByY) {
+    // Check if panel belongs to current row
+    if (Math.abs(panel.y - rowY) <= tolerance) {
+      currentRow.push(panel);
+    } else {
+      // Start a new row
+      if (currentRow.length > 0) {
+        rows.push(currentRow);
+      }
+      currentRow = [panel];
+      rowY = panel.y;
+    }
+  }
+
+  // Add the last row
+  if (currentRow.length > 0) {
+    rows.push(currentRow);
+  }
+
+  return rows;
 }
 
 /**
@@ -35,6 +78,5 @@ function groupPanelsIntoRows(panels: Panel[], tolerance: number): Panel[][] {
  * @returns Sorted array of panels
  */
 function sortRowLeftToRight(row: Panel[]): Panel[] {
-  // TODO: Implement left-to-right sorting
-  throw new Error("Not implemented");
+  return [...row].sort((a, b) => a.x - b.x);
 }

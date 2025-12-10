@@ -40,7 +40,6 @@ export interface PanelExtractionResult {
  */
 export interface ExtractionOptions {
   threshold?: number; // Binarization threshold (0-255, default: 127)
-  edgeMethod?: 'sobel' | 'canny'; // Edge detection algorithm (default: sobel)
   minPanelSize?: number; // Minimum panel dimension in pixels (default: 100)
   blurRadius?: number; // Gaussian blur radius in pixels (default: 2)
   rowTolerance?: number; // Y-distance tolerance for same row detection (default: 20)
