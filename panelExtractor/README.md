@@ -4,10 +4,10 @@ A TypeScript tool that analyzes comic book page images and extracts bounding box
 
 ## Features
 
-- Projection-based panel detection algorithm
-- Handles traditional grid layouts with white gutters
+- Contour-based panel detection algorithm
+- Handles irregular grid layouts with varied panel sizes
 - Left-to-right, top-to-bottom panel ordering
-- Debug visualization mode
+- Debug visualization mode with panel boundaries and IDs
 - JSON output format
 
 ## Installation
@@ -32,10 +32,11 @@ bun run extract page-01.jpg
 ### CLI Options
 
 - `-o, --output <path>` - Output JSON file path (default: same name as input with .json extension)
-- `--debug` - Output debug visualization showing detected panels
+- `--debug` - Output debug visualization showing detected panels and contours
 - `--min-panel-size <pixels>` - Minimum panel dimension (default: 100)
-- `--gutter-threshold <0-255>` - Brightness threshold for gutter detection (default: 240)
-- `--min-gutter-width <pixels>` - Minimum gutter width (default: 5)
+- `--threshold <0-255>` - Binarization threshold for separating panels from gutters (default: 127)
+- `--edge-method <sobel|canny>` - Edge detection algorithm (default: sobel)
+- `--blur-radius <pixels>` - Gaussian blur radius for noise reduction (default: 2)
 - `--row-tolerance <pixels>` - Y-distance tolerance for same row (default: 20)
 
 ### Examples
@@ -48,7 +49,10 @@ bun run extract page-01.jpg -o output/page-01-panels.json
 bun run extract page-01.jpg --debug
 
 # Custom parameters
-bun run extract page-01.jpg --min-panel-size 150 --gutter-threshold 230
+bun run extract page-01.jpg --min-panel-size 150 --threshold 140
+
+# Use Canny edge detection instead of Sobel
+bun run extract page-01.jpg --edge-method canny
 ```
 
 ## Output Format
@@ -68,33 +72,35 @@ The tool generates a JSON file with the following structure:
   ],
   "metadata": {
     "extractedAt": "2025-12-09T14:30:00Z",
-    "algorithm": "projection"
+    "algorithm": "contour"
   }
 }
 ```
 
 ## Algorithm
 
-The panel extractor uses a projection-based approach:
+The panel extractor uses a contour-based approach:
 
-1. **Preprocessing**: Convert to grayscale and apply slight blur
-2. **Projection Analysis**: Calculate horizontal and vertical pixel brightness projections
-3. **Gutter Detection**: Identify white gutters as peaks in projection data
-4. **Panel Extraction**: Divide image into rectangles using detected gutters
+1. **Preprocessing**: Convert to grayscale, apply Gaussian blur, and binarize
+2. **Edge Detection**: Apply Sobel or Canny edge detection to find panel boundaries
+3. **Contour Detection**: Trace connected edge pixels to form closed shapes
+4. **Panel Extraction**: Convert contours to bounding boxes, filter by size and rectangularity
 5. **Ordering**: Sort panels left-to-right, top-to-bottom
 
 ## Limitations
 
 Current version supports:
-- Traditional grid layouts with white gutters
+- Irregular grid layouts with varied panel sizes
 - Left-to-right reading order
 - Rectangular panel bounding boxes
+- Borderless and bleeding panels (via edge detection)
 
 Not yet supported:
 - Manga/right-to-left reading order
 - Rotated or skewed pages
 - Double-page spreads
 - Non-rectangular panels (returns bounding box only)
+- Nested panels (returns outermost bounding box)
 
 ## Development Status
 
@@ -104,13 +110,17 @@ Not yet supported:
 - CLI argument parsing
 - Type definitions
 - Stubbed core algorithm functions
+- Debug visualization mode
 
 **Phase 1b: Core Functionality** (TODO)
-- Image preprocessing implementation
-- Projection-based gutter detection
-- Panel boundary extraction
+- Image preprocessing implementation (grayscale, blur, binarization)
+- Edge detection (Sobel and Canny)
+- Contour detection and tracing
+- Panel boundary extraction from contours
 - Panel ordering logic
 
 **Phase 2: Refinement** (TODO)
-- Debug visualization mode
-- Comprehensive testing
+- Polygon approximation for better rectangle detection
+- Nested contour removal
+- Comprehensive testing with various comic layouts
+- Parameter tuning

@@ -2,6 +2,7 @@
 
 import { Command } from "commander";
 import { extractPanels } from "./extractor.ts";
+import { visualizePanels } from "./visualize.ts";
 import type { ExtractionOptions } from "./types.ts";
 
 interface CliOptions {
@@ -64,6 +65,7 @@ program
 
       if (extractionOptions.debug) {
         const debugPath = inputImage.replace(/\.[^.]+$/, "-debug.png");
+        await visualizePanels(inputImage, result.panels, debugPath);
         console.log(`✓ Debug visualization written to: ${debugPath}`);
       }
     } catch (error) {
