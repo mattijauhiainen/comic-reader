@@ -81,17 +81,9 @@
       "y": 3338,
       "width": 611,
       "height": 377
-    },
-    {
-      "id": 11,
-      "x": 1456,
-      "y": 3822,
-      "width": 106,
-      "height": 110
     }
   ],
   "metadata": {
-    "extractedAt": "2025-12-10T16:10:52.753Z",
-    "algorithm": "contour"
+    "extractedAt": "2025-12-11T04:04:39.938Z"
   }
 }

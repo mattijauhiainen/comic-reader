@@ -13,11 +13,6 @@ export async function visualizePanels(
   panels: Panel[],
   outputPath: string
 ): Promise<void> {
-  const strokeWidth = 6;
-  const strokeColor = { r: 255, g: 0, b: 0 }; // Red
-  const showLabels = true;
-  const labelSize = 24;
-
   // Load the original image
   const image = sharp(imagePath);
   const metadata = await image.metadata();
@@ -30,11 +25,7 @@ export async function visualizePanels(
   const svgOverlay = generateSvgOverlay(
     panels,
     metadata.width,
-    metadata.height,
-    strokeWidth,
-    strokeColor,
-    showLabels,
-    labelSize
+    metadata.height
   );
 
   // Composite the SVG overlay on top of the original image
@@ -57,12 +48,14 @@ export async function visualizePanels(
 function generateSvgOverlay(
   panels: Panel[],
   width: number,
-  height: number,
-  strokeWidth: number,
-  strokeColor: { r: number; g: number; b: number },
-  showLabels: boolean,
-  labelSize: number
+  height: number
 ): string {
+  // Visualization constants
+  const strokeWidth = 6;
+  const strokeColor = { r: 255, g: 0, b: 0 }; // Red
+  const showLabels = true;
+  const labelSize = 24;
+
   const colorStr = `rgb(${strokeColor.r},${strokeColor.g},${strokeColor.b})`;
 
   let svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">`;

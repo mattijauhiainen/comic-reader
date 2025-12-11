@@ -17,6 +17,50 @@ export interface Contour {
   };
 }
 
+type BoundingBox = Contour['boundingBox'];
+
+/**
+ * Calculates the intersection area of two bounding boxes
+ *
+ * @param a - First bounding box
+ * @param b - Second bounding box
+ * @returns Intersection area in pixels, or 0 if no overlap
+ */
+function getIntersectionArea(a: BoundingBox, b: BoundingBox): number {
+  const intersectX = Math.max(a.x, b.x);
+  const intersectY = Math.max(a.y, b.y);
+  const intersectX2 = Math.min(a.x + a.width, b.x + b.width);
+  const intersectY2 = Math.min(a.y + a.height, b.y + b.height);
+
+  // No overlap if intersection is invalid
+  if (intersectX >= intersectX2 || intersectY >= intersectY2) {
+    return 0;
+  }
+
+  return (intersectX2 - intersectX) * (intersectY2 - intersectY);
+}
+
+/**
+ * Merges two bounding boxes into one that encompasses both
+ *
+ * @param a - First bounding box
+ * @param b - Second bounding box
+ * @returns New bounding box that contains both input boxes
+ */
+function mergeBoundingBoxes(a: BoundingBox, b: BoundingBox): BoundingBox {
+  const minX = Math.min(a.x, b.x);
+  const minY = Math.min(a.y, b.y);
+  const maxX = Math.max(a.x + a.width, b.x + b.width);
+  const maxY = Math.max(a.y + a.height, b.y + b.height);
+
+  return {
+    x: minX,
+    y: minY,
+    width: maxX - minX,
+    height: maxY - minY,
+  };
+}
+
 /**
  * Finds contours in a binary edge image using border following
  *
@@ -215,46 +259,27 @@ export function removeNestedContours(contours: Contour[]): Contour[] {
  * Merges two contours by creating a bounding box that encompasses both
  */
 function mergeContours(a: Contour, b: Contour): Contour {
-  const aBox = a.boundingBox;
-  const bBox = b.boundingBox;
-
-  // Calculate the bounding box that encompasses both contours
-  const minX = Math.min(aBox.x, bBox.x);
-  const minY = Math.min(aBox.y, bBox.y);
-  const maxX = Math.max(aBox.x + aBox.width, bBox.x + bBox.width);
-  const maxY = Math.max(aBox.y + aBox.height, bBox.y + bBox.height);
-
   return {
     points: [...a.points, ...b.points], // Combine all points
-    boundingBox: {
-      x: minX,
-      y: minY,
-      width: maxX - minX,
-      height: maxY - minY,
-    },
+    boundingBox: mergeBoundingBoxes(a.boundingBox, b.boundingBox),
   };
 }
 
 /**
- * Checks if two contours have significant overlap (>50% of smaller contour)
+ * Checks if two contours have significant overlap (>20% of smaller contour)
  */
 function hasSignificantOverlap(a: Contour, b: Contour): boolean {
   const aBox = a.boundingBox;
   const bBox = b.boundingBox;
 
-  // Calculate intersection rectangle
-  const intersectX = Math.max(aBox.x, bBox.x);
-  const intersectY = Math.max(aBox.y, bBox.y);
-  const intersectX2 = Math.min(aBox.x + aBox.width, bBox.x + bBox.width);
-  const intersectY2 = Math.min(aBox.y + aBox.height, bBox.y + bBox.height);
+  const intersectionArea = getIntersectionArea(aBox, bBox);
 
-  // No overlap if intersection is invalid
-  if (intersectX >= intersectX2 || intersectY >= intersectY2) {
+  // No overlap
+  if (intersectionArea === 0) {
     return false;
   }
 
   // Calculate areas
-  const intersectionArea = (intersectX2 - intersectX) * (intersectY2 - intersectY);
   const areaA = aBox.width * aBox.height;
   const areaB = bBox.width * bBox.height;
   const smallerArea = Math.min(areaA, areaB);

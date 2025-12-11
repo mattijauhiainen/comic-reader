@@ -9,9 +9,6 @@ interface CliOptions {
   output?: string;
   debug?: boolean;
   minPanelSize: string;
-  threshold: string;
-  blurRadius: string;
-  rowTolerance: string;
 }
 
 const program = new Command();
@@ -23,14 +20,7 @@ program
   .argument("<input-image>", "Path to comic page image")
   .option("-o, --output <path>", "Output JSON file path")
   .option("--debug", "Output debug visualization showing detected panels and contours")
-  .option("--min-panel-size <pixels>", "Minimum panel dimension", "100")
-  .option(
-    "--threshold <0-255>",
-    "Binarization threshold for separating panels from gutters",
-    "127",
-  )
-  .option("--blur-radius <pixels>", "Gaussian blur radius for noise reduction", "2")
-  .option("--row-tolerance <pixels>", "Y-distance tolerance for same row", "20")
+  .option("--min-panel-size <pixels>", "Minimum panel dimension", "300")
   .action(async (inputImage: string, options: CliOptions) => {
     try {
       console.log(`Extracting panels from: ${inputImage}`);
@@ -39,9 +29,6 @@ program
         outputPath: options.output,
         debug: options.debug || false,
         minPanelSize: Number.parseInt(options.minPanelSize),
-        threshold: Number.parseInt(options.threshold),
-        blurRadius: Number.parseInt(options.blurRadius),
-        rowTolerance: Number.parseInt(options.rowTolerance),
       };
 
       const result = await extractPanels(inputImage, extractionOptions);

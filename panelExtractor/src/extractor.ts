@@ -15,6 +15,17 @@ import {
 import { orderPanels } from "./ordering.ts";
 
 /**
+ * Generates a debug image path by adding a suffix before the file extension
+ *
+ * @param inputPath - Original image path
+ * @param suffix - Suffix to add (e.g., "1-preprocessed")
+ * @returns Debug image path (e.g., "image-debug-1-preprocessed.png")
+ */
+function getDebugImagePath(inputPath: string, suffix: string): string {
+  return inputPath.replace(/\.[^.]+$/, `-debug-${suffix}.png`);
+}
+
+/**
  * Main entry point for panel extraction
  *
  * @param imagePath - Path to the comic page image
@@ -65,14 +76,14 @@ export async function extractPanels(
 
   // Debug: Draw all contours
   if (options.debug) {
-    await drawContoursDebug(imagePath, contours, imagePath, "3-all-contours");
+    await drawContoursDebug(imagePath, contours, "3-all-contours");
   }
 
   // Step 4: Filter contours
   console.log("Filtering contours...");
   const minPanelSize = options.minPanelSize ?? 300;
-  const maxWidthRatio = options.maxPanelWidthRatio ?? 0.95;
-  const maxHeightRatio = options.maxPanelHeightRatio ?? 0.95;
+  const maxWidthRatio = 0.95;
+  const maxHeightRatio = 0.95;
   contours = filterContours(
     contours,
     minPanelSize,
@@ -85,7 +96,7 @@ export async function extractPanels(
 
   // Debug: Draw filtered contours
   if (options.debug) {
-    await drawContoursDebug(imagePath, contours, imagePath, "4-filtered-contours");
+    await drawContoursDebug(imagePath, contours, "4-filtered-contours");
   }
 
   // Step 5: Remove nested contours
@@ -95,7 +106,7 @@ export async function extractPanels(
 
   // Debug: Draw final contours
   if (options.debug) {
-    await drawContoursDebug(imagePath, contours, imagePath, "5-final-contours");
+    await drawContoursDebug(imagePath, contours, "5-final-contours");
   }
 
   // Step 6: Extract panel boundaries
@@ -104,7 +115,7 @@ export async function extractPanels(
 
   // Step 7: Order panels
   console.log("Ordering panels...");
-  const rowTolerance = options.rowTolerance ?? 20;
+  const rowTolerance = 20;
   panels = orderPanels(panels, rowTolerance);
 
   console.log(`✓ Detected ${panels.length} panels`);
@@ -115,7 +126,6 @@ export async function extractPanels(
     panels,
     metadata: {
       extractedAt: new Date().toISOString(),
-      algorithm: 'contour',
     },
   };
 
@@ -134,8 +144,8 @@ async function preprocessImage(
   image: sharp.Sharp,
   options: ExtractionOptions
 ): Promise<{ data: Uint8Array; width: number; height: number }> {
-  const blurRadius = options.blurRadius ?? 2;
-  const threshold = options.threshold ?? 127;
+  const blurRadius = 2;
+  const threshold = 127;
 
   // Convert to grayscale and apply blur
   const processedImage = image
@@ -192,7 +202,7 @@ async function saveDebugImage(
   originalPath: string,
   suffix: string
 ): Promise<void> {
-  const outputPath = originalPath.replace(/\.[^.]+$/, `-debug-${suffix}.png`);
+  const outputPath = getDebugImagePath(originalPath, suffix);
 
   await sharp(data, {
     raw: {
@@ -212,13 +222,11 @@ async function saveDebugImage(
  *
  * @param imagePath - Original image path
  * @param contours - Contours to draw
- * @param originalPath - Original image path for naming
  * @param suffix - Suffix for debug filename
  */
 async function drawContoursDebug(
   imagePath: string,
   contours: Contour[],
-  originalPath: string,
   suffix: string
 ): Promise<void> {
   const image = sharp(imagePath);
@@ -231,7 +239,7 @@ async function drawContoursDebug(
   // Generate SVG overlay with contour bounding boxes
   const svg = generateContoursSvg(contours, metadata.width, metadata.height);
 
-  const outputPath = originalPath.replace(/\.[^.]+$/, `-debug-${suffix}.png`);
+  const outputPath = getDebugImagePath(imagePath, suffix);
 
   await image
     .composite([

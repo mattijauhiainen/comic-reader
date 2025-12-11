@@ -22,7 +22,6 @@ export interface Dimensions {
  */
 export interface ExtractionMetadata {
   extractedAt: string; // ISO timestamp
-  algorithm: string; // Which algorithm was used
 }
 
 /**
@@ -39,10 +38,7 @@ export interface PanelExtractionResult {
  * Configuration options for the panel extraction algorithm
  */
 export interface ExtractionOptions {
-  threshold?: number; // Binarization threshold (0-255, default: 127)
-  minPanelSize?: number; // Minimum panel dimension in pixels (default: 100)
-  blurRadius?: number; // Gaussian blur radius in pixels (default: 2)
-  rowTolerance?: number; // Y-distance tolerance for same row detection (default: 20)
+  minPanelSize?: number; // Minimum panel dimension in pixels (default: 300)
   debug?: boolean; // Output debug visualization (default: false)
   outputPath?: string; // Custom output path for JSON file
 }
