@@ -39,10 +39,12 @@ comics/
 ```
 
 **Build Flow:**
-1. Generator reads from `./assets/pizarro/` (source)
-2. Generator creates HTML files in `./reader/pizarro/`
-3. Generator copies assets to `./reader/assets/pizarro/`
-4. `./reader/` directory is ready to serve
+1. Configure album in `generator/generate-pages.ts` (albumFolder and albumTitle)
+2. Run generator: `bun run generator/generate-pages.ts`
+3. Generator reads from `./assets/{albumFolder}/` (source)
+4. Generator creates HTML files in `./reader/{albumFolder}/`
+5. Generator copies assets to `./reader/assets/{albumFolder}/`
+6. `./reader/` directory is ready to serve
 
 Each page is a separate HTML file. Static site generation creates all files. No client-side routing needed.
 
@@ -184,6 +186,11 @@ footer nav {
 
 ## Generator Implementation
 
+**Configuration:**
+The generator uses an inline configuration object to support multiple albums:
+- `albumFolder`: The subfolder name in `assets/` and `reader/` (e.g., "pizarro")
+- `albumTitle`: The human-readable title used in page titles and headings (e.g., "Pizarro")
+
 **Static Generator Script (runs with Bun):**
 ```typescript
 // generator/generate-pages.ts
@@ -196,53 +203,80 @@ interface PageInfo {
   hasPrev: boolean;
   hasNext: boolean;
   totalPages: number;
+  albumTitle: string;
+}
+
+interface AlbumConfig {
+  albumFolder: string;  // Subfolder name (e.g., "pizarro")
+  albumTitle: string;   // Display title (e.g., "Pizarro")
 }
 
 function generatePage(info: PageInfo): string {
   // Return HTML string using template
-  // Fill in page number, image path, nav links
+  // Fill in page number, image path, nav links, album title
 }
 
-function scanAssets(): number {
-  // Count how many pageN.json files exist in ./assets/pizarro/
-  const files = fs.readdirSync('./assets/pizarro');
+function scanAssets(albumFolder: string): number {
+  // Count how many pageN.json files exist in ./assets/{albumFolder}/
+  const files = fs.readdirSync(`./assets/${albumFolder}`);
   return files.filter(f => f.endsWith('.json')).length;
 }
 
-function copyAssets() {
-  // Copy files from ./assets/pizarro/ to ./reader/assets/pizarro/
-  const files = fs.readdirSync('./assets/pizarro');
+function copyAssets(albumFolder: string) {
+  // Copy files from ./assets/{albumFolder}/ to ./reader/assets/{albumFolder}/
+  const sourceDir = `./assets/${albumFolder}`;
+  const destDir = `./reader/assets/${albumFolder}`;
+  const files = fs.readdirSync(sourceDir);
   for (const file of files) {
     fs.copyFileSync(
-      `./assets/pizarro/${file}`,
-      `./reader/assets/pizarro/${file}`
+      `${sourceDir}/${file}`,
+      `${destDir}/${file}`
     );
   }
 }
 
 function generateAllPages() {
-  const totalPages = scanAssets();
+  // CONFIGURATION - Edit these values for different albums
+  const config: AlbumConfig = {
+    albumFolder: "pizarro",  // Subfolder in assets/ and reader/
+    albumTitle: "Pizarro",   // Title shown in pages
+  };
+
+  const totalPages = scanAssets(config.albumFolder);
 
   // Ensure output directories exist
-  fs.mkdirSync('reader/pizarro', { recursive: true });
-  fs.mkdirSync('reader/assets/pizarro', { recursive: true });
+  fs.mkdirSync(`reader/${config.albumFolder}`, { recursive: true });
+  fs.mkdirSync(`reader/assets/${config.albumFolder}`, { recursive: true });
 
   // Copy assets
-  copyAssets();
+  copyAssets(config.albumFolder);
 
   // Generate pages
   for (let i = 1; i <= totalPages; i++) {
     const html = generatePage({
       pageNum: i,
-      imagePath: `../assets/pizarro/page${i}.avif`,  // Relative to reader/pizarro/
+      imagePath: `../assets/${config.albumFolder}/page${i}.avif`,
       hasPrev: i > 1,
       hasNext: i < totalPages,
-      totalPages
+      totalPages,
+      albumTitle: config.albumTitle
     });
 
-    fs.writeFileSync(`reader/pizarro/page${i}.html`, html);
+    fs.writeFileSync(
+      `reader/${config.albumFolder}/page${i}.html`,
+      html
+    );
   }
 }
+```
+
+**Usage:**
+To generate pages for a different album, simply update the configuration object:
+```typescript
+const config: AlbumConfig = {
+  albumFolder: "asterix",
+  albumTitle: "Asterix in Britain",
+};
 ```
 
 ### Testing Strategy
