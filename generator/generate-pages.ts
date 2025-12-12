@@ -17,12 +17,12 @@ interface AlbumConfig {
 
 function generatePageHTML(info: PageInfo): string {
   const prevLink = info.hasPrev
-    ? `<a href="page${info.pageNum - 1}.html">← Previous</a>`
-    : '<a class="disabled">← Previous</a>';
+    ? `<a href="page${info.pageNum - 1}.html">←</a>`
+    : '<a class="disabled">←</a>';
 
   const nextLink = info.hasNext
-    ? `<a href="page${info.pageNum + 1}.html">Next →</a>`
-    : '<a class="disabled">Next →</a>';
+    ? `<a href="page${info.pageNum + 1}.html">→</a>`
+    : '<a class="disabled">→</a>';
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -33,6 +33,8 @@ function generatePageHTML(info: PageInfo): string {
   <link rel="stylesheet" href="../styles/reader.css">
 </head>
 <body>
+  <a href="../index.html" class="back-link">Back to Albums</a>
+
   <main class="viewport">
     <img src="${info.imagePath}" alt="Page ${info.pageNum}">
   </main>
@@ -40,10 +42,9 @@ function generatePageHTML(info: PageInfo): string {
   <footer>
     <nav>
       ${prevLink}
-      <span>Page ${info.pageNum} / ${info.totalPages}</span>
+      <span>${info.pageNum} / ${info.totalPages}</span>
       ${nextLink}
     </nav>
-    <a href="index.html" class="home-link">Album Home</a>
   </footer>
 </body>
 </html>
