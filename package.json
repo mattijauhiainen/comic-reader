@@ -1,0 +1,17 @@
+{
+  "name": "comics",
+  "version": "0.1.0",
+  "description": "Comics web reader and tooling",
+  "type": "module",
+  "scripts": {
+    "format": "npx @biomejs/biome format --write .",
+    "format:check": "npx @biomejs/biome format .",
+    "lint": "npx @biomejs/biome lint .",
+    "check": "npx @biomejs/biome check --write .",
+    "generate": "bun run generator/generate-pages.ts",
+    "serve": "bun run generator/serve.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4"
+  }
+}

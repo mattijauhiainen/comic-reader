@@ -19,7 +19,10 @@ program
   .version("0.1.0")
   .argument("<input-image>", "Path to comic page image")
   .option("-o, --output <path>", "Output JSON file path")
-  .option("--debug", "Output debug visualization showing detected panels and contours")
+  .option(
+    "--debug",
+    "Output debug visualization showing detected panels and contours",
+  )
   .option("--min-panel-size <pixels>", "Minimum panel dimension", "300")
   .action(async (inputImage: string, options: CliOptions) => {
     try {

@@ -13,7 +13,7 @@
 export function sobelEdgeDetection(
   data: Uint8Array,
   width: number,
-  height: number
+  height: number,
 ): Uint8Array {
   // Sobel kernels for horizontal and vertical edges
   const sobelX = [
@@ -58,4 +58,3 @@ export function sobelEdgeDetection(
 
   return edges;
 }
-

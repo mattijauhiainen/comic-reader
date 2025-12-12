@@ -11,7 +11,7 @@ import type { Panel } from "./types.ts";
 export async function visualizePanels(
   imagePath: string,
   panels: Panel[],
-  outputPath: string
+  outputPath: string,
 ): Promise<void> {
   // Load the original image
   const image = sharp(imagePath);
@@ -25,7 +25,7 @@ export async function visualizePanels(
   const svgOverlay = generateSvgOverlay(
     panels,
     metadata.width,
-    metadata.height
+    metadata.height,
   );
 
   // Composite the SVG overlay on top of the original image
@@ -48,7 +48,7 @@ export async function visualizePanels(
 function generateSvgOverlay(
   panels: Panel[],
   width: number,
-  height: number
+  height: number,
 ): string {
   // Visualization constants
   const strokeWidth = 6;

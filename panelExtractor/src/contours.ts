@@ -17,7 +17,7 @@ export interface Contour {
   };
 }
 
-type BoundingBox = Contour['boundingBox'];
+type BoundingBox = Contour["boundingBox"];
 
 /**
  * Calculates the intersection area of two bounding boxes
@@ -72,7 +72,7 @@ function mergeBoundingBoxes(a: BoundingBox, b: BoundingBox): BoundingBox {
 export function findContours(
   edgeMap: Uint8Array,
   width: number,
-  height: number
+  height: number,
 ): Contour[] {
   const visited = new Uint8Array(width * height);
   const contours: Contour[] = [];
@@ -114,7 +114,7 @@ function traceContour(
   width: number,
   height: number,
   startX: number,
-  startY: number
+  startY: number,
 ): Contour {
   const points: Point[] = [];
 
@@ -189,7 +189,7 @@ export function filterContours(
   maxWidthRatio: number,
   maxHeightRatio: number,
   imageWidth: number,
-  imageHeight: number
+  imageHeight: number,
 ): Contour[] {
   const maxWidth = imageWidth * maxWidthRatio;
   const maxHeight = imageHeight * maxHeightRatio;
@@ -251,7 +251,9 @@ export function removeNestedContours(contours: Contour[]): Contour[] {
     result = newResult;
   }
 
-  console.log(`  Merged ${mergedCount} overlapping contours in multiple passes`);
+  console.log(
+    `  Merged ${mergedCount} overlapping contours in multiple passes`,
+  );
   return result;
 }
 

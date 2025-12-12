@@ -34,14 +34,14 @@ function getDebugImagePath(inputPath: string, suffix: string): string {
  */
 export async function extractPanels(
   imagePath: string,
-  options: ExtractionOptions = {}
+  options: ExtractionOptions = {},
 ): Promise<PanelExtractionResult> {
   // Load image and get metadata
   const image = sharp(imagePath);
   const metadata = await image.metadata();
 
   if (!metadata.width || !metadata.height) {
-    throw new Error('Unable to read image dimensions');
+    throw new Error("Unable to read image dimensions");
   }
 
   const dimensions: Dimensions = {
@@ -57,16 +57,32 @@ export async function extractPanels(
 
   // Debug: Save preprocessed image
   if (options.debug) {
-    await saveDebugImage(preprocessed.data, preprocessed.width, preprocessed.height, imagePath, "1-preprocessed");
+    await saveDebugImage(
+      preprocessed.data,
+      preprocessed.width,
+      preprocessed.height,
+      imagePath,
+      "1-preprocessed",
+    );
   }
 
   // Step 2: Apply edge detection
   console.log("Applying Sobel edge detection...");
-  const edgeMap = sobelEdgeDetection(preprocessed.data, preprocessed.width, preprocessed.height);
+  const edgeMap = sobelEdgeDetection(
+    preprocessed.data,
+    preprocessed.width,
+    preprocessed.height,
+  );
 
   // Debug: Save edge map
   if (options.debug) {
-    await saveDebugImage(edgeMap, preprocessed.width, preprocessed.height, imagePath, "2-edges");
+    await saveDebugImage(
+      edgeMap,
+      preprocessed.width,
+      preprocessed.height,
+      imagePath,
+      "2-edges",
+    );
   }
 
   // Step 3: Find contours
@@ -90,7 +106,7 @@ export async function extractPanels(
     maxWidthRatio,
     maxHeightRatio,
     preprocessed.width,
-    preprocessed.height
+    preprocessed.height,
   );
   console.log(`${contours.length} contours after filtering`);
 
@@ -142,15 +158,13 @@ export async function extractPanels(
  */
 async function preprocessImage(
   image: sharp.Sharp,
-  options: ExtractionOptions
+  options: ExtractionOptions,
 ): Promise<{ data: Uint8Array; width: number; height: number }> {
   const blurRadius = 2;
   const threshold = 127;
 
   // Convert to grayscale and apply blur
-  const processedImage = image
-    .greyscale()
-    .blur(blurRadius);
+  const processedImage = image.greyscale().blur(blurRadius);
 
   // Get raw pixel data
   const { data, info } = await processedImage
@@ -200,7 +214,7 @@ async function saveDebugImage(
   width: number,
   height: number,
   originalPath: string,
-  suffix: string
+  suffix: string,
 ): Promise<void> {
   const outputPath = getDebugImagePath(originalPath, suffix);
 
@@ -227,7 +241,7 @@ async function saveDebugImage(
 async function drawContoursDebug(
   imagePath: string,
   contours: Contour[],
-  suffix: string
+  suffix: string,
 ): Promise<void> {
   const image = sharp(imagePath);
   const metadata = await image.metadata();
@@ -251,7 +265,9 @@ async function drawContoursDebug(
     ])
     .toFile(outputPath);
 
-  console.log(`  Debug image saved: ${outputPath} (${contours.length} contours)`);
+  console.log(
+    `  Debug image saved: ${outputPath} (${contours.length} contours)`,
+  );
 }
 
 /**
@@ -260,7 +276,7 @@ async function drawContoursDebug(
 function generateContoursSvg(
   contours: Contour[],
   width: number,
-  height: number
+  height: number,
 ): string {
   let svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">`;
 

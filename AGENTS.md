@@ -16,14 +16,46 @@ To support the reader, for each page, we need to find the bounding boxes of all 
 
 Panel extractor will take as an input a path to an image file, and as an output will produce a JSON file which contains bounding boxes of each panel in that image file.
 
+To extract panels from a comic page:
+```bash
+cd panelExtractor
+bun run extract <input-image>
+```
+
+Options:
+- `-o, --output <path>`: Specify output JSON file path (default: same name as input with .json extension)
+- `--debug`: Generate debug visualization showing detected panels
+- `--min-panel-size <pixels>`: Minimum panel dimension in pixels (default: 300)
+
+Example:
+```bash
+bun run extract ../assets/pizarro/page1.avif --debug
+```
+
+### Static site generator
+
+The generator produces static HTML pages for the web reader. `generate-pages.ts` scans the assets folder for comic pages, generates individual HTML files for each page with navigation, and copies assets to the reader directory. `serve.ts` provides a local development server at port 3000 for testing the generated pages.
+
+To generate static pages:
+```bash
+bun run generate
+```
+
+To run the development server:
+```bash
+bun run serve
+```
+
+Then open http://localhost:3000 in your browser to view the generated pages.
+
 ## Development Guidelines
 
 ### Code Formatting
 
-After making any code edits to TypeScript/JavaScript files, run the Biome formatter from the project directory:
+After making any code edits to TypeScript/JavaScript files, run the Biome formatter from the root directory:
 
 ```bash
 bun run format
 ```
 
-This ensures consistent code style across all projects in the repository.
+This formats all TypeScript/JavaScript files across all projects (panelExtractor, generator, etc.) using the shared biome.json configuration.
