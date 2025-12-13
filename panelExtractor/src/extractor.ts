@@ -131,7 +131,7 @@ export async function extractPanels(
 
   // Step 7: Order panels
   console.log("Ordering panels...");
-  const rowTolerance = 20;
+  const rowTolerance = 100;
   panels = orderPanels(panels, rowTolerance);
 
   console.log(`✓ Detected ${panels.length} panels`);
