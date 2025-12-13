@@ -16,6 +16,9 @@ interface AlbumConfig {
 }
 
 function generatePageHTML(info: PageInfo, albumFolder: string): string {
+  const preloadLink = info.hasNext
+    ? `<link rel="preload" href="./page${info.pageNum + 1}.avif" as="image" />`
+    : "";
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +27,8 @@ function generatePageHTML(info: PageInfo, albumFolder: string): string {
   <title>${info.albumTitle} - Page ${info.pageNum}</title>
   <link rel="stylesheet" href="../styles/reader.css">
   <link rel="stylesheet" href="../styles/transitions.css">
+  ${preloadLink}
+
   <script>
     // Embed page metadata for panel navigator
     window.COMIC_PAGE_DATA = {
@@ -86,7 +91,7 @@ function generateAllPages(): void {
   // CONFIGURATION - Edit these values for different albums
   const config: AlbumConfig = {
     albumFolder: "pizarro", // Subfolder in assets/ and reader/
-    albumTitle: "Pizarro", // Title shown in pages
+    albumTitle: "Tintin and the Picaros", // Title shown in pages
   };
 
   const totalPages = scanAssets(config.albumFolder);
