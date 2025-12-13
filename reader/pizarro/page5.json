@@ -1,5 +1,5 @@
 {
-  "imagePath": "../assets/page5.avif",
+  "imagePath": "../assets/pizarro/page5.avif",
   "dimensions": {
     "width": 3024,
     "height": 4032
@@ -7,10 +7,10 @@
   "panels": [
     {
       "id": 0,
-      "x": 1922,
-      "y": 97,
-      "width": 916,
-      "height": 953
+      "x": 20,
+      "y": 160,
+      "width": 914,
+      "height": 924
     },
     {
       "id": 1,
@@ -21,31 +21,31 @@
     },
     {
       "id": 2,
-      "x": 20,
-      "y": 160,
-      "width": 914,
-      "height": 924
+      "x": 1922,
+      "y": 97,
+      "width": 916,
+      "height": 953
     },
     {
       "id": 3,
+      "x": 36,
+      "y": 1120,
+      "width": 992,
+      "height": 915
+    },
+    {
+      "id": 4,
       "x": 1044,
       "y": 1109,
       "width": 897,
       "height": 920
     },
     {
-      "id": 4,
+      "id": 5,
       "x": 1972,
       "y": 1091,
       "width": 866,
       "height": 927
-    },
-    {
-      "id": 5,
-      "x": 36,
-      "y": 1120,
-      "width": 992,
-      "height": 915
     },
     {
       "id": 6,
@@ -91,6 +91,6 @@
     }
   ],
   "metadata": {
-    "extractedAt": "2025-12-11T04:25:39.892Z"
+    "extractedAt": "2025-12-13T15:39:34.011Z"
   }
 }

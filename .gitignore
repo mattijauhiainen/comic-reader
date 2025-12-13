@@ -20,3 +20,6 @@ Thumbs.db
 
 # Generated page HTML files
 reader/*/page*.html
+
+# Generated JSON files
+assets/**/page*.json
