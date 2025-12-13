@@ -23,7 +23,7 @@ async function loadPanelData(pageNum) {
     imageSize = data.dimensions;
     return data.panels || [];
   } catch (error) {
-    console.error('Error loading panel data:', error);
+    console.error("Error loading panel data:", error);
     return [];
   }
 }
@@ -35,14 +35,14 @@ function calculateZoomTransform(panel, imageSize, viewportSize) {
   const padding = 20; // px padding around panel
 
   // Get the actual rendered size of the image (after CSS object-fit: contain)
-  const img = document.querySelector('.viewport img');
+  const img = document.querySelector(".viewport img");
   const renderedWidth = img.clientWidth;
   const renderedHeight = img.clientHeight;
 
   // Calculate the current CSS scale (how much the image is already scaled)
   const currentScale = Math.min(
     renderedWidth / imageSize.width,
-    renderedHeight / imageSize.height
+    renderedHeight / imageSize.height,
   );
 
   // Panel coordinates are in original image space, convert to rendered space
@@ -50,12 +50,13 @@ function calculateZoomTransform(panel, imageSize, viewportSize) {
     x: panel.x * currentScale,
     y: panel.y * currentScale,
     width: panel.width * currentScale,
-    height: panel.height * currentScale
+    height: panel.height * currentScale,
   };
 
   // Calculate scale needed to fit the rendered panel in viewport
   const targetScaleX = (viewportSize.width - padding * 2) / renderedPanel.width;
-  const targetScaleY = (viewportSize.height - padding * 2) / renderedPanel.height;
+  const targetScaleY =
+    (viewportSize.height - padding * 2) / renderedPanel.height;
   const scale = Math.min(targetScaleX, targetScaleY);
 
   // Calculate the image element's offset within the viewport (due to flexbox centering)
@@ -87,10 +88,10 @@ function zoomToPanel(panelId) {
   const { scale, translateX, translateY } = calculateZoomTransform(
     panel,
     imageSize,
-    { width: window.innerWidth, height: window.innerHeight }
+    { width: window.innerWidth, height: window.innerHeight },
   );
 
-  const img = document.querySelector('.viewport img');
+  const img = document.querySelector(".viewport img");
   // Use modern CSS translate and scale properties
   img.style.translate = `${translateX}px ${translateY}px`;
   img.style.scale = scale;
@@ -100,10 +101,10 @@ function zoomToPanel(panelId) {
  * Reset zoom to show full page
  */
 function zoomToFullPage() {
-  const img = document.querySelector('.viewport img');
+  const img = document.querySelector(".viewport img");
   // Reset to default translate and scale
-  img.style.translate = '0px 0px';
-  img.style.scale = '1';
+  img.style.translate = "0px 0px";
+  img.style.scale = "1";
 }
 
 /**
@@ -167,24 +168,25 @@ function navigateToPage(pageNum) {
  * Update navigation UI (button states, position indicator)
  */
 function updateNavigationUI() {
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const indicator = document.getElementById('positionIndicator');
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const indicator = document.getElementById("positionIndicator");
 
   // Update indicator text - always show page number only
   indicator.textContent = `${currentPage} / ${totalPages}`;
 
   // Update button states
   const isFirstPosition = currentPage === 1 && currentPanel === null;
-  const isLastPosition = currentPage === totalPages &&
+  const isLastPosition =
+    currentPage === totalPages &&
     (panels.length === 0 || currentPanel === panels.length - 1);
 
-  prevBtn.classList.toggle('disabled', isFirstPosition);
-  nextBtn.classList.toggle('disabled', isLastPosition);
+  prevBtn.classList.toggle("disabled", isFirstPosition);
+  nextBtn.classList.toggle("disabled", isLastPosition);
 
   // Prevent default link behavior
-  prevBtn.href = 'javascript:void(0)';
-  nextBtn.href = 'javascript:void(0)';
+  prevBtn.href = "javascript:void(0)";
+  nextBtn.href = "javascript:void(0)";
 }
 
 /**
@@ -192,12 +194,12 @@ function updateNavigationUI() {
  */
 function attachEventHandlers() {
   // Click handlers for navigation buttons
-  document.getElementById('nextBtn').addEventListener('click', goNext);
-  document.getElementById('prevBtn').addEventListener('click', goBack);
+  document.getElementById("nextBtn").addEventListener("click", goNext);
+  document.getElementById("prevBtn").addEventListener("click", goBack);
 
   // Handle window resize - recalculate zoom
   let resizeTimeout;
-  window.addEventListener('resize', () => {
+  window.addEventListener("resize", () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
       if (currentPanel !== null) {
@@ -227,8 +229,8 @@ async function initialize() {
 }
 
 // Start when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initialize);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initialize);
 } else {
   initialize();
 }

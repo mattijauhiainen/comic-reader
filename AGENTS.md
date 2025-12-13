@@ -52,10 +52,10 @@ Then open http://localhost:3000 in your browser to view the generated pages.
 
 ### Code Formatting
 
-After making any code edits to TypeScript/JavaScript files, run the Biome formatter from the root directory:
+After making any code edits to TypeScript/JavaScript/CSS files, run the Biome formatter from the root directory:
 
 ```bash
 bun run format
 ```
 
-This formats all TypeScript/JavaScript files across all projects (panelExtractor, generator, etc.) using the shared biome.json configuration.
+This formats all files across all projects (panelExtractor, generator, etc.) using the shared biome.json configuration.

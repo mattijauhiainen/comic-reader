@@ -102,14 +102,17 @@ function generateAllPages(): void {
   // Generate pages
   console.log("Generating page HTML files...");
   for (let i = 1; i <= totalPages; i++) {
-    const html = generatePageHTML({
-      pageNum: i,
-      imagePath: `./page${i}.avif`,
-      hasPrev: i > 1,
-      hasNext: i < totalPages,
-      totalPages,
-      albumTitle: config.albumTitle,
-    }, config.albumFolder);
+    const html = generatePageHTML(
+      {
+        pageNum: i,
+        imagePath: `./page${i}.avif`,
+        hasPrev: i > 1,
+        hasNext: i < totalPages,
+        totalPages,
+        albumTitle: config.albumTitle,
+      },
+      config.albumFolder,
+    );
 
     const outputPath = `reader/${config.albumFolder}/page${i}.html`;
     fs.writeFileSync(outputPath, html);
