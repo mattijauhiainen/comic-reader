@@ -89,6 +89,11 @@ body {
   display: block;
 }
 
+/* Only apply view transition name on comic pages */
+.comic-page .viewport img {
+  view-transition-name: page-image;
+}
+
 footer {
   position: fixed;
   bottom: 1rem;

@@ -1,0 +1,58 @@
+/* Enable cross-document view transitions */
+@view-transition {
+  navigation: auto;
+}
+
+/* Default transition for all elements */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
+/* Slide transition for page image */
+::view-transition-old(page-image) {
+  animation: slide-out-left 0.3s ease-in-out;
+}
+
+::view-transition-new(page-image) {
+  animation: slide-in-right 0.3s ease-in-out;
+}
+
+/* Reversed slide transition for backward navigation */
+html.back-navigation::view-transition-old(page-image) {
+  animation: slide-out-right 0.3s ease-in-out;
+}
+
+html.back-navigation::view-transition-new(page-image) {
+  animation: slide-in-left 0.3s ease-in-out;
+}
+
+/* Keyframe animations */
+@keyframes slide-out-left {
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-out-right {
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}

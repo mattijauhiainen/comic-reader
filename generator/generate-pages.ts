@@ -23,6 +23,7 @@ function generatePageHTML(info: PageInfo, albumFolder: string): string {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${info.albumTitle} - Page ${info.pageNum}</title>
   <link rel="stylesheet" href="../styles/reader.css">
+  <link rel="stylesheet" href="../styles/transitions.css">
   <script>
     // Embed page metadata for panel navigator
     window.COMIC_PAGE_DATA = {
@@ -33,9 +34,10 @@ function generatePageHTML(info: PageInfo, albumFolder: string): string {
       panelDataPath: "./page${info.pageNum}.json"
     };
   </script>
+  <script src="../scripts/transition-direction.js"></script>
   <script type="module" src="../scripts/panel-navigator.js"></script>
 </head>
-<body>
+<body class="comic-page">
   <a href="../index.html" class="back-link">Back to Albums</a>
 
   <main class="viewport">
