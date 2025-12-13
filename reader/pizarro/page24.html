@@ -5,19 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pizarro - Page 24</title>
   <link rel="stylesheet" href="../styles/reader.css">
+  <script>
+    // Embed page metadata for panel navigator
+    window.COMIC_PAGE_DATA = {
+      pageNum: 24,
+      totalPages: 29,
+      album: "pizarro",
+      imagePath: "../assets/pizarro/page24.avif",
+      panelDataPath: "../assets/pizarro/page24.json"
+    };
+  </script>
+  <script type="module" src="../scripts/panel-navigator.js"></script>
 </head>
 <body>
   <a href="../index.html" class="back-link">Back to Albums</a>
 
   <main class="viewport">
-    <img src="../assets/pizarro/page24.avif" alt="Page 24">
+    <img id="pageImage" src="../assets/pizarro/page24.avif" alt="Page 24">
   </main>
 
   <footer>
     <nav>
-      <a href="page23.html">←</a>
-      <span>24 / 29</span>
-      <a href="page25.html">→</a>
+      <a id="prevBtn">←</a>
+      <span id="positionIndicator">24 / 29</span>
+      <a id="nextBtn">→</a>
     </nav>
   </footer>
 </body>
