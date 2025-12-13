@@ -16,13 +16,8 @@ interface AlbumConfig {
 }
 
 function generatePageHTML(info: PageInfo): string {
-  const prevLink = info.hasPrev
-    ? `<a href="page${info.pageNum - 1}.html">←</a>`
-    : '<a class="disabled">←</a>';
-
-  const nextLink = info.hasNext
-    ? `<a href="page${info.pageNum + 1}.html">→</a>`
-    : '<a class="disabled">→</a>';
+  // Extract album folder from image path
+  const albumFolder = info.imagePath.split('/')[2]; // ../assets/pizarro/page1.avif -> pizarro
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -31,19 +26,30 @@ function generatePageHTML(info: PageInfo): string {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${info.albumTitle} - Page ${info.pageNum}</title>
   <link rel="stylesheet" href="../styles/reader.css">
+  <script>
+    // Embed page metadata for panel navigator
+    window.COMIC_PAGE_DATA = {
+      pageNum: ${info.pageNum},
+      totalPages: ${info.totalPages},
+      album: "${albumFolder}",
+      imagePath: "${info.imagePath}",
+      panelDataPath: "../assets/${albumFolder}/page${info.pageNum}.json"
+    };
+  </script>
+  <script type="module" src="../scripts/panel-navigator.js"></script>
 </head>
 <body>
   <a href="../index.html" class="back-link">Back to Albums</a>
 
   <main class="viewport">
-    <img src="${info.imagePath}" alt="Page ${info.pageNum}">
+    <img id="pageImage" src="${info.imagePath}" alt="Page ${info.pageNum}">
   </main>
 
   <footer>
     <nav>
-      ${prevLink}
-      <span>${info.pageNum} / ${info.totalPages}</span>
-      ${nextLink}
+      <a id="prevBtn">←</a>
+      <span id="positionIndicator">${info.pageNum} / ${info.totalPages}</span>
+      <a id="nextBtn">→</a>
     </nav>
   </footer>
 </body>
