@@ -17,3 +17,6 @@ Thumbs.db
 *-preprocessed.json
 *-debug.png
 *-debug-*.png
+
+# Generated page HTML files
+reader/*/page*.html
