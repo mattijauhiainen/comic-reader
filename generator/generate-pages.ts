@@ -15,10 +15,7 @@ interface AlbumConfig {
   albumTitle: string; // Display title (e.g., "Pizarro")
 }
 
-function generatePageHTML(info: PageInfo): string {
-  // Extract album folder from image path
-  const albumFolder = info.imagePath.split('/')[2]; // ../assets/pizarro/page1.avif -> pizarro
-
+function generatePageHTML(info: PageInfo, albumFolder: string): string {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +30,7 @@ function generatePageHTML(info: PageInfo): string {
       totalPages: ${info.totalPages},
       album: "${albumFolder}",
       imagePath: "${info.imagePath}",
-      panelDataPath: "../assets/${albumFolder}/page${info.pageNum}.json"
+      panelDataPath: "./page${info.pageNum}.json"
     };
   </script>
   <script type="module" src="../scripts/panel-navigator.js"></script>
@@ -66,7 +63,7 @@ function scanAssets(albumFolder: string): number {
 
 function copyAssets(albumFolder: string): void {
   const sourceDir = `./assets/${albumFolder}`;
-  const destDir = `./reader/assets/${albumFolder}`;
+  const destDir = `./reader/${albumFolder}`;
 
   console.log(`Copying assets from ${sourceDir} to ${destDir}...`);
 
@@ -96,9 +93,8 @@ function generateAllPages(): void {
     `Found ${totalPages} pages to generate for "${config.albumTitle}"`,
   );
 
-  // Ensure output directories exist
+  // Ensure output directory exists
   fs.mkdirSync(`reader/${config.albumFolder}`, { recursive: true });
-  fs.mkdirSync(`reader/assets/${config.albumFolder}`, { recursive: true });
 
   // Copy assets
   copyAssets(config.albumFolder);
@@ -108,12 +104,12 @@ function generateAllPages(): void {
   for (let i = 1; i <= totalPages; i++) {
     const html = generatePageHTML({
       pageNum: i,
-      imagePath: `../assets/${config.albumFolder}/page${i}.avif`,
+      imagePath: `./page${i}.avif`,
       hasPrev: i > 1,
       hasNext: i < totalPages,
       totalPages,
       albumTitle: config.albumTitle,
-    });
+    }, config.albumFolder);
 
     const outputPath = `reader/${config.albumFolder}/page${i}.html`;
     fs.writeFileSync(outputPath, html);
