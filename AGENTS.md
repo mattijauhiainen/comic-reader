@@ -44,6 +44,12 @@ cd bubbleExtractor
 uv run extract.py <input-image>
 ```
 
+
+### ocr
+
+To translate the text items, we need to read them from images and convert them to text. `ocr` module is responsible for this.
+
+
 ### Static site generator
 
 The generator produces static HTML pages for the web reader. `generate-pages.ts` scans the assets folder for comic pages, generates individual HTML files for each page with navigation, and copies assets to the reader directory. `serve.ts` provides a local development server at port 3000 for testing the generated pages.
