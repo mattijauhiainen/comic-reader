@@ -26,3 +26,6 @@ reader/*/page*.html
 assets/**/page*.json
 # Generated text bounding boxes
 assets/**/page*-bubbles.json
+
+# Python venv
+**/.venv/*
