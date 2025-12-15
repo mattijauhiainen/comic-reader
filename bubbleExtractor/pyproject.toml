@@ -1,0 +1,11 @@
+[project]
+name = "bubbleextractor"
+version = "0.1.0"
+description = "Comic text and speech bubble detector"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "opencv-python>=4.12.0.88",
+    "pillow>=12.0.0",
+    "transformers[torch]>=4.57.3",
+]

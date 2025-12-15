@@ -12,7 +12,7 @@ When user triggers the next action, the reader will zoom in on that page to the 
 
 ### panelExtractor
 
-To support the reader, for each page, we need to find the bounding boxes of all the panels on that page. The `panelExtractor` contains a typescript program that can do this.
+To support the reader, for each page, we need to find the bounding boxes of all the panels on the page. The `panelExtractor` contains a typescript program that can do this.
 
 Panel extractor will take as an input a path to an image file, and as an output will produce a JSON file which contains bounding boxes of each panel in that image file.
 
@@ -30,6 +30,18 @@ Options:
 Example:
 ```bash
 bun run extract ../assets/pizarro/page1.avif --debug
+```
+
+### bubbleExtractor
+
+To support translation, for each page, we need to find the bouding boxes of all the text items on the page. The `bubbleExtractor` contains a python program that can do this.
+
+Bubble extractor will take as an input a path to an image file, and as an output will produce a JSON file which contains bouding boxes of each text bubble in that image file.
+
+To extract bubbles from a comic page:
+```bash
+cd bubbleExtractor
+uv run extract.py <input-image>
 ```
 
 ### Static site generator

@@ -17,9 +17,12 @@ Thumbs.db
 *-preprocessed.json
 *-debug.png
 *-debug-*.png
+*-annotated.png
 
 # Generated page HTML files
 reader/*/page*.html
 
-# Generated JSON files
+# Generated panel bounding boxes
 assets/**/page*.json
+# Generated text bounding boxes
+assets/**/page*-bubbles.json
