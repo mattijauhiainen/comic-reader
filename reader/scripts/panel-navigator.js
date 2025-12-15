@@ -8,25 +8,6 @@ let totalPages = 1;
 let panels = [];
 let imageSize = { width: 0, height: 0 };
 
-/**
- * Load panel data from JSON file
- */
-async function loadPanelData(pageNum) {
-  const panelDataPath = window.COMIC_PAGE_DATA.panelDataPath;
-  try {
-    const response = await fetch(panelDataPath);
-    if (!response.ok) {
-      console.warn(`Failed to load panel data for page ${pageNum}`);
-      return [];
-    }
-    const data = await response.json();
-    imageSize = data.dimensions;
-    return data.panels || [];
-  } catch (error) {
-    console.error("Error loading panel data:", error);
-    return [];
-  }
-}
 
 /**
  * Calculate transform values to zoom to a panel
@@ -212,13 +193,14 @@ function attachEventHandlers() {
 /**
  * Initialize the panel navigator
  */
-async function initialize() {
+function initialize() {
   // Get page metadata from embedded data
   currentPage = window.COMIC_PAGE_DATA.pageNum;
   totalPages = window.COMIC_PAGE_DATA.totalPages;
 
-  // Load panel data
-  panels = await loadPanelData(currentPage);
+  // Load panel data from embedded data
+  panels = window.COMIC_PAGE_DATA.panels || [];
+  imageSize = window.COMIC_PAGE_DATA.dimensions || { width: 0, height: 0 };
 
   // Always start in full page view
   currentPanel = null;
