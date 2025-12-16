@@ -42,3 +42,41 @@
   border-radius: 3px;
   white-space: nowrap;
 }
+
+.bubble-box .ocr-text {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.5;
+  max-width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.bubble-box .ocr-text.low-confidence {
+  background: rgba(139, 0, 0, 0.9);
+  border-color: rgba(255, 102, 102, 0.6);
+  color: #ffcccc;
+}
+
+.bubble-box .ocr-text.medium-confidence {
+  background: rgba(139, 139, 0, 0.9);
+  border-color: rgba(255, 255, 102, 0.6);
+  color: #ffffcc;
+}
+
+.bubble-box .ocr-text.high-confidence {
+  background: rgba(0, 100, 0, 0.9);
+  border-color: rgba(102, 255, 102, 0.6);
+  color: #ccffcc;
+}

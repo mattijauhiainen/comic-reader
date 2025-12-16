@@ -38,6 +38,15 @@ interface BubbleDetection {
     x2: number;
     y2: number;
   };
+  ocr_result?: {
+    text_lines: Array<{
+      text: string;
+      confidence: number;
+    }>;
+    full_text: string;
+    avg_confidence: number;
+    error?: string;
+  };
 }
 
 interface BubbleData {
@@ -49,6 +58,23 @@ interface BubbleData {
   detections: BubbleDetection[];
   model: string;
   threshold: number;
+}
+
+interface OcrData {
+  image_info: {
+    path: string;
+    width: number;
+    height: number;
+  };
+  detections: BubbleDetection[];
+  ocr_config: {
+    lang: string;
+    model: string;
+    version: string;
+    confidence_threshold: number;
+  };
+  source_bubble_file: string;
+  processed_at: string;
 }
 
 interface AlbumConfig {
@@ -82,6 +108,42 @@ function readBubbleData(albumFolder: string, pageNum: number): BubbleDetection[]
   }
 }
 
+function readOcrData(albumFolder: string, pageNum: number): Map<string, BubbleDetection> {
+  const ocrPath = `./assets/${albumFolder}/page${pageNum}-ocr.json`;
+  const ocrMap = new Map<string, BubbleDetection>();
+
+  try {
+    const content = fs.readFileSync(ocrPath, "utf-8");
+    const data: OcrData = JSON.parse(content);
+
+    // Create a map keyed by bbox coordinates for easy lookup
+    for (const detection of data.detections) {
+      const key = `${detection.bbox.x1},${detection.bbox.y1},${detection.bbox.x2},${detection.bbox.y2}`;
+      ocrMap.set(key, detection);
+    }
+  } catch (error) {
+    console.warn(`Could not read OCR data: ${ocrPath}`);
+  }
+
+  return ocrMap;
+}
+
+function mergeBubbleWithOcr(bubbles: BubbleDetection[], ocrMap: Map<string, BubbleDetection>): BubbleDetection[] {
+  return bubbles.map(bubble => {
+    const key = `${bubble.bbox.x1},${bubble.bbox.y1},${bubble.bbox.x2},${bubble.bbox.y2}`;
+    const ocrData = ocrMap.get(key);
+
+    if (ocrData && ocrData.ocr_result) {
+      return {
+        ...bubble,
+        ocr_result: ocrData.ocr_result
+      };
+    }
+
+    return bubble;
+  });
+}
+
 function generatePageHTML(
   info: PageInfo,
   albumFolder: string,
@@ -94,6 +156,10 @@ function generatePageHTML(
   // Read panel and bubble data
   const panelData = readPanelData(albumFolder, pageNum);
   const bubbleDetections = readBubbleData(albumFolder, pageNum);
+  const ocrMap = readOcrData(albumFolder, pageNum);
+
+  // Merge OCR data with bubble detections
+  const bubblesWithOcr = mergeBubbleWithOcr(bubbleDetections, ocrMap);
 
   // Prepare embedded data
   const panels = panelData?.panels || [];
@@ -119,7 +185,7 @@ function generatePageHTML(
       imagePath: "${info.imagePath}",
       dimensions: ${JSON.stringify(dimensions)},
       panels: ${JSON.stringify(panels)},
-      bubbles: ${JSON.stringify(bubbleDetections)}
+      bubbles: ${JSON.stringify(bubblesWithOcr)}
     };
   </script>
   <script src="../scripts/transition-direction.js"></script>

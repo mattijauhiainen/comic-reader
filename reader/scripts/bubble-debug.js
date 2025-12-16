@@ -81,6 +81,25 @@ function createBubbleElement(bubble, imageSize, renderInfo) {
   label.textContent = `${bubble.label}: ${bubble.confidence.toFixed(2)}`;
   bubbleBox.appendChild(label);
 
+  // Add OCR text if available
+  if (bubble.ocr_result && bubble.ocr_result?.full_text) {
+    const ocrText = document.createElement("div");
+    ocrText.className = "ocr-text";
+    ocrText.textContent = bubble.ocr_result.full_text;
+
+    // Add OCR confidence as a data attribute for styling
+    const ocrConfidence = bubble.ocr_result.avg_confidence;
+    if (ocrConfidence < 0.7) {
+      ocrText.classList.add("low-confidence");
+    } else if (ocrConfidence < 0.9) {
+      ocrText.classList.add("medium-confidence");
+    } else {
+      ocrText.classList.add("high-confidence");
+    }
+
+    bubbleBox.appendChild(ocrText);
+  }
+
   return bubbleBox;
 }
 

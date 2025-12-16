@@ -10,7 +10,8 @@
     "check": "npx @biomejs/biome check --write .",
     "extract:panels": "for f in assets/pizarro/*.avif; do bun run panelExtractor/src/index.ts \"$f\" -o \"${f%.avif}.json\"; done",
     "extract:bubbles": "for f in assets/pizarro/*.avif; do (cd bubbleExtractor && uv run python extract.py \"../$f\" --output-dir ../assets/pizarro --no-visualize); done",
-    "extract:all": "bun run extract:panels && bun run extract:bubbles",
+    "extract:ocr": "for f in assets/pizarro/*.avif; do base=$(basename \"$f\" .avif); (cd ocr && uv run python run_ocr.py --image \"../$f\" --bubbles \"../assets/pizarro/${base}-bubbles.json\" --output \"../assets/pizarro/${base}-ocr.json\"); done",
+    "extract:all": "bun run extract:panels && bun run extract:bubbles && bun run extract:ocr",
     "generate": "bun run generator/generate-pages.ts",
     "serve": "bun run generator/serve.ts",
     "build": "bun run extract:all && bun run generate"
