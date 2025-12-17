@@ -47,7 +47,11 @@ uv run extract.py <input-image>
 
 ### ocr
 
-To translate the text items, we need to read them from images and convert them to text. `ocr` module is responsible for this.
+To translate the text items, we need to read them from images and convert them to text. `ocr` module is responsible for this. `ocr` uses paddleOCR under the hood to do character regognition on the extracted bubble regions, and writes them to a new JSON file.
+
+### translator
+
+Translator module translates the detected text using Anthropics API, and produces a JSON file which contains the bounding boxes of the bubbles we detected earlier, and its translation, some keywords from translated text, and grammar notes where applicable.
 
 
 ### Static site generator

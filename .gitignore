@@ -1,5 +1,8 @@
 **/node_modules
 
+# Environment variables
+.env
+
 # Biome
 .biome/
 
@@ -18,6 +21,9 @@ Thumbs.db
 *-debug.png
 *-debug-*.png
 *-annotated.png
+
+# Translation logs
+translator/translator/logs
 
 # Generated page HTML files
 reader/*/page*.html

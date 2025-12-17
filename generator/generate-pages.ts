@@ -93,7 +93,10 @@ function readPanelData(albumFolder: string, pageNum: number): PanelData | null {
   }
 }
 
-function readBubbleData(albumFolder: string, pageNum: number): BubbleDetection[] {
+function readBubbleData(
+  albumFolder: string,
+  pageNum: number,
+): BubbleDetection[] {
   const bubblePath = `./assets/${albumFolder}/page${pageNum}-bubbles.json`;
   try {
     const content = fs.readFileSync(bubblePath, "utf-8");
@@ -108,7 +111,10 @@ function readBubbleData(albumFolder: string, pageNum: number): BubbleDetection[]
   }
 }
 
-function readOcrData(albumFolder: string, pageNum: number): Map<string, BubbleDetection> {
+function readOcrData(
+  albumFolder: string,
+  pageNum: number,
+): Map<string, BubbleDetection> {
   const ocrPath = `./assets/${albumFolder}/page${pageNum}-ocr.json`;
   const ocrMap = new Map<string, BubbleDetection>();
 
@@ -128,15 +134,18 @@ function readOcrData(albumFolder: string, pageNum: number): Map<string, BubbleDe
   return ocrMap;
 }
 
-function mergeBubbleWithOcr(bubbles: BubbleDetection[], ocrMap: Map<string, BubbleDetection>): BubbleDetection[] {
-  return bubbles.map(bubble => {
+function mergeBubbleWithOcr(
+  bubbles: BubbleDetection[],
+  ocrMap: Map<string, BubbleDetection>,
+): BubbleDetection[] {
+  return bubbles.map((bubble) => {
     const key = `${bubble.bbox.x1},${bubble.bbox.y1},${bubble.bbox.x2},${bubble.bbox.y2}`;
     const ocrData = ocrMap.get(key);
 
     if (ocrData && ocrData.ocr_result) {
       return {
         ...bubble,
-        ocr_result: ocrData.ocr_result
+        ocr_result: ocrData.ocr_result,
       };
     }
 

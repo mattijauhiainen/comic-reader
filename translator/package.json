@@ -1,0 +1,14 @@
+{
+  "name": "translator",
+  "version": "0.1.0",
+  "description": "Comic book Chinese-to-English translation tool using Anthropic API",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "translate": "bun run src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "latest"
+  }
+}

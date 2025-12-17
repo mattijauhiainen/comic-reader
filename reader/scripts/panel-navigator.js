@@ -8,7 +8,6 @@ let totalPages = 1;
 let panels = [];
 let imageSize = { width: 0, height: 0 };
 
-
 /**
  * Calculate transform values to zoom to a panel
  */
