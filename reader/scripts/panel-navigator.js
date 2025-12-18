@@ -8,6 +8,9 @@ let totalPages = 1;
 let panels = [];
 let imageSize = { width: 0, height: 0 };
 
+// Navigation callbacks
+let navigationCallbacks = [];
+
 /**
  * Calculate transform values to zoom to a panel
  */
@@ -88,9 +91,24 @@ function zoomToFullPage() {
 }
 
 /**
+ * Trigger navigation callbacks
+ */
+function triggerNavigationCallbacks() {
+  navigationCallbacks.forEach(callback => {
+    try {
+      callback();
+    } catch (error) {
+      console.error("Navigation callback error:", error);
+    }
+  });
+}
+
+/**
  * Navigate to next panel or page
  */
 function goNext() {
+  triggerNavigationCallbacks();
+
   if (currentPanel === null) {
     // Currently viewing full page → zoom to first panel
     if (panels.length > 0) {
@@ -118,6 +136,8 @@ function goNext() {
  * Navigate to previous panel or page
  */
 function goBack() {
+  triggerNavigationCallbacks();
+
   if (currentPanel === null) {
     // Currently viewing full page → go to previous page (full view)
     if (currentPage > 1) {
@@ -215,3 +235,17 @@ if (document.readyState === "loading") {
 } else {
   initialize();
 }
+
+/**
+ * Public API for integration with other modules
+ */
+window.panelNavigator = {
+  /**
+   * Register a callback to be called when navigation occurs
+   */
+  onNavigate: function (callback) {
+    if (typeof callback === 'function') {
+      navigationCallbacks.push(callback);
+    }
+  }
+};

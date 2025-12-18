@@ -77,6 +77,50 @@ interface OcrData {
   processed_at: string;
 }
 
+interface TranslationResult {
+  bbox: {
+    x1: number;
+    y1: number;
+    x2: number;
+    y2: number;
+  };
+  original_text: string;
+  translation_result: {
+    chinese_text: string;
+    translation: string;
+    sentences: Array<{
+      chinese_text: string;
+      english_translation: string;
+      vocabulary: Array<{
+        word: string;
+        translation: string;
+        romanization: string;
+      }>;
+      grammar_points?: Array<{
+        pattern: string;
+        explanation: string;
+        example: string;
+      }>;
+    }>;
+  };
+  api_metadata: {
+    model: string;
+    tokens_used: number;
+  };
+}
+
+interface TranslationData {
+  metadata: {
+    source_ocr_file: string;
+    processed_at: string;
+    total_bubbles: number;
+    translated_bubbles: number;
+    skipped_bubbles: number;
+    total_tokens: number;
+  };
+  translations: TranslationResult[];
+}
+
 interface AlbumConfig {
   albumFolder: string; // Subfolder name (e.g., "pizarro")
   albumTitle: string; // Display title (e.g., "Pizarro")
@@ -134,6 +178,21 @@ function readOcrData(
   return ocrMap;
 }
 
+function readTranslationData(
+  albumFolder: string,
+  pageNum: number,
+): TranslationResult[] {
+  const translationPath = `./assets/${albumFolder}/page${pageNum}-translation.json`;
+  try {
+    const content = fs.readFileSync(translationPath, "utf-8");
+    const data: TranslationData = JSON.parse(content);
+    return data.translations || [];
+  } catch (error) {
+    // Translation file doesn't exist yet - this is normal for pages 2+
+    return [];
+  }
+}
+
 function mergeBubbleWithOcr(
   bubbles: BubbleDetection[],
   ocrMap: Map<string, BubbleDetection>,
@@ -166,6 +225,7 @@ function generatePageHTML(
   const panelData = readPanelData(albumFolder, pageNum);
   const bubbleDetections = readBubbleData(albumFolder, pageNum);
   const ocrMap = readOcrData(albumFolder, pageNum);
+  const translations = readTranslationData(albumFolder, pageNum);
 
   // Merge OCR data with bubble detections
   const bubblesWithOcr = mergeBubbleWithOcr(bubbleDetections, ocrMap);
@@ -183,6 +243,7 @@ function generatePageHTML(
   <link rel="stylesheet" href="../styles/reader.css">
   <link rel="stylesheet" href="../styles/transitions.css">
   <link rel="stylesheet" href="../styles/bubble-debug.css">
+  <link rel="stylesheet" href="../styles/translation-overlay.css">
   ${preloadLink}
 
   <script>
@@ -194,12 +255,15 @@ function generatePageHTML(
       imagePath: "${info.imagePath}",
       dimensions: ${JSON.stringify(dimensions)},
       panels: ${JSON.stringify(panels)},
-      bubbles: ${JSON.stringify(bubblesWithOcr)}
+      bubbles: ${JSON.stringify(bubblesWithOcr)},
+      translations: ${JSON.stringify(translations)}
     };
   </script>
   <script src="../scripts/transition-direction.js"></script>
   <script type="module" src="../scripts/panel-navigator.js"></script>
   <script type="module" src="../scripts/bubble-debug.js"></script>
+  <script type="module" src="../scripts/translation-overlay.js"></script>
+  <script type="module" src="../scripts/translation-bubbles.js"></script>
 </head>
 <body class="comic-page">
   <a href="../index.html" class="back-link">Back to Albums</a>
@@ -207,6 +271,7 @@ function generatePageHTML(
   <main class="viewport">
     <img id="pageImage" src="${info.imagePath}" alt="Page ${info.pageNum}">
     <div class="bubble-overlay" id="bubbleOverlay"></div>
+    <div class="translation-bubbles-overlay" id="translationBubblesOverlay"></div>
   </main>
 
   <footer>
