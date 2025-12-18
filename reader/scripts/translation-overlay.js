@@ -259,62 +259,29 @@ export class TranslationOverlayManager {
    * Calculate optimal overlay position based on viewport and bubble location
    */
   calculatePosition(bubbleBounds, overlayRect, viewport) {
-    const isMobilePortrait =
-      viewport.width <= 768 && viewport.width < viewport.height;
-    const isMobileLandscape =
-      viewport.width <= 768 && viewport.width >= viewport.height;
-    const isDesktop = viewport.width > 768;
-
     const SPACING = 20; // Minimum spacing from bubble and edges
     const NAV_HEIGHT = 60; // Navigation footer height
     const BACK_BUTTON_HEIGHT = 50; // Back button at top
 
-    if (isMobilePortrait) {
-      // Mobile portrait: full width, above or below bubble
-      const width = `calc(100vw - ${SPACING * 2}px)`;
-      const left = `${SPACING}px`;
-      const right = "auto";
+    // Full width, above or below bubble
+    const width = `min(calc(100vw - ${SPACING * 2}px), 600px)`;
+    const left = `${SPACING}px`;
+    const right = "auto";
 
-      // Decide above or below based on bubble position
-      const bubbleCenter = bubbleBounds.top + bubbleBounds.height / 2;
-      const isTopHalf = bubbleCenter < viewport.height / 2;
+    // Decide above or below based on bubble position
+    const bubbleCenter = bubbleBounds.top + bubbleBounds.height / 2;
+    const isTopHalf = bubbleCenter < viewport.height / 2;
 
-      if (isTopHalf) {
-        // Position below bubble
-        const top = `${Math.round(bubbleBounds.bottom + SPACING)}px`;
-        const maxHeight = `calc(100vh - ${Math.round(bubbleBounds.bottom + SPACING + NAV_HEIGHT + SPACING)}px)`;
-        return { top, left, right, bottom: "auto", width, maxHeight };
-      }
-      // Position above bubble
-      const bottom = `${Math.round(viewport.height - bubbleBounds.top + SPACING)}px`;
-      const maxHeight = `calc(100vh - ${Math.round(viewport.height - bubbleBounds.top + SPACING + BACK_BUTTON_HEIGHT + SPACING)}px)`;
-      return { top: "auto", left, right, bottom, width, maxHeight };
+    if (isTopHalf) {
+      // Position below bubble
+      const top = `${Math.round(bubbleBounds.bottom + SPACING)}px`;
+      const maxHeight = `calc(100vh - ${Math.round(bubbleBounds.bottom + SPACING + NAV_HEIGHT + SPACING)}px)`;
+      return { top, left, right, bottom: "auto", width, maxHeight };
     }
-
-    // Landscape or desktop: fixed width, left or right side
-    const overlayWidth = isMobileLandscape ? 400 : 480;
-    const width = `${overlayWidth}px`;
-
-    // Decide left or right based on bubble position
-    const bubbleCenterX = bubbleBounds.left + bubbleBounds.width / 2;
-    const isLeftHalf = bubbleCenterX < viewport.width / 2;
-
-    if (isLeftHalf) {
-      // Position on right side
-      const left = `${Math.round(bubbleBounds.right + SPACING)}px`;
-      const topPos = Math.max(SPACING, bubbleBounds.top);
-      const top = `${Math.round(topPos)}px`;
-      const maxHeight = `calc(100vh - ${Math.round(topPos)}px - ${NAV_HEIGHT + SPACING}px)`;
-      return { top, left, right: "auto", bottom: "auto", width, maxHeight };
-    }
-
-    // Position on left side
-    const right = `${Math.round(viewport.width - bubbleBounds.left + SPACING)}px`;
-    const topPos = Math.max(SPACING, bubbleBounds.top);
-    const top = `${Math.round(topPos)}px`;
-    const maxHeight = `calc(100vh - ${Math.round(topPos)}px - ${NAV_HEIGHT + SPACING}px)`;
-    return { top, left: "auto", right, bottom: "auto", width, maxHeight };
-
+    // Position above bubble
+    const bottom = `${Math.round(viewport.height - bubbleBounds.top + SPACING)}px`;
+    const maxHeight = `calc(100vh - ${Math.round(viewport.height - bubbleBounds.top + SPACING + BACK_BUTTON_HEIGHT + SPACING)}px)`;
+    return { top: "auto", left, right, bottom, width, maxHeight };
   }
 
   /**

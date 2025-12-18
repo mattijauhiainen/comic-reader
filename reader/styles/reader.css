@@ -102,6 +102,11 @@ footer {
   padding: 0.5rem 0.75rem;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 4px;
+  /* 
+   * Make sure footer appears on top of the bubble overlay.
+   * TODO: Use DOM order if possible for this.
+   */
+  z-index: 100;
 }
 
 footer nav {
