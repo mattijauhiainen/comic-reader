@@ -166,7 +166,9 @@ async function main() {
     console.log(`Estimated cost:     $${totalCost.toFixed(4)}`);
     console.log("=".repeat(50));
     if (args.debug) {
-      console.log("\n✓ Debug run complete (no API calls made, no output saved)!");
+      console.log(
+        "\n✓ Debug run complete (no API calls made, no output saved)!",
+      );
     } else {
       console.log("\n✓ Translation complete!");
     }

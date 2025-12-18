@@ -1,3 +1,5 @@
+import { getSpacing, getElementHeight } from "./spacing-utils.js";
+
 /**
  * TranslationOverlayManager
  * Manages the display of translation overlays with smart positioning
@@ -259,12 +261,15 @@ export class TranslationOverlayManager {
    * Calculate optimal overlay position based on viewport and bubble location
    */
   calculatePosition(bubbleBounds, overlayRect, viewport) {
-    const SPACING = 20; // Minimum spacing from bubble and edges
-    const NAV_HEIGHT = 60; // Navigation footer height
-    const BACK_BUTTON_HEIGHT = 50; // Back button at top
+    // Get spacing from CSS variables (single source of truth)
+    const SPACING = getSpacing(3); // --spacing-3 (24px) - minimum spacing from bubble and edges
+
+    // Get actual element heights from DOM
+    const NAV_HEIGHT = getElementHeight("footer") || 64; // Fallback to 64px if not found
+    const BACK_BUTTON_HEIGHT = getElementHeight(".back-link") || 48; // Fallback to 48px if not found
 
     // Full width, above or below bubble
-    const width = `min(calc(100vw - ${SPACING * 2}px), 600px)`;
+    const width = `min(calc(100vw - ${SPACING * 2}px), 400px)`;
     const left = `${SPACING}px`;
     const right = "auto";
 

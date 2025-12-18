@@ -33,15 +33,15 @@ function replaceQuotesWithJapanese(text: string): string {
 
   return text.replace(/[""\u2018\u2019\u201C\u201D]/g, (match) => {
     // Handle fancy Unicode quotes
-    if (match === '\u201C' || match === '\u2018') {
-      return '「'; // Opening quote (" or ')
+    if (match === "\u201C" || match === "\u2018") {
+      return "「"; // Opening quote (" or ')
     }
-    if (match === '\u201D' || match === '\u2019') {
-      return '」'; // Closing quote (" or ')
+    if (match === "\u201D" || match === "\u2019") {
+      return "」"; // Closing quote (" or ')
     }
 
     // For ASCII quotes, alternate between opening and closing
-    const replacement = isOpening ? '「' : '」';
+    const replacement = isOpening ? "「" : "」";
     isOpening = !isOpening;
     return replacement;
   });

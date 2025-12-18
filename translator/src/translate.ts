@@ -56,7 +56,9 @@ export async function processOcrFile(
 
     try {
       // Call Anthropic API
-      console.log(debug ? "  🐛 Debug mode: Logging prompt..." : "  🔄 Translating...");
+      console.log(
+        debug ? "  🐛 Debug mode: Logging prompt..." : "  🔄 Translating...",
+      );
       const result = await translateText(
         fullText,
         apiKey,

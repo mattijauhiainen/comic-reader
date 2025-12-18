@@ -1,0 +1,14 @@
+/**
+ * Design System Variables
+ * 8px grid spacing system
+ */
+
+:root {
+  /* Spacing - 8px grid (4px exception) */
+  --spacing-0-5: 4px;   /* Exception - half unit */
+  --spacing-1: 8px;     /* 1x base grid unit */
+  --spacing-2: 16px;    /* 2x grid */
+  --spacing-3: 24px;    /* 3x grid */
+  --spacing-4: 32px;    /* 4x grid */
+  --spacing-5: 40px;    /* 5x grid */
+}

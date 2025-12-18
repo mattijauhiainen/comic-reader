@@ -1,3 +1,5 @@
+import { getSpacing } from "./spacing-utils.js";
+
 /**
  * PanelNavigator class - manages comic page navigation and panel zooming
  */
@@ -20,7 +22,7 @@ class PanelNavigator {
    * Calculate transform values to zoom to a panel
    */
   calculateZoomTransform(panel, imageSize, viewportSize) {
-    const padding = 20; // px padding around panel
+    const padding = getSpacing(3); // --spacing-3 (24px) padding around panel
 
     // Get the actual rendered size of the image (after CSS object-fit: contain)
     const img = this.getImage();
