@@ -242,7 +242,6 @@ function generatePageHTML(
   <title>${info.albumTitle} - Page ${info.pageNum}</title>
   <link rel="stylesheet" href="../styles/reader.css">
   <link rel="stylesheet" href="../styles/transitions.css">
-  <link rel="stylesheet" href="../styles/bubble-debug.css">
   <link rel="stylesheet" href="../styles/translation-overlay.css">
   ${preloadLink}
 
@@ -261,7 +260,6 @@ function generatePageHTML(
   </script>
   <script src="../scripts/transition-direction.js"></script>
   <script type="module" src="../scripts/panel-navigator.js"></script>
-  <script type="module" src="../scripts/bubble-debug.js"></script>
   <script type="module" src="../scripts/translation-overlay.js"></script>
   <script type="module" src="../scripts/translation-bubbles.js"></script>
 </head>
@@ -289,7 +287,7 @@ function generatePageHTML(
 function scanAssets(albumFolder: string): number {
   const assetsDir = `./assets/${albumFolder}`;
   const files = fs.readdirSync(assetsDir);
-  const jsonFiles = files.filter((f) => f.endsWith(".json"));
+  const jsonFiles = files.filter((f) => /^page\d+\.json$/.test(f));
   return jsonFiles.length;
 }
 

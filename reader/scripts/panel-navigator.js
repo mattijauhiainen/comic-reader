@@ -1,6 +1,3 @@
-// Panel-level navigation with zoom
-// Manages state and transitions between full page view and individual panels
-
 /**
  * PanelNavigator class - manages comic page navigation and panel zooming
  */
@@ -15,6 +12,10 @@ class PanelNavigator {
     this.navigationCallbacks = [];
   }
 
+  getImage() {
+    return document.querySelector(".viewport img");
+  }
+
   /**
    * Calculate transform values to zoom to a panel
    */
@@ -22,7 +23,7 @@ class PanelNavigator {
     const padding = 20; // px padding around panel
 
     // Get the actual rendered size of the image (after CSS object-fit: contain)
-    const img = document.querySelector(".viewport img");
+    const img = this.getImage();
     const renderedWidth = img.clientWidth;
     const renderedHeight = img.clientHeight;
 
@@ -79,8 +80,7 @@ class PanelNavigator {
       { width: window.innerWidth, height: window.innerHeight },
     );
 
-    const img = document.querySelector(".viewport img");
-    // Use modern CSS translate and scale properties
+    const img = this.getImage();
     img.style.translate = `${translateX}px ${translateY}px`;
     img.style.scale = scale;
   }
@@ -89,16 +89,35 @@ class PanelNavigator {
    * Reset zoom to show full page
    */
   zoomToFullPage() {
-    const img = document.querySelector(".viewport img");
-    // Reset to default translate and scale
+    const img = this.getImage();
     img.style.translate = "0px 0px";
     img.style.scale = "1";
   }
 
   /**
-   * Trigger navigation callbacks
+   * Trigger navigation callbacks after zoom animation completes
    */
   triggerNavigationCallbacks() {
+    const img = this.getImage();
+    const onTransitionEnd = (e) => {
+      // Only respond to translate or scale transitions on the image element
+      if (
+        e.target === img &&
+        (e.propertyName === "translate" || e.propertyName === "scale")
+      ) {
+        // Remove listener to avoid firing multiple times
+        img.removeEventListener("transitionend", onTransitionEnd);
+        this.executeCallbacks();
+      }
+    };
+
+    img.addEventListener("transitionend", onTransitionEnd);
+  }
+
+  /**
+   * Execute all registered callbacks
+   */
+  executeCallbacks() {
     for (const callback of this.navigationCallbacks) {
       try {
         callback();
@@ -161,11 +180,7 @@ class PanelNavigator {
     }
   }
 
-  /**
-   * Navigate to a different page
-   */
   navigateToPage(pageNum) {
-    // Simple page navigation - new page always loads in full view
     window.location.href = `page${pageNum}.html`;
   }
 
@@ -248,9 +263,7 @@ class PanelNavigator {
    * @param {Function} callback - Function to call on navigation
    */
   onNavigate(callback) {
-    if (typeof callback === "function") {
-      this.navigationCallbacks.push(callback);
-    }
+    this.navigationCallbacks.push(callback);
   }
 }
 

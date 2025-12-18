@@ -11,7 +11,6 @@ let translationBubbleElements = [];
 
 /**
  * Calculate the rendered image dimensions and position
- * (Same logic as bubble-debug.js)
  */
 function getImageRenderInfo() {
   const img = document.querySelector(".viewport img");
@@ -36,7 +35,6 @@ function getImageRenderInfo() {
 
 /**
  * Transform bubble coordinates from original image space to rendered screen space
- * (Same logic as bubble-debug.js)
  */
 function transformBubbleCoordinates(bbox, imageSize, renderInfo) {
   // Calculate the scale factor (how much the image is scaled)
@@ -136,11 +134,11 @@ function renderTranslationBubbles() {
   }
 
   // Clear existing translation bubbles
-  translationBubbleElements.forEach((el) => {
+  for (const el of translationBubbleElements) {
     if (el.parentNode) {
       el.parentNode.removeChild(el);
     }
-  });
+  }
   translationBubbleElements = [];
 
   // Get translation data and image info
@@ -183,7 +181,6 @@ function handleResize() {
  * Initialize translation bubbles system
  */
 function initialize() {
-  // Initialize translation overlay manager with the imported navigator
   translationOverlayManager = new TranslationOverlayManager(panelNavigator);
 
   // Wait for image to load before rendering bubbles
@@ -201,11 +198,9 @@ function initialize() {
   }
 
   // Re-render bubbles when panel navigation occurs (zoom changes)
+  // Callbacks are fired after the transition completes
   panelNavigator.onNavigate(() => {
-    // Use a small timeout to let the CSS transform complete
-    setTimeout(() => {
-      renderTranslationBubbles();
-    }, 500);
+    renderTranslationBubbles();
   });
 
   // Handle window resize
