@@ -1,6 +1,5 @@
 /**
  * Translation Overlay Styles
- * Responsive styling for translation popups
  */
 
 /* Container for translation bubble overlays */
@@ -11,12 +10,11 @@
   width: 100%;
   height: 100%;
   pointer-events: none; /* Allow clicks to pass through the container */
-  z-index: 10;
 }
 
 /* Individual translation bubbles are clickable */
-.translation-bubble {
-  pointer-events: auto !important; /* Override container's pointer-events: none */
+.translation-bubbles-overlay .translation-bubble {
+  pointer-events: auto; 
   position: relative;
   overflow: hidden;
 }
@@ -60,9 +58,7 @@
 
   overflow-y: auto;
   overflow-x: hidden;
-
-  z-index: 1000; /* Above image and bubbles, below navigation */
-
+  
   /* Smooth entrance/exit */
   opacity: 0;
   transform: scale(0.95);
@@ -220,87 +216,4 @@
   color: #444;
   line-height: 1.6;
   font-size: 15px;
-}
-
-/* Scrollbar styling */
-.translation-overlay::-webkit-scrollbar {
-  width: 8px;
-}
-
-.translation-overlay::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.translation-overlay::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-.translation-overlay::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Mobile portrait specific adjustments */
-@media (max-width: 768px) and (orientation: portrait) {
-  .translation-content {
-    padding: 16px;
-  }
-
-  .sentence-text .chinese {
-    font-size: 20px;
-  }
-
-  .sentence-text .english {
-    font-size: 15px;
-  }
-
-  .vocab-word {
-    font-size: 20px;
-  }
-
-  .vocab-translation {
-    font-size: 16px;
-  }
-
-  .vocab-romanization {
-    font-size: 15px;
-  }
-
-  .grammar-pattern,
-  .grammar-example {
-    font-size: 20px;
-  }
-
-  .grammar-explanation {
-    font-size: 15px;
-  }
-
-  .full-translation p {
-    font-size: 14px;
-  }
-}
-
-/* Mobile landscape adjustments */
-@media (max-width: 768px) and (orientation: landscape) {
-  .translation-content {
-    padding: 12px;
-  }
-
-  .sentence-block {
-    margin-bottom: 16px;
-    padding-bottom: 16px;
-  }
-}
-
-/* Animation for smooth appearance */
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95) translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
 }

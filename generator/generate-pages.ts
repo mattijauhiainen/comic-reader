@@ -264,14 +264,13 @@ function generatePageHTML(
   <script type="module" src="../scripts/translation-bubbles.js"></script>
 </head>
 <body class="comic-page">
-  <a href="../index.html" class="back-link">Back to Albums</a>
-
   <main class="viewport">
     <img id="pageImage" src="${info.imagePath}" alt="Page ${info.pageNum}">
-    <div class="bubble-overlay" id="bubbleOverlay"></div>
     <div class="translation-bubbles-overlay" id="translationBubblesOverlay"></div>
   </main>
 
+  <a href="../index.html" class="back-link">Back to Albums</a>
+  
   <footer>
     <nav>
       <a id="prevBtn">←</a>
