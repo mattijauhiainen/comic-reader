@@ -10,6 +10,7 @@ class TranslationBubblesManager {
   constructor() {
     this.translationOverlayManager = null;
     this.translationBubbleElements = [];
+    this.hasAnimated = false; // Track if scan animation has played
   }
 
   /**
@@ -73,6 +74,11 @@ class TranslationBubblesManager {
 
     const bubble = document.createElement("div");
     bubble.className = "translation-bubble";
+
+    // Add animation class only on first render
+    if (!this.hasAnimated) {
+      bubble.classList.add("animate-scan");
+    }
 
     // Position and size
     bubble.style.position = "absolute";
@@ -152,6 +158,11 @@ class TranslationBubblesManager {
       );
       overlay.appendChild(bubbleElement);
       this.translationBubbleElements.push(bubbleElement);
+    }
+
+    // Mark animation as played after first render
+    if (!this.hasAnimated) {
+      this.hasAnimated = true;
     }
 
     console.log(`Rendered ${translations.length} translation bubbles`);
