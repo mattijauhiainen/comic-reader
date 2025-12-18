@@ -32,6 +32,10 @@ function parseArgs(): CliArgs {
       case "-m":
         parsed.model = args[++i];
         break;
+      case "--debug":
+      case "-d":
+        parsed.debug = true;
+        break;
       case "--help":
       case "-h":
         printHelp();
@@ -68,6 +72,7 @@ Options:
   -o, --output <file>    Output path (default: <input>-translation.json)
   -a, --album <name>     Comic album/series name (optional, adds context to prompt)
   -m, --model <model>    Anthropic model to use (default: claude-sonnet-4-5-20250929)
+  -d, --debug            Debug mode: log prompts, skip API calls, don't save output
   -h, --help             Show this help message
 
 Environment Variables:
@@ -102,9 +107,9 @@ async function main() {
     process.exit(1);
   }
 
-  // Load API key from environment
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) {
+  // Load API key from environment (not required in debug mode)
+  const apiKey = process.env.ANTHROPIC_API_KEY || "";
+  if (!apiKey && !args.debug) {
     console.error("Error: ANTHROPIC_API_KEY environment variable not set\n");
     console.error("Please create a .env file with:");
     console.error("  ANTHROPIC_API_KEY=sk-ant-api03-your-key-here\n");
@@ -124,6 +129,9 @@ async function main() {
   if (args.model) {
     console.log(`Model:  ${args.model}`);
   }
+  if (args.debug) {
+    console.log(`Mode:   DEBUG (no API calls, no output file)`);
+  }
   console.log("");
 
   try {
@@ -133,11 +141,14 @@ async function main() {
       apiKey,
       args.album,
       args.model,
+      args.debug,
     );
 
-    // Write output JSON
-    console.log(`\nWriting output to: ${outputPath}`);
-    await Bun.write(outputPath, JSON.stringify(result, null, 2));
+    // Write output JSON (skip in debug mode)
+    if (!args.debug) {
+      console.log(`\nWriting output to: ${outputPath}`);
+      await Bun.write(outputPath, JSON.stringify(result, null, 2));
+    }
 
     // Display summary
     console.log("\n" + "=".repeat(50));
@@ -154,7 +165,11 @@ async function main() {
     const totalCost = inputCost + outputCost;
     console.log(`Estimated cost:     $${totalCost.toFixed(4)}`);
     console.log("=".repeat(50));
-    console.log("\n✓ Translation complete!");
+    if (args.debug) {
+      console.log("\n✓ Debug run complete (no API calls made, no output saved)!");
+    } else {
+      console.log("\n✓ Translation complete!");
+    }
   } catch (error) {
     console.error(
       `\n✗ Error: ${error instanceof Error ? error.message : "Unknown error"}`,

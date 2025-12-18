@@ -109,4 +109,5 @@ export interface CliArgs {
   output?: string;
   album?: string;
   model?: string;
+  debug?: boolean;
 }

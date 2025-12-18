@@ -16,6 +16,7 @@ export async function processOcrFile(
   apiKey: string,
   album?: string,
   model?: string,
+  debug?: boolean,
 ): Promise<TranslationJson> {
   // Load and parse OCR JSON
   console.log(`Loading OCR file: ${inputPath}`);
@@ -55,13 +56,14 @@ export async function processOcrFile(
 
     try {
       // Call Anthropic API
-      console.log("  🔄 Translating...");
+      console.log(debug ? "  🐛 Debug mode: Logging prompt..." : "  🔄 Translating...");
       const result = await translateText(
         fullText,
         apiKey,
         album,
         model,
         bubbleNum,
+        debug,
       );
 
       // Store translation result

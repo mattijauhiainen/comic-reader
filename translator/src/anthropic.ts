@@ -26,10 +26,37 @@ interface AnthropicApiResponse {
 }
 
 /**
+ * Replace quotation marks with Japanese corner brackets
+ */
+function replaceQuotesWithJapanese(text: string): string {
+  let isOpening = true;
+
+  return text.replace(/[""\u2018\u2019\u201C\u201D]/g, (match) => {
+    // Handle fancy Unicode quotes
+    if (match === '\u201C' || match === '\u2018') {
+      return '「'; // Opening quote (" or ')
+    }
+    if (match === '\u201D' || match === '\u2019') {
+      return '」'; // Closing quote (" or ')
+    }
+
+    // For ASCII quotes, alternate between opening and closing
+    const replacement = isOpening ? '「' : '」';
+    isOpening = !isOpening;
+    return replacement;
+  });
+}
+
+/**
  * Build the translation prompt with Chinese text
  */
 function buildPrompt(text: string, album?: string): string {
   const sourceContext = album ? ` The text is from ${album}.` : "";
+
+  // Replace quotation marks with Japanese quotes. Sonnet isn't very good at escaping
+  // JSON and often comes up with responses where the text has unescaped quotation marks.
+  // Work around this by replacing the quotes with Japanese quotes and call it a feature.
+  const textWithJapaneseQuotes = replaceQuotesWithJapanese(text);
 
   return `I want you to help me to create a translation aid for this comic book speech bubble text.${sourceContext}
 
@@ -71,7 +98,7 @@ Here is a sample JSON that I want you to match:
 }
 
 Here is the chinese text:
-${text}`;
+${textWithJapaneseQuotes}`;
 }
 
 /**
@@ -261,11 +288,31 @@ export async function translateText(
   album?: string,
   model: string = DEFAULT_MODEL,
   bubbleNum?: number,
+  debug?: boolean,
 ): Promise<{
   translation: AnthropicResponse;
   tokens: { input: number; output: number };
 }> {
   const prompt = buildPrompt(text, album);
+
+  // In debug mode, just log the prompt and return mock data
+  if (debug) {
+    console.log("\n" + "=".repeat(80));
+    console.log(`DEBUG: Prompt for bubble ${bubbleNum || "unknown"}`);
+    console.log("=".repeat(80));
+    console.log(prompt);
+    console.log("=".repeat(80) + "\n");
+
+    // Return mock response
+    return {
+      translation: {
+        chinese_text: text,
+        translation: "[DEBUG MODE - NO TRANSLATION]",
+        sentences: [],
+      },
+      tokens: { input: 0, output: 0 },
+    };
+  }
 
   const apiResponse = await callAnthropicWithRetry(prompt, apiKey, model);
 
