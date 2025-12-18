@@ -3,7 +3,8 @@
  * Renders clickable overlays for translations and manages interaction
  */
 
-import { TranslationOverlayManager } from './translation-overlay.js';
+import { TranslationOverlayManager } from "./translation-overlay.js";
+import panelNavigator from "./panel-navigator.js";
 
 let translationOverlayManager = null;
 let translationBubbleElements = [];
@@ -63,7 +64,11 @@ function transformBubbleCoordinates(bbox, imageSize, renderInfo) {
  * Create a clickable translation bubble overlay element
  */
 function createTranslationBubble(translation, imageSize, renderInfo) {
-  const coords = transformBubbleCoordinates(translation.bbox, imageSize, renderInfo);
+  const coords = transformBubbleCoordinates(
+    translation.bbox,
+    imageSize,
+    renderInfo,
+  );
 
   const bubble = document.createElement("div");
   bubble.className = "translation-bubble";
@@ -131,7 +136,7 @@ function renderTranslationBubbles() {
   }
 
   // Clear existing translation bubbles
-  translationBubbleElements.forEach(el => {
+  translationBubbleElements.forEach((el) => {
     if (el.parentNode) {
       el.parentNode.removeChild(el);
     }
@@ -155,7 +160,11 @@ function renderTranslationBubbles() {
 
   // Create translation bubble elements
   for (const translation of translations) {
-    const bubbleElement = createTranslationBubble(translation, imageSize, renderInfo);
+    const bubbleElement = createTranslationBubble(
+      translation,
+      imageSize,
+      renderInfo,
+    );
     overlay.appendChild(bubbleElement);
     translationBubbleElements.push(bubbleElement);
   }
@@ -171,31 +180,11 @@ function handleResize() {
 }
 
 /**
- * Get reference to the panel navigator for zoom integration
- */
-function getPanelNavigator() {
-  // Wait for window.panelNavigator to be available
-  // panel-navigator.js creates this global object
-  if (window.panelNavigator) {
-    return window.panelNavigator;
-  }
-
-  // Fallback stub if panel-navigator hasn't initialized yet
-  console.warn("Panel navigator not yet initialized, using fallback");
-  return {
-    onNavigate: () => { }, // No-op fallback
-  };
-}
-
-/**
  * Initialize translation bubbles system
  */
 function initialize() {
-  // Get panel navigator instance
-  const navigator = getPanelNavigator();
-
-  // Initialize translation overlay manager
-  translationOverlayManager = new TranslationOverlayManager(navigator);
+  // Initialize translation overlay manager with the imported navigator
+  translationOverlayManager = new TranslationOverlayManager(panelNavigator);
 
   // Wait for image to load before rendering bubbles
   const img = document.querySelector(".viewport img");
@@ -205,21 +194,19 @@ function initialize() {
       renderTranslationBubbles();
     } else {
       // Wait for image to load
-      img.addEventListener('load', () => {
+      img.addEventListener("load", () => {
         renderTranslationBubbles();
       });
     }
   }
 
   // Re-render bubbles when panel navigation occurs (zoom changes)
-  if (navigator && navigator.onNavigate) {
-    navigator.onNavigate(() => {
-      // Use a small timeout to let the CSS transform complete
-      setTimeout(() => {
-        renderTranslationBubbles();
-      }, 500);
-    });
-  }
+  panelNavigator.onNavigate(() => {
+    // Use a small timeout to let the CSS transform complete
+    setTimeout(() => {
+      renderTranslationBubbles();
+    }, 500);
+  });
 
   // Handle window resize
   let resizeTimeout;
