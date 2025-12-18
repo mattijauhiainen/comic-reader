@@ -61,7 +61,7 @@ export class TranslationOverlayManager {
 
     // Wait for animation to complete before removing
     setTimeout(() => {
-      if (this.overlayElement && this.overlayElement.parentNode) {
+      if (this.overlayElement?.parentNode) {
         this.overlayElement.parentNode.removeChild(this.overlayElement);
       }
       this.overlayElement = null;
@@ -140,7 +140,7 @@ export class TranslationOverlayManager {
       const vocabList = document.createElement("ul");
       vocabList.className = "vocabulary-list";
 
-      sentence.vocabulary.forEach((vocab) => {
+      for (const vocab of sentence.vocabulary) {
         const item = document.createElement("li");
 
         const word = document.createElement("span");
@@ -159,7 +159,7 @@ export class TranslationOverlayManager {
         item.appendChild(romanization);
         item.appendChild(translation);
         vocabList.appendChild(item);
-      });
+      }
 
       vocabSection.appendChild(vocabList);
       block.appendChild(vocabSection);
@@ -174,7 +174,7 @@ export class TranslationOverlayManager {
       grammarHeading.textContent = "Grammar";
       grammarSection.appendChild(grammarHeading);
 
-      sentence.grammar_points.forEach((point) => {
+      for (const point of sentence.grammar_points) {
         const grammarPoint = document.createElement("div");
         grammarPoint.className = "grammar-point";
 
@@ -194,7 +194,7 @@ export class TranslationOverlayManager {
         grammarPoint.appendChild(explanation);
         grammarPoint.appendChild(example);
         grammarSection.appendChild(grammarPoint);
-      });
+      }
 
       block.appendChild(grammarSection);
     }
@@ -284,37 +284,37 @@ export class TranslationOverlayManager {
         const top = `${Math.round(bubbleBounds.bottom + SPACING)}px`;
         const maxHeight = `calc(100vh - ${Math.round(bubbleBounds.bottom + SPACING + NAV_HEIGHT + SPACING)}px)`;
         return { top, left, right, bottom: "auto", width, maxHeight };
-      } else {
-        // Position above bubble
-        const bottom = `${Math.round(viewport.height - bubbleBounds.top + SPACING)}px`;
-        const maxHeight = `calc(100vh - ${Math.round(viewport.height - bubbleBounds.top + SPACING + BACK_BUTTON_HEIGHT + SPACING)}px)`;
-        return { top: "auto", left, right, bottom, width, maxHeight };
       }
-    } else {
-      // Landscape or desktop: fixed width, left or right side
-      const overlayWidth = isMobileLandscape ? 400 : 480;
-      const width = `${overlayWidth}px`;
-
-      // Decide left or right based on bubble position
-      const bubbleCenterX = bubbleBounds.left + bubbleBounds.width / 2;
-      const isLeftHalf = bubbleCenterX < viewport.width / 2;
-
-      if (isLeftHalf) {
-        // Position on right side
-        const left = `${Math.round(bubbleBounds.right + SPACING)}px`;
-        const topPos = Math.max(SPACING, bubbleBounds.top);
-        const top = `${Math.round(topPos)}px`;
-        const maxHeight = `calc(100vh - ${Math.round(topPos)}px - ${NAV_HEIGHT + SPACING}px)`;
-        return { top, left, right: "auto", bottom: "auto", width, maxHeight };
-      } else {
-        // Position on left side
-        const right = `${Math.round(viewport.width - bubbleBounds.left + SPACING)}px`;
-        const topPos = Math.max(SPACING, bubbleBounds.top);
-        const top = `${Math.round(topPos)}px`;
-        const maxHeight = `calc(100vh - ${Math.round(topPos)}px - ${NAV_HEIGHT + SPACING}px)`;
-        return { top, left: "auto", right, bottom: "auto", width, maxHeight };
-      }
+      // Position above bubble
+      const bottom = `${Math.round(viewport.height - bubbleBounds.top + SPACING)}px`;
+      const maxHeight = `calc(100vh - ${Math.round(viewport.height - bubbleBounds.top + SPACING + BACK_BUTTON_HEIGHT + SPACING)}px)`;
+      return { top: "auto", left, right, bottom, width, maxHeight };
     }
+
+    // Landscape or desktop: fixed width, left or right side
+    const overlayWidth = isMobileLandscape ? 400 : 480;
+    const width = `${overlayWidth}px`;
+
+    // Decide left or right based on bubble position
+    const bubbleCenterX = bubbleBounds.left + bubbleBounds.width / 2;
+    const isLeftHalf = bubbleCenterX < viewport.width / 2;
+
+    if (isLeftHalf) {
+      // Position on right side
+      const left = `${Math.round(bubbleBounds.right + SPACING)}px`;
+      const topPos = Math.max(SPACING, bubbleBounds.top);
+      const top = `${Math.round(topPos)}px`;
+      const maxHeight = `calc(100vh - ${Math.round(topPos)}px - ${NAV_HEIGHT + SPACING}px)`;
+      return { top, left, right: "auto", bottom: "auto", width, maxHeight };
+    }
+
+    // Position on left side
+    const right = `${Math.round(viewport.width - bubbleBounds.left + SPACING)}px`;
+    const topPos = Math.max(SPACING, bubbleBounds.top);
+    const top = `${Math.round(topPos)}px`;
+    const maxHeight = `calc(100vh - ${Math.round(topPos)}px - ${NAV_HEIGHT + SPACING}px)`;
+    return { top, left: "auto", right, bottom: "auto", width, maxHeight };
+
   }
 
   /**
@@ -357,15 +357,6 @@ export class TranslationOverlayManager {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(this.resizeHandler, 150);
     });
-
-    // Hook into navigation to dismiss on page/panel change
-    if (this.navigator && this.navigator.onNavigate) {
-      this.navigator.onNavigate(() => {
-        if (this.isVisible) {
-          this.hide();
-        }
-      });
-    }
   }
 
   /**
