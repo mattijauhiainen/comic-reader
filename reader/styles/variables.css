@@ -11,4 +11,7 @@
   --spacing-3: 24px;    /* 3x grid */
   --spacing-4: 32px;    /* 4x grid */
   --spacing-5: 40px;    /* 5x grid */
+
+  /* Typography */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
