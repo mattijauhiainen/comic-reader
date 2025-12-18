@@ -7,7 +7,7 @@ const ANTHROPIC_VERSION = "2023-06-01";
 const DEFAULT_MODEL = "claude-sonnet-4-5-20250929";
 const MAX_RETRIES = 3;
 const INITIAL_RETRY_DELAY = 1000; // 1 second
-const LOG_DIR = "translator/logs";
+const LOG_DIR = "logs";
 
 interface AnthropicApiResponse {
   id: string;

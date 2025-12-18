@@ -23,7 +23,7 @@ Thumbs.db
 *-annotated.png
 
 # Translation logs
-translator/translator/logs
+translator/logs
 
 # Generated page HTML files
 reader/*/page*.html

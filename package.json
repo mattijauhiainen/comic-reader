@@ -4,6 +4,7 @@
   "description": "Comics web reader and tooling",
   "type": "module",
   "scripts": {
+    "deploy": "bun run deploy.ts",
     "format": "npx @biomejs/biome format --write .",
     "format:check": "npx @biomejs/biome format .",
     "lint": "npx @biomejs/biome lint .",
