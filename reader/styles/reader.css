@@ -59,6 +59,8 @@ body {
   font-weight: 500;
   box-shadow: 0 2px 8px var(--color-shadow);
   transition: background 0.2s;
+  /* Participate in view transition layer to maintain stacking order during page transitions */
+  view-transition-name: back-link;
 }
 
 .back-link:hover {
@@ -99,6 +101,8 @@ footer {
   padding: var(--spacing-1) var(--spacing-2);
   background: var(--color-surface-overlay);
   border-radius: var(--radius);
+  /* Participate in view transition layer to maintain stacking order during page transitions */
+  view-transition-name: footer-nav;
 }
 
 footer nav {

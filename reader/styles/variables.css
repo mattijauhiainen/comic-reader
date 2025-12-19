@@ -51,4 +51,7 @@
 
   /* Border Radius */
   --radius: 4px; /* Standard border radius */
+
+  /* Animations */
+  --transition-duration: 0.3s; /* Page transition duration */
 }

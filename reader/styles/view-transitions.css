@@ -6,26 +6,26 @@
 /* Default transition for all elements */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 0.3s;
+  animation-duration: var(--transition-duration);
   animation-timing-function: ease-in-out;
 }
 
-/* Slide transition for page image */
-::view-transition-old(page-image) {
-  animation: slide-out-left 0.3s ease-in-out;
+/* Slide transition for page image - only when transitioning between comic pages */
+html.comic-transition::view-transition-old(page-image) {
+  animation: slide-out-left var(--transition-duration) ease-in-out;
 }
 
-::view-transition-new(page-image) {
-  animation: slide-in-right 0.3s ease-in-out;
+html.comic-transition::view-transition-new(page-image) {
+  animation: slide-in-right var(--transition-duration) ease-in-out;
 }
 
 /* Reversed slide transition for backward navigation */
-html.back-navigation::view-transition-old(page-image) {
-  animation: slide-out-right 0.3s ease-in-out;
+html.comic-transition.back-navigation::view-transition-old(page-image) {
+  animation: slide-out-right var(--transition-duration) ease-in-out;
 }
 
-html.back-navigation::view-transition-new(page-image) {
-  animation: slide-in-left 0.3s ease-in-out;
+html.comic-transition.back-navigation::view-transition-new(page-image) {
+  animation: slide-in-left var(--transition-duration) ease-in-out;
 }
 
 /* Keyframe animations */

@@ -34,6 +34,7 @@
     transparent 100%
   );
   animation: bubbleScan 1.5s ease-out;
+  animation-delay: var(--transition-duration); /* Wait for page transition to complete */
   pointer-events: none;
 }
 
