@@ -43,7 +43,7 @@ body {
 }
 
 .album-card p {
-  color: #666;
+  color: var(--color-text-muted);
 }
 
 /* Reader page styles */
@@ -52,17 +52,17 @@ body {
   top: var(--spacing-2);
   left: var(--spacing-2);
   padding: var(--spacing-1) var(--spacing-2);
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--color-surface-overlay);
   border-radius: 4px;
   text-decoration: none;
-  color: #333;
+  color: var(--color-text-body);
   font-weight: 500;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--color-shadow);
   transition: background 0.2s;
 }
 
 .back-link:hover {
-  background: rgba(255, 255, 255, 1);
+  background: var(--color-surface-base);
 }
 
 .viewport {
@@ -97,7 +97,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   padding: var(--spacing-1) var(--spacing-2);
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--color-surface-overlay);
   border-radius: 4px;
 }
 
@@ -111,23 +111,23 @@ footer nav {
 footer nav a {
   padding: var(--spacing-0-5) var(--spacing-1);
   text-decoration: none;
-  color: #000;
+  color: var(--color-text-body);
   font-weight: 400;
   border-radius: 4px;
   transition: background 0.2s;
 }
 
 footer nav a:hover:not(.disabled) {
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--color-hover-overlay);
 }
 
 footer nav a.disabled {
-  color: #ccc;
+  color: var(--color-text-disabled);
   pointer-events: none;
 }
 
 footer nav span {
-  color: #000;
+  color: var(--color-text-body);
 }
 
 /* Responsive design */

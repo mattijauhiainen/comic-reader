@@ -23,4 +23,29 @@
   --font-lg: 1.25rem; /* 20px - Large body, emphasis */
   --font-base: 1rem; /* 16px - Standard body text */
   --font-sm: 0.875rem; /* 14px - Small text, labels */
+
+  /* Text Colors */
+  --color-text-primary: #1a1a1a; /* Emphasis text - Chinese, vocab, key headings */
+  --color-text-body: #333; /* Standard text - navigation, labels */
+  --color-text-secondary: #444; /* Secondary text - translations, explanations */
+  --color-text-muted: #666; /* Tertiary text - metadata, romanization */
+  --color-text-disabled: #ccc; /* Disabled states */
+
+  /* Surface Colors */
+  --color-surface-base: white; /* Main backgrounds */
+  --color-surface-overlay: rgba(255, 255, 255, 0.9); /* Floating UI (footer, back-link) */
+  --color-surface-subtle: #f7f7f7; /* Subtle backgrounds */
+  --color-surface-accent: #f0f8ff; /* Accent sections (full translation) */
+
+  /* Accent Colors */
+  --color-accent-primary: #4a90e2; /* Primary brand blue */
+  --color-accent-primary-subtle: rgba(74, 144, 226, 0.4); /* 40% opacity variant */
+
+  /* Border Colors */
+  --color-border-default: #e0e0e0; /* Standard dividers */
+  --color-border-accent: #d0e8ff; /* Accent borders */
+
+  /* Effects */
+  --color-shadow: rgba(0, 0, 0, 0.2); /* Box shadows */
+  --color-hover-overlay: rgba(0, 0, 0, 0.05); /* Interactive hover states */
 }

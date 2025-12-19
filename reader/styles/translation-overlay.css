@@ -30,7 +30,7 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(74, 144, 226, 0.4) 50%,
+    var(--color-accent-primary-subtle) 50%,
     transparent 100%
   );
   animation: bubbleScan 1.5s ease-out;
@@ -51,10 +51,9 @@
   position: fixed;
   /* Position set dynamically via JS: top, left, right, bottom, width */
 
-  background: white;
-  border: 2px solid #333;
+  background: var(--color-surface-base);
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px var(--color-shadow);
 
   overflow-y: auto;
   overflow-x: hidden;
@@ -83,11 +82,7 @@
 .sentence-block {
   margin-bottom: var(--spacing-3);
   padding-bottom: var(--spacing-3);
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.sentence-block:last-of-type {
-  border-bottom: 2px solid #333; /* Stronger separator before full translation */
+  border-bottom: 1px solid var(--color-border-default);
 }
 
 /* Sentence text */
@@ -101,12 +96,12 @@
 .sentence-text .chinese {
   font-size: var(--font-xl);
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--color-text-primary);
   line-height: 1.6;
 }
 
 .sentence-text .english {
-  color: #444;
+  color: var(--color-text-secondary);
   font-style: italic;
   line-height: 1.5;
 }
@@ -116,7 +111,7 @@
 .grammar-section h3 {
   font-size: var(--font-base);
   font-weight: 600;
-  color: #666;
+  color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin: var(--spacing-1) 0 var(--spacing-1) 0;
@@ -131,7 +126,7 @@
 
 .vocabulary-list li {
   padding: var(--spacing-1) var(--spacing-2);
-  background: #f5f5f5;
+  background: var(--color-surface-subtle);
   border-radius: 4px;
   margin-bottom: var(--spacing-1);
   display: flex;
@@ -142,16 +137,16 @@
 
 .vocab-word {
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--color-text-primary);
   font-size: var(--font-xl);
 }
 
 .vocab-translation {
-  color: #444;
+  color: var(--color-text-secondary);
 }
 
 .vocab-romanization {
-  color: #666;
+  color: var(--color-text-muted);
   font-style: italic;
 }
 
@@ -161,8 +156,8 @@
 }
 
 .grammar-point {
-  background: #f9f9f9;
-  border-left: 3px solid #4a90e2;
+  background: var(--color-surface-subtle);
+  border-left: 3px solid var(--color-accent-primary);
   padding: var(--spacing-2);
   margin-bottom: var(--spacing-1);
   border-radius: 4px;
@@ -170,19 +165,19 @@
 
 .grammar-pattern {
   font-weight: 600;
-  color: #4a90e2;
+  color: var(--color-accent-primary);
   margin-bottom: var(--spacing-0-5);
   font-size: var(--font-xl);
 }
 
 .grammar-explanation {
-  color: #444;
+  color: var(--color-text-secondary);
   margin-bottom: var(--spacing-0-5);
   line-height: 1.5;
 }
 
 .grammar-example {
-  color: #666;
+  color: var(--color-text-muted);
   font-style: italic;
   font-size: var(--font-xl);
   line-height: 1.4;
@@ -192,22 +187,22 @@
 .full-translation {
   margin-top: var(--spacing-3);
   padding: var(--spacing-2);
-  background: #f0f8ff;
+  background: var(--color-surface-accent);
   border-radius: 8px;
-  border: 1px solid #d0e8ff;
+  border: 1px solid var(--color-border-accent);
 }
 
 .full-translation h3 {
   font-size: var(--font-base);
   font-weight: 600;
   margin: 0 0 var(--spacing-2) 0;
-  color: #1a1a1a;
+  color: var(--color-text-primary);
   text-transform: none;
   letter-spacing: normal;
 }
 
 .full-translation p {
   margin: 0;
-  color: #444;
+  color: var(--color-text-secondary);
   line-height: 1.6;
 }
