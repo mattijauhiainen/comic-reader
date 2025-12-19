@@ -2,12 +2,6 @@
 
 Comics project is a project to build web reader for comic books. It has two parts, the website which renders comic pages, and tooling which will get the necessary metadata from the comics for rendering.
 
-## Comics web reader
-
-The web reader renders a single comic album. Each page of the comic album is a single image file. The reader will initially render the first page of the album in full. 
-
-When user triggers the next action, the reader will zoom in on that page to the first panel of the page. When user triggers the next action again, reader will zoom to the next panel. When user triggers next action on the last panel of the page, reader will load in next page, and displays the next page in full.
-
 ## Tooling
 
 ### panelExtractor
@@ -69,6 +63,16 @@ bun run serve
 ```
 
 Then open http://localhost:3000 in your browser to view the generated pages.
+
+## Comics web reader
+
+The web reader renders a single comic album. Each page of the comic album is a single image file. The reader will initially render the first page of the album in full. 
+
+When user triggers the next action, the reader will zoom in on that page to the first panel of the page. When user triggers the next action again, reader will zoom to the next panel. When user triggers next action on the last panel of the page, reader will load in next page, and displays the next page in full.
+
+Reader code is in the `reader` directory. Some of the reader code is created by the static site generator.
+
+The reader has `variables.css` file which contains common design tokens, which should be used when writing reader code. Human should always be consulted when adding new tokens.
 
 ## Development Guidelines
 
