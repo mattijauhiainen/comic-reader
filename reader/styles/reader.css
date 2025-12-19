@@ -53,7 +53,7 @@ body {
   left: var(--spacing-2);
   padding: var(--spacing-1) var(--spacing-2);
   background: var(--color-surface-overlay);
-  border-radius: 4px;
+  border-radius: var(--radius);
   text-decoration: none;
   color: var(--color-text-body);
   font-weight: 500;
@@ -98,7 +98,7 @@ footer {
   transform: translateX(-50%);
   padding: var(--spacing-1) var(--spacing-2);
   background: var(--color-surface-overlay);
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 
 footer nav {
@@ -113,7 +113,7 @@ footer nav a {
   text-decoration: none;
   color: var(--color-text-body);
   font-weight: 400;
-  border-radius: 4px;
+  border-radius: var(--radius);
   transition: background 0.2s;
 }
 

@@ -242,7 +242,7 @@ function generatePageHTML(
   <title>${info.albumTitle} - Page ${info.pageNum}</title>
   <link rel="stylesheet" href="../styles/variables.css">
   <link rel="stylesheet" href="../styles/reader.css">
-  <link rel="stylesheet" href="../styles/transitions.css">
+  <link rel="stylesheet" href="../styles/view-transitions.css">
   <link rel="stylesheet" href="../styles/translation-overlay.css">
   ${preloadLink}
 

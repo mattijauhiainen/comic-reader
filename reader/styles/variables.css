@@ -48,4 +48,7 @@
   /* Effects */
   --color-shadow: rgba(0, 0, 0, 0.2); /* Box shadows */
   --color-hover-overlay: rgba(0, 0, 0, 0.05); /* Interactive hover states */
+
+  /* Border Radius */
+  --radius: 4px; /* Standard border radius */
 }
