@@ -201,7 +201,7 @@ function mergeBubbleWithOcr(
     const key = `${bubble.bbox.x1},${bubble.bbox.y1},${bubble.bbox.x2},${bubble.bbox.y2}`;
     const ocrData = ocrMap.get(key);
 
-    if (ocrData && ocrData.ocr_result) {
+    if (ocrData?.ocr_result) {
       return {
         ...bubble,
         ocr_result: ocrData.ocr_result,
@@ -271,7 +271,7 @@ function generatePageHTML(
   </main>
 
   <a href="../index.html" class="back-link">Back to Albums</a>
-  
+
   <footer>
     <nav>
       <a id="prevBtn">←</a>

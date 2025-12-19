@@ -1,5 +1,8 @@
 **/node_modules
 
+# Zed
+.zed
+
 # Environment variables
 .env
 

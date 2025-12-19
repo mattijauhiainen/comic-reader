@@ -15,7 +15,10 @@ window.addEventListener("pagereveal", (event) => {
   if (!event.viewTransition) return;
 
   const currentPage = window.COMIC_PAGE_DATA?.pageNum ?? null;
-  const previousPage = Number.parseInt(sessionStorage.getItem("previousPage") ?? "null", 10);
+  const previousPage = Number.parseInt(
+    sessionStorage.getItem("previousPage") ?? "null",
+    10,
+  );
 
   // Check if both pages are comic pages (have valid page numbers)
   const isComicTransition = currentPage !== null && !Number.isNaN(previousPage);
