@@ -11,7 +11,7 @@
 export function getSpacing(level) {
   const rootStyles = getComputedStyle(document.documentElement);
   // Handle 0.5 as "0-5" in CSS variable name
-  const varName = level === 0.5 ? '--spacing-0-5' : `--spacing-${level}`;
+  const varName = level === 0.5 ? "--spacing-0-5" : `--spacing-${level}`;
   const value = rootStyles.getPropertyValue(varName).trim();
   return parseInt(value, 10);
 }
@@ -34,10 +34,10 @@ export function getElementHeight(selector) {
 export function getAllSpacing() {
   return {
     0.5: getSpacing(0.5), // 4px
-    1: getSpacing(1),     // 8px
-    2: getSpacing(2),     // 16px
-    3: getSpacing(3),     // 24px
-    4: getSpacing(4),     // 32px
-    5: getSpacing(5),     // 40px
+    1: getSpacing(1), // 8px
+    2: getSpacing(2), // 16px
+    3: getSpacing(3), // 24px
+    4: getSpacing(4), // 32px
+    5: getSpacing(5), // 40px
   };
 }

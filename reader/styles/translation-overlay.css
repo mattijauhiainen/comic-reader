@@ -21,7 +21,7 @@
 
 /* Scan animation effect to make bubbles discoverable - only on first render */
 .translation-bubble.animate-scan::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -99,14 +99,13 @@
 }
 
 .sentence-text .chinese {
-  font-size: 22px;
+  font-size: var(--font-xl);
   font-weight: 600;
   color: #1a1a1a;
   line-height: 1.6;
 }
 
 .sentence-text .english {
-  font-size: 16px;
   color: #444;
   font-style: italic;
   line-height: 1.5;
@@ -115,7 +114,7 @@
 /* Section headings */
 .vocabulary-section h3,
 .grammar-section h3 {
-  font-size: 14px;
+  font-size: var(--font-base);
   font-weight: 600;
   color: #666;
   text-transform: uppercase;
@@ -144,17 +143,15 @@
 .vocab-word {
   font-weight: 600;
   color: #1a1a1a;
-  font-size: 22px;
+  font-size: var(--font-xl);
 }
 
 .vocab-translation {
   color: #444;
-  font-size: 17px;
 }
 
 .vocab-romanization {
   color: #666;
-  font-size: 16px;
   font-style: italic;
 }
 
@@ -175,20 +172,19 @@
   font-weight: 600;
   color: #4a90e2;
   margin-bottom: var(--spacing-0-5);
-  font-size: 22px;
+  font-size: var(--font-xl);
 }
 
 .grammar-explanation {
   color: #444;
   margin-bottom: var(--spacing-0-5);
-  font-size: 16px;
   line-height: 1.5;
 }
 
 .grammar-example {
   color: #666;
   font-style: italic;
-  font-size: 22px;
+  font-size: var(--font-xl);
   line-height: 1.4;
 }
 
@@ -202,7 +198,7 @@
 }
 
 .full-translation h3 {
-  font-size: 16px;
+  font-size: var(--font-base);
   font-weight: 600;
   margin: 0 0 var(--spacing-2) 0;
   color: #1a1a1a;
@@ -214,5 +210,4 @@
   margin: 0;
   color: #444;
   line-height: 1.6;
-  font-size: 15px;
 }
