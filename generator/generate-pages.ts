@@ -270,15 +270,34 @@ function generatePageHTML(
     <div class="translation-bubbles-overlay" id="translationBubblesOverlay"></div>
   </main>
 
-  <a href="../index.html" class="back-link">Back to Albums</a>
-
-  <footer>
-    <nav>
-      <a id="prevBtn">←</a>
-      <span id="positionIndicator">${info.pageNum} / ${info.totalPages}</span>
-      <a id="nextBtn">→</a>
-    </nav>
-  </footer>
+  <nav class="nav-buttons">
+    <button id="expandableNavBtn" class="nav-btn" aria-label="Navigation menu">
+      <span class="nav-btn-icon">☰</span>
+    </button>
+    <div id="expandedNavMenu" class="expanded-nav-menu">
+      <div class="nav-menu-item">
+        <span class="nav-menu-label">Back to Albums</span>
+        <button id="backToIndexBtn" class="nav-btn" aria-label="Back to Albums">
+          <span class="nav-btn-icon">🏠</span>
+        </button>
+      </div>
+      <div class="nav-menu-item">
+        <span class="nav-menu-label">Previous page</span>
+        <button id="prevPageBtn" class="nav-btn" aria-label="Previous page">
+          <span class="nav-btn-icon">⏮</span>
+        </button>
+      </div>
+      <div class="nav-menu-item">
+        <span class="nav-menu-label">Next page</span>
+        <button id="nextPageBtn" class="nav-btn" aria-label="Next page">
+          <span class="nav-btn-icon">⏭</span>
+        </button>
+      </div>
+    </div>
+    <button id="nextBtn" class="nav-btn" aria-label="Next">
+      <span class="nav-btn-icon">→</span>
+    </button>
+  </nav>
 </body>
 </html>
 `;

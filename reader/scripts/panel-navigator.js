@@ -187,30 +187,49 @@ class PanelNavigator {
   }
 
   /**
-   * Update navigation UI (button states, position indicator)
+   * Navigate to next page (skipping panels)
+   */
+  goToNextPage() {
+    if (this.currentPage < this.totalPages) {
+      this.navigateToPage(this.currentPage + 1);
+    }
+  }
+
+  /**
+   * Navigate to previous page (skipping panels)
+   */
+  goToPreviousPage() {
+    if (this.currentPage > 1) {
+      this.navigateToPage(this.currentPage - 1);
+    }
+  }
+
+  /**
+   * Check if back action is available
+   */
+  canGoBack() {
+    return !(this.currentPage === 1 && this.currentPanel === null);
+  }
+
+  /**
+   * Update navigation UI (button states)
    */
   updateNavigationUI() {
-    const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
-    const indicator = document.getElementById("positionIndicator");
-
-    // Update indicator text - always show page number only
-    indicator.textContent = `${this.currentPage} / ${this.totalPages}`;
+    const prevPageBtn = document.getElementById("prevPageBtn");
+    const nextPageBtn = document.getElementById("nextPageBtn");
 
     // Update button states
-    const isFirstPosition =
-      this.currentPage === 1 && this.currentPanel === null;
     const isLastPosition =
       this.currentPage === this.totalPages &&
       (this.panels.length === 0 ||
         this.currentPanel === this.panels.length - 1);
 
-    prevBtn.classList.toggle("disabled", isFirstPosition);
     nextBtn.classList.toggle("disabled", isLastPosition);
 
-    // Prevent default link behavior
-    prevBtn.href = "javascript:void(0)";
-    nextBtn.href = "javascript:void(0)";
+    // Page navigation buttons
+    prevPageBtn.classList.toggle("disabled", this.currentPage === 1);
+    nextPageBtn.classList.toggle("disabled", this.currentPage === this.totalPages);
   }
 
   /**
@@ -221,9 +240,54 @@ class PanelNavigator {
     document
       .getElementById("nextBtn")
       .addEventListener("click", () => this.goNext());
-    document
-      .getElementById("prevBtn")
-      .addEventListener("click", () => this.goBack());
+
+    // Expandable navigation menu
+    const expandableBtn = document.getElementById("expandableNavBtn");
+    const expandableBtnIcon = expandableBtn.querySelector(".nav-btn-icon");
+    const expandedMenu = document.getElementById("expandedNavMenu");
+    let isMenuExpanded = false;
+
+    expandableBtn.addEventListener("click", () => {
+      if (isMenuExpanded) {
+        // Menu is open, button shows back arrow - execute back action if available
+        if (this.canGoBack()) {
+          this.goBack();
+        }
+        // Keep the menu open
+      } else {
+        // Menu is closed, button shows burger - open the menu
+        isMenuExpanded = true;
+        expandedMenu.classList.add("active");
+        expandableBtnIcon.textContent = "←";
+      }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (
+        isMenuExpanded &&
+        !expandableBtn.contains(e.target) &&
+        !expandedMenu.contains(e.target)
+      ) {
+        isMenuExpanded = false;
+        expandedMenu.classList.remove("active");
+        expandableBtnIcon.textContent = "☰";
+      }
+    });
+
+    // Back to index button
+    document.getElementById("backToIndexBtn").addEventListener("click", () => {
+      window.location.href = "../index.html";
+    });
+
+    // Page navigation buttons
+    document.getElementById("prevPageBtn").addEventListener("click", () => {
+      this.goToPreviousPage();
+    });
+
+    document.getElementById("nextPageBtn").addEventListener("click", () => {
+      this.goToNextPage();
+    });
 
     // Handle window resize - recalculate zoom
     let resizeTimeout;
