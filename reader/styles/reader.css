@@ -47,26 +47,6 @@ body {
 }
 
 /* Reader page styles */
-.back-link {
-  position: fixed;
-  top: var(--spacing-2);
-  left: var(--spacing-2);
-  padding: var(--spacing-1) var(--spacing-2);
-  background: var(--color-surface-overlay);
-  border-radius: var(--radius);
-  text-decoration: none;
-  color: var(--color-text-body);
-  font-weight: 500;
-  box-shadow: 0 2px 8px var(--color-shadow);
-  transition: background 0.2s;
-  /* Participate in view transition layer to maintain stacking order during page transitions */
-  view-transition-name: back-link;
-}
-
-.back-link:hover {
-  background: var(--color-surface-base);
-}
-
 .viewport {
   display: flex;
   align-items: center;
@@ -88,7 +68,7 @@ body {
   display: block;
 }
 
-/* Only apply view transition name on comic pages */
+/* Apply slide transition on comic pages */
 .comic-page .viewport img {
   view-transition-name: page-image;
 }
@@ -102,6 +82,11 @@ body {
   align-items: flex-end;
   gap: var(--spacing-1);
   z-index: 100;
+}
+
+/* When we are on comic pages, don't do transition on the menu */
+.comic-page .nav-buttons {
+  view-transition-name: no-transition;
 }
 
 .nav-btn {

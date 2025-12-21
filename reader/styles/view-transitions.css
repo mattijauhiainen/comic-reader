@@ -56,3 +56,10 @@ html.comic-transition.back-navigation::view-transition-new(page-image) {
     opacity: 0;
   }
 }
+
+/* Transition mode that can be applied to UI chrome to keep them visible between pages */
+::view-transition-old(no-transition),
+::view-transition-new(no-transition) {
+  animation: none;
+  mix-blend-mode: normal;
+}

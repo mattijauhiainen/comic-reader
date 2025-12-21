@@ -268,7 +268,9 @@ class PanelNavigator {
       } else {
         // Menu is closed, button shows burger - open the menu
         expandedMenu.classList.add("active");
-        expandableBtnIcon.querySelector('use').setAttribute('href', '#icon-back-arrow');
+        expandableBtnIcon
+          .querySelector("use")
+          .setAttribute("href", "#icon-back-arrow");
       }
     });
 
@@ -282,7 +284,9 @@ class PanelNavigator {
         !e.target.closest(".nav-btn")
       ) {
         expandedMenu.classList.remove("active");
-        expandableBtnIcon.querySelector('use').setAttribute('href', '#icon-hamburger');
+        expandableBtnIcon
+          .querySelector("use")
+          .setAttribute("href", "#icon-hamburger");
       }
     });
 

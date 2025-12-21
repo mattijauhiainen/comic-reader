@@ -264,10 +264,6 @@ export class TranslationOverlayManager {
     // Get spacing from CSS variables (single source of truth)
     const SPACING = getSpacing(3); // --spacing-3 (24px) - minimum spacing from bubble and edges
 
-    // Get actual element heights from DOM
-    const NAV_HEIGHT = getElementHeight("footer") || 64; // Fallback to 64px if not found
-    const BACK_BUTTON_HEIGHT = getElementHeight(".back-link") || 48; // Fallback to 48px if not found
-
     // Full width, above or below bubble
     const width = `min(calc(100vw - ${SPACING * 2}px), 400px)`;
     const left = `${SPACING}px`;
@@ -280,12 +276,12 @@ export class TranslationOverlayManager {
     if (isTopHalf) {
       // Position below bubble
       const top = `${Math.round(bubbleBounds.bottom + SPACING)}px`;
-      const maxHeight = `calc(100vh - ${Math.round(bubbleBounds.bottom + SPACING + NAV_HEIGHT + SPACING)}px)`;
+      const maxHeight = `calc(100vh - ${Math.round(bubbleBounds.bottom + SPACING + SPACING)}px)`;
       return { top, left, right, bottom: "auto", width, maxHeight };
     }
     // Position above bubble
     const bottom = `${Math.round(viewport.height - bubbleBounds.top + SPACING)}px`;
-    const maxHeight = `calc(100vh - ${Math.round(viewport.height - bubbleBounds.top + SPACING + BACK_BUTTON_HEIGHT + SPACING)}px)`;
+    const maxHeight = `calc(100vh - ${Math.round(viewport.height - bubbleBounds.top + SPACING + SPACING)}px)`;
     return { top: "auto", left, right, bottom, width, maxHeight };
   }
 

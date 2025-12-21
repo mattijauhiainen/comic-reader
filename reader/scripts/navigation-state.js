@@ -28,11 +28,20 @@ window.addEventListener("pagereveal", (event) => {
   sessionStorage.removeItem("menuExpanded");
 
   if (menuExpanded) {
-    // Set menu to open state immediately, synchronously
-    const menu = document.getElementById("expandedNavMenu");
     const btnIcon = document.querySelector("#expandableNavBtn .nav-btn-icon");
-    if (menu) menu.classList.add("active");
-    if (btnIcon) btnIcon.querySelector('use').setAttribute('href', '#icon-back-arrow');
+    // Set menu to open state immediately. Disable the transition to prevent it
+    // from animating when we do this.
+    const menu = document.getElementById("expandedNavMenu");
+    if (menu) {
+      const originalTransition = menu.style.transition;
+      menu.style.transition = "none";
+      menu.classList.add("active");
+      requestAnimationFrame(() => {
+        menu.style.transition = originalTransition;
+      });
+    }
+    if (btnIcon)
+      btnIcon.querySelector("use").setAttribute("href", "#icon-back-arrow");
   }
 
   // Check if both pages are comic pages (have valid page numbers)
