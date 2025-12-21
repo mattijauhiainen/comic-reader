@@ -32,7 +32,7 @@ window.addEventListener("pagereveal", (event) => {
     const menu = document.getElementById("expandedNavMenu");
     const btnIcon = document.querySelector("#expandableNavBtn .nav-btn-icon");
     if (menu) menu.classList.add("active");
-    if (btnIcon) btnIcon.textContent = "←";
+    if (btnIcon) btnIcon.querySelector('use').setAttribute('href', '#icon-back-arrow');
   }
 
   // Check if both pages are comic pages (have valid page numbers)
