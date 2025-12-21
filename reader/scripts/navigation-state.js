@@ -1,5 +1,5 @@
-// Detect navigation direction for view transitions
-// Adds 'back-navigation' class to <html> when navigating to a previous page
+// Manages navigation state across page transitions
+// Detects navigation direction and transition type for view transitions
 
 // Store the current page number before navigating away
 window.addEventListener("pageswap", (event) => {
@@ -19,6 +19,21 @@ window.addEventListener("pagereveal", (event) => {
     sessionStorage.getItem("previousPage") ?? "null",
     10,
   );
+
+  // Clear session storage to prevent stale data affecting future navigations
+  sessionStorage.removeItem("previousPage");
+
+  // Restore menu state BEFORE view transition animates to prevent glitches
+  const menuExpanded = sessionStorage.getItem("menuExpanded") === "true";
+  sessionStorage.removeItem("menuExpanded");
+
+  if (menuExpanded) {
+    // Set menu to open state immediately, synchronously
+    const menu = document.getElementById("expandedNavMenu");
+    const btnIcon = document.querySelector("#expandableNavBtn .nav-btn-icon");
+    if (menu) menu.classList.add("active");
+    if (btnIcon) btnIcon.textContent = "←";
+  }
 
   // Check if both pages are comic pages (have valid page numbers)
   const isComicTransition = currentPage !== null && !Number.isNaN(previousPage);

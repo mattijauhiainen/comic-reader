@@ -259,7 +259,7 @@ function generatePageHTML(
       translations: ${JSON.stringify(translations)}
     };
   </script>
-  <script src="../scripts/transition-direction.js"></script>
+  <script src="../scripts/navigation-state.js"></script>
   <script type="module" src="../scripts/panel-navigator.js"></script>
   <script type="module" src="../scripts/translation-overlay.js"></script>
   <script type="module" src="../scripts/translation-bubbles.js"></script>

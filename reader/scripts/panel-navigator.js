@@ -219,6 +219,8 @@ class PanelNavigator {
     const prevPageBtn = document.getElementById("prevPageBtn");
     const nextPageBtn = document.getElementById("nextPageBtn");
 
+    const isFirstPosition =
+      this.currentPage === 1 && this.currentPanel === null;
     // Update button states
     const isLastPosition =
       this.currentPage === this.totalPages &&
@@ -229,7 +231,10 @@ class PanelNavigator {
 
     // Page navigation buttons
     prevPageBtn.classList.toggle("disabled", this.currentPage === 1);
-    nextPageBtn.classList.toggle("disabled", this.currentPage === this.totalPages);
+    nextPageBtn.classList.toggle(
+      "disabled",
+      this.currentPage === this.totalPages,
+    );
   }
 
   /**
@@ -245,9 +250,15 @@ class PanelNavigator {
     const expandableBtn = document.getElementById("expandableNavBtn");
     const expandableBtnIcon = expandableBtn.querySelector(".nav-btn-icon");
     const expandedMenu = document.getElementById("expandedNavMenu");
-    let isMenuExpanded = false;
+
+    // Save menu state before navigating away
+    window.addEventListener("pageswap", () => {
+      const isMenuExpanded = expandedMenu.classList.contains("active");
+      sessionStorage.setItem("menuExpanded", isMenuExpanded.toString());
+    });
 
     expandableBtn.addEventListener("click", () => {
+      const isMenuExpanded = expandedMenu.classList.contains("active");
       if (isMenuExpanded) {
         // Menu is open, button shows back arrow - execute back action if available
         if (this.canGoBack()) {
@@ -256,20 +267,20 @@ class PanelNavigator {
         // Keep the menu open
       } else {
         // Menu is closed, button shows burger - open the menu
-        isMenuExpanded = true;
         expandedMenu.classList.add("active");
         expandableBtnIcon.textContent = "←";
       }
     });
 
-    // Close menu when clicking outside
+    // Close menu when clicking outside (but not on navigation buttons)
     document.addEventListener("click", (e) => {
+      const isMenuExpanded = expandedMenu.classList.contains("active");
       if (
         isMenuExpanded &&
         !expandableBtn.contains(e.target) &&
-        !expandedMenu.contains(e.target)
+        !expandedMenu.contains(e.target) &&
+        !e.target.closest(".nav-btn")
       ) {
-        isMenuExpanded = false;
         expandedMenu.classList.remove("active");
         expandableBtnIcon.textContent = "☰";
       }
