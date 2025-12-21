@@ -243,6 +243,7 @@ function generatePageHTML(
   <link rel="stylesheet" href="../styles/variables.css">
   <link rel="stylesheet" href="../styles/reader.css">
   <link rel="stylesheet" href="../styles/view-transitions.css">
+  <link rel="stylesheet" href="../styles/comic-nav-menu.css">
   <link rel="stylesheet" href="../styles/translation-overlay.css">
   ${preloadLink}
 
