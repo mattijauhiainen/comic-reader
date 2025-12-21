@@ -23,27 +23,6 @@ window.addEventListener("pagereveal", (event) => {
   // Clear session storage to prevent stale data affecting future navigations
   sessionStorage.removeItem("previousPage");
 
-  // Restore menu state BEFORE view transition animates to prevent glitches
-  const menuExpanded = sessionStorage.getItem("menuExpanded") === "true";
-  sessionStorage.removeItem("menuExpanded");
-
-  if (menuExpanded) {
-    const btnIcon = document.querySelector("#expandableNavBtn .nav-btn-icon");
-    // Set menu to open state immediately. Disable the transition to prevent it
-    // from animating when we do this.
-    const menu = document.getElementById("expandedNavMenu");
-    if (menu) {
-      const originalTransition = menu.style.transition;
-      menu.style.transition = "none";
-      menu.classList.add("active");
-      requestAnimationFrame(() => {
-        menu.style.transition = originalTransition;
-      });
-    }
-    if (btnIcon)
-      btnIcon.querySelector("use").setAttribute("href", "#icon-back-arrow");
-  }
-
   // Check if both pages are comic pages (have valid page numbers)
   const isComicTransition = currentPage !== null && !Number.isNaN(previousPage);
 

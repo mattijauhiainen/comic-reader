@@ -215,93 +215,33 @@ class PanelNavigator {
    * Update navigation UI (button states)
    */
   updateNavigationUI() {
-    const nextBtn = document.getElementById("nextBtn");
-    const prevPageBtn = document.getElementById("prevPageBtn");
-    const nextPageBtn = document.getElementById("nextPageBtn");
+    const navMenu = document.querySelector("comic-nav-menu");
+    if (!navMenu) return;
 
-    const isFirstPosition =
-      this.currentPage === 1 && this.currentPanel === null;
-    // Update button states
+    // Update component attributes
+    navMenu.setAttribute("current-page", this.currentPage.toString());
+    navMenu.setAttribute("total-pages", this.totalPages.toString());
+    navMenu.setAttribute("can-go-back", this.canGoBack().toString());
+
+    // Update next button state based on panel position using public API
     const isLastPosition =
       this.currentPage === this.totalPages &&
       (this.panels.length === 0 ||
         this.currentPanel === this.panels.length - 1);
-
-    nextBtn.classList.toggle("disabled", isLastPosition);
-
-    // Page navigation buttons
-    prevPageBtn.classList.toggle("disabled", this.currentPage === 1);
-    nextPageBtn.classList.toggle(
-      "disabled",
-      this.currentPage === this.totalPages,
-    );
+    navMenu.setNextButtonDisabled(isLastPosition);
   }
 
   /**
    * Attach event handlers for navigation
    */
   attachEventHandlers() {
-    // Click handlers for navigation buttons
-    document
-      .getElementById("nextBtn")
-      .addEventListener("click", () => this.goNext());
-
-    // Expandable navigation menu
-    const expandableBtn = document.getElementById("expandableNavBtn");
-    const expandableBtnIcon = expandableBtn.querySelector(".nav-btn-icon");
-    const expandedMenu = document.getElementById("expandedNavMenu");
-
-    // Save menu state before navigating away
-    window.addEventListener("pageswap", () => {
-      const isMenuExpanded = expandedMenu.classList.contains("active");
-      sessionStorage.setItem("menuExpanded", isMenuExpanded.toString());
-    });
-
-    expandableBtn.addEventListener("click", () => {
-      const isMenuExpanded = expandedMenu.classList.contains("active");
-      if (isMenuExpanded) {
-        // Menu is open, button shows back arrow - execute back action if available
-        if (this.canGoBack()) {
-          this.goBack();
-        }
-        // Keep the menu open
-      } else {
-        // Menu is closed, button shows burger - open the menu
-        expandedMenu.classList.add("active");
-        expandableBtnIcon
-          .querySelector("use")
-          .setAttribute("href", "#icon-back-arrow");
-      }
-    });
-
-    // Close menu when clicking outside (but not on navigation buttons)
-    document.addEventListener("click", (e) => {
-      const isMenuExpanded = expandedMenu.classList.contains("active");
-      if (
-        isMenuExpanded &&
-        !expandableBtn.contains(e.target) &&
-        !expandedMenu.contains(e.target) &&
-        !e.target.closest(".nav-btn")
-      ) {
-        expandedMenu.classList.remove("active");
-        expandableBtnIcon
-          .querySelector("use")
-          .setAttribute("href", "#icon-hamburger");
-      }
-    });
-
-    // Back to index button
-    document.getElementById("backToIndexBtn").addEventListener("click", () => {
+    // Listen for custom events from comic-nav-menu component
+    document.addEventListener("nav-next", () => this.goNext());
+    document.addEventListener("nav-back", () => this.goBack());
+    document.addEventListener("nav-prev-page", () => this.goToPreviousPage());
+    document.addEventListener("nav-next-page", () => this.goToNextPage());
+    document.addEventListener("nav-home", () => {
       window.location.href = "../index.html";
-    });
-
-    // Page navigation buttons
-    document.getElementById("prevPageBtn").addEventListener("click", () => {
-      this.goToPreviousPage();
-    });
-
-    document.getElementById("nextPageBtn").addEventListener("click", () => {
-      this.goToNextPage();
     });
 
     // Handle window resize - recalculate zoom
