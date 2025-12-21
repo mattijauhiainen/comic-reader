@@ -64,6 +64,9 @@
   transform: scale(0.95);
   transition: opacity 0.2s ease-out, transform 0.2s ease-out;
   pointer-events: none;
+
+  /* Ensure overlay appears above navigation menu */
+  z-index: var(--z-index-translation-overlay);
 }
 
 .translation-overlay.visible {

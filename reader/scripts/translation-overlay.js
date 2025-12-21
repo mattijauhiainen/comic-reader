@@ -232,11 +232,7 @@ export class TranslationOverlayManager {
       height: window.innerHeight,
     };
 
-    const position = this.calculatePosition(
-      bubbleBounds,
-      overlayRect,
-      viewport,
-    );
+    const position = this.calculatePosition(bubbleBounds, viewport);
 
     // Apply position - set all to empty first to clear any previous values
     this.overlayElement.style.top = "";
@@ -260,29 +256,52 @@ export class TranslationOverlayManager {
   /**
    * Calculate optimal overlay position based on viewport and bubble location
    */
-  calculatePosition(bubbleBounds, overlayRect, viewport) {
-    // Get spacing from CSS variables (single source of truth)
-    const SPACING = getSpacing(3); // --spacing-3 (24px) - minimum spacing from bubble and edges
-
-    // Full width, above or below bubble
+  calculatePosition(bubbleBounds, viewport) {
+    const SPACING = getSpacing(3);
     const width = `min(calc(100vw - ${SPACING * 2}px), 400px)`;
     const left = `${SPACING}px`;
     const right = "auto";
+    const MIN_HEIGHT_PX = 400;
 
     // Decide above or below based on bubble position
     const bubbleCenter = bubbleBounds.top + bubbleBounds.height / 2;
     const isTopHalf = bubbleCenter < viewport.height / 2;
 
     if (isTopHalf) {
-      // Position below bubble
-      const top = `${Math.round(bubbleBounds.bottom + SPACING)}px`;
-      const maxHeight = `calc(100vh - ${Math.round(bubbleBounds.bottom + SPACING + SPACING)}px)`;
+      // Position below bubble, but adjust upward if needed to fit minimum height
+      // Top has to be at least "safe area" + SPACING
+      const minTop = `calc(env(safe-area-inset-top) + ${SPACING}px)`;
+      // Ideally we want the top right below the bubble
+      const idealTop = `${Math.round(bubbleBounds.bottom + SPACING)}px`;
+      // We want to make sure there is at least MIN_HEIGHT_PX of overlay visible.
+      // Clamp the top to max value that accommodates for having MIN_HEIGHT_PX
+      // and the margins.
+      const maxTop = `calc(100vh - ${MIN_HEIGHT_PX}px - env(safe-area-inset-bottom) - ${SPACING}px)`;
+      const top = `clamp(${minTop}, ${idealTop}, ${maxTop})`;
+
+      // Max height: The max height is the full view port minus the top position we just
+      // calculated, minus save area and margin
+      const maxHeight = `calc(100vh - ${top} - env(safe-area-inset-bottom) - ${SPACING}px)`;
+
       return { top, left, right, bottom: "auto", width, maxHeight };
     }
-    // Position above bubble
-    const bottom = `${Math.round(viewport.height - bubbleBounds.top + SPACING)}px`;
-    const maxHeight = `calc(100vh - ${Math.round(viewport.height - bubbleBounds.top + SPACING + SPACING)}px)`;
-    return { top: "auto", left, right, bottom, width, maxHeight };
+
+    // Position above bubble, but adjust downward if needed to fit minimum height
+    // The bottom has to be at least this high
+    const minBottom = `calc(env(safe-area-inset-bottom) + ${SPACING}px)`;
+    // Ideally we want the bottom right above the bubble
+    const idealBottom = `${Math.round(viewport.height - bubbleBounds.top + SPACING)}px`;
+    // We want to make sure there is at least MIN_HEIGHT_PX of overlay visible.
+    // Clamp the bottom to max value that accommodtes for having MIN_HEIGHT_PX
+    // and the margins.
+    const maxBottom = `calc(100vh - ${MIN_HEIGHT_PX}px - env(safe-area-inset-top) - ${SPACING}px)`;
+    const bottom = `clamp(${minBottom}, ${idealBottom}, ${maxBottom})`;
+
+    // Max height: The max height is the full view port minus the bottom position we just
+    // claculated, minus save area and margin
+    const maxHeight = `calc(100vh - env(safe-area-inset-top) - ${SPACING}px - ${bottom})`;
+
+    return { top: "auto", left, right, bottom, width, maxHeight, minHeight };
   }
 
   /**

@@ -9,7 +9,7 @@ comic-nav-menu .nav-buttons {
   display: flex;
   align-items: flex-end;
   gap: var(--spacing-1);
-  z-index: 100;
+  z-index: var(--z-index-nav-menu);
 }
 
 /* Prevent transitions on the menu during page transitions */

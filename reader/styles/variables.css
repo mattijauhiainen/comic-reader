@@ -54,4 +54,8 @@
 
   /* Animations */
   --transition-duration: 0.3s; /* Page transition duration */
+
+  /* Z-index Layers */
+  --z-index-nav-menu: 100; /* Navigation menu buttons */
+  --z-index-translation-overlay: 200; /* Translation overlay (above menu) */
 }
