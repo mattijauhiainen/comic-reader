@@ -240,6 +240,7 @@ function generatePageHTML(
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${info.albumTitle} - Page ${info.pageNum}</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="stylesheet" href="../styles/variables.css">
   <link rel="stylesheet" href="../styles/reader.css">
   <link rel="stylesheet" href="../styles/view-transitions.css">
