@@ -35,12 +35,12 @@ export class TranslationOverlayManager {
     this.overlayElement = this.buildOverlay(translation);
     document.body.appendChild(this.overlayElement);
 
-    // Calculate and apply positioning
-    // We need to wait a frame for the overlay to be rendered so we can get its dimensions
-    requestAnimationFrame(() => {
-      const overlayRect = this.overlayElement.getBoundingClientRect();
-      this.positionOverlay(bubbleBounds, overlayRect);
+    // Position the overlay before making it visible
+    this.positionOverlay(bubbleBounds);
 
+    // Wait a frame to ensure the browser renders the initial state
+    // before adding the visible class, so the CSS transition fires
+    requestAnimationFrame(() => {
       // Make overlay visible with animation
       this.overlayElement.classList.add("visible");
       this.isVisible = true;
@@ -62,12 +62,18 @@ export class TranslationOverlayManager {
     this.overlayElement.classList.remove("visible");
 
     // Wait for animation to complete before removing
-    setTimeout(() => {
-      if (this.overlayElement?.parentNode) {
-        this.overlayElement.parentNode.removeChild(this.overlayElement);
+    const handleTransitionEnd = (e) => {
+      if (e.target === this.overlayElement) {
+        if (this.overlayElement?.parentNode) {
+          this.overlayElement.parentNode.removeChild(this.overlayElement);
+        }
+        this.overlayElement = null;
       }
-      this.overlayElement = null;
-    }, 200); // Match CSS transition duration
+    };
+
+    this.overlayElement.addEventListener("transitionend", handleTransitionEnd, {
+      once: true,
+    });
 
     // Clean up event listeners
     this.removeDismissalHandlers();
@@ -226,7 +232,7 @@ export class TranslationOverlayManager {
   /**
    * Calculate and apply overlay position
    */
-  positionOverlay(bubbleBounds, overlayRect) {
+  positionOverlay(bubbleBounds) {
     const viewport = {
       width: window.innerWidth,
       height: window.innerHeight,
@@ -315,10 +321,9 @@ export class TranslationOverlayManager {
    * Setup dismissal event handlers
    */
   setupDismissalHandlers() {
-    // Click anywhere to dismiss
+    // Click outside overlay to dismiss
     this.dismissHandler = (e) => {
-      if (this.isVisible) {
-        e.stopPropagation();
+      if (this.isVisible && !this.overlayElement.contains(e.target)) {
         this.hide();
       }
     };
@@ -341,8 +346,7 @@ export class TranslationOverlayManager {
     // Resize handler
     this.resizeHandler = () => {
       if (this.isVisible && this.overlayElement) {
-        const overlayRect = this.overlayElement.getBoundingClientRect();
-        this.positionOverlay(this.currentBubbleBounds, overlayRect);
+        this.positionOverlay(this.currentBubbleBounds);
       }
     };
 
