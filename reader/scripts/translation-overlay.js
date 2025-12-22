@@ -259,9 +259,16 @@ export class TranslationOverlayManager {
   calculatePosition(bubbleBounds, viewport) {
     const SPACING = getSpacing(3);
     const width = `min(calc(100vw - ${SPACING * 2}px), 400px)`;
-    const left = `${SPACING}px`;
-    const right = "auto";
     const MIN_HEIGHT_PX = 400;
+
+    // Horizontal positioning: center on bubble, but clamp to viewport bounds
+    const bubbleHorizontalCenter = bubbleBounds.left + bubbleBounds.width / 2;
+    const left = `clamp(
+      ${SPACING}px,
+      calc(${Math.round(bubbleHorizontalCenter)}px - (${width}) / 2),
+      calc(100vw - (${width}) - ${SPACING}px)
+    )`;
+    const right = "auto";
 
     // Decide above or below based on bubble position
     const bubbleCenter = bubbleBounds.top + bubbleBounds.height / 2;
@@ -301,7 +308,7 @@ export class TranslationOverlayManager {
     // claculated, minus save area and margin
     const maxHeight = `calc(100vh - env(safe-area-inset-top) - ${SPACING}px - ${bottom})`;
 
-    return { top: "auto", left, right, bottom, width, maxHeight, minHeight };
+    return { top: "auto", left, right, bottom, width, maxHeight };
   }
 
   /**
