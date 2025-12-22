@@ -23,7 +23,13 @@ export class TranslationOverlayManager {
    * @param {DOMRect} bubbleBounds - Screen position of the clicked bubble
    */
   show(translation, bubbleBounds) {
-    // If already showing a translation, hide it first
+    // The current bubble is hiding. If it is the same bubble, don't open it
+    // again.
+    if (this.isSameBubble(bubbleBounds)) {
+      return;
+    }
+
+    // If already showing a different translation, hide it first
     if (this.isVisible) {
       this.hide();
     }
@@ -61,27 +67,44 @@ export class TranslationOverlayManager {
     // Remove visible class for fade-out animation
     this.overlayElement.classList.remove("visible");
 
-    // Wait for animation to complete before removing
+    // Clean up event listeners
+    this.removeDismissalHandlers();
+
+    // Wait for animation to complete before removing and resetting state
     const handleTransitionEnd = (e) => {
       if (e.target === this.overlayElement) {
         if (this.overlayElement?.parentNode) {
           this.overlayElement.parentNode.removeChild(this.overlayElement);
         }
         this.overlayElement = null;
+
+        // Reset state after transition completes
+        this.isVisible = false;
+        this.currentTranslation = null;
+        this.currentBubbleBounds = null;
       }
     };
 
     this.overlayElement.addEventListener("transitionend", handleTransitionEnd, {
       once: true,
     });
+  }
 
-    // Clean up event listeners
-    this.removeDismissalHandlers();
+  /**
+   * Check if the given bounds represent the same bubble as currently shown
+   */
+  isSameBubble(bubbleBounds) {
+    if (!this.currentBubbleBounds) {
+      return false;
+    }
 
-    // Reset state
-    this.isVisible = false;
-    this.currentTranslation = null;
-    this.currentBubbleBounds = null;
+    // Compare bubble positions to determine if it's the same bubble
+    return (
+      this.currentBubbleBounds.top === bubbleBounds.top &&
+      this.currentBubbleBounds.left === bubbleBounds.left &&
+      this.currentBubbleBounds.width === bubbleBounds.width &&
+      this.currentBubbleBounds.height === bubbleBounds.height
+    );
   }
 
   /**
