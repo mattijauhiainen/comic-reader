@@ -312,12 +312,12 @@ export class TranslationOverlayManager {
       // We want to make sure there is at least MIN_HEIGHT_PX of overlay visible.
       // Clamp the top to max value that accommodates for having MIN_HEIGHT_PX
       // and the margins.
-      const maxTop = `calc(100vh - ${MIN_HEIGHT_PX}px - env(safe-area-inset-bottom) - ${SPACING}px)`;
+      const maxTop = `calc(100dvh - ${MIN_HEIGHT_PX}px - env(safe-area-inset-bottom) - ${SPACING}px)`;
       const top = `clamp(${minTop}, ${idealTop}, ${maxTop})`;
 
       // Max height: The max height is the full view port minus the top position we just
       // calculated, minus save area and margin
-      const maxHeight = `calc(100vh - ${top} - env(safe-area-inset-bottom) - ${SPACING}px)`;
+      const maxHeight = `calc(100dvh - ${top} - env(safe-area-inset-bottom) - ${SPACING}px)`;
 
       return { top, left, right, bottom: "auto", width, maxHeight };
     }
@@ -330,12 +330,12 @@ export class TranslationOverlayManager {
     // We want to make sure there is at least MIN_HEIGHT_PX of overlay visible.
     // Clamp the bottom to max value that accommodtes for having MIN_HEIGHT_PX
     // and the margins.
-    const maxBottom = `calc(100vh - ${MIN_HEIGHT_PX}px - env(safe-area-inset-top) - ${SPACING}px)`;
+    const maxBottom = `calc(100dvh - ${MIN_HEIGHT_PX}px - env(safe-area-inset-top) - ${SPACING}px)`;
     const bottom = `clamp(${minBottom}, ${idealBottom}, ${maxBottom})`;
 
     // Max height: The max height is the full view port minus the bottom position we just
     // claculated, minus save area and margin
-    const maxHeight = `calc(100vh - env(safe-area-inset-top) - ${SPACING}px - ${bottom})`;
+    const maxHeight = `calc(100dvh - env(safe-area-inset-top) - ${SPACING}px - ${bottom})`;
 
     return { top: "auto", left, right, bottom, width, maxHeight };
   }

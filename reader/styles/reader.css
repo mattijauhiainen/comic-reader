@@ -8,6 +8,7 @@
 body {
   font-family: var(--font-family);
   line-height: 1.6;
+  overflow: hidden;
 }
 
 /* Landing page styles */
@@ -51,7 +52,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh; /* fallback */
+  height: 100dvh;
   overflow: hidden;
   position: relative;
 }
