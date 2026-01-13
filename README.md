@@ -2,6 +2,8 @@
 
 A web-based comic book reader designed for panel-by-panel reading with translation support.
 
+The reader is hosted at [https://tintincomics.netlify.app](https://tintincomics.netlify.app)
+
 ## What is this?
 
 This project creates a web reader for reading comic books in a foreign language. The reader browses the comic book panel-by-panel with support for translating the text on the panel into English. The reader is designed for me to practise my Chinese reading, mostly on my phone.
@@ -29,8 +31,6 @@ A web interface that uses the extracted data to create a guided reading experien
 - Highlights relevant grammar patterns with examples
 
 The web interface is a static site which is generated with TypeScript.
-
-The reader is hosted at [https://tintincomics.netlify.app](https://tintincomics.netlify.app)
 
 ## Why
 
