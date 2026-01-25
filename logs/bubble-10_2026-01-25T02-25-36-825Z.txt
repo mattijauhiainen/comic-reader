@@ -1,0 +1,41 @@
+=== API Response for Bubble 10 ===
+Timestamp: 2026-01-25T02:25:36.825Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "現在，覺得頭痛了吧！",
+  "translation": "Now you're getting a headache, aren't you!",
+  "sentences": [
+    {
+      "chinese_text": "現在，覺得頭痛了吧！",
+      "english_translation": "Now you're getting a headache, aren't you!",
+      "vocabulary": [
+        {
+          "word": "現在",
+          "translation": "now",
+          "romanization": "jin6 zoi6"
+        },
+        {
+          "word": "覺得",
+          "translation": "to feel",
+          "romanization": "gok3 dak1"
+        },
+        {
+          "word": "頭痛",
+          "translation": "headache",
+          "romanization": "tau4 tung3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "了吧",
+          "explanation": "Combination of the aspect marker 了 (indicating change of state or completion) and the particle 吧 (suggesting a supposition or seeking confirmation). Together they express 'I suppose/assume that...' or used rhetorically as 'aren't you/isn't it'",
+          "example": "覺得頭痛了吧 (You're getting a headache now, aren't you)"
+        }
+      ]
+    }
+  ]
+}
+```
+

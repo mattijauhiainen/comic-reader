@@ -1,0 +1,36 @@
+=== API Response for Bubble 13 ===
+Timestamp: 2026-01-25T02:39:06.961Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "是不是，\n教授？",
+  "translation": "Isn't that right, Professor?",
+  "sentences": [
+    {
+      "chinese_text": "是不是，教授？",
+      "english_translation": "Isn't that right, Professor?",
+      "vocabulary": [
+        {
+          "word": "是不是",
+          "translation": "isn't it; right or not",
+          "romanization": "si6 bat1 si6"
+        },
+        {
+          "word": "教授",
+          "translation": "professor",
+          "romanization": "gaau3 sau6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "是不是",
+          "explanation": "A tag question pattern placed at the beginning or end of a statement to seek confirmation or agreement, equivalent to 'isn't it?', 'right?', or 'is it or isn't it?' in English.",
+          "example": "是不是，教授？"
+        }
+      ]
+    }
+  ]
+}
+```
+

@@ -1,0 +1,25 @@
+=== API Response for Bubble 12 ===
+Timestamp: 2026-01-25T02:39:00.810Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "摩普里弗摩尼基",
+  "translation": "Moprifurmonica",
+  "sentences": [
+    {
+      "chinese_text": "摩普里弗摩尼基",
+      "english_translation": "Moprifurmonica",
+      "vocabulary": [
+        {
+          "word": "摩普里弗摩尼基",
+          "translation": "Moprifurmonica (transliteration of a proper name)",
+          "romanization": "mo1 pou2 lei5 fat6 mo1 nei4 gei1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

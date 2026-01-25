@@ -1,0 +1,25 @@
+=== API Response for Bubble 21 ===
+Timestamp: 2026-01-25T02:39:53.756Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "啊呸！",
+  "translation": "Yuck! / Ptui!",
+  "sentences": [
+    {
+      "chinese_text": "啊呸！",
+      "english_translation": "Yuck! / Ptui!",
+      "vocabulary": [
+        {
+          "word": "啊呸",
+          "translation": "expression of disgust or spitting sound",
+          "romanization": "aa1 pei3"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

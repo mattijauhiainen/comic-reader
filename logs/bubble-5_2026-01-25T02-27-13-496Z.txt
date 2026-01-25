@@ -1,0 +1,79 @@
+=== API Response for Bubble 5 ===
+Timestamp: 2026-01-25T02:27:13.496Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "這個姓很可笑！我的名字是甚麼？",
+  "translation": "This surname is ridiculous! What is my name?",
+  "sentences": [
+    {
+      "chinese_text": "這個姓很可笑！",
+      "english_translation": "This surname is ridiculous!",
+      "vocabulary": [
+        {
+          "word": "這個",
+          "translation": "this",
+          "romanization": "ze5 go3"
+        },
+        {
+          "word": "姓",
+          "translation": "surname",
+          "romanization": "sing3"
+        },
+        {
+          "word": "很",
+          "translation": "very",
+          "romanization": "han2"
+        },
+        {
+          "word": "可笑",
+          "translation": "ridiculous, laughable",
+          "romanization": "ho2 siu3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "很 + adjective",
+          "explanation": "很 (very) is used before adjectives to indicate degree or intensity",
+          "example": "很可笑 (very ridiculous)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "我的名字是甚麼？",
+      "english_translation": "What is my name?",
+      "vocabulary": [
+        {
+          "word": "我的",
+          "translation": "my",
+          "romanization": "ngo5 dik1"
+        },
+        {
+          "word": "名字",
+          "translation": "name",
+          "romanization": "ming4 zi6"
+        },
+        {
+          "word": "是",
+          "translation": "is",
+          "romanization": "si6"
+        },
+        {
+          "word": "甚麼",
+          "translation": "what",
+          "romanization": "sam6 mo1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Subject + 是 + 甚麼？",
+          "explanation": "This is a question pattern asking 'what is [subject]?' using the question word 甚麼 (what) after the verb 是 (to be)",
+          "example": "我的名字是甚麼？(What is my name?)"
+        }
+      ]
+    }
+  ]
+}
+```
+

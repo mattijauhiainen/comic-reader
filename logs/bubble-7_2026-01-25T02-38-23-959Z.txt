@@ -1,0 +1,44 @@
+=== API Response for Bubble 7 ===
+Timestamp: 2026-01-25T02:38:23.959Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "纳古姆瓦曾！約摩！\n纳古姆埃恩岡！",
+  "translation": "Nagoomwatzen! Yomo! Nagoomwaingan!",
+  "sentences": [
+    {
+      "chinese_text": "纳古姆瓦曾！約摩！",
+      "english_translation": "Nagoomwatzen! Yomo!",
+      "vocabulary": [
+        {
+          "word": "纳古姆瓦曾",
+          "translation": "Nagoomwatzen (indigenous/fictional language exclamation)",
+          "romanization": "naap6 gu2 mou5 ngaa5 zang1"
+        },
+        {
+          "word": "約摩",
+          "translation": "Yomo (indigenous/fictional language word)",
+          "romanization": "joek3 mo1"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "纳古姆埃恩岡！",
+      "english_translation": "Nagoomwaingan!",
+      "vocabulary": [
+        {
+          "word": "纳古姆埃恩岡",
+          "translation": "Nagoomwaingan (indigenous/fictional language exclamation)",
+          "romanization": "naap6 gu2 mou5 oi1 jan1 gong1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+**Note:** This text appears to be transliterated indigenous/fictional language words from the Tintin comic, represented phonetically in Chinese characters. These are not standard Chinese words with conventional meanings, but rather sound representations of the native language spoken by characters in "Tintin and the Picaros."
+

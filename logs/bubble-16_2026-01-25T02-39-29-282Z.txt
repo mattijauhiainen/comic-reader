@@ -1,0 +1,51 @@
+=== API Response for Bubble 16 ===
+Timestamp: 2026-01-25T02:39:29.282Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "他問你喜不喜歡吃？",
+  "translation": "He's asking if you like eating it?",
+  "sentences": [
+    {
+      "chinese_text": "他問你喜不喜歡吃？",
+      "english_translation": "He's asking if you like eating it?",
+      "vocabulary": [
+        {
+          "word": "他",
+          "translation": "he",
+          "romanization": "taa1"
+        },
+        {
+          "word": "問",
+          "translation": "to ask",
+          "romanization": "man6"
+        },
+        {
+          "word": "你",
+          "translation": "you",
+          "romanization": "nei5"
+        },
+        {
+          "word": "喜歡",
+          "translation": "to like",
+          "romanization": "hei2 fun1"
+        },
+        {
+          "word": "吃",
+          "translation": "to eat",
+          "romanization": "hek3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb + 不 + Verb (A-not-A question form)",
+          "explanation": "This pattern creates a yes-no question by juxtaposing the positive and negative forms of a verb or adjective. Here '喜不喜歡' (like or not like) asks whether someone likes something.",
+          "example": "喜不喜歡"
+        }
+      ]
+    }
+  ]
+}
+```
+

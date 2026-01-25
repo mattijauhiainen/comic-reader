@@ -1,0 +1,98 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T02:24:30.164Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "你說嚐一點！但看你的樣子，整瓶酒也全喝掉！",
+  "translation": "You said just a taste! But looking at you, you've drunk the entire bottle!",
+  "sentences": [
+    {
+      "chinese_text": "你說嚐一點！",
+      "english_translation": "You said just a taste!",
+      "vocabulary": [
+        {
+          "word": "說",
+          "translation": "to say",
+          "romanization": "syut3"
+        },
+        {
+          "word": "嚐",
+          "translation": "to taste, to try",
+          "romanization": "soeng4"
+        },
+        {
+          "word": "一點",
+          "translation": "a little bit",
+          "romanization": "jat1 dim2"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "但看你的樣子，整瓶酒也全喝掉！",
+      "english_translation": "But looking at you, you've drunk the entire bottle!",
+      "vocabulary": [
+        {
+          "word": "但",
+          "translation": "but",
+          "romanization": "daan6"
+        },
+        {
+          "word": "看",
+          "translation": "to look at",
+          "romanization": "hon3"
+        },
+        {
+          "word": "樣子",
+          "translation": "appearance, manner",
+          "romanization": "joeng6 zi2"
+        },
+        {
+          "word": "整",
+          "translation": "entire, whole",
+          "romanization": "zing2"
+        },
+        {
+          "word": "瓶",
+          "translation": "bottle",
+          "romanization": "ping4"
+        },
+        {
+          "word": "酒",
+          "translation": "alcohol, wine",
+          "romanization": "zau2"
+        },
+        {
+          "word": "也",
+          "translation": "also, even",
+          "romanization": "jaa5"
+        },
+        {
+          "word": "全",
+          "translation": "completely, entirely",
+          "romanization": "cyun4"
+        },
+        {
+          "word": "喝掉",
+          "translation": "to drink up, to finish drinking",
+          "romanization": "hot3 diu6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "也...全...",
+          "explanation": "The combination of 也 (even) and 全 (completely) emphasizes the totality of the action, suggesting that even the entire amount was consumed.",
+          "example": "整瓶酒也全喝掉"
+        },
+        {
+          "pattern": "看...的樣子",
+          "explanation": "This pattern means 'looking at...' or 'judging from the appearance of...', used to make an observation based on visible evidence.",
+          "example": "看你的樣子"
+        }
+      ]
+    }
+  ]
+}
+```
+

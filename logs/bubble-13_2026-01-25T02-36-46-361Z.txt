@@ -1,0 +1,36 @@
+=== API Response for Bubble 13 ===
+Timestamp: 2026-01-25T02:36:46.361Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "請放心。",
+  "translation": "Please rest assured. / Please don't worry.",
+  "sentences": [
+    {
+      "chinese_text": "請放心。",
+      "english_translation": "Please rest assured. / Please don't worry.",
+      "vocabulary": [
+        {
+          "word": "請",
+          "translation": "please",
+          "romanization": "cing2"
+        },
+        {
+          "word": "放心",
+          "translation": "to rest assured, to be at ease, to not worry",
+          "romanization": "fong3 sam1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "請 + Verb",
+          "explanation": "請 is used before a verb to make a polite request or imperative, similar to 'please' in English.",
+          "example": "請放心"
+        }
+      ]
+    }
+  ]
+}
+```
+

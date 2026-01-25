@@ -1,0 +1,131 @@
+=== API Response for Bubble 1 ===
+Timestamp: 2026-01-25T02:26:24.543Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "不,不,阿倫巴亞人已成為我們的朋友了!起初,他們總給我們製造一些麻煩。但現在,沒事了……",
+  "translation": "No, no, the Arumbaya people have become our friends! At first, they always caused us some trouble. But now, everything's fine...",
+  "sentences": [
+    {
+      "chinese_text": "不,不,阿倫巴亞人已成為我們的朋友了!",
+      "english_translation": "No, no, the Arumbaya people have become our friends!",
+      "vocabulary": [
+        {
+          "word": "不",
+          "translation": "no",
+          "romanization": "bat1"
+        },
+        {
+          "word": "阿倫巴亞人",
+          "translation": "Arumbaya people",
+          "romanization": "aa3 leon4 baa1 aa3 jan4"
+        },
+        {
+          "word": "已",
+          "translation": "already",
+          "romanization": "ji5"
+        },
+        {
+          "word": "成為",
+          "translation": "to become",
+          "romanization": "sing4 wai4"
+        },
+        {
+          "word": "我們",
+          "translation": "we, us, our",
+          "romanization": "ngo5 mun4"
+        },
+        {
+          "word": "朋友",
+          "translation": "friends",
+          "romanization": "pang4 jau5"
+        },
+        {
+          "word": "了",
+          "translation": "(particle indicating completion)",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "已 + Verb + 了",
+          "explanation": "This pattern indicates that an action has already been completed. '已' means 'already' and '了' is a particle marking completion or change of state.",
+          "example": "已成為我們的朋友了 (have already become our friends)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "起初,他們總給我們製造一些麻煩。",
+      "english_translation": "At first, they always caused us some trouble.",
+      "vocabulary": [
+        {
+          "word": "起初",
+          "translation": "at first, initially",
+          "romanization": "hei2 co1"
+        },
+        {
+          "word": "他們",
+          "translation": "they, them",
+          "romanization": "taa1 mun4"
+        },
+        {
+          "word": "總",
+          "translation": "always",
+          "romanization": "zung2"
+        },
+        {
+          "word": "給",
+          "translation": "to give, for",
+          "romanization": "kap1"
+        },
+        {
+          "word": "製造",
+          "translation": "to create, to cause",
+          "romanization": "zai3 zou6"
+        },
+        {
+          "word": "一些",
+          "translation": "some",
+          "romanization": "jat1 se1"
+        },
+        {
+          "word": "麻煩",
+          "translation": "trouble",
+          "romanization": "maa4 faan4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "給 + Person + Verb",
+          "explanation": "Here '給' is used to indicate doing something for or to someone, similar to 'to' or 'for' in English.",
+          "example": "給我們製造 (caused us)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "但現在,沒事了……",
+      "english_translation": "But now, everything's fine...",
+      "vocabulary": [
+        {
+          "word": "但",
+          "translation": "but",
+          "romanization": "daan6"
+        },
+        {
+          "word": "現在",
+          "translation": "now",
+          "romanization": "jin6 zoi6"
+        },
+        {
+          "word": "沒事",
+          "translation": "nothing's wrong, it's fine",
+          "romanization": "mut6 si6"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

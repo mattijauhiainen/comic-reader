@@ -1,0 +1,80 @@
+=== API Response for Bubble 4 ===
+Timestamp: 2026-01-25T02:35:44.418Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "啊！在那兒！他總是躲在後面。",
+  "translation": "Ah! There he is! He's always hiding in the back.",
+  "sentences": [
+    {
+      "chinese_text": "啊！",
+      "english_translation": "Ah!",
+      "vocabulary": [
+        {
+          "word": "啊",
+          "translation": "ah (exclamation)",
+          "romanization": "aa3"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "在那兒！",
+      "english_translation": "There he is! / Over there!",
+      "vocabulary": [
+        {
+          "word": "在",
+          "translation": "to be at, to be located",
+          "romanization": "zoi6"
+        },
+        {
+          "word": "那兒",
+          "translation": "there",
+          "romanization": "naa5 ji4"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "他總是躲在後面。",
+      "english_translation": "He's always hiding in the back.",
+      "vocabulary": [
+        {
+          "word": "他",
+          "translation": "he",
+          "romanization": "taa1"
+        },
+        {
+          "word": "總是",
+          "translation": "always",
+          "romanization": "zung2 si6"
+        },
+        {
+          "word": "躲",
+          "translation": "to hide",
+          "romanization": "do2"
+        },
+        {
+          "word": "在",
+          "translation": "at, in (indicating location)",
+          "romanization": "zoi6"
+        },
+        {
+          "word": "後面",
+          "translation": "back, behind",
+          "romanization": "hau6 min6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "在 + Location",
+          "explanation": "The preposition 在 is used before a location word to indicate where an action takes place or where someone/something is located.",
+          "example": "躲在後面 (hiding in the back)"
+        }
+      ]
+    }
+  ]
+}
+```
+

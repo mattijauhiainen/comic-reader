@@ -1,0 +1,104 @@
+=== API Response for Bubble 11 ===
+Timestamp: 2026-01-25T02:28:18.406Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "我們要在那裡停下來過夜！來一支煙嗎，朋友？",
+  "translation": "We're going to stop there for the night! Want a cigarette, friend?",
+  "sentences": [
+    {
+      "chinese_text": "我們要在那裡停下來過夜！",
+      "english_translation": "We're going to stop there for the night!",
+      "vocabulary": [
+        {
+          "word": "我們",
+          "translation": "we",
+          "romanization": "ngo5 mun4"
+        },
+        {
+          "word": "要",
+          "translation": "will, going to",
+          "romanization": "jiu3"
+        },
+        {
+          "word": "在",
+          "translation": "at, in",
+          "romanization": "zoi6"
+        },
+        {
+          "word": "那裡",
+          "translation": "there",
+          "romanization": "naa5 leoi5"
+        },
+        {
+          "word": "停下來",
+          "translation": "to stop",
+          "romanization": "ting4 haa5 loi4"
+        },
+        {
+          "word": "過夜",
+          "translation": "to spend the night, to stay overnight",
+          "romanization": "gwo3 je6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "要 + verb",
+          "explanation": "Indicates future intention or necessity, meaning 'will' or 'going to'",
+          "example": "我們要在那裡停下來"
+        },
+        {
+          "pattern": "在 + location + verb",
+          "explanation": "Indicates the location where an action takes place",
+          "example": "在那裡停下來"
+        }
+      ]
+    },
+    {
+      "chinese_text": "來一支煙嗎，朋友？",
+      "english_translation": "Want a cigarette, friend?",
+      "vocabulary": [
+        {
+          "word": "來",
+          "translation": "to have, to take (colloquial)",
+          "romanization": "loi4"
+        },
+        {
+          "word": "一支",
+          "translation": "one (classifier for stick-like objects)",
+          "romanization": "jat1 zi1"
+        },
+        {
+          "word": "煙",
+          "translation": "cigarette",
+          "romanization": "jin1"
+        },
+        {
+          "word": "嗎",
+          "translation": "question particle",
+          "romanization": "maa3"
+        },
+        {
+          "word": "朋友",
+          "translation": "friend",
+          "romanization": "pang4 jau5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "來 + noun",
+          "explanation": "Colloquial way to offer or suggest having something, similar to 'how about' or 'want'",
+          "example": "來一支煙"
+        },
+        {
+          "pattern": "嗎",
+          "explanation": "Question particle placed at the end of a statement to form a yes/no question",
+          "example": "來一支煙嗎"
+        }
+      ]
+    }
+  ]
+}
+```
+

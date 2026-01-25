@@ -1,0 +1,64 @@
+=== API Response for Bubble 13 ===
+Timestamp: 2026-01-25T02:28:35.916Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "名字更滑稽！\n你呢？",
+  "translation": "The name is even more ridiculous!\nWhat about you?",
+  "sentences": [
+    {
+      "chinese_text": "名字更滑稽！",
+      "english_translation": "The name is even more ridiculous!",
+      "vocabulary": [
+        {
+          "word": "名字",
+          "translation": "name",
+          "romanization": "ming4 zi6"
+        },
+        {
+          "word": "更",
+          "translation": "even more",
+          "romanization": "gang3"
+        },
+        {
+          "word": "滑稽",
+          "translation": "ridiculous, funny, comical",
+          "romanization": "waat6 kai1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "更 + adjective",
+          "explanation": "更 is used before an adjective to indicate a comparative meaning of 'even more' or 'still more'",
+          "example": "名字更滑稽 (the name is even more ridiculous)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "你呢？",
+      "english_translation": "What about you?",
+      "vocabulary": [
+        {
+          "word": "你",
+          "translation": "you",
+          "romanization": "nei5"
+        },
+        {
+          "word": "呢",
+          "translation": "question particle (what about...?)",
+          "romanization": "ne1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "noun/pronoun + 呢？",
+          "explanation": "呢 is used after a noun or pronoun to ask 'what about...?' or 'how about...?', often used to ask the same question back to someone",
+          "example": "你呢？(What about you?)"
+        }
+      ]
+    }
+  ]
+}
+```
+

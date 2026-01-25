@@ -1,0 +1,25 @@
+=== API Response for Bubble 20 ===
+Timestamp: 2026-01-25T02:39:49.860Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "啊……!",
+  "translation": "Ah...!",
+  "sentences": [
+    {
+      "chinese_text": "啊……!",
+      "english_translation": "Ah...!",
+      "vocabulary": [
+        {
+          "word": "啊",
+          "translation": "ah (exclamation expressing surprise, realization, or pain)",
+          "romanization": "aa3"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

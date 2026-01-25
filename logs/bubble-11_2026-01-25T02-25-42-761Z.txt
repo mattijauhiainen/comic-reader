@@ -1,0 +1,48 @@
+=== API Response for Bubble 11 ===
+Timestamp: 2026-01-25T02:25:42.761Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "停！别喝！",
+  "translation": "Stop! Don't drink!",
+  "sentences": [
+    {
+      "chinese_text": "停！",
+      "english_translation": "Stop!",
+      "vocabulary": [
+        {
+          "word": "停",
+          "translation": "stop",
+          "romanization": "ting4"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "别喝！",
+      "english_translation": "Don't drink!",
+      "vocabulary": [
+        {
+          "word": "别",
+          "translation": "don't",
+          "romanization": "bit6"
+        },
+        {
+          "word": "喝",
+          "translation": "drink",
+          "romanization": "hot3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "别 + Verb",
+          "explanation": "别 is used before a verb to form a negative imperative, meaning 'don't do something'. It's a command telling someone not to perform an action.",
+          "example": "别喝 (Don't drink)"
+        }
+      ]
+    }
+  ]
+}
+```
+

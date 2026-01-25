@@ -1,0 +1,46 @@
+=== API Response for Bubble 5 ===
+Timestamp: 2026-01-25T02:25:01.191Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "正前方有冰山！",
+  "translation": "There's an iceberg dead ahead!",
+  "sentences": [
+    {
+      "chinese_text": "正前方有冰山！",
+      "english_translation": "There's an iceberg dead ahead!",
+      "vocabulary": [
+        {
+          "word": "正",
+          "translation": "directly, right",
+          "romanization": "zing3"
+        },
+        {
+          "word": "前方",
+          "translation": "ahead, in front",
+          "romanization": "cin4 fong1"
+        },
+        {
+          "word": "有",
+          "translation": "there is/are, to have",
+          "romanization": "jau5"
+        },
+        {
+          "word": "冰山",
+          "translation": "iceberg",
+          "romanization": "bing1 saan1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "有 + Noun",
+          "explanation": "The existential verb '有' is used to indicate the existence or presence of something. The structure is '(Location) + 有 + Noun' to express 'there is/are [noun] (at location)'.",
+          "example": "正前方有冰山 (There is an iceberg dead ahead)"
+        }
+      ]
+    }
+  ]
+}
+```
+

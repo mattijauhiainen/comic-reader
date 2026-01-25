@@ -1,0 +1,25 @@
+=== API Response for Bubble 17 ===
+Timestamp: 2026-01-25T02:39:33.787Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "弗雷摩！弗雷摩！",
+  "translation": "Framó! Framó!",
+  "sentences": [
+    {
+      "chinese_text": "弗雷摩！弗雷摩！",
+      "english_translation": "Framó! Framó!",
+      "vocabulary": [
+        {
+          "word": "弗雷摩",
+          "translation": "Framó (a name - transliteration)",
+          "romanization": "fat1 leoi4 mo1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

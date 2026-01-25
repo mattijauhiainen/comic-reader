@@ -1,0 +1,41 @@
+=== API Response for Bubble 7 ===
+Timestamp: 2026-01-25T02:25:12.032Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "讓我來！",
+  "translation": "Let me do it!",
+  "sentences": [
+    {
+      "chinese_text": "讓我來！",
+      "english_translation": "Let me do it!",
+      "vocabulary": [
+        {
+          "word": "讓",
+          "translation": "to let, to allow",
+          "romanization": "joeng6"
+        },
+        {
+          "word": "我",
+          "translation": "I, me",
+          "romanization": "ngo5"
+        },
+        {
+          "word": "來",
+          "translation": "to come, to do (something)",
+          "romanization": "loi4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "讓 + person + 來",
+          "explanation": "This pattern is used to volunteer or offer to do something. '讓我來' literally means 'let me come' but idiomatically means 'let me do it' or 'let me handle it'.",
+          "example": "讓我來！"
+        }
+      ]
+    }
+  ]
+}
+```
+

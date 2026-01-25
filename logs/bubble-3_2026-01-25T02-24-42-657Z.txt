@@ -1,0 +1,94 @@
+=== API Response for Bubble 3 ===
+Timestamp: 2026-01-25T02:24:42.657Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "在熱帶森林裡竟有一瓶酒？難以置信！",
+  "translation": "There's actually a bottle of alcohol in the tropical forest? Unbelievable!",
+  "sentences": [
+    {
+      "chinese_text": "在熱帶森林裡竟有一瓶酒？",
+      "english_translation": "There's actually a bottle of alcohol in the tropical forest?",
+      "vocabulary": [
+        {
+          "word": "在",
+          "translation": "in, at",
+          "romanization": "zoi6"
+        },
+        {
+          "word": "熱帶",
+          "translation": "tropical",
+          "romanization": "jit6 daai3"
+        },
+        {
+          "word": "森林",
+          "translation": "forest",
+          "romanization": "sam1 lam4"
+        },
+        {
+          "word": "裡",
+          "translation": "inside, in",
+          "romanization": "leoi5"
+        },
+        {
+          "word": "竟",
+          "translation": "actually, unexpectedly",
+          "romanization": "ging2"
+        },
+        {
+          "word": "有",
+          "translation": "to have, there is",
+          "romanization": "jau5"
+        },
+        {
+          "word": "一瓶",
+          "translation": "one bottle",
+          "romanization": "jat1 ping4"
+        },
+        {
+          "word": "酒",
+          "translation": "alcohol, wine",
+          "romanization": "zau2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "在...裡",
+          "explanation": "Indicates location, meaning 'in' or 'inside'. 在 (at/in) + place + 裡 (inside) forms a locational phrase.",
+          "example": "在熱帶森林裡"
+        },
+        {
+          "pattern": "竟",
+          "explanation": "An adverb expressing surprise or unexpectedness, meaning 'actually' or 'surprisingly'. It emphasizes that something is contrary to expectations.",
+          "example": "竟有一瓶酒"
+        }
+      ]
+    },
+    {
+      "chinese_text": "難以置信！",
+      "english_translation": "Unbelievable!",
+      "vocabulary": [
+        {
+          "word": "難以",
+          "translation": "difficult to, hard to",
+          "romanization": "naan4 ji5"
+        },
+        {
+          "word": "置信",
+          "translation": "to believe",
+          "romanization": "zi3 seon3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "難以 + verb",
+          "explanation": "Means 'difficult to' or 'hard to' do something. 難以 is a formal way to express difficulty in performing an action.",
+          "example": "難以置信 (hard to believe)"
+        }
+      ]
+    }
+  ]
+}
+```
+

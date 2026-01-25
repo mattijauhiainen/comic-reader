@@ -1,0 +1,35 @@
+=== API Response for Bubble 15 ===
+Timestamp: 2026-01-25T02:28:49.636Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "舵柄全右舷！",
+  "translation": "Helm hard to starboard!",
+  "sentences": [
+    {
+      "chinese_text": "舵柄全右舷！",
+      "english_translation": "Helm hard to starboard!",
+      "vocabulary": [
+        {
+          "word": "舵柄",
+          "translation": "helm, tiller",
+          "romanization": "to5 beng3"
+        },
+        {
+          "word": "全",
+          "translation": "fully, completely, hard",
+          "romanization": "cyun4"
+        },
+        {
+          "word": "右舷",
+          "translation": "starboard (right side of a ship)",
+          "romanization": "jau6 jin4"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

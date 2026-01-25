@@ -1,0 +1,25 @@
+=== API Response for Bubble 22 ===
+Timestamp: 2026-01-25T02:39:57.481Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "當然……",
+  "translation": "Of course...",
+  "sentences": [
+    {
+      "chinese_text": "當然……",
+      "english_translation": "Of course...",
+      "vocabulary": [
+        {
+          "word": "當然",
+          "translation": "of course, naturally",
+          "romanization": "dong1 jin4"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

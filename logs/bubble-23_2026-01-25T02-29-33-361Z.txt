@@ -1,0 +1,25 @@
+=== API Response for Bubble 23 ===
+Timestamp: 2026-01-25T02:29:33.361Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "噗！",
+  "translation": "Pfft! / Poof!",
+  "sentences": [
+    {
+      "chinese_text": "噗！",
+      "english_translation": "Pfft! / Poof!",
+      "vocabulary": [
+        {
+          "word": "噗",
+          "translation": "sound effect expressing a puff, burst, or spitting sound",
+          "romanization": "puk1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

@@ -1,0 +1,25 @@
+=== API Response for Bubble 11 ===
+Timestamp: 2026-01-25T02:34:11.125Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "嘿！嘿！",
+  "translation": "Hey! Hey!",
+  "sentences": [
+    {
+      "chinese_text": "嘿！嘿！",
+      "english_translation": "Hey! Hey!",
+      "vocabulary": [
+        {
+          "word": "嘿",
+          "translation": "hey (exclamation)",
+          "romanization": "hek1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

@@ -1,0 +1,137 @@
+=== API Response for Bubble 3 ===
+Timestamp: 2026-01-25T02:32:56.068Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "別提了！但他們在酗酒方面卻進步很快！這得感謝塔比奧卡將軍！",
+  "translation": "Don't mention it! But they're making fast progress in the drinking department! We have to thank General Tapioca for that!",
+  "sentences": [
+    {
+      "chinese_text": "別提了！",
+      "english_translation": "Don't mention it!",
+      "vocabulary": [
+        {
+          "word": "別",
+          "translation": "don't",
+          "romanization": "bit6"
+        },
+        {
+          "word": "提",
+          "translation": "mention, bring up",
+          "romanization": "tai4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "別 + Verb",
+          "explanation": "Used to form negative imperatives, telling someone not to do something",
+          "example": "別提了"
+        }
+      ]
+    },
+    {
+      "chinese_text": "但他們在酗酒方面卻進步很快！",
+      "english_translation": "But they're making fast progress in the drinking department!",
+      "vocabulary": [
+        {
+          "word": "但",
+          "translation": "but",
+          "romanization": "daan6"
+        },
+        {
+          "word": "他們",
+          "translation": "they",
+          "romanization": "taa1 mun4"
+        },
+        {
+          "word": "在",
+          "translation": "in, at",
+          "romanization": "zoi6"
+        },
+        {
+          "word": "酗酒",
+          "translation": "excessive drinking, alcoholism",
+          "romanization": "jau3 zau2"
+        },
+        {
+          "word": "方面",
+          "translation": "aspect, department",
+          "romanization": "fong1 min6"
+        },
+        {
+          "word": "卻",
+          "translation": "however, yet",
+          "romanization": "koek3"
+        },
+        {
+          "word": "進步",
+          "translation": "progress, improvement",
+          "romanization": "zeon3 bou6"
+        },
+        {
+          "word": "很",
+          "translation": "very",
+          "romanization": "han2"
+        },
+        {
+          "word": "快",
+          "translation": "fast, quick",
+          "romanization": "faai3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "在...方面",
+          "explanation": "Used to indicate 'in the aspect of' or 'regarding', often translated as 'in terms of'",
+          "example": "在酗酒方面"
+        },
+        {
+          "pattern": "很 + Adjective",
+          "explanation": "Used to intensify adjectives, meaning 'very'",
+          "example": "很快"
+        }
+      ]
+    },
+    {
+      "chinese_text": "這得感謝塔比奧卡將軍！",
+      "english_translation": "We have to thank General Tapioca for that!",
+      "vocabulary": [
+        {
+          "word": "這",
+          "translation": "this",
+          "romanization": "ze5"
+        },
+        {
+          "word": "得",
+          "translation": "must, have to",
+          "romanization": "dak1"
+        },
+        {
+          "word": "感謝",
+          "translation": "thank, be grateful to",
+          "romanization": "gam2 ze6"
+        },
+        {
+          "word": "塔比奧卡",
+          "translation": "Tapioca (name)",
+          "romanization": "taap3 bei2 ou1 kaa1"
+        },
+        {
+          "word": "將軍",
+          "translation": "general",
+          "romanization": "zoeng1 gwan1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "得 + Verb",
+          "explanation": "Expresses necessity or obligation, meaning 'must' or 'have to'",
+          "example": "得感謝"
+        }
+      ]
+    }
+  ]
+}
+```
+

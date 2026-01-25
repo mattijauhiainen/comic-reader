@@ -1,0 +1,56 @@
+=== API Response for Bubble 14 ===
+Timestamp: 2026-01-25T02:28:44.619Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "当然是你了，你是哈達克船長….",
+  "translation": "Of course it's you, you are Captain Haddock....",
+  "sentences": [
+    {
+      "chinese_text": "当然是你了，你是哈達克船長….",
+      "english_translation": "Of course it's you, you are Captain Haddock....",
+      "vocabulary": [
+        {
+          "word": "当然",
+          "translation": "of course, naturally",
+          "romanization": "dong1 jin4"
+        },
+        {
+          "word": "是",
+          "translation": "to be, am/is/are",
+          "romanization": "si6"
+        },
+        {
+          "word": "你",
+          "translation": "you",
+          "romanization": "nei5"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating completion or change of state",
+          "romanization": "liu5"
+        },
+        {
+          "word": "哈達克",
+          "translation": "Haddock (transliteration of name)",
+          "romanization": "haa1 daat6 hak1"
+        },
+        {
+          "word": "船長",
+          "translation": "captain (of a ship)",
+          "romanization": "syun4 zoeng2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "是...了",
+          "explanation": "The particle 了 (liu5) after 你 emphasizes certainty or obviousness of the statement, often used to confirm something that should be obvious",
+          "example": "当然是你了"
+        }
+      ]
+    }
+  ]
+}
+```
+

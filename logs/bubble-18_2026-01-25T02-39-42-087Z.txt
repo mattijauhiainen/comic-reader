@@ -1,0 +1,51 @@
+=== API Response for Bubble 18 ===
+Timestamp: 2026-01-25T02:39:42.087Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "喝吧,盡量喝光……",
+  "translation": "Drink up, drink as much as you can...",
+  "sentences": [
+    {
+      "chinese_text": "喝吧,盡量喝光……",
+      "english_translation": "Drink up, drink as much as you can...",
+      "vocabulary": [
+        {
+          "word": "喝",
+          "translation": "to drink",
+          "romanization": "hot3"
+        },
+        {
+          "word": "吧",
+          "translation": "particle indicating suggestion or mild command",
+          "romanization": "baa1"
+        },
+        {
+          "word": "盡量",
+          "translation": "as much as possible, to the fullest extent",
+          "romanization": "zeon6 loeng6"
+        },
+        {
+          "word": "喝光",
+          "translation": "to drink up completely, to finish drinking",
+          "romanization": "hot3 gwong1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb + 吧",
+          "explanation": "The particle 吧 (baa1) is added after a verb to soften a command or make a suggestion, similar to 'go ahead and...' or 'why don't you...' in English.",
+          "example": "喝吧"
+        },
+        {
+          "pattern": "Verb + 光",
+          "translation": "The complement 光 (gwong1) after a verb indicates completion or using something up entirely.",
+          "example": "喝光"
+        }
+      ]
+    }
+  ]
+}
+```
+

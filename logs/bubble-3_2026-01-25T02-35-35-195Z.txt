@@ -1,0 +1,91 @@
+=== API Response for Bubble 3 ===
+Timestamp: 2026-01-25T02:35:35.195Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "這是卡洛馬村長，他邀請我們一起\n進餐，並在他家裡過夜。",
+  "translation": "This is Village Chief Caloma. He's inviting us to dine together and spend the night at his house.",
+  "sentences": [
+    {
+      "chinese_text": "這是卡洛馬村長，他邀請我們一起進餐，並在他家裡過夜。",
+      "english_translation": "This is Village Chief Caloma. He's inviting us to dine together and spend the night at his house.",
+      "vocabulary": [
+        {
+          "word": "這是",
+          "translation": "this is",
+          "romanization": "ze5 si6"
+        },
+        {
+          "word": "卡洛馬",
+          "translation": "Caloma (name)",
+          "romanization": "kaa1 lok6 maa5"
+        },
+        {
+          "word": "村長",
+          "translation": "village chief",
+          "romanization": "cyun1 zoeng2"
+        },
+        {
+          "word": "邀請",
+          "translation": "to invite",
+          "romanization": "jiu1 cing2"
+        },
+        {
+          "word": "我們",
+          "translation": "us, we",
+          "romanization": "ngo5 mun4"
+        },
+        {
+          "word": "一起",
+          "translation": "together",
+          "romanization": "jat1 hei2"
+        },
+        {
+          "word": "進餐",
+          "translation": "to dine, to have a meal",
+          "romanization": "zeon3 caan1"
+        },
+        {
+          "word": "並",
+          "translation": "and (also)",
+          "romanization": "bing6"
+        },
+        {
+          "word": "在",
+          "translation": "at, in",
+          "romanization": "zoi6"
+        },
+        {
+          "word": "他",
+          "translation": "he, his",
+          "romanization": "taa1"
+        },
+        {
+          "word": "家裡",
+          "translation": "home, house",
+          "romanization": "gaa1 leoi5"
+        },
+        {
+          "word": "過夜",
+          "translation": "to spend the night, to stay overnight",
+          "romanization": "gwo3 je6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "並 (bing6)",
+          "explanation": "並 is a formal conjunction meaning 'and' or 'and also', used to connect two parallel actions or clauses. It emphasizes that both actions are part of the invitation.",
+          "example": "他邀請我們一起進餐，並在他家裡過夜"
+        },
+        {
+          "pattern": "在 + Place + Verb",
+          "explanation": "This pattern indicates where an action takes place. 在 (at/in) is followed by a location (他家裡 - his house) and then the verb (過夜 - spend the night).",
+          "example": "在他家裡過夜"
+        }
+      ]
+    }
+  ]
+}
+```
+

@@ -1,0 +1,37 @@
+=== API Response for Bubble 8 ===
+Timestamp: 2026-01-25T02:38:28.863Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "啊帕！\n啊帕！",
+  "translation": "Aha! Aha!",
+  "sentences": [
+    {
+      "chinese_text": "啊帕！",
+      "english_translation": "Aha!",
+      "vocabulary": [
+        {
+          "word": "啊帕",
+          "translation": "aha (exclamation of discovery or realization)",
+          "romanization": "aa1 paa3"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "啊帕！",
+      "english_translation": "Aha!",
+      "vocabulary": [
+        {
+          "word": "啊帕",
+          "translation": "aha (exclamation of discovery or realization)",
+          "romanization": "aa1 paa3"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

@@ -1,0 +1,30 @@
+=== API Response for Bubble 19 ===
+Timestamp: 2026-01-25T02:35:04.685Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "當天晚上",
+  "translation": "That evening",
+  "sentences": [
+    {
+      "chinese_text": "當天晚上",
+      "english_translation": "That evening",
+      "vocabulary": [
+        {
+          "word": "當天",
+          "translation": "that day, the same day",
+          "romanization": "dong1 tin1"
+        },
+        {
+          "word": "晚上",
+          "translation": "evening, night",
+          "romanization": "maan5 soeng6"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

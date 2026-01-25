@@ -1,0 +1,121 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T02:26:42.460Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "它在上面看了我們整整四十一個世紀，永遠別忘了這一點，年輕水手！",
+  "translation": "It has been watching us from above for a full forty-one centuries. Never forget this, young sailor!",
+  "sentences": [
+    {
+      "chinese_text": "它在上面看了我們整整四十一個世紀，",
+      "english_translation": "It has been watching us from above for a full forty-one centuries,",
+      "vocabulary": [
+        {
+          "word": "它",
+          "translation": "it",
+          "romanization": "taa1"
+        },
+        {
+          "word": "上面",
+          "translation": "above, on top",
+          "romanization": "soeng6 min6"
+        },
+        {
+          "word": "看",
+          "translation": "to watch, to look at",
+          "romanization": "hon3"
+        },
+        {
+          "word": "我們",
+          "translation": "us, we",
+          "romanization": "ngo5 mun4"
+        },
+        {
+          "word": "整整",
+          "translation": "fully, exactly, a whole",
+          "romanization": "zing2 zing2"
+        },
+        {
+          "word": "四十一",
+          "translation": "forty-one",
+          "romanization": "sei3 sap6 jat1"
+        },
+        {
+          "word": "世紀",
+          "translation": "century, centuries",
+          "romanization": "sai3 gei2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "了 (le) - perfective aspect marker",
+          "explanation": "了 is used after the verb 看 to indicate a completed action or a change of state, emphasizing that the watching has occurred over the stated period",
+          "example": "看了我們"
+        },
+        {
+          "pattern": "整整 - emphatic reduplication",
+          "explanation": "整整 is used before a time expression to emphasize the completeness or fullness of the duration",
+          "example": "整整四十一個世紀"
+        }
+      ]
+    },
+    {
+      "chinese_text": "永遠別忘了這一點，",
+      "english_translation": "Never forget this,",
+      "vocabulary": [
+        {
+          "word": "永遠",
+          "translation": "forever, never",
+          "romanization": "wing5 jyun5"
+        },
+        {
+          "word": "別",
+          "translation": "don't",
+          "romanization": "bit6"
+        },
+        {
+          "word": "忘",
+          "translation": "to forget",
+          "romanization": "mong4"
+        },
+        {
+          "word": "這一點",
+          "translation": "this point, this",
+          "romanization": "ze5 jat1 dim2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "別 + verb - negative imperative",
+          "explanation": "別 is used before a verb to form a negative command, meaning 'don't do something'",
+          "example": "別忘了"
+        },
+        {
+          "pattern": "了 after verb in imperative",
+          "explanation": "了 is used after the verb in this imperative sentence to soften the command slightly or indicate a change of state that should be maintained",
+          "example": "別忘了"
+        }
+      ]
+    },
+    {
+      "chinese_text": "年輕水手！",
+      "english_translation": "young sailor!",
+      "vocabulary": [
+        {
+          "word": "年輕",
+          "translation": "young",
+          "romanization": "nin4 hing1"
+        },
+        {
+          "word": "水手",
+          "translation": "sailor",
+          "romanization": "seoi2 sau2"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

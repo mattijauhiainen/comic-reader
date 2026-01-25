@@ -1,0 +1,51 @@
+=== API Response for Bubble 11 ===
+Timestamp: 2026-01-25T02:38:56.061Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "你這傻瓜，怎麼了，想找死嗎？",
+  "translation": "You fool, what's wrong with you, are you looking for death?",
+  "sentences": [
+    {
+      "chinese_text": "你這傻瓜，怎麼了，想找死嗎？",
+      "english_translation": "You fool, what's wrong with you, are you looking for death?",
+      "vocabulary": [
+        {
+          "word": "傻瓜",
+          "translation": "fool, idiot",
+          "romanization": "so4 gwaa1"
+        },
+        {
+          "word": "怎麼了",
+          "translation": "what's wrong, what happened",
+          "romanization": "zam2 mo1 liu5"
+        },
+        {
+          "word": "想",
+          "translation": "want to, thinking of",
+          "romanization": "soeng2"
+        },
+        {
+          "word": "找死",
+          "translation": "looking for death, courting death",
+          "romanization": "zaau2 sei2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "你這 + Noun",
+          "explanation": "This pattern is used to directly address someone with a descriptor, often in an emotional or confrontational way. '這' (this) adds emphasis and immediacy to the address.",
+          "example": "你這傻瓜"
+        },
+        {
+          "pattern": "想 + Verb",
+          "explanation": "The verb '想' followed by another verb indicates intention or desire to do something. Here it's used rhetorically to suggest the person's actions are foolish or dangerous.",
+          "example": "想找死"
+        }
+      ]
+    }
+  ]
+}
+```
+

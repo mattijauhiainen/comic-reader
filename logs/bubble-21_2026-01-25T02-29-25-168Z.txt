@@ -1,0 +1,25 @@
+=== API Response for Bubble 21 ===
+Timestamp: 2026-01-25T02:29:25.168Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "噗！",
+  "translation": "Pff! / Poof! / *pfft sound*",
+  "sentences": [
+    {
+      "chinese_text": "噗！",
+      "english_translation": "Pff! / Poof! / *pfft sound*",
+      "vocabulary": [
+        {
+          "word": "噗",
+          "translation": "sound effect expressing a puffing, spitting, or exhaling sound; can indicate laughter, disbelief, or something bursting",
+          "romanization": "puk1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

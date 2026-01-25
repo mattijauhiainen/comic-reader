@@ -1,0 +1,56 @@
+=== API Response for Bubble 10 ===
+Timestamp: 2026-01-25T02:28:04.582Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "明早天一亮，我們就出發。",
+  "translation": "Tomorrow morning at daybreak, we'll set off.",
+  "sentences": [
+    {
+      "chinese_text": "明早天一亮，我們就出發。",
+      "english_translation": "Tomorrow morning at daybreak, we'll set off.",
+      "vocabulary": [
+        {
+          "word": "明早",
+          "translation": "tomorrow morning",
+          "romanization": "ming4 zou2"
+        },
+        {
+          "word": "天",
+          "translation": "sky, day",
+          "romanization": "tin1"
+        },
+        {
+          "word": "亮",
+          "translation": "bright, to become light",
+          "romanization": "loeng6"
+        },
+        {
+          "word": "我們",
+          "translation": "we, us",
+          "romanization": "ngo5 mun4"
+        },
+        {
+          "word": "就",
+          "translation": "then, right away",
+          "romanization": "zau6"
+        },
+        {
+          "word": "出發",
+          "translation": "to set off, to depart",
+          "romanization": "ceot1 faat3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "一...就...",
+          "explanation": "This pattern means 'as soon as... then...' It indicates that the second action happens immediately after the first action or condition is met.",
+          "example": "天一亮，我們就出發 (As soon as it gets light, we'll set off)"
+        }
+      ]
+    }
+  ]
+}
+```
+

@@ -1,0 +1,46 @@
+=== API Response for Bubble 15 ===
+Timestamp: 2026-01-25T02:34:46.658Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "參見《破損的耳朵》",
+  "translation": "See \"The Broken Ear\"",
+  "sentences": [
+    {
+      "chinese_text": "參見《破損的耳朵》",
+      "english_translation": "See \"The Broken Ear\"",
+      "vocabulary": [
+        {
+          "word": "參見",
+          "translation": "see, refer to",
+          "romanization": "caam1 gin3"
+        },
+        {
+          "word": "破損",
+          "translation": "broken, damaged",
+          "romanization": "po3 syun2"
+        },
+        {
+          "word": "耳朵",
+          "translation": "ear",
+          "romanization": "ji5 do2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "參見 + object",
+          "explanation": "參見 is a formal expression meaning 'see' or 'refer to', commonly used in books and formal writing to direct readers to another source or reference",
+          "example": "參見《破損的耳朵》"
+        },
+        {
+          "pattern": "《》book title markers",
+          "explanation": "《》are used in Chinese to denote book titles, similar to italics or quotation marks in English",
+          "example": "《破損的耳朵》"
+        }
+      ]
+    }
+  ]
+}
+```
+

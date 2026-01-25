@@ -1,0 +1,36 @@
+=== API Response for Bubble 14 ===
+Timestamp: 2026-01-25T02:26:00.475Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "是那邊！",
+  "translation": "It's over there!",
+  "sentences": [
+    {
+      "chinese_text": "是那邊！",
+      "english_translation": "It's over there!",
+      "vocabulary": [
+        {
+          "word": "是",
+          "translation": "is, to be",
+          "romanization": "si6"
+        },
+        {
+          "word": "那邊",
+          "translation": "over there, that side",
+          "romanization": "naa5 bin1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "是 + noun/location",
+          "explanation": "The verb 是 (to be) is used here to identify or point out a location. This is a simple equative sentence structure used to indicate 'it is [location]'.",
+          "example": "是那邊！"
+        }
+      ]
+    }
+  ]
+}
+```
+

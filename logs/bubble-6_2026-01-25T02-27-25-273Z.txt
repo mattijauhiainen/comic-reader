@@ -1,0 +1,84 @@
+=== API Response for Bubble 6 ===
+Timestamp: 2026-01-25T02:27:25.273Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "這麼說，我的船是丟了！它可能是飛走了！",
+  "translation": "So you're saying my boat is lost! It might have flown away!",
+  "sentences": [
+    {
+      "chinese_text": "這麼說，我的船是丟了！",
+      "english_translation": "So you're saying my boat is lost!",
+      "vocabulary": [
+        {
+          "word": "這麼說",
+          "translation": "so you're saying; in that case",
+          "romanization": "ze2 mo1 syut3"
+        },
+        {
+          "word": "船",
+          "translation": "boat; ship",
+          "romanization": "syun4"
+        },
+        {
+          "word": "丟",
+          "translation": "to lose; to be lost",
+          "romanization": "diu1"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating completed action or change of state",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "是...了",
+          "explanation": "This construction emphasizes a change of state or confirmation of a situation. 是 adds emphasis while 了 indicates the completion or realization of the situation.",
+          "example": "我的船是丟了"
+        }
+      ]
+    },
+    {
+      "chinese_text": "它可能是飛走了！",
+      "english_translation": "It might have flown away!",
+      "vocabulary": [
+        {
+          "word": "它",
+          "translation": "it",
+          "romanization": "taa1"
+        },
+        {
+          "word": "可能",
+          "translation": "might; possibly; maybe",
+          "romanization": "ho2 nang4"
+        },
+        {
+          "word": "飛",
+          "translation": "to fly",
+          "romanization": "fei1"
+        },
+        {
+          "word": "走",
+          "translation": "to go away; to leave",
+          "romanization": "zau2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "可能 + Verb",
+          "explanation": "可能 is used before a verb to express possibility or probability, meaning 'might' or 'possibly'.",
+          "example": "它可能是飛走了"
+        },
+        {
+          "pattern": "Verb + 走",
+          "translation": "Verb + 走 indicates movement away from a location. The verb describes the manner of leaving.",
+          "example": "飛走 (fly away)"
+        }
+      ]
+    }
+  ]
+}
+```
+

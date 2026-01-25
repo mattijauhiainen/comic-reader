@@ -1,0 +1,116 @@
+=== API Response for Bubble 4 ===
+Timestamp: 2026-01-25T02:33:10.915Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "里奇威爾！你這個老諧星，永遠改不了！快從你的洞裡出来吧！",
+  "translation": "Ridgewell! You old joker, you'll never change! Hurry up and come out of your hole!",
+  "sentences": [
+    {
+      "chinese_text": "里奇威爾！",
+      "english_translation": "Ridgewell!",
+      "vocabulary": [
+        {
+          "word": "里奇威爾",
+          "translation": "Ridgewell (name)",
+          "romanization": "lei5 kei4 wai1 ji5"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "你這個老諧星，永遠改不了！",
+      "english_translation": "You old joker, you'll never change!",
+      "vocabulary": [
+        {
+          "word": "這個",
+          "translation": "this",
+          "romanization": "ze5 go3"
+        },
+        {
+          "word": "老",
+          "translation": "old",
+          "romanization": "lou5"
+        },
+        {
+          "word": "諧星",
+          "translation": "joker, comedian",
+          "romanization": "haai4 sing1"
+        },
+        {
+          "word": "永遠",
+          "translation": "forever, never",
+          "romanization": "wing5 jyun5"
+        },
+        {
+          "word": "改",
+          "translation": "change, alter",
+          "romanization": "goi2"
+        },
+        {
+          "word": "不了",
+          "translation": "unable to, can't",
+          "romanization": "bat1 liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "不了",
+          "explanation": "Potential complement indicating inability to complete an action. 改不了 means 'unable to change' or 'can't change'.",
+          "example": "永遠改不了"
+        }
+      ]
+    },
+    {
+      "chinese_text": "快從你的洞裡出来吧！",
+      "english_translation": "Hurry up and come out of your hole!",
+      "vocabulary": [
+        {
+          "word": "快",
+          "translation": "quick, hurry",
+          "romanization": "faai3"
+        },
+        {
+          "word": "從",
+          "translation": "from",
+          "romanization": "cung4"
+        },
+        {
+          "word": "洞",
+          "translation": "hole, cave",
+          "romanization": "dung6"
+        },
+        {
+          "word": "裡",
+          "translation": "inside",
+          "romanization": "leoi5"
+        },
+        {
+          "word": "出来",
+          "translation": "come out",
+          "romanization": "ceot1 loi4"
+        },
+        {
+          "word": "吧",
+          "translation": "particle indicating suggestion or command",
+          "romanization": "baa1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "從...裡",
+          "explanation": "Prepositional phrase indicating movement from inside a location. 從...裡 means 'from inside...'",
+          "example": "從你的洞裡"
+        },
+        {
+          "pattern": "吧",
+          "explanation": "Sentence-final particle used to make a suggestion or soften a command",
+          "example": "出来吧"
+        }
+      ]
+    }
+  ]
+}
+```
+

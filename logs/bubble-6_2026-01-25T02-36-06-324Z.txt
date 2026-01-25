@@ -1,0 +1,81 @@
+=== API Response for Bubble 6 ===
+Timestamp: 2026-01-25T02:36:06.324Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "也許你不喜歡這個，但還是要裝成喜歡，別讓他們不高興。",
+  "translation": "Maybe you don't like this, but you still have to pretend to like it, don't make them unhappy.",
+  "sentences": [
+    {
+      "chinese_text": "也許你不喜歡這個，但還是要裝成喜歡，別讓他們不高興。",
+      "english_translation": "Maybe you don't like this, but you still have to pretend to like it, don't make them unhappy.",
+      "vocabulary": [
+        {
+          "word": "也許",
+          "translation": "maybe, perhaps",
+          "romanization": "jaa5 heoi2"
+        },
+        {
+          "word": "喜歡",
+          "translation": "to like",
+          "romanization": "hei2 fun1"
+        },
+        {
+          "word": "還是",
+          "translation": "still, nevertheless",
+          "romanization": "waan4 si6"
+        },
+        {
+          "word": "要",
+          "translation": "must, have to",
+          "romanization": "jiu3"
+        },
+        {
+          "word": "裝成",
+          "translation": "to pretend to be, to feign",
+          "romanization": "zong1 sing4"
+        },
+        {
+          "word": "別",
+          "translation": "don't",
+          "romanization": "bit6"
+        },
+        {
+          "word": "讓",
+          "translation": "to let, to make, to allow",
+          "romanization": "joeng6"
+        },
+        {
+          "word": "他們",
+          "translation": "they, them",
+          "romanization": "taa1 mun4"
+        },
+        {
+          "word": "高興",
+          "translation": "happy",
+          "romanization": "gou1 hing3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "但還是...",
+          "explanation": "This pattern means 'but still...' or 'nevertheless...'. It introduces a contrasting action or situation that persists despite what was mentioned before.",
+          "example": "但還是要裝成喜歡"
+        },
+        {
+          "pattern": "裝成 + [state/condition]",
+          "explanation": "This pattern means 'to pretend to be' or 'to feign'. 裝成 is followed by the state or condition one is pretending to have.",
+          "example": "裝成喜歡"
+        },
+        {
+          "pattern": "別讓 + [person] + [adjective/verb]",
+          "explanation": "This is an imperative construction meaning 'don't let/make [someone] [do something/be in a state]'. 別 is the negative imperative marker.",
+          "example": "別讓他們不高興"
+        }
+      ]
+    }
+  ]
+}
+```
+

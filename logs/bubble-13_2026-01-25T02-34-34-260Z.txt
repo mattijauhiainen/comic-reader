@@ -1,0 +1,170 @@
+=== API Response for Bubble 13 ===
+Timestamp: 2026-01-25T02:34:34.260Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "丁丁，快過來！幫幫我！抓小偷！開槍呀！快叫警察！我被搶劫了！",
+  "translation": "Tintin, come quickly! Help me! Catch the thief! Fire your gun! Quickly call the police! I've been robbed!",
+  "sentences": [
+    {
+      "chinese_text": "丁丁，快過來！",
+      "english_translation": "Tintin, come quickly!",
+      "vocabulary": [
+        {
+          "word": "丁丁",
+          "translation": "Tintin (name)",
+          "romanization": "ding1 ding1"
+        },
+        {
+          "word": "快",
+          "translation": "quickly, fast",
+          "romanization": "faai3"
+        },
+        {
+          "word": "過來",
+          "translation": "come over, come here",
+          "romanization": "gwo3 loi4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "快 + Verb",
+          "explanation": "快 is used before a verb to indicate doing something quickly or urgently, often in imperative sentences",
+          "example": "快過來"
+        }
+      ]
+    },
+    {
+      "chinese_text": "幫幫我！",
+      "english_translation": "Help me!",
+      "vocabulary": [
+        {
+          "word": "幫",
+          "translation": "to help",
+          "romanization": "bong1"
+        },
+        {
+          "word": "我",
+          "translation": "me, I",
+          "romanization": "ngo5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb reduplication (AA pattern)",
+          "explanation": "Repeating a verb (幫幫) softens the tone and can indicate a brief action or add urgency/pleading tone",
+          "example": "幫幫我"
+        }
+      ]
+    },
+    {
+      "chinese_text": "抓小偷！",
+      "english_translation": "Catch the thief!",
+      "vocabulary": [
+        {
+          "word": "抓",
+          "translation": "to catch, to grab",
+          "romanization": "zaa1"
+        },
+        {
+          "word": "小偷",
+          "translation": "thief",
+          "romanization": "siu2 tau1"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "開槍呀！",
+      "english_translation": "Fire your gun!",
+      "vocabulary": [
+        {
+          "word": "開槍",
+          "translation": "to fire a gun, to shoot",
+          "romanization": "hoi1 coeng1"
+        },
+        {
+          "word": "呀",
+          "translation": "particle expressing urgency or exclamation",
+          "romanization": "aa3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "呀 sentence particle",
+          "explanation": "呀 is added at the end of imperative sentences to express urgency, strong emotion, or to soften the command",
+          "example": "開槍呀"
+        }
+      ]
+    },
+    {
+      "chinese_text": "快叫警察！",
+      "english_translation": "Quickly call the police!",
+      "vocabulary": [
+        {
+          "word": "快",
+          "translation": "quickly, fast",
+          "romanization": "faai3"
+        },
+        {
+          "word": "叫",
+          "translation": "to call, to summon",
+          "romanization": "giu3"
+        },
+        {
+          "word": "警察",
+          "translation": "police",
+          "romanization": "ging2 caat3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "快 + Verb",
+          "explanation": "快 is used before a verb to indicate doing something quickly or urgently, often in imperative sentences",
+          "example": "快叫警察"
+        }
+      ]
+    },
+    {
+      "chinese_text": "我被搶劫了！",
+      "english_translation": "I've been robbed!",
+      "vocabulary": [
+        {
+          "word": "我",
+          "translation": "I, me",
+          "romanization": "ngo5"
+        },
+        {
+          "word": "被",
+          "translation": "passive marker (by)",
+          "romanization": "bei6"
+        },
+        {
+          "word": "搶劫",
+          "translation": "to rob",
+          "romanization": "coeng2 gip3"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating completed action",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "被 + Verb (passive voice)",
+          "explanation": "被 is used to form passive sentences, indicating the subject receives the action. Structure: Subject + 被 + (Agent) + Verb",
+          "example": "我被搶劫了"
+        },
+        {
+          "pattern": "了 completion particle",
+          "explanation": "了 at the end of a sentence indicates a completed action or change of state",
+          "example": "我被搶劫了"
+        }
+      ]
+    }
+  ]
+}
+```
+

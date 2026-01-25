@@ -1,0 +1,25 @@
+=== API Response for Bubble 14 ===
+Timestamp: 2026-01-25T02:34:38.979Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "嗚達咿！",
+  "translation": "Wadarrh! (An exclamation expressing alarm, surprise, or distress)",
+  "sentences": [
+    {
+      "chinese_text": "嗚達咿！",
+      "english_translation": "Wadarrh! (An exclamation expressing alarm, surprise, or distress)",
+      "vocabulary": [
+        {
+          "word": "嗚達咿",
+          "translation": "exclamation of alarm or surprise (onomatopoeia/interjection)",
+          "romanization": "wu1 daat6 ji1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

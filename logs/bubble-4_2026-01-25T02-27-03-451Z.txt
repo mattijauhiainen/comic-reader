@@ -1,0 +1,66 @@
+=== API Response for Bubble 4 ===
+Timestamp: 2026-01-25T02:27:03.451Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "他的腦袋给那瓶子打出毛病了！",
+  "translation": "That bottle has knocked something wrong with his head!",
+  "sentences": [
+    {
+      "chinese_text": "他的腦袋给那瓶子打出毛病了！",
+      "english_translation": "That bottle has knocked something wrong with his head!",
+      "vocabulary": [
+        {
+          "word": "腦袋",
+          "translation": "head",
+          "romanization": "nou5 doi6"
+        },
+        {
+          "word": "给",
+          "translation": "by (passive marker)",
+          "romanization": "kap1"
+        },
+        {
+          "word": "瓶子",
+          "translation": "bottle",
+          "romanization": "ping4 zi2"
+        },
+        {
+          "word": "打",
+          "translation": "hit, strike",
+          "romanization": "daa2"
+        },
+        {
+          "word": "出",
+          "translation": "out, to result in",
+          "romanization": "ceot1"
+        },
+        {
+          "word": "毛病",
+          "translation": "problem, something wrong",
+          "romanization": "mou4 beng6"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating completed action",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "给...打",
+          "explanation": "This is a passive construction using 给 (kap1) as a passive marker, meaning 'by' or indicating the agent of the action. The structure is: Subject + 给 + Agent + Verb",
+          "example": "他的腦袋给那瓶子打"
+        },
+        {
+          "pattern": "打出...了",
+          "explanation": "This is a resultative complement construction where 出 follows the verb 打 to indicate the result of the hitting action. The 了 at the end marks the completion of the action.",
+          "example": "打出毛病了"
+        }
+      ]
+    }
+  ]
+}
+```
+

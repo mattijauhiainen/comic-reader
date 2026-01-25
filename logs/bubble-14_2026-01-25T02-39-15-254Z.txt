@@ -1,0 +1,41 @@
+=== API Response for Bubble 14 ===
+Timestamp: 2026-01-25T02:39:15.254Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "的……的確！",
+  "translation": "Well... indeed! / That's... that's true!",
+  "sentences": [
+    {
+      "chinese_text": "的……的確！",
+      "english_translation": "Well... indeed! / That's... that's true!",
+      "vocabulary": [
+        {
+          "word": "的",
+          "translation": "(particle used for hesitation or affirmation)",
+          "romanization": "dik1"
+        },
+        {
+          "word": "的確",
+          "translation": "indeed; truly; really",
+          "romanization": "dik1 kok3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "的 (as a hesitation marker)",
+          "explanation": "Here '的' is used as an interjection or filler word to express hesitation, similar to 'well...' or 'um...' in English. This is different from its common use as a possessive or descriptive particle.",
+          "example": "的……的確！"
+        },
+        {
+          "pattern": "Ellipsis (……) for dramatic pause",
+          "explanation": "The ellipsis indicates a pause or hesitation before the speaker confirms or agrees with something, showing uncertainty or reluctance before agreement.",
+          "example": "的……的確！"
+        }
+      ]
+    }
+  ]
+}
+```
+

@@ -1,0 +1,68 @@
+=== API Response for Bubble 5 ===
+Timestamp: 2026-01-25T02:35:53.422Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "啊！他到哪兒去了？",
+  "translation": "Ah! Where did he go?",
+  "sentences": [
+    {
+      "chinese_text": "啊！",
+      "english_translation": "Ah!",
+      "vocabulary": [
+        {
+          "word": "啊",
+          "translation": "ah (exclamation expressing surprise)",
+          "romanization": "aa3"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "他到哪兒去了？",
+      "english_translation": "Where did he go?",
+      "vocabulary": [
+        {
+          "word": "他",
+          "translation": "he",
+          "romanization": "taa1"
+        },
+        {
+          "word": "到",
+          "translation": "to (arrive at)",
+          "romanization": "dou3"
+        },
+        {
+          "word": "哪兒",
+          "translation": "where",
+          "romanization": "naa5 ji4"
+        },
+        {
+          "word": "去",
+          "translation": "to go",
+          "romanization": "heoi3"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating completed action",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "到 + place + 去",
+          "explanation": "This pattern means 'to go to (a place)'. When used with 哪兒 (where), it forms a question asking about destination.",
+          "example": "到哪兒去"
+        },
+        {
+          "pattern": "了 (aspect particle)",
+          "explanation": "The particle 了 at the end of the sentence indicates a completed action or change of state, here asking about where someone has gone.",
+          "example": "去了"
+        }
+      ]
+    }
+  ]
+}
+```
+

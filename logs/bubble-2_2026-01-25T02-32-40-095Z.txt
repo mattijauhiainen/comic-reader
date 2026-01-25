@@ -1,0 +1,165 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T02:32:40.095Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "看見嗎？都是塔比奧卡幹的好事，你們說是不是？走吧！村子離這裡還遠呢！",
+  "translation": "Do you see? This is all Tapioca's doing, don't you agree? Let's go! The village is still far from here!",
+  "sentences": [
+    {
+      "chinese_text": "看見嗎？",
+      "english_translation": "Do you see?",
+      "vocabulary": [
+        {
+          "word": "看見",
+          "translation": "to see",
+          "romanization": "hon3 gin3"
+        },
+        {
+          "word": "嗎",
+          "translation": "question particle",
+          "romanization": "maa1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "verb + 嗎",
+          "explanation": "嗎 is added at the end of a statement to turn it into a yes/no question",
+          "example": "看見嗎？"
+        }
+      ]
+    },
+    {
+      "chinese_text": "都是塔比奧卡幹的好事，你們說是不是？",
+      "english_translation": "This is all Tapioca's doing, don't you agree?",
+      "vocabulary": [
+        {
+          "word": "都",
+          "translation": "all",
+          "romanization": "dou1"
+        },
+        {
+          "word": "是",
+          "translation": "to be",
+          "romanization": "si6"
+        },
+        {
+          "word": "塔比奧卡",
+          "translation": "Tapioca (name)",
+          "romanization": "taap3 bei2 ou1 kaa1"
+        },
+        {
+          "word": "幹",
+          "translation": "to do",
+          "romanization": "gon3"
+        },
+        {
+          "word": "好事",
+          "translation": "good deed (ironic - bad deed)",
+          "romanization": "hou2 si6"
+        },
+        {
+          "word": "你們",
+          "translation": "you (plural)",
+          "romanization": "nei5 mun4"
+        },
+        {
+          "word": "說",
+          "translation": "to say",
+          "romanization": "syut3"
+        },
+        {
+          "word": "是不是",
+          "translation": "isn't it? / right?",
+          "romanization": "si6 bat1 si6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "都是...的",
+          "explanation": "都是 (all/entirely) combined with 的 emphasizes that something is entirely caused by or attributed to someone/something",
+          "example": "都是塔比奧卡幹的好事"
+        },
+        {
+          "pattern": "是不是",
+          "explanation": "A tag question pattern asking for confirmation or agreement, similar to 'isn't it?' or 'right?' in English",
+          "example": "你們說是不是？"
+        }
+      ]
+    },
+    {
+      "chinese_text": "走吧！",
+      "english_translation": "Let's go!",
+      "vocabulary": [
+        {
+          "word": "走",
+          "translation": "to go / to leave",
+          "romanization": "zau2"
+        },
+        {
+          "word": "吧",
+          "translation": "particle for suggestion",
+          "romanization": "baa1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "verb + 吧",
+          "explanation": "吧 is used after a verb to make a suggestion or gentle command",
+          "example": "走吧！"
+        }
+      ]
+    },
+    {
+      "chinese_text": "村子離這裡還遠呢！",
+      "english_translation": "The village is still far from here!",
+      "vocabulary": [
+        {
+          "word": "村子",
+          "translation": "village",
+          "romanization": "cyun1 zi2"
+        },
+        {
+          "word": "離",
+          "translation": "from / away from",
+          "romanization": "lei4"
+        },
+        {
+          "word": "這裡",
+          "translation": "here",
+          "romanization": "ze5 leoi5"
+        },
+        {
+          "word": "還",
+          "translation": "still / yet",
+          "romanization": "waan4"
+        },
+        {
+          "word": "遠",
+          "translation": "far",
+          "romanization": "jyun5"
+        },
+        {
+          "word": "呢",
+          "translation": "particle for emphasis",
+          "romanization": "ne1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "A 離 B + adjective",
+          "explanation": "離 is used to express distance or separation between two places, followed by an adjective describing the distance",
+          "example": "村子離這裡還遠"
+        },
+        {
+          "pattern": "還 + adjective + 呢",
+          "explanation": "還 (still) emphasizes that a state continues, and 呢 at the end adds emphasis or indicates the situation is noteworthy",
+          "example": "還遠呢"
+        }
+      ]
+    }
+  ]
+}
+```
+

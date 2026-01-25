@@ -1,0 +1,51 @@
+=== API Response for Bubble 10 ===
+Timestamp: 2026-01-25T02:38:47.500Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "我覺得很好吃！",
+  "translation": "I think it's very delicious!",
+  "sentences": [
+    {
+      "chinese_text": "我覺得很好吃！",
+      "english_translation": "I think it's very delicious!",
+      "vocabulary": [
+        {
+          "word": "我",
+          "translation": "I, me",
+          "romanization": "ngo5"
+        },
+        {
+          "word": "覺得",
+          "translation": "to feel, to think",
+          "romanization": "gok3 dak1"
+        },
+        {
+          "word": "很",
+          "translation": "very",
+          "romanization": "han2"
+        },
+        {
+          "word": "好吃",
+          "translation": "delicious, tasty",
+          "romanization": "hou2 hek3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "覺得 + adjective/clause",
+          "explanation": "覺得 (to feel/think) is used to express personal opinions or feelings about something. It's followed by an adjective phrase or clause.",
+          "example": "我覺得很好吃"
+        },
+        {
+          "pattern": "很 + adjective",
+          "explanation": "很 (very) is an adverb of degree that intensifies the adjective that follows it.",
+          "example": "很好吃"
+        }
+      ]
+    }
+  ]
+}
+```
+

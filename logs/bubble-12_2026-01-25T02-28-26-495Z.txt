@@ -1,0 +1,46 @@
+=== API Response for Bubble 12 ===
+Timestamp: 2026-01-25T02:28:26.495Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "怎麼搞的,船长……",
+  "translation": "What's going on, Captain...",
+  "sentences": [
+    {
+      "chinese_text": "怎麼搞的,船长……",
+      "english_translation": "What's going on, Captain...",
+      "vocabulary": [
+        {
+          "word": "怎麼",
+          "translation": "how, what",
+          "romanization": "zam2 mo1"
+        },
+        {
+          "word": "搞",
+          "translation": "do, handle, make",
+          "romanization": "gaau2"
+        },
+        {
+          "word": "的",
+          "translation": "particle (nominalizer)",
+          "romanization": "dik1"
+        },
+        {
+          "word": "船長",
+          "translation": "captain",
+          "romanization": "syun4 zoeng2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "怎麼搞的",
+          "explanation": "A colloquial expression meaning 'what's going on' or 'what happened'. 搞 means 'to do/make' and 的 nominalizes the phrase, literally asking 'how was it done/made' but idiomatically asking about the situation or what went wrong.",
+          "example": "怎麼搞的"
+        }
+      ]
+    }
+  ]
+}
+```
+

@@ -1,0 +1,74 @@
+=== API Response for Bubble 9 ===
+Timestamp: 2026-01-25T02:27:56.698Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "誰是船長？是你還是我？",
+  "translation": "Who is the captain? Is it you or is it me?",
+  "sentences": [
+    {
+      "chinese_text": "誰是船長？",
+      "english_translation": "Who is the captain?",
+      "vocabulary": [
+        {
+          "word": "誰",
+          "translation": "who",
+          "romanization": "seoi4"
+        },
+        {
+          "word": "是",
+          "translation": "to be",
+          "romanization": "si6"
+        },
+        {
+          "word": "船長",
+          "translation": "captain",
+          "romanization": "syun4 zoeng2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "誰是...？",
+          "explanation": "Question word 誰 (who) used with 是 (to be) to ask about identity",
+          "example": "誰是船長？"
+        }
+      ]
+    },
+    {
+      "chinese_text": "是你還是我？",
+      "english_translation": "Is it you or is it me?",
+      "vocabulary": [
+        {
+          "word": "是",
+          "translation": "to be",
+          "romanization": "si6"
+        },
+        {
+          "word": "你",
+          "translation": "you",
+          "romanization": "nei5"
+        },
+        {
+          "word": "還是",
+          "translation": "or (in questions)",
+          "romanization": "waan4 si6"
+        },
+        {
+          "word": "我",
+          "translation": "I, me",
+          "romanization": "ngo5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "是...還是...？",
+          "explanation": "A-not-A question pattern using 還是 to present alternatives in a choice question",
+          "example": "是你還是我？"
+        }
+      ]
+    }
+  ]
+}
+```
+

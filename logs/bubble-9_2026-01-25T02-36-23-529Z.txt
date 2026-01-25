@@ -1,0 +1,36 @@
+=== API Response for Bubble 9 ===
+Timestamp: 2026-01-25T02:36:23.529Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "別轉向！",
+  "translation": "Don't turn!",
+  "sentences": [
+    {
+      "chinese_text": "別轉向！",
+      "english_translation": "Don't turn!",
+      "vocabulary": [
+        {
+          "word": "別",
+          "translation": "don't",
+          "romanization": "bit6"
+        },
+        {
+          "word": "轉向",
+          "translation": "to turn, to change direction",
+          "romanization": "zyun2 hoeng3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "別 + Verb",
+          "explanation": "別 is used before a verb to form a negative imperative, meaning 'don't do something'. It is a command or strong suggestion not to perform the action.",
+          "example": "別轉向！(Don't turn!)"
+        }
+      ]
+    }
+  ]
+}
+```
+

@@ -1,0 +1,51 @@
+=== API Response for Bubble 19 ===
+Timestamp: 2026-01-25T02:29:16.978Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "我……我叫丁丁呀！",
+  "translation": "I... I'm called Tintin!",
+  "sentences": [
+    {
+      "chinese_text": "我……我叫丁丁呀！",
+      "english_translation": "I... I'm called Tintin!",
+      "vocabulary": [
+        {
+          "word": "我",
+          "translation": "I, me",
+          "romanization": "ngo5"
+        },
+        {
+          "word": "叫",
+          "translation": "to be called, named",
+          "romanization": "giu3"
+        },
+        {
+          "word": "丁丁",
+          "translation": "Tintin (name)",
+          "romanization": "ding1 ding1"
+        },
+        {
+          "word": "呀",
+          "translation": "particle (emphasis/exclamation)",
+          "romanization": "aa3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "叫 + [name]",
+          "explanation": "This pattern is used to state someone's name. '叫' means 'to be called/named' and is followed directly by the name.",
+          "example": "我叫丁丁 (I'm called Tintin)"
+        },
+        {
+          "pattern": "呀 (sentence-final particle)",
+          "explanation": "呀 is a sentence-final particle used to express emphasis, exclamation, or to soften the tone. Here it adds emphasis to the speaker's statement of identity.",
+          "example": "我叫丁丁呀！"
+        }
+      ]
+    }
+  ]
+}
+```
+

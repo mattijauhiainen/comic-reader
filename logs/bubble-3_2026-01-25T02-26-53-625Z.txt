@@ -1,0 +1,96 @@
+=== API Response for Bubble 3 ===
+Timestamp: 2026-01-25T02:26:53.625Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "不能飛？可我的船就能飛！我的船是客輪，怎麼不能飛！",
+  "translation": "Can't fly? But my ship can fly! My ship is a passenger liner, how can it not fly!",
+  "sentences": [
+    {
+      "chinese_text": "不能飛？",
+      "english_translation": "Can't fly?",
+      "vocabulary": [
+        {
+          "word": "不能",
+          "translation": "cannot",
+          "romanization": "bat1 nang4"
+        },
+        {
+          "word": "飛",
+          "translation": "fly",
+          "romanization": "fei1"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "可我的船就能飛！",
+      "english_translation": "But my ship can fly!",
+      "vocabulary": [
+        {
+          "word": "可",
+          "translation": "but",
+          "romanization": "ho2"
+        },
+        {
+          "word": "我的",
+          "translation": "my",
+          "romanization": "ngo5 dik1"
+        },
+        {
+          "word": "船",
+          "translation": "ship",
+          "romanization": "syun4"
+        },
+        {
+          "word": "就",
+          "translation": "precisely/exactly",
+          "romanization": "zau6"
+        },
+        {
+          "word": "能",
+          "translation": "can",
+          "romanization": "nang4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "就",
+          "explanation": "The particle 就 is used here for emphasis, stressing that the ship does indeed have the ability to fly, contrary to what might be expected.",
+          "example": "我的船就能飛"
+        }
+      ]
+    },
+    {
+      "chinese_text": "我的船是客輪，怎麼不能飛！",
+      "english_translation": "My ship is a passenger liner, how can it not fly!",
+      "vocabulary": [
+        {
+          "word": "是",
+          "translation": "is",
+          "romanization": "si6"
+        },
+        {
+          "word": "客輪",
+          "translation": "passenger liner",
+          "romanization": "haak3 leon4"
+        },
+        {
+          "word": "怎麼",
+          "translation": "how",
+          "romanization": "zam2 mo1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "怎麼 + negative",
+          "explanation": "This rhetorical question pattern expresses disbelief or indignation. 怎麼不能 means 'how can it not' and implies the speaker strongly believes it should be able to.",
+          "example": "怎麼不能飛"
+        }
+      ]
+    }
+  ]
+}
+```
+

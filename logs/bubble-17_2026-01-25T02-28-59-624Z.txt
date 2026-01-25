@@ -1,0 +1,30 @@
+=== API Response for Bubble 17 ===
+Timestamp: 2026-01-25T02:28:59.624Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "不要，謝謝",
+  "translation": "No, thank you",
+  "sentences": [
+    {
+      "chinese_text": "不要，謝謝",
+      "english_translation": "No, thank you",
+      "vocabulary": [
+        {
+          "word": "不要",
+          "translation": "don't want; no",
+          "romanization": "bat1 jiu3"
+        },
+        {
+          "word": "謝謝",
+          "translation": "thank you",
+          "romanization": "ze6 ze6"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

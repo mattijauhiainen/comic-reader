@@ -1,0 +1,25 @@
+=== API Response for Bubble 15 ===
+Timestamp: 2026-01-25T02:39:21.704Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "瓦帕伊斯德杜萬?",
+  "translation": "Wapaishidu Wan? (This appears to be a transliteration of a foreign name, likely 'Wapais de Dwan' or similar)",
+  "sentences": [
+    {
+      "chinese_text": "瓦帕伊斯德杜萬?",
+      "english_translation": "Wapaishidu Wan? (A transliterated foreign name, possibly a place name or person's name)",
+      "vocabulary": [
+        {
+          "word": "瓦帕伊斯德杜萬",
+          "translation": "Wapaishidu Wan (phonetic transliteration of a foreign name)",
+          "romanization": "ngaa5 paak3 ji1 si1 dak1 dou6 maan6"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

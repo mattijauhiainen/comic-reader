@@ -1,0 +1,68 @@
+=== API Response for Bubble 9 ===
+Timestamp: 2026-01-25T02:34:03.139Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "一群酒鬼！「文明人」使「野蠻人」變成這樣！",
+  "translation": "A bunch of drunkards! \"Civilized people\" have turned the \"savages\" into this!",
+  "sentences": [
+    {
+      "chinese_text": "一群酒鬼！",
+      "english_translation": "A bunch of drunkards!",
+      "vocabulary": [
+        {
+          "word": "一群",
+          "translation": "a group of, a bunch of",
+          "romanization": "jat1 kwan4"
+        },
+        {
+          "word": "酒鬼",
+          "translation": "drunkard, alcoholic",
+          "romanization": "zau2 gwai2"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "「文明人」使「野蠻人」變成這樣！",
+      "english_translation": "\"Civilized people\" have turned the \"savages\" into this!",
+      "vocabulary": [
+        {
+          "word": "文明人",
+          "translation": "civilized people",
+          "romanization": "man4 ming4 jan4"
+        },
+        {
+          "word": "使",
+          "translation": "to cause, to make",
+          "romanization": "si2"
+        },
+        {
+          "word": "野蠻人",
+          "translation": "savages, barbarians",
+          "romanization": "je5 maan4 jan4"
+        },
+        {
+          "word": "變成",
+          "translation": "to become, to turn into",
+          "romanization": "bin3 sing4"
+        },
+        {
+          "word": "這樣",
+          "translation": "like this, this way",
+          "romanization": "ze5 joeng6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "使 + Object + Verb",
+          "explanation": "The causative construction '使' means 'to cause/make someone do something'. The pattern is: Subject + 使 + Object + Verb/Adjective.",
+          "example": "「文明人」使「野蠻人」變成這樣 (Civilized people made savages become like this)"
+        }
+      ]
+    }
+  ]
+}
+```
+

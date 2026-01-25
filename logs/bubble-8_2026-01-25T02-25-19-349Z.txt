@@ -1,0 +1,46 @@
+=== API Response for Bubble 8 ===
+Timestamp: 2026-01-25T02:25:19.349Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "這是怎麼回事？",
+  "translation": "What's going on?",
+  "sentences": [
+    {
+      "chinese_text": "這是怎麼回事？",
+      "english_translation": "What's going on?",
+      "vocabulary": [
+        {
+          "word": "這",
+          "translation": "this",
+          "romanization": "ze2"
+        },
+        {
+          "word": "是",
+          "translation": "to be",
+          "romanization": "si6"
+        },
+        {
+          "word": "怎麼",
+          "translation": "how, what",
+          "romanization": "zam2 mo1"
+        },
+        {
+          "word": "回事",
+          "translation": "matter, situation, what's happening",
+          "romanization": "wui4 si6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "怎麼回事",
+          "explanation": "A common fixed expression meaning 'what's the matter' or 'what's going on'. It's used to ask about a situation or problem. The structure is typically '(這/那)是怎麼回事？'",
+          "example": "這是怎麼回事？"
+        }
+      ]
+    }
+  ]
+}
+```
+

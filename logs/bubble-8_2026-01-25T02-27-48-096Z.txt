@@ -1,0 +1,101 @@
+=== API Response for Bubble 8 ===
+Timestamp: 2026-01-25T02:27:48.096Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "我再說一遍，我並不責怪你，因為從金字塔上看，景色確實美極了，不過……",
+  "translation": "I'll say it again, I don't blame you, because the view from the pyramid is indeed extremely beautiful, but...",
+  "sentences": [
+    {
+      "chinese_text": "我再說一遍，我並不責怪你，因為從金字塔上看，景色確實美極了，不過……",
+      "english_translation": "I'll say it again, I don't blame you, because the view from the pyramid is indeed extremely beautiful, but...",
+      "vocabulary": [
+        {
+          "word": "再",
+          "translation": "again",
+          "romanization": "zoi3"
+        },
+        {
+          "word": "說",
+          "translation": "say",
+          "romanization": "syut3"
+        },
+        {
+          "word": "一遍",
+          "translation": "one time (through)",
+          "romanization": "jat1 pin3"
+        },
+        {
+          "word": "並不",
+          "translation": "not at all",
+          "romanization": "bing6 bat1"
+        },
+        {
+          "word": "責怪",
+          "translation": "blame",
+          "romanization": "zaak3 gwaai3"
+        },
+        {
+          "word": "因為",
+          "translation": "because",
+          "romanization": "jan1 wai6"
+        },
+        {
+          "word": "從",
+          "translation": "from",
+          "romanization": "cung4"
+        },
+        {
+          "word": "金字塔",
+          "translation": "pyramid",
+          "romanization": "gam1 zi6 taap3"
+        },
+        {
+          "word": "景色",
+          "translation": "scenery, view",
+          "romanization": "ging2 sik1"
+        },
+        {
+          "word": "確實",
+          "translation": "indeed, really",
+          "romanization": "kok3 sat6"
+        },
+        {
+          "word": "美",
+          "translation": "beautiful",
+          "romanization": "mei5"
+        },
+        {
+          "word": "極了",
+          "translation": "extremely",
+          "romanization": "gik6 liu5"
+        },
+        {
+          "word": "不過",
+          "translation": "but, however",
+          "romanization": "bat1 gwo3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "並不 + verb",
+          "explanation": "並不 is used for emphatic negation, meaning 'not at all' or 'definitely not', stronger than just 不",
+          "example": "我並不責怪你 (I don't blame you at all)"
+        },
+        {
+          "pattern": "從...上看",
+          "explanation": "This pattern means 'looking from...' or 'from the perspective of...', where 從 means 'from', and 上看 means 'looking from/on'",
+          "example": "從金字塔上看 (looking from the pyramid)"
+        },
+        {
+          "pattern": "adjective + 極了",
+          "explanation": "極了 is used after an adjective to express an extreme degree, meaning 'extremely' or 'very much'",
+          "example": "美極了 (extremely beautiful)"
+        }
+      ]
+    }
+  ]
+}
+```
+

@@ -1,0 +1,67 @@
+=== API Response for Bubble 1 ===
+Timestamp: 2026-01-25T02:35:12.568Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "我？沒問題！相反，我酷愛這些異國風味食品！",
+  "translation": "Me? No problem! On the contrary, I absolutely love these exotic foods!",
+  "sentences": [
+    {
+      "chinese_text": "我？沒問題！",
+      "english_translation": "Me? No problem!",
+      "vocabulary": [
+        {
+          "word": "我",
+          "translation": "me, I",
+          "romanization": "ngo5"
+        },
+        {
+          "word": "沒問題",
+          "translation": "no problem",
+          "romanization": "mut6 man6 tai4"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "相反，我酷愛這些異國風味食品！",
+      "english_translation": "On the contrary, I absolutely love these exotic foods!",
+      "vocabulary": [
+        {
+          "word": "相反",
+          "translation": "on the contrary, opposite",
+          "romanization": "soeng1 faan2"
+        },
+        {
+          "word": "酷愛",
+          "translation": "love passionately, be crazy about",
+          "romanization": "huk6 oi3"
+        },
+        {
+          "word": "這些",
+          "translation": "these",
+          "romanization": "ze5 se1"
+        },
+        {
+          "word": "異國",
+          "translation": "foreign, exotic",
+          "romanization": "ji6 gwok3"
+        },
+        {
+          "word": "風味",
+          "translation": "flavor, local flavor",
+          "romanization": "fung1 mei6"
+        },
+        {
+          "word": "食品",
+          "translation": "food, foodstuff",
+          "romanization": "sik6 ban2"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

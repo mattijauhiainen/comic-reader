@@ -1,0 +1,36 @@
+=== API Response for Bubble 9 ===
+Timestamp: 2026-01-25T02:25:26.786Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "是「洛赫洛蒙」？",
+  "translation": "Is it 'Los Dopicos'?",
+  "sentences": [
+    {
+      "chinese_text": "是「洛赫洛蒙」？",
+      "english_translation": "Is it 'Los Dopicos'?",
+      "vocabulary": [
+        {
+          "word": "是",
+          "translation": "to be; is",
+          "romanization": "si6"
+        },
+        {
+          "word": "洛赫洛蒙",
+          "translation": "Los Dopicos (transliterated place name)",
+          "romanization": "lok6 haak1 lok6 mung4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "是...？",
+          "explanation": "A question pattern using 是 (to be) with rising intonation indicated by the question mark, asking for confirmation about identity or correctness",
+          "example": "是「洛赫洛蒙」？"
+        }
+      ]
+    }
+  ]
+}
+```
+

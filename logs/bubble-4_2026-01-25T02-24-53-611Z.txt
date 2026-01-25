@@ -1,0 +1,76 @@
+=== API Response for Bubble 4 ===
+Timestamp: 2026-01-25T02:24:53.611Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "頭痛？因為喝「洛赫洛蒙」？從来沒有！",
+  "translation": "Headache? From drinking 'Loch Lomond'? Never!",
+  "sentences": [
+    {
+      "chinese_text": "頭痛？",
+      "english_translation": "Headache?",
+      "vocabulary": [
+        {
+          "word": "頭痛",
+          "translation": "headache",
+          "romanization": "tau4 tung3"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "因為喝「洛赫洛蒙」？",
+      "english_translation": "From drinking 'Loch Lomond'?",
+      "vocabulary": [
+        {
+          "word": "因為",
+          "translation": "because, from",
+          "romanization": "jan1 wai6"
+        },
+        {
+          "word": "喝",
+          "translation": "to drink",
+          "romanization": "hot3"
+        },
+        {
+          "word": "洛赫洛蒙",
+          "translation": "Loch Lomond (whisky brand name)",
+          "romanization": "lok6 haak1 lok6 mung4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "因為 + verb phrase",
+          "explanation": "因為 is used here in a question form to ask if something is the cause or reason for a situation",
+          "example": "因為喝「洛赫洛蒙」？"
+        }
+      ]
+    },
+    {
+      "chinese_text": "從来沒有！",
+      "english_translation": "Never!",
+      "vocabulary": [
+        {
+          "word": "從来",
+          "translation": "never (in the past), ever",
+          "romanization": "cung4 loi4"
+        },
+        {
+          "word": "沒有",
+          "translation": "have not, don't have",
+          "romanization": "mut6 jau5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "從来沒有",
+          "explanation": "This pattern emphasizes that something has never happened in the past, expressing strong negation",
+          "example": "從来沒有！"
+        }
+      ]
+    }
+  ]
+}
+```
+

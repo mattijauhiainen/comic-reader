@@ -1,0 +1,136 @@
+=== API Response for Bubble 1 ===
+Timestamp: 2026-01-25T02:37:14.423Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "噁心？！！！旅行途中，應該盡量遵從地方風俗！要不然，就呆在自己家裡別出來！",
+  "translation": "Disgusting?!!! When traveling, one should do their best to follow local customs! Otherwise, just stay at home and don't go out!",
+  "sentences": [
+    {
+      "chinese_text": "噁心？！！！",
+      "english_translation": "Disgusting?!!!",
+      "vocabulary": [
+        {
+          "word": "噁心",
+          "translation": "disgusting, nauseating",
+          "romanization": "ok3 sam1"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "旅行途中，應該盡量遵從地方風俗！",
+      "english_translation": "When traveling, one should do their best to follow local customs!",
+      "vocabulary": [
+        {
+          "word": "旅行",
+          "translation": "to travel, travel",
+          "romanization": "leoi5 hang4"
+        },
+        {
+          "word": "途中",
+          "translation": "on the way, in the process",
+          "romanization": "tou4 zung1"
+        },
+        {
+          "word": "應該",
+          "translation": "should, ought to",
+          "romanization": "jing1 goi1"
+        },
+        {
+          "word": "盡量",
+          "translation": "as much as possible, do one's best",
+          "romanization": "zeon6 loeng6"
+        },
+        {
+          "word": "遵從",
+          "translation": "to follow, to comply with",
+          "romanization": "zeon1 cung4"
+        },
+        {
+          "word": "地方",
+          "translation": "local, place",
+          "romanization": "dei6 fong1"
+        },
+        {
+          "word": "風俗",
+          "translation": "customs, traditions",
+          "romanization": "fung1 zuk6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "應該 + verb",
+          "explanation": "Modal verb meaning 'should' or 'ought to', expressing obligation or advisability",
+          "example": "應該盡量遵從"
+        },
+        {
+          "pattern": "盡量 + verb",
+          "explanation": "Adverb meaning 'as much as possible' or 'do one's best to', placed before the verb to indicate making maximum effort",
+          "example": "盡量遵從地方風俗"
+        }
+      ]
+    },
+    {
+      "chinese_text": "要不然，就呆在自己家裡別出來！",
+      "english_translation": "Otherwise, just stay at home and don't come out!",
+      "vocabulary": [
+        {
+          "word": "要不然",
+          "translation": "otherwise, or else",
+          "romanization": "jiu3 bat1 jin4"
+        },
+        {
+          "word": "就",
+          "translation": "then, just",
+          "romanization": "zau6"
+        },
+        {
+          "word": "呆",
+          "translation": "to stay, to remain",
+          "romanization": "ngoi4"
+        },
+        {
+          "word": "自己",
+          "translation": "oneself, one's own",
+          "romanization": "zi6 gei2"
+        },
+        {
+          "word": "家裡",
+          "translation": "at home, home",
+          "romanization": "gaa1 leoi5"
+        },
+        {
+          "word": "別",
+          "translation": "don't",
+          "romanization": "bit6"
+        },
+        {
+          "word": "出來",
+          "translation": "to come out, to go out",
+          "romanization": "ceot1 loi4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "要不然",
+          "explanation": "A conjunction meaning 'otherwise' or 'or else', used to introduce an alternative or consequence",
+          "example": "要不然，就呆在自己家裡"
+        },
+        {
+          "pattern": "別 + verb",
+          "explanation": "Negative imperative marker meaning 'don't', used to give commands or prohibitions",
+          "example": "別出來"
+        },
+        {
+          "pattern": "在 + location",
+          "explanation": "Preposition indicating location or position, meaning 'at' or 'in'",
+          "example": "在自己家裡"
+        }
+      ]
+    }
+  ]
+}
+```
+

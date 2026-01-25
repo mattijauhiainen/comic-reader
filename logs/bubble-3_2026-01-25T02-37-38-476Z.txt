@@ -1,0 +1,89 @@
+=== API Response for Bubble 3 ===
+Timestamp: 2026-01-25T02:37:38.476Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "實在對不起，我沒法再喝……這酒太難喝了……",
+  "translation": "I'm truly sorry, I can't drink anymore... This alcohol is too awful...",
+  "sentences": [
+    {
+      "chinese_text": "實在對不起，我沒法再喝……",
+      "english_translation": "I'm truly sorry, I can't drink anymore...",
+      "vocabulary": [
+        {
+          "word": "實在",
+          "translation": "truly, really",
+          "romanization": "sat6 zoi6"
+        },
+        {
+          "word": "對不起",
+          "translation": "sorry, excuse me",
+          "romanization": "deoi3 bat1 hei2"
+        },
+        {
+          "word": "沒法",
+          "translation": "no way, unable to",
+          "romanization": "mut6 faat3"
+        },
+        {
+          "word": "再",
+          "translation": "again, anymore",
+          "romanization": "zoi3"
+        },
+        {
+          "word": "喝",
+          "translation": "to drink",
+          "romanization": "hot3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "沒法 + verb",
+          "explanation": "This pattern means 'unable to' or 'there's no way to' do something. It indicates impossibility or inability.",
+          "example": "我沒法再喝 (I can't drink anymore)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "這酒太難喝了……",
+      "english_translation": "This alcohol is too awful...",
+      "vocabulary": [
+        {
+          "word": "這",
+          "translation": "this",
+          "romanization": "ze5"
+        },
+        {
+          "word": "酒",
+          "translation": "alcohol, wine",
+          "romanization": "zau2"
+        },
+        {
+          "word": "太",
+          "translation": "too (excessively)",
+          "romanization": "taai3"
+        },
+        {
+          "word": "難喝",
+          "translation": "awful to drink, bad-tasting",
+          "romanization": "naan4 hot3"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating completion or change",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "太 + adjective + 了",
+          "explanation": "This pattern expresses 'too' or 'excessively' something. It emphasizes that something exceeds a reasonable degree.",
+          "example": "太難喝了 (too awful/bad-tasting)"
+        }
+      ]
+    }
+  ]
+}
+```
+

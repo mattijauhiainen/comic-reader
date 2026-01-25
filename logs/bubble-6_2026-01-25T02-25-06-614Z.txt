@@ -1,0 +1,30 @@
+=== API Response for Bubble 6 ===
+Timestamp: 2026-01-25T02:25:06.614Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "瞧，降落傘！",
+  "translation": "Look, parachutes!",
+  "sentences": [
+    {
+      "chinese_text": "瞧，降落傘！",
+      "english_translation": "Look, parachutes!",
+      "vocabulary": [
+        {
+          "word": "瞧",
+          "translation": "look, see",
+          "romanization": "ciu4"
+        },
+        {
+          "word": "降落傘",
+          "translation": "parachute",
+          "romanization": "gong3 lok6 saan3"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

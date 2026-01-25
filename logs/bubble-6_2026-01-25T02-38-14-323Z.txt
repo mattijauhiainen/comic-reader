@@ -1,0 +1,88 @@
+=== API Response for Bubble 6 ===
+Timestamp: 2026-01-25T02:38:14.324Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "見鬼！他是頭一個沒被這酒「醉倒」的人！",
+  "translation": "Damn it! He's the first person who hasn't been \"knocked out\" by this liquor!",
+  "sentences": [
+    {
+      "chinese_text": "見鬼！",
+      "english_translation": "Damn it!",
+      "vocabulary": [
+        {
+          "word": "見鬼",
+          "translation": "damn it, hell (exclamation of frustration)",
+          "romanization": "gin3 gwai2"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "他是頭一個沒被這酒「醉倒」的人！",
+      "english_translation": "He's the first person who hasn't been \"knocked out\" by this liquor!",
+      "vocabulary": [
+        {
+          "word": "他",
+          "translation": "he",
+          "romanization": "taa1"
+        },
+        {
+          "word": "是",
+          "translation": "is",
+          "romanization": "si6"
+        },
+        {
+          "word": "頭一個",
+          "translation": "the first one",
+          "romanization": "tau4 jat1 go3"
+        },
+        {
+          "word": "沒",
+          "translation": "not, didn't",
+          "romanization": "mut6"
+        },
+        {
+          "word": "被",
+          "translation": "by (passive marker)",
+          "romanization": "bei6"
+        },
+        {
+          "word": "這",
+          "translation": "this",
+          "romanization": "ze5"
+        },
+        {
+          "word": "酒",
+          "translation": "liquor, alcohol",
+          "romanization": "zau2"
+        },
+        {
+          "word": "醉倒",
+          "translation": "knocked out drunk, drunk unconscious",
+          "romanization": "zeoi3 dou2"
+        },
+        {
+          "word": "人",
+          "translation": "person",
+          "romanization": "jan4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "被 + Verb",
+          "explanation": "The passive voice marker '被' is used to indicate that the subject receives the action. Here '沒被...醉倒' means 'hasn't been knocked out by...'",
+          "example": "沒被這酒「醉倒」"
+        },
+        {
+          "pattern": "是...的",
+          "explanation": "The '是...的' construction is used to emphasize a particular aspect of a past action or to provide clarification. Here it emphasizes that he is specifically the first person with this characteristic.",
+          "example": "他是頭一個...的人"
+        }
+      ]
+    }
+  ]
+}
+```
+

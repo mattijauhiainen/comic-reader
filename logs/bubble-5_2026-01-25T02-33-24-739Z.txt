@@ -1,0 +1,94 @@
+=== API Response for Bubble 5 ===
+Timestamp: 2026-01-25T02:33:24.739Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "我可以過去看看嗎，船長？他們在那邊備飯呢！",
+  "translation": "Can I go over and take a look, Captain? They're preparing food over there!",
+  "sentences": [
+    {
+      "chinese_text": "我可以過去看看嗎，船長？",
+      "english_translation": "Can I go over and take a look, Captain?",
+      "vocabulary": [
+        {
+          "word": "可以",
+          "translation": "can, may",
+          "romanization": "ho2 ji5"
+        },
+        {
+          "word": "過去",
+          "translation": "go over, go there",
+          "romanization": "gwo3 heoi3"
+        },
+        {
+          "word": "看看",
+          "translation": "take a look, have a look",
+          "romanization": "hon3 hon3"
+        },
+        {
+          "word": "船長",
+          "translation": "captain",
+          "romanization": "syun4 zoeng2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "可以...嗎？",
+          "explanation": "A question pattern used to ask for permission, meaning 'can/may I...?'",
+          "example": "我可以過去看看嗎"
+        },
+        {
+          "pattern": "Verb reduplication (看看)",
+          "explanation": "Reduplicating a verb (看 → 看看) softens the tone and suggests a brief or casual action, often translated as 'take a...' or 'have a...'",
+          "example": "看看 (take a look)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "他們在那邊備飯呢！",
+      "english_translation": "They're preparing food over there!",
+      "vocabulary": [
+        {
+          "word": "他們",
+          "translation": "they, them",
+          "romanization": "taa1 mun4"
+        },
+        {
+          "word": "在",
+          "translation": "at, in the process of",
+          "romanization": "zoi6"
+        },
+        {
+          "word": "那邊",
+          "translation": "over there, that side",
+          "romanization": "naa5 bin1"
+        },
+        {
+          "word": "備",
+          "translation": "prepare",
+          "romanization": "bei6"
+        },
+        {
+          "word": "飯",
+          "translation": "food, meal, rice",
+          "romanization": "faan6"
+        },
+        {
+          "word": "呢",
+          "translation": "particle indicating ongoing action",
+          "romanization": "ne1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "在...呢",
+          "explanation": "This pattern indicates an ongoing action in progress, similar to the '-ing' form in English. 在 marks the progressive aspect and 呢 is a particle emphasizing the ongoing nature.",
+          "example": "他們在那邊備飯呢 (They're preparing food over there)"
+        }
+      ]
+    }
+  ]
+}
+```
+

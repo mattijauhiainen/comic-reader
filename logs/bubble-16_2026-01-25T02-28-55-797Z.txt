@@ -1,0 +1,36 @@
+=== API Response for Bubble 16 ===
+Timestamp: 2026-01-25T02:28:55.797Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "難聽極了！",
+  "translation": "It sounds terrible!",
+  "sentences": [
+    {
+      "chinese_text": "難聽極了！",
+      "english_translation": "It sounds terrible!",
+      "vocabulary": [
+        {
+          "word": "難聽",
+          "translation": "unpleasant to listen to, awful-sounding",
+          "romanization": "naan4 teng1"
+        },
+        {
+          "word": "極了",
+          "translation": "extremely, very much",
+          "romanization": "gik6 liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Adjective + 極了",
+          "explanation": "This pattern is used to express an extreme degree of the adjective, meaning 'extremely' or 'very'. It emphasizes that something has reached the highest degree of that quality.",
+          "example": "難聽極了 (extremely unpleasant to hear)"
+        }
+      ]
+    }
+  ]
+}
+```
+

@@ -1,0 +1,56 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T02:35:20.552Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "樂意接受他的邀請，",
+  "translation": "Happy to accept his invitation,",
+  "sentences": [
+    {
+      "chinese_text": "樂意接受他的邀請，",
+      "english_translation": "Happy to accept his invitation,",
+      "vocabulary": [
+        {
+          "word": "樂意",
+          "translation": "happy to, willing to",
+          "romanization": "lok6 ji3"
+        },
+        {
+          "word": "接受",
+          "translation": "to accept",
+          "romanization": "zip3 sau6"
+        },
+        {
+          "word": "他",
+          "translation": "he, him, his",
+          "romanization": "taa1"
+        },
+        {
+          "word": "的",
+          "translation": "possessive particle",
+          "romanization": "dik1"
+        },
+        {
+          "word": "邀請",
+          "translation": "invitation",
+          "romanization": "jiu1 cing2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "樂意 + verb",
+          "explanation": "樂意 (happy to/willing to) is placed before a verb to express willingness or eagerness to do something",
+          "example": "樂意接受 (happy to accept)"
+        },
+        {
+          "pattern": "的 possessive structure",
+          "explanation": "的 is used to indicate possession, connecting the pronoun 他 (his) with the noun 邀請 (invitation)",
+          "example": "他的邀請 (his invitation)"
+        }
+      ]
+    }
+  ]
+}
+```
+

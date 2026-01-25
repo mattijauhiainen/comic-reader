@@ -1,0 +1,71 @@
+=== API Response for Bubble 17 ===
+Timestamp: 2026-01-25T02:35:00.789Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "放開我！\n丁丁！\n救救我！",
+  "translation": "Let me go!\nTintin!\nSave me!",
+  "sentences": [
+    {
+      "chinese_text": "放開我！",
+      "english_translation": "Let me go!",
+      "vocabulary": [
+        {
+          "word": "放開",
+          "translation": "to let go, to release",
+          "romanization": "fong3 hoi1"
+        },
+        {
+          "word": "我",
+          "translation": "me",
+          "romanization": "ngo5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb + 開",
+          "explanation": "The complement 開 (hoi1) after a verb indicates separating or releasing. 放開 means 'to let go' or 'to release'.",
+          "example": "放開我"
+        }
+      ]
+    },
+    {
+      "chinese_text": "丁丁！",
+      "english_translation": "Tintin!",
+      "vocabulary": [
+        {
+          "word": "丁丁",
+          "translation": "Tintin (name)",
+          "romanization": "ding1 ding1"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "救救我！",
+      "english_translation": "Save me!",
+      "vocabulary": [
+        {
+          "word": "救",
+          "translation": "to save, to rescue",
+          "romanization": "gau3"
+        },
+        {
+          "word": "我",
+          "translation": "me",
+          "romanization": "ngo5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb reduplication (AA pattern)",
+          "explanation": "Repeating the verb 救救 (instead of just 救) adds urgency, emphasis, or a pleading tone to the request.",
+          "example": "救救我"
+        }
+      ]
+    }
+  ]
+}
+```
+

@@ -1,0 +1,74 @@
+=== API Response for Bubble 9 ===
+Timestamp: 2026-01-25T02:38:40.231Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "該乾杯了！必須喝，要一飲而盡……",
+  "translation": "It's time for a toast! You must drink, you have to drink it all in one gulp...",
+  "sentences": [
+    {
+      "chinese_text": "該乾杯了！",
+      "english_translation": "It's time for a toast!",
+      "vocabulary": [
+        {
+          "word": "該",
+          "translation": "should, ought to, it's time to",
+          "romanization": "goi1"
+        },
+        {
+          "word": "乾杯",
+          "translation": "toast, cheers (literally: dry cup)",
+          "romanization": "gon1 bui1"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating change of state or completion",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "該...了",
+          "explanation": "This pattern indicates that it's time to do something or something should happen now. 該 means 'should/ought to' and 了 indicates a change of state or that the time has come.",
+          "example": "該乾杯了！"
+        }
+      ]
+    },
+    {
+      "chinese_text": "必須喝，要一飲而盡……",
+      "english_translation": "You must drink, you have to drink it all in one gulp...",
+      "vocabulary": [
+        {
+          "word": "必須",
+          "translation": "must, have to",
+          "romanization": "bit1 seoi1"
+        },
+        {
+          "word": "喝",
+          "translation": "drink",
+          "romanization": "hot3"
+        },
+        {
+          "word": "要",
+          "translation": "must, need to, have to",
+          "romanization": "jiu3"
+        },
+        {
+          "word": "一飲而盡",
+          "translation": "drink it all in one gulp (idiom)",
+          "romanization": "jat1 jam2 ji4 zeon6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "必須...要...",
+          "explanation": "Using both 必須 (must) and 要 (have to) together emphasizes the obligation or necessity of the action. This creates a strong imperative tone.",
+          "example": "必須喝，要一飲而盡"
+        }
+      ]
+    }
+  ]
+}
+```
+

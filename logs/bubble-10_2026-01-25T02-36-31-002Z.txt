@@ -1,0 +1,51 @@
+=== API Response for Bubble 10 ===
+Timestamp: 2026-01-25T02:36:31.002Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "教授，祝你好胃口！",
+  "translation": "Professor, bon appétit! (I wish you a good appetite!)",
+  "sentences": [
+    {
+      "chinese_text": "教授，祝你好胃口！",
+      "english_translation": "Professor, bon appétit! (I wish you a good appetite!)",
+      "vocabulary": [
+        {
+          "word": "教授",
+          "translation": "professor",
+          "romanization": "gaau3 sau6"
+        },
+        {
+          "word": "祝",
+          "translation": "to wish",
+          "romanization": "zuk1"
+        },
+        {
+          "word": "你",
+          "translation": "you",
+          "romanization": "nei5"
+        },
+        {
+          "word": "好",
+          "translation": "good",
+          "romanization": "hou2"
+        },
+        {
+          "word": "胃口",
+          "translation": "appetite",
+          "romanization": "wai6 hau2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "祝 + [someone] + [something positive]",
+          "explanation": "This is a common pattern for expressing wishes or blessings. '祝' (to wish) is followed by the person being addressed and then the good thing you wish for them.",
+          "example": "祝你好胃口 (I wish you a good appetite)"
+        }
+      ]
+    }
+  ]
+}
+```
+

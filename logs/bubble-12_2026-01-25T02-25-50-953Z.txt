@@ -1,0 +1,46 @@
+=== API Response for Bubble 12 ===
+Timestamp: 2026-01-25T02:25:50.953Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "只是噹一點嘛！",
+  "translation": "It's just a little knock/bump!",
+  "sentences": [
+    {
+      "chinese_text": "只是噹一點嘛！",
+      "english_translation": "It's just a little knock/bump!",
+      "vocabulary": [
+        {
+          "word": "只是",
+          "translation": "just, only, merely",
+          "romanization": "zi2 si6"
+        },
+        {
+          "word": "噹",
+          "translation": "to knock, to bump, to hit",
+          "romanization": "dong1"
+        },
+        {
+          "word": "一點",
+          "translation": "a little, a bit",
+          "romanization": "jat1 dim2"
+        },
+        {
+          "word": "嘛",
+          "translation": "particle indicating obviousness or reassurance",
+          "romanization": "maa3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "只是...嘛",
+          "explanation": "This pattern uses 只是 (only/just) at the beginning and 嘛 (particle) at the end to downplay or minimize something, often used to reassure someone that something is not a big deal",
+          "example": "只是噹一點嘛！"
+        }
+      ]
+    }
+  ]
+}
+```
+

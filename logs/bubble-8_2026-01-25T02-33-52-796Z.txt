@@ -1,0 +1,76 @@
+=== API Response for Bubble 8 ===
+Timestamp: 2026-01-25T02:33:52.796Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "夠了！嗯？还不住手？",
+  "translation": "Enough! Huh? You still won't stop?",
+  "sentences": [
+    {
+      "chinese_text": "夠了！",
+      "english_translation": "Enough!",
+      "vocabulary": [
+        {
+          "word": "夠",
+          "translation": "enough",
+          "romanization": "gau3"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating completion or change of state",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "了",
+          "explanation": "The particle 了 is used here to indicate a change of state or that a situation has reached a certain point. When used with 夠, it means 'that's enough' or 'enough already'.",
+          "example": "夠了"
+        }
+      ]
+    },
+    {
+      "chinese_text": "嗯？",
+      "english_translation": "Huh?",
+      "vocabulary": [
+        {
+          "word": "嗯",
+          "translation": "huh/hmm (interjection expressing surprise or questioning)",
+          "romanization": "ng2"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "还不住手？",
+      "english_translation": "You still won't stop?",
+      "vocabulary": [
+        {
+          "word": "还",
+          "translation": "still/yet",
+          "romanization": "waan4"
+        },
+        {
+          "word": "不",
+          "translation": "not",
+          "romanization": "bat1"
+        },
+        {
+          "word": "住手",
+          "translation": "stop (what you're doing)/cease",
+          "romanization": "zyu6 sau2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "还不...？",
+          "explanation": "This pattern expresses 'still not...?' or 'you still won't...?', often used to show impatience or surprise that someone hasn't done something yet. It's a rhetorical question structure.",
+          "example": "还不住手？"
+        }
+      ]
+    }
+  ]
+}
+```
+

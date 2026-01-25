@@ -1,0 +1,99 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T02:37:26.809Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "我……實在抱歉……喝不下去！……因为這威士忌實在令我噁心！",
+  "translation": "I... I'm really sorry... I can't drink it!... Because this whisky really makes me nauseous!",
+  "sentences": [
+    {
+      "chinese_text": "我……實在抱歉……喝不下去！",
+      "english_translation": "I... I'm really sorry... I can't drink it!",
+      "vocabulary": [
+        {
+          "word": "我",
+          "translation": "I, me",
+          "romanization": "ngo5"
+        },
+        {
+          "word": "實在",
+          "translation": "really, truly",
+          "romanization": "sat6 zoi6"
+        },
+        {
+          "word": "抱歉",
+          "translation": "sorry, apologetic",
+          "romanization": "pou5 hip3"
+        },
+        {
+          "word": "喝",
+          "translation": "drink",
+          "romanization": "hot3"
+        },
+        {
+          "word": "下去",
+          "translation": "down (directional complement)",
+          "romanization": "haa6 heoi3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "verb + 不 + complement",
+          "explanation": "The pattern 'verb + 不 + complement' indicates inability or impossibility. Here '喝不下去' means 'cannot drink it down'.",
+          "example": "喝不下去 (can't drink it down)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "因为這威士忌實在令我噁心！",
+      "english_translation": "Because this whisky really makes me nauseous!",
+      "vocabulary": [
+        {
+          "word": "因为",
+          "translation": "because",
+          "romanization": "jan1 wai6"
+        },
+        {
+          "word": "這",
+          "translation": "this",
+          "romanization": "ze5"
+        },
+        {
+          "word": "威士忌",
+          "translation": "whisky",
+          "romanization": "wai1 si6 gei6"
+        },
+        {
+          "word": "實在",
+          "translation": "really, truly",
+          "romanization": "sat6 zoi6"
+        },
+        {
+          "word": "令",
+          "translation": "to make, to cause",
+          "romanization": "ling6"
+        },
+        {
+          "word": "我",
+          "translation": "me",
+          "romanization": "ngo5"
+        },
+        {
+          "word": "噁心",
+          "translation": "nauseous, disgusted",
+          "romanization": "ok3 sam1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "令 + object + adjective/verb",
+          "explanation": "The causative structure '令 + object + adjective/verb' means 'to make/cause someone to (feel/do something)'. Here '令我噁心' means 'makes me feel nauseous'.",
+          "example": "令我噁心 (makes me nauseous)"
+        }
+      ]
+    }
+  ]
+}
+```
+

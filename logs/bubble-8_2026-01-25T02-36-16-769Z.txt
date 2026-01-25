@@ -1,0 +1,25 @@
+=== API Response for Bubble 8 ===
+Timestamp: 2026-01-25T02:36:16.769Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "噢！！！",
+  "translation": "Oh!!!",
+  "sentences": [
+    {
+      "chinese_text": "噢！！！",
+      "english_translation": "Oh!!!",
+      "vocabulary": [
+        {
+          "word": "噢",
+          "translation": "oh (exclamation of surprise or realization)",
+          "romanization": "o1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+

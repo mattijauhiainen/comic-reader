@@ -1,0 +1,109 @@
+=== API Response for Bubble 4 ===
+Timestamp: 2026-01-25T02:37:52.105Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "他說，應該多吃一些！他說得沒錯，今天的「斯土菠」，味道好極了！",
+  "translation": "He said we should eat more! He's quite right, today's 'Stobbo' tastes excellent!",
+  "sentences": [
+    {
+      "chinese_text": "他說，應該多吃一些！",
+      "english_translation": "He said we should eat more!",
+      "vocabulary": [
+        {
+          "word": "他",
+          "translation": "he",
+          "romanization": "taa1"
+        },
+        {
+          "word": "說",
+          "translation": "to say",
+          "romanization": "syut3"
+        },
+        {
+          "word": "應該",
+          "translation": "should, ought to",
+          "romanization": "jing1 goi1"
+        },
+        {
+          "word": "多",
+          "translation": "more",
+          "romanization": "do1"
+        },
+        {
+          "word": "吃",
+          "translation": "to eat",
+          "romanization": "hek3"
+        },
+        {
+          "word": "一些",
+          "translation": "some, a little",
+          "romanization": "jat1 se1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "應該 + verb",
+          "explanation": "Used to express obligation or recommendation, meaning 'should' or 'ought to'",
+          "example": "應該多吃一些"
+        }
+      ]
+    },
+    {
+      "chinese_text": "他說得沒錯，今天的「斯土菠」，味道好極了！",
+      "english_translation": "He's quite right, today's 'Stobbo' tastes excellent!",
+      "vocabulary": [
+        {
+          "word": "他",
+          "translation": "he",
+          "romanization": "taa1"
+        },
+        {
+          "word": "說得沒錯",
+          "translation": "to be right (in what one says)",
+          "romanization": "syut3 dak1 mut6 co3"
+        },
+        {
+          "word": "今天",
+          "translation": "today",
+          "romanization": "gam1 tin1"
+        },
+        {
+          "word": "的",
+          "translation": "possessive particle",
+          "romanization": "dik1"
+        },
+        {
+          "word": "斯土菠",
+          "translation": "Stobbo (transliteration)",
+          "romanization": "si1 tou2 bo1"
+        },
+        {
+          "word": "味道",
+          "translation": "taste, flavor",
+          "romanization": "mei6 dou6"
+        },
+        {
+          "word": "好極了",
+          "translation": "extremely good, excellent",
+          "romanization": "hou2 gik6 liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "說得沒錯",
+          "explanation": "A fixed expression meaning 'to be right' or 'to speak correctly', using the complement marker 得 to indicate the result of the action",
+          "example": "他說得沒錯"
+        },
+        {
+          "pattern": "adjective + 極了",
+          "explanation": "Used to express the superlative degree, meaning 'extremely' or 'very much'",
+          "example": "好極了"
+        }
+      ]
+    }
+  ]
+}
+```
+

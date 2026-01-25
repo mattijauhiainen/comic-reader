@@ -1,0 +1,51 @@
+=== API Response for Bubble 18 ===
+Timestamp: 2026-01-25T02:29:08.991Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "阿爾齊巴爾德呀，不是嗎？",
+  "translation": "Archibald, isn't it?",
+  "sentences": [
+    {
+      "chinese_text": "阿爾齊巴爾德呀，不是嗎？",
+      "english_translation": "Archibald, isn't it?",
+      "vocabulary": [
+        {
+          "word": "阿爾齊巴爾德",
+          "translation": "Archibald (name)",
+          "romanization": "aa3 ji5 cai4 baa1 ji5 dak1"
+        },
+        {
+          "word": "呀",
+          "translation": "particle indicating emphasis or confirmation",
+          "romanization": "aa3"
+        },
+        {
+          "word": "不是",
+          "translation": "isn't it / right",
+          "romanization": "bat1 si6"
+        },
+        {
+          "word": "嗎",
+          "translation": "question particle",
+          "romanization": "maa3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "不是嗎？",
+          "explanation": "A tag question pattern used to seek confirmation, similar to 'isn't it?' or 'right?' in English. It expresses the speaker's expectation of agreement.",
+          "example": "阿爾齊巴爾德呀，不是嗎？"
+        },
+        {
+          "pattern": "呀",
+          "explanation": "A sentence-medial particle used here to add emphasis or express a tone of familiarity when addressing someone by name.",
+          "example": "阿爾齊巴爾德呀"
+        }
+      ]
+    }
+  ]
+}
+```
+

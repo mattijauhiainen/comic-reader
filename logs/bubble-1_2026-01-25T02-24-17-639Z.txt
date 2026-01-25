@@ -1,0 +1,142 @@
+=== API Response for Bubble 1 ===
+Timestamp: 2026-01-25T02:24:17.639Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "恥的塔比奧卡，還送禮物來！為了消滅阿倫巴亞人和我的游擊隊，他們不停地用降落伞投擲整箱威士忌！結果醉了猴！",
+  "translation": "The shameless Tapioca even sends gifts! In order to eliminate the Arumbaya people and my guerrilla forces, they keep dropping entire crates of whiskey by parachute! The result is drunk monkeys!",
+  "sentences": [
+    {
+      "chinese_text": "無恥的塔比奧卡，還送禮物來！",
+      "english_translation": "The shameless Tapioca even sends gifts!",
+      "vocabulary": [
+        {
+          "word": "無恥",
+          "translation": "shameless",
+          "romanization": "mou4 chi2"
+        },
+        {
+          "word": "塔比奧卡",
+          "translation": "Tapioca (name)",
+          "romanization": "taap3 bei2 ou1 kaa1"
+        },
+        {
+          "word": "還",
+          "translation": "still, even",
+          "romanization": "waan4"
+        },
+        {
+          "word": "送",
+          "translation": "to send, to give",
+          "romanization": "sung3"
+        },
+        {
+          "word": "禮物",
+          "translation": "gift",
+          "romanization": "lai5 mat6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "還",
+          "explanation": "Used here to express 'even' or 'still', emphasizing the surprising or ironic nature of the action",
+          "example": "還送禮物來"
+        }
+      ]
+    },
+    {
+      "chinese_text": "為了消滅阿倫巴亞人和我的游擊隊，他們不停地用降落伞投擲整箱威士忌！",
+      "english_translation": "In order to eliminate the Arumbaya people and my guerrilla forces, they keep dropping entire crates of whiskey by parachute!",
+      "vocabulary": [
+        {
+          "word": "為了",
+          "translation": "in order to, for the purpose of",
+          "romanization": "wai6 liu5"
+        },
+        {
+          "word": "消滅",
+          "translation": "to eliminate, to destroy",
+          "romanization": "siu1 mit6"
+        },
+        {
+          "word": "阿倫巴亞人",
+          "translation": "Arumbaya people",
+          "romanization": "aa3 leon4 baa1 aa3 jan4"
+        },
+        {
+          "word": "游擊隊",
+          "translation": "guerrilla forces",
+          "romanization": "jau4 gik1 deoi6"
+        },
+        {
+          "word": "不停地",
+          "translation": "continuously, non-stop",
+          "romanization": "bat1 ting4 dei6"
+        },
+        {
+          "word": "降落傘",
+          "translation": "parachute",
+          "romanization": "gong3 lok6 saan3"
+        },
+        {
+          "word": "投擲",
+          "translation": "to drop, to throw",
+          "romanization": "tau4 zaak6"
+        },
+        {
+          "word": "整箱",
+          "translation": "entire crates, whole boxes",
+          "romanization": "zing2 soeng1"
+        },
+        {
+          "word": "威士忌",
+          "translation": "whiskey",
+          "romanization": "wai1 si6 gei6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "為了...verb",
+          "explanation": "Expresses purpose or intention, meaning 'in order to' or 'for the purpose of'",
+          "example": "為了消滅阿倫巴亞人"
+        },
+        {
+          "pattern": "verb + 地",
+          "explanation": "地 is used after an adjective or adverb to form an adverbial phrase that modifies the following verb",
+          "example": "不停地用降落傘投擲"
+        }
+      ]
+    },
+    {
+      "chinese_text": "結果醉了猴！",
+      "english_translation": "The result is drunk monkeys!",
+      "vocabulary": [
+        {
+          "word": "結果",
+          "translation": "result, outcome",
+          "romanization": "git3 gwo2"
+        },
+        {
+          "word": "醉",
+          "translation": "drunk, intoxicated",
+          "romanization": "zeoi3"
+        },
+        {
+          "word": "猴",
+          "translation": "monkeys",
+          "romanization": "hau4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "verb + 了",
+          "explanation": "了 is used after a verb to indicate completion or change of state",
+          "example": "醉了猴"
+        }
+      ]
+    }
+  ]
+}
+```
+

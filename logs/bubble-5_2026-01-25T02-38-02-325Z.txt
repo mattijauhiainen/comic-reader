@@ -1,0 +1,74 @@
+=== API Response for Bubble 5 ===
+Timestamp: 2026-01-25T02:38:02.325Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "能乾的卡洛馬村長，\n祝你健康！",
+  "translation": "Capable Mayor Carroma, I wish you good health!",
+  "sentences": [
+    {
+      "chinese_text": "能乾的卡洛馬村長，",
+      "english_translation": "Capable Mayor Carroma,",
+      "vocabulary": [
+        {
+          "word": "能乾",
+          "translation": "capable, competent, able",
+          "romanization": "nang4 gon1"
+        },
+        {
+          "word": "的",
+          "translation": "of (possessive/descriptive particle)",
+          "romanization": "dik1"
+        },
+        {
+          "word": "卡洛馬",
+          "translation": "Carroma (name)",
+          "romanization": "kaa1 lok6 maa5"
+        },
+        {
+          "word": "村長",
+          "translation": "village chief, mayor",
+          "romanization": "cyun1 zoeng2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Adjective + 的 + Noun",
+          "explanation": "The particle 的 is used to connect an adjective (能乾) to a noun (卡洛馬村長), forming a descriptive phrase meaning 'capable Mayor Carroma'",
+          "example": "能乾的卡洛馬村長"
+        }
+      ]
+    },
+    {
+      "chinese_text": "祝你健康！",
+      "english_translation": "I wish you good health!",
+      "vocabulary": [
+        {
+          "word": "祝",
+          "translation": "to wish",
+          "romanization": "zuk1"
+        },
+        {
+          "word": "你",
+          "translation": "you",
+          "romanization": "nei5"
+        },
+        {
+          "word": "健康",
+          "translation": "health, healthy",
+          "romanization": "gin6 hong1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "祝 + Person + Noun/Adjective",
+          "explanation": "This is a common structure for expressing wishes or blessings. 祝 (to wish) is followed by the person (你) and then what you wish for them (健康)",
+          "example": "祝你健康"
+        }
+      ]
+    }
+  ]
+}
+```
+

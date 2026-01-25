@@ -1,0 +1,56 @@
+=== API Response for Bubble 7 ===
+Timestamp: 2026-01-25T02:27:33.862Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "怎麼，船長，船是不能飛的！",
+  "translation": "What, Captain, ships can't fly!",
+  "sentences": [
+    {
+      "chinese_text": "怎麼，船長，船是不能飛的！",
+      "english_translation": "What, Captain, ships can't fly!",
+      "vocabulary": [
+        {
+          "word": "怎麼",
+          "translation": "what; how come",
+          "romanization": "zam2 mo1"
+        },
+        {
+          "word": "船長",
+          "translation": "captain",
+          "romanization": "syun4 zoeng2"
+        },
+        {
+          "word": "船",
+          "translation": "ship",
+          "romanization": "syun4"
+        },
+        {
+          "word": "不能",
+          "translation": "cannot; unable to",
+          "romanization": "bat1 nang4"
+        },
+        {
+          "word": "飛",
+          "translation": "fly",
+          "romanization": "fei1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "是...的",
+          "explanation": "This structure is used for emphasis, often to emphasize a fact or a state. Here it emphasizes the fact that ships cannot fly.",
+          "example": "船是不能飛的"
+        },
+        {
+          "pattern": "不能 + Verb",
+          "explanation": "Expresses inability or impossibility. '不能' means 'cannot' or 'unable to', followed by a verb to indicate what cannot be done.",
+          "example": "不能飛 (cannot fly)"
+        }
+      ]
+    }
+  ]
+}
+```
+
