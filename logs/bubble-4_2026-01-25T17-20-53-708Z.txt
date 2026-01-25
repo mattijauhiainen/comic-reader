@@ -1,0 +1,74 @@
+=== API Response for Bubble 4 ===
+Timestamp: 2026-01-25T17:20:53.708Z
+
+--- Raw Response Text ---
+Here's the translation aid in JSON format:
+
+```json
+{
+  "chinese_text": "船長，冷靜點，我們馬上告訴你發生過甚麼事。",
+  "translation": "Captain, calm down, we'll tell you right away what happened.",
+  "sentences": [
+    {
+      "chinese_text": "船長，冷靜點，我們馬上告訴你發生過甚麼事。",
+      "english_translation": "Captain, calm down, we'll tell you right away what happened.",
+      "vocabulary": [
+        {
+          "word": "船長",
+          "translation": "captain",
+          "romanization": "syun4 zoeng2"
+        },
+        {
+          "word": "冷靜",
+          "translation": "calm",
+          "romanization": "laang5 zing6"
+        },
+        {
+          "word": "點",
+          "translation": "a bit (softening particle)",
+          "romanization": "dim2"
+        },
+        {
+          "word": "馬上",
+          "translation": "right away, immediately",
+          "romanization": "maa5 soeng6"
+        },
+        {
+          "word": "告訴",
+          "translation": "tell, inform",
+          "romanization": "gou3 sou3"
+        },
+        {
+          "word": "發生",
+          "translation": "happen, occur",
+          "romanization": "faat3 saang1"
+        },
+        {
+          "word": "甚麼",
+          "translation": "what",
+          "romanization": "sam6 mo1"
+        },
+        {
+          "word": "事",
+          "translation": "matter, thing",
+          "romanization": "si6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb + 點",
+          "explanation": "Adding 點 after an adjective or verb softens it, making it a gentle suggestion or mild imperative (similar to 'a bit' in English)",
+          "example": "冷靜點 (calm down a bit)"
+        },
+        {
+          "pattern": "發生過甚麼事",
+          "explanation": "過 is used as a past tense/experience marker here, indicating something that has happened or occurred",
+          "example": "發生過甚麼事 (what happened)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

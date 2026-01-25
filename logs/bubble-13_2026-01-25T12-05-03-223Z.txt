@@ -1,0 +1,28 @@
+=== API Response for Bubble 13 ===
+Timestamp: 2026-01-25T12:05:03.223Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "嗯",
+  "translation": "Hmm / Mm / Uh-huh",
+  "sentences": [
+    {
+      "chinese_text": "嗯",
+      "english_translation": "Hmm / Mm / Uh-huh",
+      "vocabulary": [
+        {
+          "word": "嗯",
+          "translation": "interjection expressing agreement, acknowledgment, or thinking",
+          "romanization": "ng2"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+This is a single-character interjection commonly used in Chinese to express agreement, acknowledgment, or indicate that someone is thinking or listening. It's one of the most basic vocal responses in conversation.
+
+

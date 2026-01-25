@@ -1,0 +1,66 @@
+=== API Response for Bubble 14 ===
+Timestamp: 2026-01-25T17:56:29.358Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for the Chinese text from Tintin and the Picaros:
+
+```json
+{
+  "chinese_text": "所以……嗝…\n我們喝了一杯！",
+  "translation": "So... *hic*...\nWe had a drink!",
+  "sentences": [
+    {
+      "chinese_text": "所以……嗝…",
+      "english_translation": "So... *hic*...",
+      "vocabulary": [
+        {
+          "word": "所以",
+          "translation": "so, therefore",
+          "romanization": "so2 ji5"
+        },
+        {
+          "word": "嗝",
+          "translation": "hiccup, burp",
+          "romanization": "gaak3"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "我們喝了一杯！",
+      "english_translation": "We had a drink!",
+      "vocabulary": [
+        {
+          "word": "我們",
+          "translation": "we, us",
+          "romanization": "ngo5 mun4"
+        },
+        {
+          "word": "喝",
+          "translation": "to drink",
+          "romanization": "hot3"
+        },
+        {
+          "word": "了",
+          "translation": "perfective aspect marker (completed action)",
+          "romanization": "liu5"
+        },
+        {
+          "word": "一杯",
+          "translation": "one cup/glass, a drink",
+          "romanization": "jat1 bui1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "verb + 了",
+          "explanation": "The particle 了 (liu5) is used after the verb to indicate a completed action in the past",
+          "example": "喝了 (drank, had a drink)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

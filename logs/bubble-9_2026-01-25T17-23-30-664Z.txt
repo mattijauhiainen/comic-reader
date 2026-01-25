@@ -1,0 +1,54 @@
+=== API Response for Bubble 9 ===
+Timestamp: 2026-01-25T17:23:30.664Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "當心後面！有鱷魚！",
+  "translation": "Watch out behind you! There's a crocodile!",
+  "sentences": [
+    {
+      "chinese_text": "當心後面！",
+      "english_translation": "Watch out behind you!",
+      "vocabulary": [
+        {
+          "word": "當心",
+          "translation": "watch out, be careful",
+          "romanization": "dong1 sam1"
+        },
+        {
+          "word": "後面",
+          "translation": "behind, back",
+          "romanization": "hau6 min6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "當心 + Location/Object",
+          "explanation": "當心 is an imperative expression meaning 'watch out' or 'be careful'. When followed by a location or object, it warns someone to be careful of that specific thing or place.",
+          "example": "當心後面 (Watch out behind)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "有鱷魚！",
+      "english_translation": "There's a crocodile!",
+      "vocabulary": [
+        {
+          "word": "有",
+          "translation": "there is, have",
+          "romanization": "jau5"
+        },
+        {
+          "word": "鱷魚",
+          "translation": "crocodile, alligator",
+          "romanization": "ngok6 jyu4"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+

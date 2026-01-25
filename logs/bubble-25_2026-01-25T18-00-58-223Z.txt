@@ -1,0 +1,76 @@
+=== API Response for Bubble 25 ===
+Timestamp: 2026-01-25T18:00:58.223Z
+
+--- Raw Response Text ---
+Here is the translation aid for the Chinese text from Tintin and the Picaros:
+
+```json
+{
+  "chinese_text": "啊！是…是將軍！將軍萬歲！",
+  "translation": "Ah! It's... it's the General! Long live the General!",
+  "sentences": [
+    {
+      "chinese_text": "啊！",
+      "english_translation": "Ah!",
+      "vocabulary": [
+        {
+          "word": "啊",
+          "translation": "ah (exclamation of surprise)",
+          "romanization": "aa3"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "是…是將軍！",
+      "english_translation": "It's... it's the General!",
+      "vocabulary": [
+        {
+          "word": "是",
+          "translation": "is, to be",
+          "romanization": "si6"
+        },
+        {
+          "word": "將軍",
+          "translation": "general (military rank)",
+          "romanization": "zoeng1 gwan1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Stuttering repetition (是…是)",
+          "explanation": "The repetition with ellipsis indicates hesitation or surprise, showing the speaker is startled or uncertain",
+          "example": "是…是將軍"
+        }
+      ]
+    },
+    {
+      "chinese_text": "將軍萬歲！",
+      "english_translation": "Long live the General!",
+      "vocabulary": [
+        {
+          "word": "將軍",
+          "translation": "general (military rank)",
+          "romanization": "zoeng1 gwan1"
+        },
+        {
+          "word": "萬歲",
+          "translation": "long live, hurrah (literally: ten thousand years)",
+          "romanization": "maan6 seoi3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "[Subject] + 萬歲",
+          "explanation": "萬歲 is a celebratory expression meaning 'long live' or 'hurrah', traditionally used to show loyalty or celebrate someone in authority",
+          "example": "將軍萬歲"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON provides the full translation, breaks down each sentence with its vocabulary (in Traditional Chinese with Jyutping romanization), and identifies relevant grammar patterns like the stuttering repetition showing surprise and the celebratory 萬歲 expression.
+
+

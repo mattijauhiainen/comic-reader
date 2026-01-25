@@ -1,0 +1,30 @@
+=== API Response for Bubble 23 ===
+Timestamp: 2026-01-25T18:00:11.540Z
+
+--- Raw Response Text ---
+Here is the translation aid for the Chinese text "隔！":
+
+```json
+{
+  "chinese_text": "隔！",
+  "translation": "Get away! / Back off!",
+  "sentences": [
+    {
+      "chinese_text": "隔！",
+      "english_translation": "Get away! / Back off!",
+      "vocabulary": [
+        {
+          "word": "隔",
+          "translation": "to separate; to keep away; to block",
+          "romanization": "gaak3"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+This is a very short exclamation. The character "隔" (gaak3) in Cantonese is commonly used as an interjection meaning "get away" or "back off" - often used to warn someone or something to stay away or keep their distance. It's an imperative/command form, which is why there are no specific grammar patterns to note - it's a standalone exclamation.
+
+

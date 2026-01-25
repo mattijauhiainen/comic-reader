@@ -1,0 +1,167 @@
+=== API Response for Bubble 1 ===
+Timestamp: 2026-01-25T11:40:05.611Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Tintin comic book text. Let me analyze the text and provide the structured JSON response.
+
+Looking at the text, I notice it appears to be fragmented (likely from OCR extraction), but I can work with it to provide meaningful translations and analysis.
+
+```json
+{
+  "chinese_text": "來那麼多「但是」、「如果」！\n惜一切代價都要找到他們！\n油彈、火箭彈、炸彈，都可\n部完成！聽見嗎？",
+  "translation": "Enough with all these \"buts\" and \"ifs\"! Find them at all costs! Petrol bombs, rockets, bombs - all are acceptable. Complete the mission! Do you hear me?",
+  "sentences": [
+    {
+      "chinese_text": "來那麼多「但是」、「如果」！",
+      "english_translation": "Enough with all these \"buts\" and \"ifs\"!",
+      "vocabulary": [
+        {
+          "word": "來",
+          "translation": "come; bring (here: used colloquially to mean \"enough of\")",
+          "romanization": "loi4"
+        },
+        {
+          "word": "那麼多",
+          "translation": "so many",
+          "romanization": "naa5 mo1 do1"
+        },
+        {
+          "word": "但是",
+          "translation": "but",
+          "romanization": "daan6 si6"
+        },
+        {
+          "word": "如果",
+          "translation": "if",
+          "romanization": "jyu4 gwo2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "來 + [thing]",
+          "explanation": "Colloquial usage of 來 to express impatience or dismissiveness, similar to \"enough with [something]\"",
+          "example": "來那麼多「但是」"
+        }
+      ]
+    },
+    {
+      "chinese_text": "惜一切代價都要找到他們！",
+      "english_translation": "Find them at all costs!",
+      "vocabulary": [
+        {
+          "word": "惜",
+          "translation": "regardless of; at the cost of (short for 不惜)",
+          "romanization": "sik1"
+        },
+        {
+          "word": "一切代價",
+          "translation": "all costs; any price",
+          "romanization": "jat1 cai3 doi6 gaa3"
+        },
+        {
+          "word": "都",
+          "translation": "all; even",
+          "romanization": "dou1"
+        },
+        {
+          "word": "要",
+          "translation": "must; need to",
+          "romanization": "jiu3"
+        },
+        {
+          "word": "找到",
+          "translation": "find; locate",
+          "romanization": "zaau2 dou3"
+        },
+        {
+          "word": "他們",
+          "translation": "them",
+          "romanization": "taa1 mun4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "不惜/惜 + [cost] + 都要 + [action]",
+          "explanation": "Expression meaning \"at all costs\" or \"regardless of the price, must do something\"",
+          "example": "惜一切代價都要找到他們"
+        }
+      ]
+    },
+    {
+      "chinese_text": "油彈、火箭彈、炸彈，都可",
+      "english_translation": "Petrol bombs, rockets, bombs - all are acceptable",
+      "vocabulary": [
+        {
+          "word": "油彈",
+          "translation": "petrol bomb; Molotov cocktail",
+          "romanization": "jau4 daan6"
+        },
+        {
+          "word": "火箭彈",
+          "translation": "rocket; missile",
+          "romanization": "fo2 zin3 daan6"
+        },
+        {
+          "word": "炸彈",
+          "translation": "bomb",
+          "romanization": "zaa3 daan6"
+        },
+        {
+          "word": "都",
+          "translation": "all",
+          "romanization": "dou1"
+        },
+        {
+          "word": "可",
+          "translation": "acceptable; permissible (short for 可以)",
+          "romanization": "ho2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "[list with 、] + 都 + [verb/adjective]",
+          "explanation": "Pattern for listing items and applying a statement to all of them",
+          "example": "油彈、火箭彈、炸彈，都可"
+        }
+      ]
+    },
+    {
+      "chinese_text": "部完成！聽見嗎？",
+      "english_translation": "Complete the mission! Do you hear me?",
+      "vocabulary": [
+        {
+          "word": "部",
+          "translation": "fully; completely (likely 全部 with 全 missing)",
+          "romanization": "bou6"
+        },
+        {
+          "word": "完成",
+          "translation": "complete; accomplish",
+          "romanization": "jyun4 sing4"
+        },
+        {
+          "word": "聽見",
+          "translation": "hear",
+          "romanization": "ting1 gin3"
+        },
+        {
+          "word": "嗎",
+          "translation": "question particle",
+          "romanization": "maa3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "[verb] + 嗎",
+          "explanation": "Question particle 嗎 turns a statement into a yes/no question",
+          "example": "聽見嗎？"
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Note:** The text appears to have some OCR extraction issues (missing characters like "不" before "惜" and "全" before "部"), but I've provided translations based on the most likely intended meaning in the context of what seems to be an urgent military or action command from a Tintin story.
+
+

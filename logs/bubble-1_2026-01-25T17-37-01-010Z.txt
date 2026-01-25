@@ -1,0 +1,121 @@
+=== API Response for Bubble 1 ===
+Timestamp: 2026-01-25T17:37:01.010Z
+
+--- Raw Response Text ---
+Here's the translation aid for this Tintin text:
+
+```json
+{
+  "chinese_text": "站住！你别管了！他们有槍，很容易给打中，危險！",
+  "translation": "Stop! Don't get involved! They have guns, it's very easy to get hit, it's dangerous!",
+  "sentences": [
+    {
+      "chinese_text": "站住！",
+      "english_translation": "Stop!",
+      "vocabulary": [
+        {
+          "word": "站住",
+          "translation": "stop (stand still)",
+          "romanization": "zaam6 zyu6"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "你别管了！",
+      "english_translation": "Don't get involved! / Don't worry about it!",
+      "vocabulary": [
+        {
+          "word": "别",
+          "translation": "don't",
+          "romanization": "bit6"
+        },
+        {
+          "word": "管",
+          "translation": "manage, be concerned with, get involved",
+          "romanization": "gun2"
+        },
+        {
+          "word": "了",
+          "translation": "(particle indicating change of state or completion)",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "别 + Verb",
+          "explanation": "This is the imperative negative form meaning 'don't do [action]'. 别 is used to tell someone not to do something.",
+          "example": "你别管了"
+        },
+        {
+          "pattern": "Verb + 了",
+          "explanation": "The particle 了 here emphasizes that the action should stop or that there's a change in situation - 'stop concerning yourself (with this)'.",
+          "example": "别管了"
+        }
+      ]
+    },
+    {
+      "chinese_text": "他们有槍，很容易给打中，危險！",
+      "english_translation": "They have guns, it's very easy to get hit, it's dangerous!",
+      "vocabulary": [
+        {
+          "word": "他们",
+          "translation": "they",
+          "romanization": "taa1 mun4"
+        },
+        {
+          "word": "有",
+          "translation": "have",
+          "romanization": "jau5"
+        },
+        {
+          "word": "槍",
+          "translation": "gun",
+          "romanization": "coeng1"
+        },
+        {
+          "word": "很",
+          "translation": "very",
+          "romanization": "han2"
+        },
+        {
+          "word": "容易",
+          "translation": "easy",
+          "romanization": "jung4 ji6"
+        },
+        {
+          "word": "给",
+          "translation": "(passive marker) by, to be",
+          "romanization": "kap1"
+        },
+        {
+          "word": "打中",
+          "translation": "hit (target), strike",
+          "romanization": "daa2 zung3"
+        },
+        {
+          "word": "危險",
+          "translation": "dangerous",
+          "romanization": "ngai4 him2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "很容易 + Verb",
+          "explanation": "This pattern means 'it's very easy to [do something]'. 很 (very) + 容易 (easy) describes how readily something can happen.",
+          "example": "很容易给打中"
+        },
+        {
+          "pattern": "给 + Verb (Passive)",
+          "explanation": "给 is used here as a passive marker, indicating that the subject receives the action. It's similar to 被 in Mandarin, meaning 'to be [verb]-ed'.",
+          "example": "给打中 (to be hit)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON provides the complete translation, breaks down each sentence with its vocabulary (in Traditional Chinese with Jyutping romanization), and identifies the key grammar patterns used in the text.
+
+

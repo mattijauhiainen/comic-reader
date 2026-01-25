@@ -1,0 +1,46 @@
+=== API Response for Bubble 11 ===
+Timestamp: 2026-01-25T12:03:59.432Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for the Chinese text:
+
+```json
+{
+  "chinese_text": "船長，對不起了！",
+  "translation": "Captain, I'm sorry!",
+  "sentences": [
+    {
+      "chinese_text": "船長，對不起了！",
+      "english_translation": "Captain, I'm sorry!",
+      "vocabulary": [
+        {
+          "word": "船長",
+          "translation": "captain",
+          "romanization": "syun4 zoeng2"
+        },
+        {
+          "word": "對不起",
+          "translation": "sorry, excuse me",
+          "romanization": "deoi3 bat1 hei2"
+        },
+        {
+          "word": "了",
+          "translation": "particle (indicating change of state or completion)",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "了 (liu5) at sentence end",
+          "explanation": "The particle 了 at the end of the sentence indicates a change of state or emphasizes that the situation has now occurred. Here it adds a sense of finality or resignation to the apology.",
+          "example": "對不起了！"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This is a short, direct apology from someone (likely a character in the comic) to Captain Haddock. The use of 了 at the end adds emotional weight, suggesting the speaker is apologizing for something they're about to do or have just done, with a sense of "I'm afraid I have to apologize" or "Sorry, but this is how it is."
+
+

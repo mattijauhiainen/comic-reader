@@ -1,0 +1,41 @@
+=== API Response for Bubble 30 ===
+Timestamp: 2026-01-25T18:03:32.858Z
+
+--- Raw Response Text ---
+Here is the JSON translation aid for the Chinese text "在哪兒？":
+
+```json
+{
+  "chinese_text": "在哪兒？",
+  "translation": "Where is it?",
+  "sentences": [
+    {
+      "chinese_text": "在哪兒？",
+      "english_translation": "Where is it?",
+      "vocabulary": [
+        {
+          "word": "在",
+          "translation": "at, in, to be located",
+          "romanization": "zoi6"
+        },
+        {
+          "word": "哪兒",
+          "translation": "where, what place",
+          "romanization": "naa5 ji4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "在 + question word",
+          "explanation": "Using 在 (at/in) with the question word 哪兒 (where) to ask about location",
+          "example": "在哪兒？"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This is a simple location question asking "Where is it?" or "Where?" The sentence uses the locative verb 在 (to be at/in) combined with the question word 哪兒 (where).
+
+

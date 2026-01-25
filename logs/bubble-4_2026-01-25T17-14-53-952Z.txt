@@ -1,0 +1,76 @@
+=== API Response for Bubble 4 ===
+Timestamp: 2026-01-25T17:14:53.952Z
+
+--- Raw Response Text ---
+Here's the translation aid for the Chinese text from Tintin and the Picaros:
+
+```json
+{
+  "chinese_text": "船長，冷靜點，我們馬上告訴你發生過甚麼事。",
+  "translation": "Captain, calm down, we'll tell you right away what happened.",
+  "sentences": [
+    {
+      "chinese_text": "船長，冷靜點，我們馬上告訴你發生過甚麼事。",
+      "english_translation": "Captain, calm down, we'll tell you right away what happened.",
+      "vocabulary": [
+        {
+          "word": "船長",
+          "translation": "captain",
+          "romanization": "syun4 zoeng2"
+        },
+        {
+          "word": "冷靜",
+          "translation": "calm (down), composed",
+          "romanization": "laang5 zing6"
+        },
+        {
+          "word": "點",
+          "translation": "a bit (imperative softener)",
+          "romanization": "dim2"
+        },
+        {
+          "word": "馬上",
+          "translation": "immediately, right away",
+          "romanization": "maa5 soeng6"
+        },
+        {
+          "word": "告訴",
+          "translation": "to tell, inform",
+          "romanization": "gou3 sou3"
+        },
+        {
+          "word": "發生",
+          "translation": "to happen, occur",
+          "romanization": "faat3 sang1"
+        },
+        {
+          "word": "甚麼",
+          "translation": "what",
+          "romanization": "sam6 mo1"
+        },
+        {
+          "word": "事",
+          "translation": "matter, thing, event",
+          "romanization": "si6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb + 點",
+          "explanation": "Adding 點 after a verb in imperative sentences softens the command, making it more polite or gentle. Similar to 'a bit' in English.",
+          "example": "冷靜點 (calm down a bit)"
+        },
+        {
+          "pattern": "發生過 (verb + 過)",
+          "explanation": "過 is an aspect marker indicating a past experience or completed action. Here it emphasizes what has happened/occurred.",
+          "example": "發生過甚麼事 (what [has] happened)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This text is a single sentence where someone is trying to calm down the Captain and promise to explain what happened. The tone is reassuring and immediate.
+
+

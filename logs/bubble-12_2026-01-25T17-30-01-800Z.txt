@@ -1,0 +1,36 @@
+=== API Response for Bubble 12 ===
+Timestamp: 2026-01-25T17:30:01.800Z
+
+--- Raw Response Text ---
+Here's the translation aid for the Chinese text "去吧！":
+
+```json
+{
+  "chinese_text": "去吧！",
+  "translation": "Go!",
+  "sentences": [
+    {
+      "chinese_text": "去吧！",
+      "english_translation": "Go!",
+      "vocabulary": [
+        {
+          "word": "去",
+          "translation": "to go",
+          "romanization": "heoi3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "吧 (baa1) - imperative/suggestion particle",
+          "explanation": "吧 is a sentence-final particle used to soften commands or express suggestions. It makes imperatives sound less harsh and more like an encouraging suggestion.",
+          "example": "去吧！ (Go ahead!)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This is a very short, simple imperative sentence telling someone to go. The particle 吧 (baa1) softens what would otherwise be a direct command into more of an encouraging statement.
+
+

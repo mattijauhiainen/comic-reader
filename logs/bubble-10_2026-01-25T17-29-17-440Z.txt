@@ -1,0 +1,132 @@
+=== API Response for Bubble 10 ===
+Timestamp: 2026-01-25T17:29:17.440Z
+
+--- Raw Response Text ---
+Here's the translation aid for the Tintin text in JSON format:
+
+```json
+{
+  "chinese_text": "這條魚很小，算你走運！最大的電鰻有兩米長，一次放電能擊死一匹馬！",
+  "translation": "This fish is very small, consider yourself lucky! The largest electric eels are two meters long and can electrocute a horse to death with a single discharge!",
+  "sentences": [
+    {
+      "chinese_text": "這條魚很小，算你走運！",
+      "english_translation": "This fish is very small, consider yourself lucky!",
+      "vocabulary": [
+        {
+          "word": "這條",
+          "translation": "this (classifier for fish)",
+          "romanization": "ze5 tiu4"
+        },
+        {
+          "word": "魚",
+          "translation": "fish",
+          "romanization": "jyu4"
+        },
+        {
+          "word": "很",
+          "translation": "very",
+          "romanization": "han2"
+        },
+        {
+          "word": "小",
+          "translation": "small",
+          "romanization": "siu2"
+        },
+        {
+          "word": "算",
+          "translation": "to consider, to count as",
+          "romanization": "syun3"
+        },
+        {
+          "word": "走運",
+          "translation": "lucky, fortunate",
+          "romanization": "zau2 wan6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "算 + noun/pronoun + verb",
+          "explanation": "The pattern '算你走運' is an idiomatic expression meaning 'consider yourself lucky.' 算 here means 'to consider' or 'to count as.'",
+          "example": "算你走運"
+        }
+      ]
+    },
+    {
+      "chinese_text": "最大的電鰻有兩米長，一次放電能擊死一匹馬！",
+      "english_translation": "The largest electric eels are two meters long and can electrocute a horse to death with a single discharge!",
+      "vocabulary": [
+        {
+          "word": "最大",
+          "translation": "largest, biggest",
+          "romanization": "zeoi3 daai6"
+        },
+        {
+          "word": "電鰻",
+          "translation": "electric eel",
+          "romanization": "din6 maan4"
+        },
+        {
+          "word": "有",
+          "translation": "to have, to be (measurement)",
+          "romanization": "jau5"
+        },
+        {
+          "word": "兩米",
+          "translation": "two meters",
+          "romanization": "loeng5 mai5"
+        },
+        {
+          "word": "長",
+          "translation": "long",
+          "romanization": "coeng4"
+        },
+        {
+          "word": "一次",
+          "translation": "one time, a single",
+          "romanization": "jat1 ci3"
+        },
+        {
+          "word": "放電",
+          "translation": "to discharge electricity",
+          "romanization": "fong3 din6"
+        },
+        {
+          "word": "能",
+          "translation": "can, able to",
+          "romanization": "nang4"
+        },
+        {
+          "word": "擊死",
+          "translation": "to strike dead, to kill by striking",
+          "romanization": "gik1 sei2"
+        },
+        {
+          "word": "一匹",
+          "translation": "one (classifier for horses)",
+          "romanization": "jat1 pat1"
+        },
+        {
+          "word": "馬",
+          "translation": "horse",
+          "romanization": "maa5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "有 + measurement + adjective",
+          "explanation": "This pattern expresses measurements or dimensions. '有兩米長' means 'is two meters long.' 有 is used to indicate the measurement, followed by the quantity and the dimension adjective.",
+          "example": "有兩米長"
+        },
+        {
+          "pattern": "能 + verb phrase",
+          "explanation": "能 is a modal verb indicating ability or capability, meaning 'can' or 'able to.' It precedes the verb phrase to show what someone or something is capable of doing.",
+          "example": "能擊死一匹馬"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

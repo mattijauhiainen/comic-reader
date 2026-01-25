@@ -1,0 +1,61 @@
+=== API Response for Bubble 21 ===
+Timestamp: 2026-01-25T12:09:26.938Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for the text "可是，那人哪兒去了？":
+
+```json
+{
+  "chinese_text": "可是，那人哪兒去了？",
+  "translation": "But where did that person go?",
+  "sentences": [
+    {
+      "chinese_text": "可是，那人哪兒去了？",
+      "english_translation": "But where did that person go?",
+      "vocabulary": [
+        {
+          "word": "可是",
+          "translation": "but, however",
+          "romanization": "ho2 si6"
+        },
+        {
+          "word": "那人",
+          "translation": "that person",
+          "romanization": "naa5 jan4"
+        },
+        {
+          "word": "哪兒",
+          "translation": "where",
+          "romanization": "naa5 ji4"
+        },
+        {
+          "word": "去",
+          "translation": "to go",
+          "romanization": "heoi3"
+        },
+        {
+          "word": "了",
+          "translation": "(completion particle)",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "哪兒 + verb + 了",
+          "explanation": "Question pattern asking 'where' something happened or where someone went. 了 indicates completed action.",
+          "example": "那人哪兒去了？(Where did that person go?)"
+        },
+        {
+          "pattern": "可是 as sentence connector",
+          "explanation": "可是 is used to introduce a contrasting or adversative clause, meaning 'but' or 'however'.",
+          "example": "可是，那人哪兒去了？"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This text is a single interrogative sentence expressing surprise or confusion about someone's whereabouts, with "可是" providing a contrasting connection to previous context.
+
+

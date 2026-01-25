@@ -1,0 +1,66 @@
+=== API Response for Bubble 6 ===
+Timestamp: 2026-01-25T17:51:28.844Z
+
+--- Raw Response Text ---
+Here's the JSON response for the Tintin text:
+
+```json
+{
+  "chinese_text": "現在，你回來了，\n我們就放心了！",
+  "translation": "Now that you're back, we can relax!",
+  "sentences": [
+    {
+      "chinese_text": "現在，你回來了，我們就放心了！",
+      "english_translation": "Now that you're back, we can relax!",
+      "vocabulary": [
+        {
+          "word": "現在",
+          "translation": "now",
+          "romanization": "jin6 zoi6"
+        },
+        {
+          "word": "回來",
+          "translation": "come back, return",
+          "romanization": "wui4 loi4"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating completed action",
+          "romanization": "liu5"
+        },
+        {
+          "word": "我們",
+          "translation": "we, us",
+          "romanization": "ngo5 mun4"
+        },
+        {
+          "word": "就",
+          "translation": "then, consequently",
+          "romanization": "zau6"
+        },
+        {
+          "word": "放心",
+          "translation": "feel relieved, be at ease",
+          "romanization": "fong3 sam1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "了 (liu5) - aspect marker",
+          "explanation": "The particle 了 appears twice here. The first 了 after 回來 marks the completion of the action 'coming back'. The second 了 at the end emphasizes the change of state - the shift from worry to relief.",
+          "example": "你回來了 (you came back)"
+        },
+        {
+          "pattern": "就 (zau6) - consequence marker",
+          "explanation": "就 connects cause and effect, indicating that as a result of you coming back, we feel relieved. It shows the logical consequence between the two clauses.",
+          "example": "你回來了，我們就放心了 (Now that you're back, we consequently feel relieved)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This text expresses relief at someone's return. The sentence uses the aspectual particle 了 to mark both the completed action and the change of state, while 就 connects the cause (your return) with the effect (our relief).
+
+

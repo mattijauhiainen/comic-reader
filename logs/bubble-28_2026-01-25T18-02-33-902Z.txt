@@ -1,0 +1,46 @@
+=== API Response for Bubble 28 ===
+Timestamp: 2026-01-25T18:02:33.902Z
+
+--- Raw Response Text ---
+Here is the translation aid for the Chinese text "將軍，在哪兒？":
+
+```json
+{
+  "chinese_text": "將軍，在哪兒？",
+  "translation": "General, where are you?",
+  "sentences": [
+    {
+      "chinese_text": "將軍，在哪兒？",
+      "english_translation": "General, where are you?",
+      "vocabulary": [
+        {
+          "word": "將軍",
+          "translation": "general (military rank)",
+          "romanization": "zoeng1 gwan1"
+        },
+        {
+          "word": "在",
+          "translation": "at, in (location marker)",
+          "romanization": "zoi6"
+        },
+        {
+          "word": "哪兒",
+          "translation": "where",
+          "romanization": "naa5 ji4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "在 + question word (哪兒)",
+          "explanation": "The pattern '在哪兒' is used to ask about location, meaning 'where' or 'at what place'. '在' is a locative preposition and '哪兒' means 'where'.",
+          "example": "將軍，在哪兒？"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This text is a short question asking about the location of a general. The speaker is directly addressing the general and asking where they are located.
+
+

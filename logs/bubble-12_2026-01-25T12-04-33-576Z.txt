@@ -1,0 +1,30 @@
+=== API Response for Bubble 12 ===
+Timestamp: 2026-01-25T12:04:33.576Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for the text "咕嚕！":
+
+```json
+{
+  "chinese_text": "咕嚕！",
+  "translation": "Gurgle! / Rumble!",
+  "sentences": [
+    {
+      "chinese_text": "咕嚕！",
+      "english_translation": "Gurgle! / Rumble!",
+      "vocabulary": [
+        {
+          "word": "咕嚕",
+          "translation": "gurgling sound, rumbling sound (onomatopoeia for stomach growling or liquid bubbling)",
+          "romanization": "gu1 lou1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+Note: This is an onomatopoeia representing a sound effect (likely a stomach growling or liquid gurgling sound). Since it's a sound effect rather than a grammatical sentence, there are no grammar points to analyze. The exclamation mark (！) emphasizes the sound.
+
+

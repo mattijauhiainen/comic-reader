@@ -1,0 +1,30 @@
+=== API Response for Bubble 23 ===
+Timestamp: 2026-01-25T12:10:24.365Z
+
+--- Raw Response Text ---
+Here's the JSON for the Chinese text "咕嚕":
+
+```json
+{
+  "chinese_text": "咕嚕",
+  "translation": "Gurgle/rumble",
+  "sentences": [
+    {
+      "chinese_text": "咕嚕",
+      "english_translation": "Gurgle/rumble",
+      "vocabulary": [
+        {
+          "word": "咕嚕",
+          "translation": "gurgling/rumbling sound (onomatopoeia)",
+          "romanization": "gu1 lou1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+This is an onomatopoeia representing a gurgling or rumbling sound, likely indicating stomach growling or liquid moving. Since it's just a sound effect rather than a grammatical sentence, there are no grammar points to note.
+
+

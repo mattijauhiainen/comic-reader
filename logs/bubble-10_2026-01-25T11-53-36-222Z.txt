@@ -1,0 +1,56 @@
+=== API Response for Bubble 10 ===
+Timestamp: 2026-01-25T11:53:36.222Z
+
+--- Raw Response Text ---
+Here's the translation aid for the text "三點鐘，發現一個人！":
+
+```json
+{
+  "chinese_text": "三點鐘，發現一個人！",
+  "translation": "Three o'clock, spotted a person!",
+  "sentences": [
+    {
+      "chinese_text": "三點鐘，發現一個人！",
+      "english_translation": "Three o'clock, spotted a person!",
+      "vocabulary": [
+        {
+          "word": "三點鐘",
+          "translation": "three o'clock",
+          "romanization": "saam1 dim2 zung1"
+        },
+        {
+          "word": "發現",
+          "translation": "to discover, to spot",
+          "romanization": "faat3 jin6"
+        },
+        {
+          "word": "一個",
+          "translation": "one (measure word + classifier)",
+          "romanization": "jat1 go3"
+        },
+        {
+          "word": "人",
+          "translation": "person",
+          "romanization": "jan4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Time phrase + verb phrase",
+          "explanation": "The time expression '三點鐘' comes at the beginning of the sentence to set the temporal context, followed by the main action. This is a common pattern in Chinese for emphasizing when something happened.",
+          "example": "三點鐘，發現一個人！"
+        },
+        {
+          "pattern": "Measure word + classifier + noun (一個人)",
+          "explanation": "In Chinese, when expressing quantities, a measure word (一) is followed by a classifier (個) before the noun (人). 個 is the general classifier for people and many other objects.",
+          "example": "一個人"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This appears to be someone reporting a sighting at a specific time (three o'clock), likely in a military or surveillance context given the terse, report-like style typical of Tintin adventures.
+
+

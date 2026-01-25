@@ -1,0 +1,104 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T17:14:07.174Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Tintin comic text. Let me analyze the Chinese text and provide a comprehensive breakdown.
+
+```json
+{
+  "chinese_text": "那瓶威士忌，到底你還不還給我？那是我找到的，是不是？",
+  "translation": "That bottle of whisky, are you going to give it back to me or not? I was the one who found it, wasn't I?",
+  "sentences": [
+    {
+      "chinese_text": "那瓶威士忌，到底你還不還給我？",
+      "english_translation": "That bottle of whisky, are you going to give it back to me or not?",
+      "vocabulary": [
+        {
+          "word": "那",
+          "translation": "that",
+          "romanization": "naa5"
+        },
+        {
+          "word": "瓶",
+          "translation": "bottle (measure word)",
+          "romanization": "ping4"
+        },
+        {
+          "word": "威士忌",
+          "translation": "whisky",
+          "romanization": "wai1 si6 gei6"
+        },
+        {
+          "word": "到底",
+          "translation": "in the end, actually (emphasizes impatience)",
+          "romanization": "dou3 dai2"
+        },
+        {
+          "word": "還",
+          "translation": "to return, to give back",
+          "romanization": "waan4"
+        },
+        {
+          "word": "給",
+          "translation": "to give",
+          "romanization": "kap1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "到底 in questions",
+          "explanation": "到底 is used in questions to express impatience or insistence on getting an answer, similar to 'in the end' or 'just tell me'",
+          "example": "到底你還不還給我"
+        },
+        {
+          "pattern": "Verb-不-Verb question pattern",
+          "explanation": "還不還 (return-not-return) is an A-not-A question pattern used to ask yes/no questions, emphasizing the choice between doing or not doing the action",
+          "example": "你還不還給我"
+        }
+      ]
+    },
+    {
+      "chinese_text": "那是我找到的，是不是？",
+      "english_translation": "I was the one who found it, wasn't I?",
+      "vocabulary": [
+        {
+          "word": "那",
+          "translation": "that",
+          "romanization": "naa5"
+        },
+        {
+          "word": "找到",
+          "translation": "to find",
+          "romanization": "zaau2 dou3"
+        },
+        {
+          "word": "的",
+          "translation": "(particle marking noun phrase)",
+          "romanization": "dik1"
+        },
+        {
+          "word": "是不是",
+          "translation": "isn't it? right?",
+          "romanization": "si6 bat1 si6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "是...的 construction",
+          "explanation": "是...的 emphasizes the circumstances of a past action (who, when, where, how). Here it emphasizes that 'I' was the one who found it",
+          "example": "是我找到的"
+        },
+        {
+          "pattern": "是不是 tag question",
+          "explanation": "是不是 at the end of a statement turns it into a tag question seeking confirmation, similar to 'right?' or 'isn't it?'",
+          "example": "那是我找到的，是不是？"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This translation captures the impatient, insistent tone of the speaker (likely Captain Haddock!) demanding the return of his whisky bottle and asserting his claim to it.
+
+

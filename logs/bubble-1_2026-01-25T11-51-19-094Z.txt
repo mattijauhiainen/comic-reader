@@ -1,0 +1,165 @@
+=== API Response for Bubble 1 ===
+Timestamp: 2026-01-25T11:51:19.094Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Tintin comic text. Let me analyze the text and provide the translation with vocabulary and grammar notes.
+
+```json
+{
+  "chinese_text": "來那麼多「但是」、「如果」！\n惜一切代價都要找到他們！\n油彈、火箭彈、炸彈，都可\n部完成！聽見嗎？",
+  "translation": "Don't give me so many \"buts\" and \"ifs\"! Find them at all costs! Napalm, rockets, bombs - use whatever you need! Complete the mission! Do you hear me?",
+  "sentences": [
+    {
+      "chinese_text": "來那麼多「但是」、「如果」！",
+      "english_translation": "Don't give me so many \"buts\" and \"ifs\"!",
+      "vocabulary": [
+        {
+          "word": "來",
+          "translation": "come (here: used to reject/dismiss)",
+          "romanization": "loi4"
+        },
+        {
+          "word": "那麼多",
+          "translation": "so many",
+          "romanization": "naa5 mo1 do1"
+        },
+        {
+          "word": "但是",
+          "translation": "but",
+          "romanization": "daan6 si6"
+        },
+        {
+          "word": "如果",
+          "translation": "if",
+          "romanization": "jyu4 gwo2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "來 + [unwanted thing]",
+          "explanation": "Using 來 (come) in a negative imperative sense to reject or dismiss something, similar to \"don't give me...\" in English",
+          "example": "來那麼多「但是」"
+        }
+      ]
+    },
+    {
+      "chinese_text": "惜一切代價都要找到他們！",
+      "english_translation": "Find them at all costs!",
+      "vocabulary": [
+        {
+          "word": "惜",
+          "translation": "spare/care about (here: not sparing)",
+          "romanization": "sik1"
+        },
+        {
+          "word": "一切代價",
+          "translation": "all costs/any price",
+          "romanization": "jat1 cai3 doi6 gaa3"
+        },
+        {
+          "word": "都",
+          "translation": "all/even",
+          "romanization": "dou1"
+        },
+        {
+          "word": "要",
+          "translation": "must/need to",
+          "romanization": "jiu3"
+        },
+        {
+          "word": "找到",
+          "translation": "find",
+          "romanization": "zaau2 dou3"
+        },
+        {
+          "word": "他們",
+          "translation": "them",
+          "romanization": "taa1 mun4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "不惜一切代價",
+          "explanation": "A set phrase meaning \"at all costs\" or \"sparing no expense.\" The 不 (not) is often omitted in urgent commands, with 惜 alone implying \"not sparing.\"",
+          "example": "惜一切代價都要找到他們"
+        }
+      ]
+    },
+    {
+      "chinese_text": "油彈、火箭彈、炸彈，都可",
+      "english_translation": "Napalm, rockets, bombs - use whatever you need",
+      "vocabulary": [
+        {
+          "word": "油彈",
+          "translation": "napalm/incendiary bomb",
+          "romanization": "jau4 daan6"
+        },
+        {
+          "word": "火箭彈",
+          "translation": "rocket",
+          "romanization": "fo2 zin3 daan6"
+        },
+        {
+          "word": "炸彈",
+          "translation": "bomb",
+          "romanization": "zaa3 daan6"
+        },
+        {
+          "word": "都",
+          "translation": "all",
+          "romanization": "dou1"
+        },
+        {
+          "word": "可",
+          "translation": "can/may (permissible)",
+          "romanization": "ho2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "[list], 都可",
+          "explanation": "A pattern where multiple items are listed, followed by 都可 meaning \"all are acceptable/permitted.\" The full phrase 都可以 (all can) is shortened to 都可 in urgent speech.",
+          "example": "油彈、火箭彈、炸彈，都可"
+        }
+      ]
+    },
+    {
+      "chinese_text": "部完成！聽見嗎？",
+      "english_translation": "Complete the mission! Do you hear me?",
+      "vocabulary": [
+        {
+          "word": "部",
+          "translation": "unit/department (here: mission/operation)",
+          "romanization": "bou6"
+        },
+        {
+          "word": "完成",
+          "translation": "complete/finish",
+          "romanization": "jyun4 sing4"
+        },
+        {
+          "word": "聽見",
+          "translation": "hear",
+          "romanization": "teng1 gin3"
+        },
+        {
+          "word": "嗎",
+          "translation": "question particle",
+          "romanization": "maa3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "聽見嗎？",
+          "explanation": "A rhetorical question used to emphasize a command or statement, similar to \"Do you hear me?\" or \"Got it?\" in English",
+          "example": "聽見嗎？"
+        }
+      ]
+    }
+  ]
+}
+```
+
+Note: The text appears to have some missing characters (particularly at the beginning of sentences 2 and 3, where it seems like 不 might be missing before 惜, and the sentence may be incomplete before 部完成). I've interpreted it based on the context of an urgent military-style command, which fits the Tintin storyline.
+
+

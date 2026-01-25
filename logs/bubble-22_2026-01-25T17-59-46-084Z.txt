@@ -1,0 +1,76 @@
+=== API Response for Bubble 22 ===
+Timestamp: 2026-01-25T17:59:46.084Z
+
+--- Raw Response Text ---
+Here's the translation aid for the speech bubble text:
+
+```json
+{
+  "chinese_text": "啊！是…是將軍！將軍萬歲！",
+  "translation": "Ah! It's... it's the General! Long live the General!",
+  "sentences": [
+    {
+      "chinese_text": "啊！",
+      "english_translation": "Ah!",
+      "vocabulary": [
+        {
+          "word": "啊",
+          "translation": "ah (exclamation of surprise)",
+          "romanization": "aa3"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "是…是將軍！",
+      "english_translation": "It's... it's the General!",
+      "vocabulary": [
+        {
+          "word": "是",
+          "translation": "is, to be",
+          "romanization": "si6"
+        },
+        {
+          "word": "將軍",
+          "translation": "general (military rank)",
+          "romanization": "zoeng1 gwan1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Repetition for stuttering/hesitation",
+          "explanation": "The repetition of 是…是 (is... is) indicates stuttering or hesitation, often used to show surprise, nervousness, or excitement",
+          "example": "是…是將軍！"
+        }
+      ]
+    },
+    {
+      "chinese_text": "將軍萬歲！",
+      "english_translation": "Long live the General!",
+      "vocabulary": [
+        {
+          "word": "將軍",
+          "translation": "general",
+          "romanization": "zoeng1 gwan1"
+        },
+        {
+          "word": "萬歲",
+          "translation": "long live, ten thousand years (expression of loyalty/celebration)",
+          "romanization": "maan6 seoi3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "[Noun] + 萬歲",
+          "explanation": "萬歲 (literally 'ten thousand years') is placed after a noun to express wishes for longevity or to show loyalty and celebration, similar to 'long live' in English",
+          "example": "將軍萬歲！"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This text shows a character's excited and somewhat nervous reaction upon recognizing the General, with the stuttering repetition and the traditional exclamation of loyalty "萬歲" (long live).
+
+

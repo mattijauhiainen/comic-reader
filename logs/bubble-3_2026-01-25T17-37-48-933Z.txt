@@ -1,0 +1,78 @@
+=== API Response for Bubble 3 ===
+Timestamp: 2026-01-25T17:37:48.933Z
+
+--- Raw Response Text ---
+Here's the translation aid for the Chinese text from Tintin and the Picaros:
+
+```json
+{
+  "chinese_text": "别怕，兄弟！\n我來了！",
+  "translation": "Don't be afraid, brother! I'm here!",
+  "sentences": [
+    {
+      "chinese_text": "别怕，兄弟！",
+      "english_translation": "Don't be afraid, brother!",
+      "vocabulary": [
+        {
+          "word": "别",
+          "translation": "don't",
+          "romanization": "bit6"
+        },
+        {
+          "word": "怕",
+          "translation": "to be afraid, to fear",
+          "romanization": "paa3"
+        },
+        {
+          "word": "兄弟",
+          "translation": "brother",
+          "romanization": "hing1 dai6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "别 + Verb",
+          "explanation": "别 is used to form negative imperatives (commands). It means 'don't' and is placed directly before the verb.",
+          "example": "别怕 (Don't be afraid)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "我來了！",
+      "english_translation": "I'm here!",
+      "vocabulary": [
+        {
+          "word": "我",
+          "translation": "I, me",
+          "romanization": "ngo5"
+        },
+        {
+          "word": "來",
+          "translation": "to come",
+          "romanization": "loi4"
+        },
+        {
+          "word": "了",
+          "translation": "(particle indicating completed action or change of state)",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb + 了",
+          "explanation": "了 is placed after a verb to indicate that an action has been completed or that a new situation has emerged. Here it emphasizes that the speaker has arrived.",
+          "example": "我來了 (I've come/I'm here)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON structure provides:
+- The full Chinese text and its English translation
+- Each sentence broken down separately with translation
+- Key vocabulary with Traditional Chinese characters, contextual English meanings, and Jyutping romanization
+- Relevant grammar points explaining the imperative structure with 别 and the aspect particle 了
+
+

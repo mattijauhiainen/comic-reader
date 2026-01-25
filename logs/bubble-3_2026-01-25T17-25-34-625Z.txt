@@ -1,0 +1,107 @@
+=== API Response for Bubble 3 ===
+Timestamp: 2026-01-25T17:25:34.625Z
+
+--- Raw Response Text ---
+Here is the translation aid in JSON format:
+
+```json
+{
+  "chinese_text": "快到了！再走十五分鐘，就到我們游擊隊住的地方了！",
+  "translation": "We're almost there! Walk for another fifteen minutes, and we'll arrive at the place where our guerrilla unit is stationed!",
+  "sentences": [
+    {
+      "chinese_text": "快到了！",
+      "english_translation": "We're almost there!",
+      "vocabulary": [
+        {
+          "word": "快",
+          "translation": "almost, soon",
+          "romanization": "faai3"
+        },
+        {
+          "word": "到",
+          "translation": "to arrive, to reach",
+          "romanization": "dou3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "快...了",
+          "explanation": "Used to indicate that something is about to happen or is nearly complete. The structure is '快 + verb + 了'",
+          "example": "快到了"
+        }
+      ]
+    },
+    {
+      "chinese_text": "再走十五分鐘，就到我們游擊隊住的地方了！",
+      "english_translation": "Walk for another fifteen minutes, and we'll arrive at the place where our guerrilla unit is stationed!",
+      "vocabulary": [
+        {
+          "word": "再",
+          "translation": "again, another (more)",
+          "romanization": "zoi3"
+        },
+        {
+          "word": "走",
+          "translation": "to walk",
+          "romanization": "zau2"
+        },
+        {
+          "word": "十五",
+          "translation": "fifteen",
+          "romanization": "sap6 ng5"
+        },
+        {
+          "word": "分鐘",
+          "translation": "minute(s)",
+          "romanization": "fan1 zung1"
+        },
+        {
+          "word": "就",
+          "translation": "then, will (indicating result)",
+          "romanization": "zau6"
+        },
+        {
+          "word": "我們",
+          "translation": "we, our",
+          "romanization": "ngo5 mun4"
+        },
+        {
+          "word": "游擊隊",
+          "translation": "guerrilla unit, guerrilla force",
+          "romanization": "jau4 gik1 deoi6"
+        },
+        {
+          "word": "住",
+          "translation": "to live, to stay, to be stationed",
+          "romanization": "zyu6"
+        },
+        {
+          "word": "地方",
+          "translation": "place, location",
+          "romanization": "dei6 fong1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "再 + verb + time duration",
+          "explanation": "Used to indicate doing something for an additional amount of time",
+          "example": "再走十五分鐘"
+        },
+        {
+          "pattern": "..., 就...了",
+          "explanation": "A conditional structure meaning 'if/when..., then...'. The first clause states a condition, and 就 introduces the result",
+          "example": "再走十五分鐘，就到我們游擊隊住的地方了"
+        },
+        {
+          "pattern": "verb + 的 + 地方",
+          "explanation": "A relative clause structure meaning 'the place where [verb]'. 的 modifies the noun 地方",
+          "example": "我們游擊隊住的地方"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

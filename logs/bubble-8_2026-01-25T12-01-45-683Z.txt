@@ -1,0 +1,63 @@
+=== API Response for Bubble 8 ===
+Timestamp: 2026-01-25T12:01:45.683Z
+
+--- Raw Response Text ---
+Here's the translation aid in JSON format:
+
+```json
+{
+  "chinese_text": "快！快拉他上来！",
+  "translation": "Quick! Quickly pull him up!",
+  "sentences": [
+    {
+      "chinese_text": "快！",
+      "english_translation": "Quick!",
+      "vocabulary": [
+        {
+          "word": "快",
+          "translation": "quick, fast",
+          "romanization": "faai3"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "快拉他上来！",
+      "english_translation": "Quickly pull him up!",
+      "vocabulary": [
+        {
+          "word": "快",
+          "translation": "quickly",
+          "romanization": "faai3"
+        },
+        {
+          "word": "拉",
+          "translation": "to pull",
+          "romanization": "laai1"
+        },
+        {
+          "word": "他",
+          "translation": "him",
+          "romanization": "taa1"
+        },
+        {
+          "word": "上來",
+          "translation": "to come up",
+          "romanization": "soeng5 loi4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb + 上來 (directional complement)",
+          "explanation": "上來 (up/upward) is a directional complement that indicates the direction of movement toward the speaker or upward. It follows the main verb to show the direction of the action.",
+          "example": "拉他上來 (pull him up)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON provides the complete translation, breaks down each sentence with vocabulary and relevant grammar notes. The key grammar point here is the directional complement 上來, which is a common pattern in Chinese to indicate upward movement toward the speaker.
+
+

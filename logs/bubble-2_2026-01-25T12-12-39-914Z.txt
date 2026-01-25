@@ -1,0 +1,88 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T12:12:39.914Z
+
+--- Raw Response Text ---
+Here's the translation aid in JSON format:
+
+```json
+{
+  "chinese_text": "那瓶威士忌，到底你還不還給我？那是我找到的，是不是？",
+  "translation": "That bottle of whisky, are you going to return it to me or not? I was the one who found it, wasn't I?",
+  "sentences": [
+    {
+      "chinese_text": "那瓶威士忌，到底你還不還給我？",
+      "english_translation": "That bottle of whisky, are you going to return it to me or not?",
+      "vocabulary": [
+        {
+          "word": "瓶",
+          "translation": "bottle (measure word)",
+          "romanization": "ping4"
+        },
+        {
+          "word": "威士忌",
+          "translation": "whisky",
+          "romanization": "wai1 si6 gei2"
+        },
+        {
+          "word": "到底",
+          "translation": "actually, in the end (emphasis particle)",
+          "romanization": "dou3 dai2"
+        },
+        {
+          "word": "還",
+          "translation": "return, give back",
+          "romanization": "waan4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb 不 Verb",
+          "explanation": "The affirmative-negative question pattern (還不還) is used to ask yes/no questions, emphasizing the speaker's impatience or insistence on getting an answer.",
+          "example": "你還不還給我？(Are you going to return it to me or not?)"
+        },
+        {
+          "pattern": "到底",
+          "translation": "to the bottom",
+          "explanation": "到底 is used before a question to emphasize urgency or impatience, similar to 'actually' or 'in the end' in English.",
+          "example": "到底你還不還給我？"
+        }
+      ]
+    },
+    {
+      "chinese_text": "那是我找到的，是不是？",
+      "english_translation": "I was the one who found it, wasn't I?",
+      "vocabulary": [
+        {
+          "word": "找到",
+          "translation": "to find",
+          "romanization": "zaau2 dou3"
+        },
+        {
+          "word": "的",
+          "translation": "(nominalizer particle)",
+          "romanization": "dik1"
+        },
+        {
+          "word": "是不是",
+          "translation": "isn't it? right?",
+          "romanization": "si6 bat1 si6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "是...的 construction",
+          "explanation": "The 是...的 pattern emphasizes the circumstances of a past action (who, when, where, how). Here it emphasizes WHO found the bottle.",
+          "example": "那是我找到的 (I was the one who found it)"
+        },
+        {
+          "pattern": "是不是？",
+          "explanation": "Tag question placed at the end of a statement to seek confirmation or agreement, similar to 'right?' or 'isn't it?' in English.",
+          "example": "那是我找到的，是不是？"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

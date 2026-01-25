@@ -1,0 +1,58 @@
+=== API Response for Bubble 6 ===
+Timestamp: 2026-01-25T11:53:58.007Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Chinese text from Tintin and the Picaros. Let me analyze the text and provide the structured translation.
+
+```json
+{
+  "chinese_text": "站住！船長，隱蔽起來！",
+  "translation": "Stop! Captain, take cover!",
+  "sentences": [
+    {
+      "chinese_text": "站住！",
+      "english_translation": "Stop!",
+      "vocabulary": [
+        {
+          "word": "站住",
+          "translation": "to stop, to halt",
+          "romanization": "zaam6 zyu6"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "船長，隱蔽起來！",
+      "english_translation": "Captain, take cover!",
+      "vocabulary": [
+        {
+          "word": "船長",
+          "translation": "captain (of a ship)",
+          "romanization": "syun4 zoeng2"
+        },
+        {
+          "word": "隱蔽",
+          "translation": "to hide, to take cover",
+          "romanization": "jan2 bai3"
+        },
+        {
+          "word": "起來",
+          "translation": "to get up, to rise (directional complement indicating action completion)",
+          "romanization": "hei2 loi4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb + 起來",
+          "explanation": "The directional complement 起來 is used after verbs to indicate the beginning or completion of an action, or a change of state. Here it emphasizes the action of taking cover.",
+          "example": "隱蔽起來 (take cover)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This translation aid breaks down the urgent command into two sentences: a quick imperative "Stop!" and then an instruction to Captain Haddock to take cover, which uses the directional complement 起來 to emphasize the action.
+
+

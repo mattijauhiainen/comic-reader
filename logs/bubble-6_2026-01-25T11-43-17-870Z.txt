@@ -1,0 +1,58 @@
+=== API Response for Bubble 6 ===
+Timestamp: 2026-01-25T11:43:17.870Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Tintin text. Let me analyze the Chinese text and provide the structured JSON response.
+
+```json
+{
+  "chinese_text": "站住！船長，隱蔽起來！",
+  "translation": "Stop! Captain, take cover!",
+  "sentences": [
+    {
+      "chinese_text": "站住！",
+      "english_translation": "Stop!",
+      "vocabulary": [
+        {
+          "word": "站住",
+          "translation": "stop (in place), halt",
+          "romanization": "zaam6 zyu6"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "船長，隱蔽起來！",
+      "english_translation": "Captain, take cover!",
+      "vocabulary": [
+        {
+          "word": "船長",
+          "translation": "captain",
+          "romanization": "syun4 zoeng2"
+        },
+        {
+          "word": "隱蔽",
+          "translation": "hide, take cover",
+          "romanization": "jan2 bai3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "起來 (hei2 loi4)",
+          "explanation": "Resultative complement indicating the completion or initiation of an action. When combined with verbs, it shows that the action is beginning or being carried out.",
+          "example": "隱蔽起來 - take cover (literally: hide + up/start)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON provides:
+- The full original Chinese text with proper quotation marks preserved
+- Complete English translation showing the urgent imperative commands
+- Two sentences broken down separately
+- Key vocabulary with Traditional Chinese characters, contextual English meanings, and Jyutping romanization
+- A grammar point for the 起來 (hei2 loi4) resultative complement pattern used in the second sentence
+
+

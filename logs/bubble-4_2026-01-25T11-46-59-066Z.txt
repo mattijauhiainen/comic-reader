@@ -1,0 +1,83 @@
+=== API Response for Bubble 4 ===
+Timestamp: 2026-01-25T11:46:59.066Z
+
+--- Raw Response Text ---
+Here's the translation aid in JSON format:
+
+```json
+{
+  "chinese_text": "直升機！只要隱藏起來，就不會有危險！",
+  "translation": "A helicopter! As long as we hide, there won't be any danger!",
+  "sentences": [
+    {
+      "chinese_text": "直升機！",
+      "english_translation": "A helicopter!",
+      "vocabulary": [
+        {
+          "word": "直升機",
+          "translation": "helicopter",
+          "romanization": "zik6 sing1 gei1"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "只要隱藏起來，就不會有危險！",
+      "english_translation": "As long as we hide, there won't be any danger!",
+      "vocabulary": [
+        {
+          "word": "只要",
+          "translation": "as long as, only need to",
+          "romanization": "zi2 jiu3"
+        },
+        {
+          "word": "隱藏",
+          "translation": "to hide, to conceal",
+          "romanization": "jan2 cong4"
+        },
+        {
+          "word": "起來",
+          "translation": "up (complement indicating action completion)",
+          "romanization": "hei2 loi4"
+        },
+        {
+          "word": "就",
+          "translation": "then, as a result",
+          "romanization": "zau6"
+        },
+        {
+          "word": "不會",
+          "translation": "will not, won't",
+          "romanization": "bat1 wui5"
+        },
+        {
+          "word": "有",
+          "translation": "to have, to exist",
+          "romanization": "jau5"
+        },
+        {
+          "word": "危險",
+          "translation": "danger",
+          "romanization": "ngai4 him2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "只要...就...",
+          "explanation": "This is a conditional pattern meaning 'as long as... then...' or 'if only... then...'. It expresses that if the condition in the first clause is met, the result in the second clause will follow.",
+          "example": "只要隱藏起來，就不會有危險 (As long as we hide, there won't be danger)"
+        },
+        {
+          "pattern": "起來 (resultative complement)",
+          "explanation": "起來 is used after a verb to indicate the completion or achievement of an action, often with the sense of 'up' or establishing a state.",
+          "example": "隱藏起來 (hide [ourselves] up / get hidden)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON provides the complete translation, breaks down each sentence with its vocabulary (in Traditional Chinese with Jyutping romanization), and identifies the key grammar patterns used in the text.
+
+

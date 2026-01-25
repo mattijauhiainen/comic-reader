@@ -1,0 +1,51 @@
+=== API Response for Bubble 27 ===
+Timestamp: 2026-01-25T18:02:11.691Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Tintin and the Picaros speech bubble text.
+
+```json
+{
+  "chinese_text": "嗨！兄弟，將軍來了",
+  "translation": "Hey! Brother, the general is coming!",
+  "sentences": [
+    {
+      "chinese_text": "嗨！兄弟，將軍來了",
+      "english_translation": "Hey! Brother, the general is coming!",
+      "vocabulary": [
+        {
+          "word": "嗨",
+          "translation": "hey",
+          "romanization": "haai1"
+        },
+        {
+          "word": "兄弟",
+          "translation": "brother",
+          "romanization": "hing1 dai6"
+        },
+        {
+          "word": "將軍",
+          "translation": "general",
+          "romanization": "zoeng1 gwan1"
+        },
+        {
+          "word": "來了",
+          "translation": "is coming / has arrived",
+          "romanization": "loi4 liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "來了 (verb + 了)",
+          "explanation": "The particle 了 (liu5) after a verb indicates a change of state or completed action. Here it suggests the general is arriving or has just arrived.",
+          "example": "將軍來了"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This text is a short exclamation alerting someone that a general is arriving. The structure is straightforward with a greeting, a term of address, and a simple statement about the general's arrival using the 了 particle to indicate the action or change of state.
+
+

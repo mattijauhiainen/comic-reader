@@ -1,0 +1,137 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T11:40:56.825Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Tintin text. Let me analyze and translate this Traditional Chinese text sentence by sentence.
+
+```json
+{
+  "chinese_text": "……今早，直升機會繼續搜索。可是，你也知道，那是森林地帶，會增加搜索的困難。人一逃進森林，就很難被發現了。反之，如果……",
+  "translation": "...This morning, the helicopter will continue searching. However, as you know, that's a forested area, which will increase the difficulty of the search. Once someone escapes into the forest, it's very hard to find them. On the other hand, if...",
+  "sentences": [
+    {
+      "chinese_text": "今早，直升機會繼續搜索。",
+      "english_translation": "This morning, the helicopter will continue searching.",
+      "vocabulary": [
+        {
+          "word": "今早",
+          "translation": "this morning",
+          "romanization": "gam1 zou2"
+        },
+        {
+          "word": "直升機",
+          "translation": "helicopter",
+          "romanization": "zik6 sing1 gei1"
+        },
+        {
+          "word": "繼續",
+          "translation": "to continue",
+          "romanization": "gai3 zuk6"
+        },
+        {
+          "word": "搜索",
+          "translation": "to search",
+          "romanization": "sau1 sok3"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "可是，你也知道，那是森林地帶，會增加搜索的困難。",
+      "english_translation": "However, as you know, that's a forested area, which will increase the difficulty of the search.",
+      "vocabulary": [
+        {
+          "word": "可是",
+          "translation": "however, but",
+          "romanization": "ho2 si6"
+        },
+        {
+          "word": "森林",
+          "translation": "forest",
+          "romanization": "sam1 lam4"
+        },
+        {
+          "word": "地帶",
+          "translation": "area, zone",
+          "romanization": "dei6 daai3"
+        },
+        {
+          "word": "增加",
+          "translation": "to increase",
+          "romanization": "zang1 gaa1"
+        },
+        {
+          "word": "困難",
+          "translation": "difficulty",
+          "romanization": "kwan3 naan4"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "人一逃進森林，就很難被發現了。",
+      "english_translation": "Once someone escapes into the forest, it's very hard to find them.",
+      "vocabulary": [
+        {
+          "word": "逃",
+          "translation": "to escape, to flee",
+          "romanization": "tou4"
+        },
+        {
+          "word": "進",
+          "translation": "to enter",
+          "romanization": "zeon3"
+        },
+        {
+          "word": "很難",
+          "translation": "very difficult",
+          "romanization": "han2 naan4"
+        },
+        {
+          "word": "被",
+          "translation": "passive marker (to be)",
+          "romanization": "bei6"
+        },
+        {
+          "word": "發現",
+          "translation": "to discover, to find",
+          "romanization": "faat3 jin6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "一...就...",
+          "explanation": "This pattern means 'as soon as...then...' or 'once...then...'. It shows that the second action happens immediately after or as a result of the first action.",
+          "example": "人一逃進森林，就很難被發現了 (Once someone escapes into the forest, it's very hard to find them)"
+        },
+        {
+          "pattern": "被 + Verb (passive construction)",
+          "explanation": "被 is used to form passive sentences, indicating that the subject receives the action rather than performs it.",
+          "example": "被發現 (to be discovered/found)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "反之，如果……",
+      "english_translation": "On the other hand, if...",
+      "vocabulary": [
+        {
+          "word": "反之",
+          "translation": "on the contrary, conversely",
+          "romanization": "faan2 zi1"
+        },
+        {
+          "word": "如果",
+          "translation": "if",
+          "romanization": "jyu4 gwo2"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+This translation aid provides the complete text analysis with Traditional Chinese characters, contextual English translations, Jyutping romanization, and relevant grammar points. The key grammar pattern identified is the "一...就..." construction which is commonly used to express immediate consequence or sequence of events.
+
+

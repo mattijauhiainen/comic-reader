@@ -1,0 +1,119 @@
+=== API Response for Bubble 4 ===
+Timestamp: 2026-01-25T18:05:49.039Z
+
+--- Raw Response Text ---
+Here's the translation aid for this Tintin speech bubble text:
+
+```json
+{
+  "chinese_text": "謝謝你這番話，尊敬的夫人！你的热情好客，深深打動了我們！請讓我向你表示敬意.……",
+  "translation": "Thank you for those words, respected madam! Your warm hospitality has deeply moved us! Please allow me to express my respect to you...",
+  "sentences": [
+    {
+      "chinese_text": "謝謝你這番話，尊敬的夫人！",
+      "english_translation": "Thank you for those words, respected madam!",
+      "vocabulary": [
+        {
+          "word": "謝謝",
+          "translation": "thank you",
+          "romanization": "ze6 ze6"
+        },
+        {
+          "word": "這番話",
+          "translation": "these words/remarks",
+          "romanization": "ze5 faan1 waa6"
+        },
+        {
+          "word": "尊敬",
+          "translation": "respected/honorable",
+          "romanization": "zyun1 ging3"
+        },
+        {
+          "word": "夫人",
+          "translation": "madam/lady",
+          "romanization": "fu1 jan4"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "你的热情好客，深深打動了我們！",
+      "english_translation": "Your warm hospitality has deeply moved us!",
+      "vocabulary": [
+        {
+          "word": "热情",
+          "translation": "warm/enthusiastic",
+          "romanization": "jit6 cing4"
+        },
+        {
+          "word": "好客",
+          "translation": "hospitable/welcoming to guests",
+          "romanization": "hou2 haak3"
+        },
+        {
+          "word": "深深",
+          "translation": "deeply",
+          "romanization": "sam1 sam1"
+        },
+        {
+          "word": "打動",
+          "translation": "to move/to touch (emotionally)",
+          "romanization": "daa2 dung6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "了 (le) - completion marker",
+          "explanation": "The particle 了 indicates that the action of 'moving us emotionally' has been completed or achieved",
+          "example": "打動了我們"
+        }
+      ]
+    },
+    {
+      "chinese_text": "請讓我向你表示敬意.……",
+      "english_translation": "Please allow me to express my respect to you...",
+      "vocabulary": [
+        {
+          "word": "請",
+          "translation": "please",
+          "romanization": "cing2"
+        },
+        {
+          "word": "讓",
+          "translation": "to allow/to let",
+          "romanization": "joeng6"
+        },
+        {
+          "word": "向",
+          "translation": "toward/to (directional)",
+          "romanization": "hoeng3"
+        },
+        {
+          "word": "表示",
+          "translation": "to express/to show",
+          "romanization": "biu2 si6"
+        },
+        {
+          "word": "敬意",
+          "translation": "respect/reverence",
+          "romanization": "ging3 ji3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "請讓我 + verb - polite request pattern",
+          "explanation": "This pattern combines 請 (please) with 讓我 (let me/allow me) to make a very polite request to perform an action",
+          "example": "請讓我向你表示敬意"
+        },
+        {
+          "pattern": "向 + person + verb - directional complement",
+          "explanation": "向 indicates the direction or target of an action, here showing that the respect is being expressed 'toward' the person",
+          "example": "向你表示"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

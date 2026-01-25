@@ -1,0 +1,81 @@
+=== API Response for Bubble 6 ===
+Timestamp: 2026-01-25T12:00:31.362Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Cantonese text from Tintin and the Picaros. Let me analyze the text and provide the structured translation.
+
+```json
+{
+  "chinese_text": "可是，我剛才真的看見有東西在動！",
+  "translation": "But I really did see something moving just now!",
+  "sentences": [
+    {
+      "chinese_text": "可是，我剛才真的看見有東西在動！",
+      "english_translation": "But I really did see something moving just now!",
+      "vocabulary": [
+        {
+          "word": "可是",
+          "translation": "but, however",
+          "romanization": "ho2 si6"
+        },
+        {
+          "word": "剛才",
+          "translation": "just now, a moment ago",
+          "romanization": "gong1 coi4"
+        },
+        {
+          "word": "真的",
+          "translation": "really, truly",
+          "romanization": "zan1 dik1"
+        },
+        {
+          "word": "看見",
+          "translation": "to see, to catch sight of",
+          "romanization": "hon3 gin3"
+        },
+        {
+          "word": "有",
+          "translation": "to have, there is/are",
+          "romanization": "jau5"
+        },
+        {
+          "word": "東西",
+          "translation": "thing, something",
+          "romanization": "dung1 sai1"
+        },
+        {
+          "word": "在",
+          "translation": "at, in the process of (progressive marker)",
+          "romanization": "zoi6"
+        },
+        {
+          "word": "動",
+          "translation": "to move",
+          "romanization": "dung6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "在 + Verb",
+          "explanation": "The progressive aspect marker '在' is placed before a verb to indicate an ongoing action, similar to '-ing' in English",
+          "example": "在動 (in the process of moving)"
+        },
+        {
+          "pattern": "有 + Noun + Verb Phrase",
+          "explanation": "This existential construction '有 + [something] + [action]' expresses that something exists doing an action",
+          "example": "有東西在動 (there is something moving)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON structure provides:
+- The full Chinese text and its English translation
+- Sentence-by-sentence breakdown with vocabulary in traditional Chinese
+- Jyutping romanization for each word
+- Context-appropriate English meanings
+- Relevant grammar points explaining the progressive aspect marker and existential construction
+
+

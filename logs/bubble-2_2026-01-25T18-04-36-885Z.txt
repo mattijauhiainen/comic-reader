@@ -1,0 +1,158 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T18:04:36.885Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for the text from Tintin and the Picaros:
+
+```json
+{
+  "chinese_text": "好，好，藉口多的是！我知道，你有很多很多藉口！可我呢，留在樹枝搭的破屋子裡乾等！你覺得這樣很好是不是？",
+  "translation": "Fine, fine, there are plenty of excuses! I know, you have so many excuses! But what about me, stuck waiting here in a shabby shack made of branches! You think that's just fine, don't you?",
+  "sentences": [
+    {
+      "chinese_text": "好，好，藉口多的是！",
+      "english_translation": "Fine, fine, there are plenty of excuses!",
+      "vocabulary": [
+        {
+          "word": "藉口",
+          "translation": "excuse",
+          "romanization": "ze3 hau2"
+        },
+        {
+          "word": "多的是",
+          "translation": "plenty of; there are many",
+          "romanization": "do1 dik1 si6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "多的是",
+          "explanation": "This pattern means 'there are plenty of' or 'there's no shortage of'. It emphasizes abundance.",
+          "example": "藉口多的是 (there are plenty of excuses)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "我知道，你有很多很多藉口！",
+      "english_translation": "I know, you have so many excuses!",
+      "vocabulary": [
+        {
+          "word": "知道",
+          "translation": "know",
+          "romanization": "zi1 dou3"
+        },
+        {
+          "word": "很多很多",
+          "translation": "very many; so many",
+          "romanization": "han2 do1 han2 do1"
+        },
+        {
+          "word": "藉口",
+          "translation": "excuse",
+          "romanization": "ze3 hau2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "很多很多",
+          "explanation": "Reduplication of adjectives (很多很多) is used for emphasis, meaning 'very many' or 'so many'.",
+          "example": "很多很多藉口 (so many excuses)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "可我呢，留在樹枝搭的破屋子裡乾等！",
+      "english_translation": "But what about me, stuck waiting here in a shabby shack made of branches!",
+      "vocabulary": [
+        {
+          "word": "可",
+          "translation": "but",
+          "romanization": "ho2"
+        },
+        {
+          "word": "呢",
+          "translation": "what about (particle)",
+          "romanization": "ne1"
+        },
+        {
+          "word": "留在",
+          "translation": "remain in; stay in",
+          "romanization": "lau4 zoi6"
+        },
+        {
+          "word": "樹枝",
+          "translation": "branches",
+          "romanization": "syu6 zi1"
+        },
+        {
+          "word": "搭",
+          "translation": "to build; to construct",
+          "romanization": "daap3"
+        },
+        {
+          "word": "破",
+          "translation": "broken; shabby",
+          "romanization": "po3"
+        },
+        {
+          "word": "屋子",
+          "translation": "house; shack",
+          "romanization": "uk1 zi2"
+        },
+        {
+          "word": "乾等",
+          "translation": "wait in vain; wait idly",
+          "romanization": "gon1 dang2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "X呢",
+          "explanation": "The particle 呢 after a noun/pronoun indicates 'what about X?' or 'as for X', often used to contrast or shift focus.",
+          "example": "可我呢 (but what about me?)"
+        },
+        {
+          "pattern": "V + 的 + N",
+          "explanation": "This structure creates a relative clause, where 搭的破屋子 means 'the shabby house that was built'.",
+          "example": "樹枝搭的破屋子 (shabby shack made of branches)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "你覺得這樣很好是不是？",
+      "english_translation": "You think that's just fine, don't you?",
+      "vocabulary": [
+        {
+          "word": "覺得",
+          "translation": "think; feel",
+          "romanization": "gok3 dak1"
+        },
+        {
+          "word": "這樣",
+          "translation": "this way; like this",
+          "romanization": "ze5 joeng6"
+        },
+        {
+          "word": "很好",
+          "translation": "very good; fine",
+          "romanization": "han2 hou2"
+        },
+        {
+          "word": "是不是",
+          "translation": "isn't it; right?",
+          "romanization": "si6 bat1 si6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "是不是",
+          "explanation": "This phrase at the end of a statement turns it into a rhetorical question seeking confirmation, similar to 'isn't it?' or 'right?' in English.",
+          "example": "你覺得這樣很好是不是？ (You think that's just fine, don't you?)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

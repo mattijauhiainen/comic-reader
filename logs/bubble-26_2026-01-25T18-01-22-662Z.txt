@@ -1,0 +1,41 @@
+=== API Response for Bubble 26 ===
+Timestamp: 2026-01-25T18:01:22.662Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for the Chinese text "夠了！":
+
+```json
+{
+  "chinese_text": "夠了！",
+  "translation": "Enough! / That's enough!",
+  "sentences": [
+    {
+      "chinese_text": "夠了！",
+      "english_translation": "Enough! / That's enough!",
+      "vocabulary": [
+        {
+          "word": "夠",
+          "translation": "enough, sufficient",
+          "romanization": "gau3"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating completed action or change of state",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "夠了",
+          "explanation": "This is a common exclamatory phrase meaning 'enough!' or 'that's enough!'. The particle 了 (liu5) after 夠 (gau3) indicates a change of state - that something has reached the point of being sufficient/enough. Often used to express frustration or to tell someone to stop.",
+          "example": "夠了！"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This is a short but emphatic exclamation commonly used to tell someone to stop doing something or that a situation has gone too far.
+
+

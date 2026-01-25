@@ -1,0 +1,170 @@
+=== API Response for Bubble 3 ===
+Timestamp: 2026-01-25T18:05:16.570Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for the Tintin text:
+
+```json
+{
+  "chinese_text": "有人曾答應給我在塔比奧卡波利斯買一座宮殿！而現在，那人所能給我的，就是這間破草棚子！到處是臭蟲和蟑螂……",
+  "translation": "Someone once promised to buy me a palace in Tapiocapolis! And now, all that person can give me is this broken-down shack! It's full of bedbugs and cockroaches everywhere...",
+  "sentences": [
+    {
+      "chinese_text": "有人曾答應給我在塔比奧卡波利斯買一座宮殿！",
+      "english_translation": "Someone once promised to buy me a palace in Tapiocapolis!",
+      "vocabulary": [
+        {
+          "word": "有人",
+          "translation": "someone",
+          "romanization": "jau5 jan4"
+        },
+        {
+          "word": "曾",
+          "translation": "once, formerly",
+          "romanization": "cang4"
+        },
+        {
+          "word": "答應",
+          "translation": "to promise, to agree",
+          "romanization": "daap3 jing3"
+        },
+        {
+          "word": "給",
+          "translation": "to give, for",
+          "romanization": "kap1"
+        },
+        {
+          "word": "買",
+          "translation": "to buy",
+          "romanization": "maai5"
+        },
+        {
+          "word": "座",
+          "translation": "measure word for buildings",
+          "romanization": "zo6"
+        },
+        {
+          "word": "宮殿",
+          "translation": "palace",
+          "romanization": "gung1 din6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "曾 + verb",
+          "explanation": "The adverb 曾 (cang4) indicates that an action happened in the past, similar to 'once' or 'formerly' in English",
+          "example": "有人曾答應"
+        },
+        {
+          "pattern": "給 + indirect object + verb phrase",
+          "explanation": "給 here indicates the beneficiary of the action (buy for me), creating a double object construction",
+          "example": "答應給我在塔比奧卡波利斯買一座宮殿"
+        }
+      ]
+    },
+    {
+      "chinese_text": "而現在，那人所能給我的，就是這間破草棚子！",
+      "english_translation": "And now, all that person can give me is this broken-down shack!",
+      "vocabulary": [
+        {
+          "word": "而",
+          "translation": "and, but",
+          "romanization": "ji4"
+        },
+        {
+          "word": "現在",
+          "translation": "now",
+          "romanization": "jin6 zoi6"
+        },
+        {
+          "word": "那人",
+          "translation": "that person",
+          "romanization": "naa5 jan4"
+        },
+        {
+          "word": "所",
+          "translation": "that which (nominalizer)",
+          "romanization": "so2"
+        },
+        {
+          "word": "能",
+          "translation": "can, to be able to",
+          "romanization": "nang4"
+        },
+        {
+          "word": "就是",
+          "translation": "is precisely, is just",
+          "romanization": "zau6 si6"
+        },
+        {
+          "word": "間",
+          "translation": "measure word for rooms/buildings",
+          "romanization": "gaan1"
+        },
+        {
+          "word": "破",
+          "translation": "broken, shabby",
+          "romanization": "po3"
+        },
+        {
+          "word": "草棚子",
+          "translation": "grass shack, straw hut",
+          "romanization": "cou2 paang4 zi2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "所 + verb + 的",
+          "explanation": "This structure nominalizes a verb phrase, turning it into 'that which [verb]' or 'what [verb]'. It emphasizes the object or result of the action",
+          "example": "那人所能給我的"
+        },
+        {
+          "pattern": "就是",
+          "explanation": "Used for emphatic identification or equation, meaning 'is precisely' or 'is nothing but', often expressing disappointment or irony",
+          "example": "所能給我的，就是這間破草棚子"
+        }
+      ]
+    },
+    {
+      "chinese_text": "到處是臭蟲和蟑螂……",
+      "english_translation": "It's full of bedbugs and cockroaches everywhere...",
+      "vocabulary": [
+        {
+          "word": "到處",
+          "translation": "everywhere, all over",
+          "romanization": "dou3 cyu3"
+        },
+        {
+          "word": "是",
+          "translation": "to be (here: expressing existence)",
+          "romanization": "si6"
+        },
+        {
+          "word": "臭蟲",
+          "translation": "bedbug",
+          "romanization": "cau3 cung4"
+        },
+        {
+          "word": "和",
+          "translation": "and",
+          "romanization": "wo4"
+        },
+        {
+          "word": "蟑螂",
+          "translation": "cockroach",
+          "romanization": "zong1 long4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "到處 + 是/都 + noun",
+          "explanation": "This pattern expresses that something exists or is found everywhere, often used to describe an abundance or infestation",
+          "example": "到處是臭蟲和蟑螂"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

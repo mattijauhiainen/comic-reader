@@ -1,0 +1,81 @@
+=== API Response for Bubble 5 ===
+Timestamp: 2026-01-25T17:26:37.275Z
+
+--- Raw Response Text ---
+Here is the translation aid for the Chinese text from Tintin and the Picaros:
+
+```json
+{
+  "chinese_text": "好吧,把牠放回\n水裡去……",
+  "translation": "Alright, put it back in the water...",
+  "sentences": [
+    {
+      "chinese_text": "好吧,把牠放回水裡去……",
+      "english_translation": "Alright, put it back in the water...",
+      "vocabulary": [
+        {
+          "word": "好吧",
+          "translation": "alright, okay then",
+          "romanization": "hou2 baa6"
+        },
+        {
+          "word": "把",
+          "translation": "disposal marker (used before verb to indicate handling of object)",
+          "romanization": "baa2"
+        },
+        {
+          "word": "牠",
+          "translation": "it (for animals)",
+          "romanization": "taa1"
+        },
+        {
+          "word": "放",
+          "translation": "to release, to put",
+          "romanization": "fong3"
+        },
+        {
+          "word": "回",
+          "translation": "back, to return",
+          "romanization": "wui4"
+        },
+        {
+          "word": "水",
+          "translation": "water",
+          "romanization": "seoi2"
+        },
+        {
+          "word": "裡",
+          "translation": "inside, in",
+          "romanization": "leoi5"
+        },
+        {
+          "word": "去",
+          "translation": "to go (directional complement)",
+          "romanization": "heoi3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "把 + Object + Verb Phrase",
+          "explanation": "The 把 (baa2) construction is used to bring the object before the verb to emphasize the disposal or handling of that object. Structure: 把 + object + verb + other elements",
+          "example": "把牠放回水裡去 (put it back in the water)"
+        },
+        {
+          "pattern": "Verb + 回 + Location",
+          "explanation": "回 (wui4) is used as a directional complement indicating return to a previous location or state",
+          "example": "放回水裡 (put back in the water)"
+        },
+        {
+          "pattern": "Directional Complement 去",
+          "explanation": "去 (heoi3) is used as a directional complement indicating movement away from the speaker or current location",
+          "example": "放回水裡去 (put it back in the water [away from here])"
+        }
+      ]
+    }
+  ]
+}
+```
+
+The text is a simple command telling someone to release an animal (likely a fish or aquatic creature, given the context) back into the water. The 把 construction emphasizes the handling of the animal, and the directional complements 回 and 去 indicate the movement back to where it came from.
+
+

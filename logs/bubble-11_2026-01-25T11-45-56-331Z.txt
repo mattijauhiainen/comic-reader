@@ -1,0 +1,51 @@
+=== API Response for Bubble 11 ===
+Timestamp: 2026-01-25T11:45:56.331Z
+
+--- Raw Response Text ---
+I'll help you translate this Chinese text from Tintin and the Picaros. This is a very short text, so the analysis will be brief.
+
+```json
+{
+  "chinese_text": "與此同時",
+  "translation": "Meanwhile",
+  "sentences": [
+    {
+      "chinese_text": "與此同時",
+      "english_translation": "Meanwhile / At the same time",
+      "vocabulary": [
+        {
+          "word": "與",
+          "translation": "with / and",
+          "romanization": "jyu5"
+        },
+        {
+          "word": "此",
+          "translation": "this",
+          "romanization": "ci2"
+        },
+        {
+          "word": "同時",
+          "translation": "at the same time / simultaneously",
+          "romanization": "tung4 si4"
+        },
+        {
+          "word": "與此同時",
+          "translation": "meanwhile / at the same time",
+          "romanization": "jyu5 ci2 tung4 si4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "與此同時",
+          "explanation": "This is a fixed expression/idiom that functions as a conjunction or transition phrase to indicate that something is happening at the same time as another event. It's commonly used in narrative texts to shift scenes or show parallel actions.",
+          "example": "與此同時"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This is a common transitional phrase in Chinese comics and narratives, used to switch between different scenes or characters while indicating that the actions are happening simultaneously.
+
+

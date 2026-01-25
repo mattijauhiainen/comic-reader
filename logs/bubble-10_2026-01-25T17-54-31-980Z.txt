@@ -1,0 +1,105 @@
+=== API Response for Bubble 10 ===
+Timestamp: 2026-01-25T17:54:31.980Z
+
+--- Raw Response Text ---
+Based on the Chinese text from Tintin and the Picaros, here's the translation aid in JSON format:
+
+```json
+{
+  "chinese_text": "晚上好！頭兒！我們不知道……·……你……嗝……你干甚麼去了？",
+  "translation": "Good evening! Boss! We didn't know... you... *hic*... where did you go?",
+  "sentences": [
+    {
+      "chinese_text": "晚上好！",
+      "english_translation": "Good evening!",
+      "vocabulary": [
+        {
+          "word": "晚上",
+          "translation": "evening",
+          "romanization": "maan5 soeng6"
+        },
+        {
+          "word": "好",
+          "translation": "good",
+          "romanization": "hou2"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "頭兒！",
+      "english_translation": "Boss!",
+      "vocabulary": [
+        {
+          "word": "頭兒",
+          "translation": "boss, chief",
+          "romanization": "tau4 ji4"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "我們不知道……·……你……嗝……你干甚麼去了？",
+      "english_translation": "We didn't know... you... *hic*... where did you go?",
+      "vocabulary": [
+        {
+          "word": "我們",
+          "translation": "we",
+          "romanization": "ngo5 mun4"
+        },
+        {
+          "word": "不",
+          "translation": "not",
+          "romanization": "bat1"
+        },
+        {
+          "word": "知道",
+          "translation": "to know",
+          "romanization": "zi1 dou3"
+        },
+        {
+          "word": "你",
+          "translation": "you",
+          "romanization": "nei5"
+        },
+        {
+          "word": "嗝",
+          "translation": "hiccup (sound effect)",
+          "romanization": "gaak3"
+        },
+        {
+          "word": "干",
+          "translation": "to do",
+          "romanization": "gon3"
+        },
+        {
+          "word": "甚麼",
+          "translation": "what",
+          "romanization": "sam6 mo1"
+        },
+        {
+          "word": "去了",
+          "translation": "went (perfective aspect)",
+          "romanization": "heoi3 liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "干甚麼去了",
+          "explanation": "This is a question pattern asking 'where did (someone) go' or 'what did (someone) go to do'. 干甚麼 means 'do what' and 去了 indicates completed action of going.",
+          "example": "你干甚麼去了？(Where did you go? / What did you go to do?)"
+        },
+        {
+          "pattern": "了 (perfective aspect marker)",
+          "explanation": "The particle 了 after the verb 去 indicates a completed action, showing that the going has already happened.",
+          "example": "去了 (went, have gone)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON contains the full translation showing that the characters are greeting their boss in the evening and drunkenly (indicated by the hiccup "嗝") asking where he went. The vocabulary includes context-appropriate translations with Jyutping romanization, and the grammar points highlight the question pattern and perfective aspect marker.
+
+

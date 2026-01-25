@@ -1,0 +1,71 @@
+=== API Response for Bubble 8 ===
+Timestamp: 2026-01-25T17:28:20.701Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for this Chinese text:
+
+```json
+{
+  "chinese_text": "嗨！我来看看是\n甚麼……",
+  "translation": "Hey! Let me see what it is...",
+  "sentences": [
+    {
+      "chinese_text": "嗨！",
+      "english_translation": "Hey!",
+      "vocabulary": [
+        {
+          "word": "嗨",
+          "translation": "hey (interjection)",
+          "romanization": "haai1"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "我来看看是甚麼……",
+      "english_translation": "Let me see what it is...",
+      "vocabulary": [
+        {
+          "word": "我",
+          "translation": "I, me",
+          "romanization": "ngo5"
+        },
+        {
+          "word": "来",
+          "translation": "to come (here: indicating purpose/intention)",
+          "romanization": "loi4"
+        },
+        {
+          "word": "看看",
+          "translation": "to take a look, to see",
+          "romanization": "hon3 hon3"
+        },
+        {
+          "word": "是",
+          "translation": "is, to be",
+          "romanization": "si6"
+        },
+        {
+          "word": "甚麼",
+          "translation": "what",
+          "romanization": "sam6 mo1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb reduplication (看看)",
+          "explanation": "Reduplicating a verb (看 → 看看) softens the tone and suggests a brief or casual action, often translated as 'take a look' or 'have a quick [verb]'",
+          "example": "看看 (take a look)"
+        },
+        {
+          "pattern": "来 + Verb (purpose construction)",
+          "explanation": "来 followed by a verb indicates coming to do something or doing something (with the sense of 'let me...'). Here 我来看看 means 'let me take a look'",
+          "example": "我来看看"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

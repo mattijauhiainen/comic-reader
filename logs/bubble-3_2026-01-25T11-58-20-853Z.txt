@@ -1,0 +1,61 @@
+=== API Response for Bubble 3 ===
+Timestamp: 2026-01-25T11:58:20.853Z
+
+--- Raw Response Text ---
+Based on the Chinese text from Tintin and the Picaros, here's the translation aid:
+
+```json
+{
+  "chinese_text": "你剛才看見的好像是一條鱷魚……",
+  "translation": "What you just saw looks like a crocodile...",
+  "sentences": [
+    {
+      "chinese_text": "你剛才看見的好像是一條鱷魚……",
+      "english_translation": "What you just saw looks like a crocodile...",
+      "vocabulary": [
+        {
+          "word": "剛才",
+          "translation": "just now, a moment ago",
+          "romanization": "gong1 coi4"
+        },
+        {
+          "word": "看見",
+          "translation": "to see, to catch sight of",
+          "romanization": "hon3 gin3"
+        },
+        {
+          "word": "好像",
+          "translation": "it seems, it looks like",
+          "romanization": "hou2 zoeng6"
+        },
+        {
+          "word": "一條",
+          "translation": "one (classifier for long things)",
+          "romanization": "jat1 tiu4"
+        },
+        {
+          "word": "鱷魚",
+          "translation": "crocodile",
+          "romanization": "ngok6 jyu4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "的 nominalizer",
+          "explanation": "The particle 的 (dik1) turns the verb phrase '你剛才看見' into a noun phrase 'what you just saw'. This allows the verb phrase to function as the subject of the sentence.",
+          "example": "你剛才看見的 = what you just saw"
+        },
+        {
+          "pattern": "Measure word/Classifier",
+          "explanation": "條 (tiu4) is the classifier used for long, flexible things like rivers, roads, fish, and reptiles. In Chinese, a number must be paired with an appropriate classifier before a noun: 一條鱷魚 (one crocodile).",
+          "example": "一條鱷魚"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON provides the complete translation, breaks down the vocabulary with traditional Chinese characters, contextual English meanings, and Jyutping romanization, and identifies the key grammar patterns in the sentence.
+
+

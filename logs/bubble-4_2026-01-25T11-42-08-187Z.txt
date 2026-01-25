@@ -1,0 +1,78 @@
+=== API Response for Bubble 4 ===
+Timestamp: 2026-01-25T11:42:08.187Z
+
+--- Raw Response Text ---
+Here's the translation aid for the Tintin speech bubble text in JSON format:
+
+```json
+{
+  "chinese_text": "直升機！只要隱藏起來，就不會有危險！",
+  "translation": "A helicopter! As long as we hide, there won't be any danger!",
+  "sentences": [
+    {
+      "chinese_text": "直升機！",
+      "english_translation": "A helicopter!",
+      "vocabulary": [
+        {
+          "word": "直升機",
+          "translation": "helicopter",
+          "romanization": "zik6 sing1 gei1"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "只要隱藏起來，就不會有危險！",
+      "english_translation": "As long as we hide, there won't be any danger!",
+      "vocabulary": [
+        {
+          "word": "只要",
+          "translation": "as long as, if only",
+          "romanization": "zi2 jiu3"
+        },
+        {
+          "word": "隱藏",
+          "translation": "to hide, to conceal",
+          "romanization": "jan2 cong4"
+        },
+        {
+          "word": "起來",
+          "translation": "up (resultative complement indicating completion)",
+          "romanization": "hei2 loi4"
+        },
+        {
+          "word": "就",
+          "translation": "then, in that case",
+          "romanization": "zau6"
+        },
+        {
+          "word": "不會",
+          "translation": "will not, won't",
+          "romanization": "bat1 wui5"
+        },
+        {
+          "word": "危險",
+          "translation": "danger",
+          "romanization": "ngai4 him2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "只要...就...",
+          "explanation": "This is a conditional pattern meaning 'as long as... then...' or 'if only... then...'. It expresses that if the first condition is met, the second result will follow.",
+          "example": "只要隱藏起來，就不會有危險"
+        },
+        {
+          "pattern": "Verb + 起來",
+          "translation": "起來 is used as a resultative complement here, indicating the completion or result of the action of hiding.",
+          "example": "隱藏起來"
+        }
+      ]
+    }
+  ]
+}
+```
+
+The text describes someone spotting a helicopter and reassuring others that they'll be safe if they hide. The key grammar pattern here is the 只要...就... conditional structure, which is very common in Chinese for expressing "as long as/if only" conditions.
+
+

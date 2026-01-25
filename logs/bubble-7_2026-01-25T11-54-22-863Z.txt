@@ -1,0 +1,79 @@
+=== API Response for Bubble 7 ===
+Timestamp: 2026-01-25T11:54:22.863Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Chinese text from Tintin and the Picaros. Let me analyze the text and provide the structured JSON response.
+
+```json
+{
+  "chinese_text": "站住！船長，\n別往前走！",
+  "translation": "Stop! Captain, don't go forward!",
+  "sentences": [
+    {
+      "chinese_text": "站住！",
+      "english_translation": "Stop!",
+      "vocabulary": [
+        {
+          "word": "站住",
+          "translation": "stop, halt",
+          "romanization": "zaam6 zyu6"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "船長，別往前走！",
+      "english_translation": "Captain, don't go forward!",
+      "vocabulary": [
+        {
+          "word": "船長",
+          "translation": "captain",
+          "romanization": "syun4 zoeng2"
+        },
+        {
+          "word": "別",
+          "translation": "don't",
+          "romanization": "bit6"
+        },
+        {
+          "word": "往",
+          "translation": "toward, to",
+          "romanization": "wong5"
+        },
+        {
+          "word": "前",
+          "translation": "forward, ahead",
+          "romanization": "cin4"
+        },
+        {
+          "word": "走",
+          "translation": "go, walk",
+          "romanization": "zau2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "別 + verb",
+          "explanation": "別 is used to form negative imperatives, meaning 'don't (do something)'",
+          "example": "別往前走 (don't go forward)"
+        },
+        {
+          "pattern": "往 + direction/location + verb",
+          "explanation": "往 indicates direction of movement, used before a location or direction word",
+          "example": "往前走 (go forward)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON provides:
+- The complete translation: "Stop! Captain, don't go forward!"
+- Two sentences broken down with their translations
+- Key vocabulary with Traditional Chinese characters, contextual English meanings, and Jyutping romanization
+- Grammar points for the second sentence highlighting the negative imperative structure (別 + verb) and the directional pattern (往 + direction + verb)
+
+The text is a warning, telling the Captain (likely Captain Haddock) to stop and not move forward, suggesting danger ahead.
+
+

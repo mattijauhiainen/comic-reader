@@ -1,0 +1,87 @@
+=== API Response for Bubble 4 ===
+Timestamp: 2026-01-25T11:53:03.871Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Chinese text from Tintin and the Picaros. Let me analyze it and provide the structured JSON response.
+
+```json
+{
+  "chinese_text": "直升機！只要隱藏起來，就不會有危險！",
+  "translation": "A helicopter! As long as we hide, there won't be any danger!",
+  "sentences": [
+    {
+      "chinese_text": "直升機！",
+      "english_translation": "A helicopter!",
+      "vocabulary": [
+        {
+          "word": "直升機",
+          "translation": "helicopter",
+          "romanization": "zik6 sing1 gei1"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "只要隱藏起來，就不會有危險！",
+      "english_translation": "As long as we hide, there won't be any danger!",
+      "vocabulary": [
+        {
+          "word": "只要",
+          "translation": "as long as, only need to",
+          "romanization": "zi2 jiu3"
+        },
+        {
+          "word": "隱藏",
+          "translation": "to hide, to conceal",
+          "romanization": "jan2 cong4"
+        },
+        {
+          "word": "起來",
+          "translation": "up (directional complement indicating completion)",
+          "romanization": "hei2 loi4"
+        },
+        {
+          "word": "就",
+          "translation": "then, in that case",
+          "romanization": "zau6"
+        },
+        {
+          "word": "不會",
+          "translation": "will not, won't",
+          "romanization": "bat1 wui5"
+        },
+        {
+          "word": "有",
+          "translation": "to have, there is/are",
+          "romanization": "jau5"
+        },
+        {
+          "word": "危險",
+          "translation": "danger",
+          "romanization": "ngai4 him2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "只要...就...",
+          "explanation": "This is a conditional pattern meaning 'as long as... then...' or 'if only... then...'. It expresses that if the first condition is met, the result in the second clause will follow.",
+          "example": "只要隱藏起來，就不會有危險"
+        },
+        {
+          "pattern": "V + 起來",
+          "explanation": "The directional complement 起來 (hei2 loi4) after a verb indicates the action of doing something completely or starting and continuing an action. Here it emphasizes the act of getting hidden/concealed.",
+          "example": "隱藏起來"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON structure provides:
+- The complete text and its full translation
+- Two sentences broken down separately (the exclamation and the conditional statement)
+- Key vocabulary with traditional Chinese characters, contextual English meanings, and Jyutping romanization
+- Grammar points highlighting the 只要...就... conditional pattern and the 起來 directional complement
+
+

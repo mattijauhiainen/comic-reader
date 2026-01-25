@@ -1,0 +1,67 @@
+=== API Response for Bubble 4 ===
+Timestamp: 2026-01-25T17:50:32.234Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for the text from Tintin and the Picaros:
+
+```json
+{
+  "chinese_text": "是啊……我们很……\n嗝……很擔心……",
+  "translation": "Yeah... we're very... *hic*... very worried...",
+  "sentences": [
+    {
+      "chinese_text": "是啊……我们很……",
+      "english_translation": "Yeah... we're very...",
+      "vocabulary": [
+        {
+          "word": "是",
+          "translation": "yes, correct",
+          "romanization": "si6"
+        },
+        {
+          "word": "啊",
+          "translation": "ah (particle expressing affirmation)",
+          "romanization": "aa3"
+        },
+        {
+          "word": "我们",
+          "translation": "we, us",
+          "romanization": "ngo5 men4"
+        },
+        {
+          "word": "很",
+          "translation": "very",
+          "romanization": "han2"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "嗝……很擔心……",
+      "english_translation": "*hic*... very worried...",
+      "vocabulary": [
+        {
+          "word": "嗝",
+          "translation": "hiccup (onomatopoeia)",
+          "romanization": "gaak3"
+        },
+        {
+          "word": "很",
+          "translation": "very",
+          "romanization": "han2"
+        },
+        {
+          "word": "擔心",
+          "translation": "worried, concerned",
+          "romanization": "daam1 sam1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+The text appears to show someone speaking while hiccuping (likely drunk or emotional), expressing concern. The ellipses (...) indicate hesitation or interruption in speech, and "嗝" represents the hiccup sound effect.
+
+

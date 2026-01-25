@@ -1,0 +1,46 @@
+=== API Response for Bubble 10 ===
+Timestamp: 2026-01-25T12:03:10.933Z
+
+--- Raw Response Text ---
+Here's the translation aid for the text "噢！得救了！":
+
+```json
+{
+  "chinese_text": "噢！得救了！",
+  "translation": "Oh! We're saved!",
+  "sentences": [
+    {
+      "chinese_text": "噢！得救了！",
+      "english_translation": "Oh! We're saved!",
+      "vocabulary": [
+        {
+          "word": "噢",
+          "translation": "oh (exclamation)",
+          "romanization": "o1"
+        },
+        {
+          "word": "得救",
+          "translation": "to be saved/rescued",
+          "romanization": "dak1 gau3"
+        },
+        {
+          "word": "了",
+          "translation": "completed action particle",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "了 (aspect particle)",
+          "explanation": "The particle 了 (liu5) is used after verbs to indicate a completed action or change of state. Here it shows that the rescue/salvation has been achieved.",
+          "example": "得救了 (we're saved/have been saved)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This is a short exclamation expressing relief at being rescued or saved from danger. The text uses the completed aspect particle 了 to emphasize that the salvation has already happened.
+
+

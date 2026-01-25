@@ -1,0 +1,28 @@
+=== API Response for Bubble 14 ===
+Timestamp: 2026-01-25T12:05:37.027Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "咕噜!",
+  "translation": "Gurgle! / Rumble!",
+  "sentences": [
+    {
+      "chinese_text": "咕噜!",
+      "english_translation": "Gurgle! / Rumble!",
+      "vocabulary": [
+        {
+          "word": "咕噜",
+          "translation": "gurgling sound, rumbling (onomatopoeia for stomach growling or liquid bubbling)",
+          "romanization": "gu1 lou1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+This is an onomatopoeia (sound effect word) representing a gurgling or rumbling sound, most commonly used to indicate a stomach growling from hunger. In the context of Tintin comics, this would likely be accompanied by a visual showing someone's stomach or a hungry character. Since it's purely an onomatopoeia, there are no specific grammar points to note.
+
+

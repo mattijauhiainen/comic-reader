@@ -1,0 +1,30 @@
+=== API Response for Bubble 11 ===
+Timestamp: 2026-01-25T17:29:39.613Z
+
+--- Raw Response Text ---
+Here's the translation aid for the Chinese text:
+
+```json
+{
+  "chinese_text": "哎唷！",
+  "translation": "Ouch! / Oh my!",
+  "sentences": [
+    {
+      "chinese_text": "哎唷！",
+      "english_translation": "Ouch! / Oh my!",
+      "vocabulary": [
+        {
+          "word": "哎唷",
+          "translation": "exclamation expressing pain, surprise, or dismay",
+          "romanization": "aai1 jau4"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+This is a simple exclamation - an interjection expressing pain, surprise, or dismay. It's commonly used when someone experiences sudden pain or shock. Since it's just an exclamation, there are no specific grammar patterns to note.
+
+

@@ -1,0 +1,30 @@
+=== API Response for Bubble 24 ===
+Timestamp: 2026-01-25T18:00:31.884Z
+
+--- Raw Response Text ---
+Here's the translation aid for "將軍?" in JSON format:
+
+```json
+{
+  "chinese_text": "將軍?",
+  "translation": "General?",
+  "sentences": [
+    {
+      "chinese_text": "將軍?",
+      "english_translation": "General?",
+      "vocabulary": [
+        {
+          "word": "將軍",
+          "translation": "general (military rank)",
+          "romanization": "zoeng1 gwan1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+This is a very short utterance - just a single word with a question mark, likely someone addressing or questioning a military general. There are no specific grammar patterns to note here as it's simply a noun used as a form of address in question form.
+
+

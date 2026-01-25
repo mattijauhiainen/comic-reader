@@ -1,0 +1,46 @@
+=== API Response for Bubble 19 ===
+Timestamp: 2026-01-25T17:58:28.380Z
+
+--- Raw Response Text ---
+Here is the JSON translation aid for the Chinese text:
+
+```json
+{
+  "chinese_text": "將軍，在哪兒？",
+  "translation": "General, where are you?",
+  "sentences": [
+    {
+      "chinese_text": "將軍，在哪兒？",
+      "english_translation": "General, where are you?",
+      "vocabulary": [
+        {
+          "word": "將軍",
+          "translation": "general",
+          "romanization": "zoeng1 gwan1"
+        },
+        {
+          "word": "在",
+          "translation": "to be at/located at",
+          "romanization": "zoi6"
+        },
+        {
+          "word": "哪兒",
+          "translation": "where",
+          "romanization": "naa5 ji4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "在 + location word",
+          "explanation": "在 (zoi6) is used with location words to ask or state where someone/something is located. 哪兒 is the question word 'where'.",
+          "example": "在哪兒？(Where is it?)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This is a short, direct question asking about the general's location. The sentence structure is straightforward with a vocative (將軍) followed by a location question using 在哪兒.
+
+

@@ -1,0 +1,61 @@
+=== API Response for Bubble 6 ===
+Timestamp: 2026-01-25T17:16:00.629Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for the Chinese text from Tintin and the Picaros:
+
+```json
+{
+  "chinese_text": "不，我不能\n再忍了！",
+  "translation": "No, I can't endure this anymore!",
+  "sentences": [
+    {
+      "chinese_text": "不，我不能再忍了！",
+      "english_translation": "No, I can't endure this anymore!",
+      "vocabulary": [
+        {
+          "word": "不",
+          "translation": "no, not",
+          "romanization": "bat1"
+        },
+        {
+          "word": "不能",
+          "translation": "cannot, unable to",
+          "romanization": "bat1 nang4"
+        },
+        {
+          "word": "再",
+          "translation": "again, anymore",
+          "romanization": "zoi3"
+        },
+        {
+          "word": "忍",
+          "translation": "endure, tolerate",
+          "romanization": "jan2"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating change of state or completed action",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "不能 + verb",
+          "explanation": "Expresses inability or impossibility to do something",
+          "example": "不能再忍 (cannot endure anymore)"
+        },
+        {
+          "pattern": "再 + verb + 了",
+          "explanation": "Used to express 'not...anymore' or reaching a limit, often with negative implications",
+          "example": "不能再忍了 (can't endure anymore)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This text expresses frustration and the speaker's limit being reached - they can no longer tolerate or endure whatever situation they're in. The sentence uses the common pattern of 不能再...了 to emphasize that a breaking point has been reached.
+
+

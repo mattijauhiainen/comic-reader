@@ -1,0 +1,211 @@
+=== API Response for Bubble 1 ===
+Timestamp: 2026-01-25T17:48:15.925Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for this Tintin text:
+
+```json
+{
+  "chinese_text": "就這樣鬧革命嗎！也不怕讓人好笑！你們以為自己是甚麼？你們是廢物！一群酒囊飯袋！可憐蟲！跟塔比奧卡分子同一個臭模樣……",
+  "translation": "You call this a revolution?! Aren't you afraid of being laughed at?! What do you think you are? You're worthless! A bunch of wine sacks and rice bags! Pitiful worms! The same stinking appearance as those Tapioca elements...",
+  "sentences": [
+    {
+      "chinese_text": "就這樣鬧革命嗎！",
+      "english_translation": "You call this a revolution?!",
+      "vocabulary": [
+        {
+          "word": "就",
+          "translation": "just; only",
+          "romanization": "zau6"
+        },
+        {
+          "word": "這樣",
+          "translation": "like this; this way",
+          "romanization": "ze5 joeng6"
+        },
+        {
+          "word": "鬧",
+          "translation": "to make; to stir up",
+          "romanization": "naau6"
+        },
+        {
+          "word": "革命",
+          "translation": "revolution",
+          "romanization": "gaak3 ming6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "就這樣...嗎",
+          "explanation": "Rhetorical question expressing disbelief or criticism, meaning 'Is this all...?' or 'You call this...?'",
+          "example": "就這樣鬧革命嗎！"
+        }
+      ]
+    },
+    {
+      "chinese_text": "也不怕讓人好笑！",
+      "english_translation": "Aren't you afraid of being laughed at?!",
+      "vocabulary": [
+        {
+          "word": "也",
+          "translation": "also; even",
+          "romanization": "jaa5"
+        },
+        {
+          "word": "不怕",
+          "translation": "not afraid",
+          "romanization": "bat1 paa3"
+        },
+        {
+          "word": "讓人",
+          "translation": "to make people; to let people",
+          "romanization": "joeng6 jan4"
+        },
+        {
+          "word": "好笑",
+          "translation": "laughable; ridiculous",
+          "romanization": "hou2 siu3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "讓人 + verb",
+          "explanation": "Causative structure meaning 'to make people [verb]' or 'to cause people to [verb]'",
+          "example": "讓人好笑"
+        }
+      ]
+    },
+    {
+      "chinese_text": "你們以為自己是甚麼？",
+      "english_translation": "What do you think you are?",
+      "vocabulary": [
+        {
+          "word": "你們",
+          "translation": "you (plural)",
+          "romanization": "nei5 mun4"
+        },
+        {
+          "word": "以為",
+          "translation": "to think; to believe",
+          "romanization": "ji5 wai4"
+        },
+        {
+          "word": "自己",
+          "translation": "oneself",
+          "romanization": "zi6 gei2"
+        },
+        {
+          "word": "甚麼",
+          "translation": "what",
+          "romanization": "sam6 mo1"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "你們是廢物！",
+      "english_translation": "You're worthless!",
+      "vocabulary": [
+        {
+          "word": "廢物",
+          "translation": "trash; worthless person",
+          "romanization": "fai3 mat6"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "一群酒囊飯袋！",
+      "english_translation": "A bunch of wine sacks and rice bags!",
+      "vocabulary": [
+        {
+          "word": "一群",
+          "translation": "a group; a bunch",
+          "romanization": "jat1 kwan4"
+        },
+        {
+          "word": "酒囊飯袋",
+          "translation": "good-for-nothing; glutton (literally: wine sacks and rice bags)",
+          "romanization": "zau2 nong4 faan6 doi6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "酒囊飯袋",
+          "explanation": "An idiom describing useless people who only know how to eat and drink, contributing nothing",
+          "example": "一群酒囊飯袋"
+        }
+      ]
+    },
+    {
+      "chinese_text": "可憐蟲！",
+      "english_translation": "Pitiful worms!",
+      "vocabulary": [
+        {
+          "word": "可憐",
+          "translation": "pitiful; pathetic",
+          "romanization": "ho2 lin4"
+        },
+        {
+          "word": "蟲",
+          "translation": "worm; insect",
+          "romanization": "cung4"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "跟塔比奧卡分子同一個臭模樣……",
+      "english_translation": "The same stinking appearance as those Tapioca elements...",
+      "vocabulary": [
+        {
+          "word": "跟",
+          "translation": "with; the same as",
+          "romanization": "gan1"
+        },
+        {
+          "word": "塔比奧卡",
+          "translation": "Tapioca (name)",
+          "romanization": "taap3 bei2 ou1 kaa1"
+        },
+        {
+          "word": "分子",
+          "translation": "element; member (often with negative connotation)",
+          "romanization": "fan1 zi2"
+        },
+        {
+          "word": "同",
+          "translation": "same",
+          "romanization": "tung4"
+        },
+        {
+          "word": "一個",
+          "translation": "one; a",
+          "romanization": "jat1 go3"
+        },
+        {
+          "word": "臭",
+          "translation": "stinking; foul",
+          "romanization": "cau3"
+        },
+        {
+          "word": "模樣",
+          "translation": "appearance; look",
+          "romanization": "mou4 joeng6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "跟...同一個...",
+          "explanation": "Comparison structure meaning 'the same... as...'",
+          "example": "跟塔比奧卡分子同一個臭模樣"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON provides a complete translation aid with vocabulary and grammar notes for this angry speech from what appears to be someone berating revolutionary fighters, comparing them unfavorably to General Tapioca's forces.
+
+

@@ -1,0 +1,54 @@
+=== API Response for Bubble 6 ===
+Timestamp: 2026-01-25T17:21:42.352Z
+
+--- Raw Response Text ---
+Here is the JSON translation aid for the Tintin text:
+
+```json
+{
+  "chinese_text": "不，我不能\n再忍了！",
+  "translation": "No, I can't endure it anymore!",
+  "sentences": [
+    {
+      "chinese_text": "不，我不能再忍了！",
+      "english_translation": "No, I can't endure it anymore!",
+      "vocabulary": [
+        {
+          "word": "不",
+          "translation": "no, not",
+          "romanization": "bat1"
+        },
+        {
+          "word": "不能",
+          "translation": "cannot, unable to",
+          "romanization": "bat1 nang4"
+        },
+        {
+          "word": "再",
+          "translation": "again, anymore",
+          "romanization": "zoi3"
+        },
+        {
+          "word": "忍",
+          "translation": "endure, tolerate, bear",
+          "romanization": "jan2"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating change of state or completion",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "不能再...了",
+          "explanation": "This pattern expresses 'can no longer...' or 'cannot...anymore'. 再 (again/anymore) combined with 了 (change of state particle) emphasizes that a threshold has been reached.",
+          "example": "我不能再忍了"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

@@ -1,0 +1,55 @@
+=== API Response for Bubble 18 ===
+Timestamp: 2026-01-25T17:58:04.969Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Chinese text from Tintin and the Picaros. Let me analyze the text and provide the structured JSON response.
+
+```json
+{
+  "chinese_text": "嗨！兄弟，將軍來了",
+  "translation": "Hey! Brother, the general is coming!",
+  "sentences": [
+    {
+      "chinese_text": "嗨！兄弟，將軍來了",
+      "english_translation": "Hey! Brother, the general is coming!",
+      "vocabulary": [
+        {
+          "word": "嗨",
+          "translation": "hey (exclamation/greeting)",
+          "romanization": "haai1"
+        },
+        {
+          "word": "兄弟",
+          "translation": "brother (can mean sibling or close friend/comrade)",
+          "romanization": "hing1 dai6"
+        },
+        {
+          "word": "將軍",
+          "translation": "general (military rank)",
+          "romanization": "zoeng1 gwan1"
+        },
+        {
+          "word": "來了",
+          "translation": "is coming/has come",
+          "romanization": "loi4 liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "了 (liu5) - completion/change of state marker",
+          "explanation": "The particle 了 indicates either completion of an action or a change of state. Here it indicates that the general's arrival is imminent or has begun.",
+          "example": "將軍來了 - the general is coming (the situation has changed - he wasn't coming before, but now he is)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON provides:
+- The full text and complete translation
+- A sentence-by-sentence breakdown (this text is one sentence)
+- Key vocabulary with traditional Chinese characters, contextual English meanings, and Jyutping romanization
+- The relevant grammar point about the 了 particle, which is significant in this context
+
+

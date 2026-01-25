@@ -1,0 +1,89 @@
+=== API Response for Bubble 6 ===
+Timestamp: 2026-01-25T17:27:08.522Z
+
+--- Raw Response Text ---
+Here's the translation aid for the Tintin text in JSON format:
+
+```json
+{
+  "chinese_text": "只有三十多人，你们就想奪取政權？的確膽量過人。",
+  "translation": "With only thirty-something people, you want to seize political power? That's truly remarkable courage.",
+  "sentences": [
+    {
+      "chinese_text": "只有三十多人，你們就想奪取政權？",
+      "english_translation": "With only thirty-something people, you want to seize political power?",
+      "vocabulary": [
+        {
+          "word": "只有",
+          "translation": "only",
+          "romanization": "zi2 jau5"
+        },
+        {
+          "word": "三十多人",
+          "translation": "thirty-something people",
+          "romanization": "saam1 sap6 do1 jan4"
+        },
+        {
+          "word": "就",
+          "translation": "then, already (emphasizing the condition)",
+          "romanization": "zau6"
+        },
+        {
+          "word": "想",
+          "translation": "want to, wish to",
+          "romanization": "soeng2"
+        },
+        {
+          "word": "奪取",
+          "translation": "seize, take by force",
+          "romanization": "dyut6 ceoi2"
+        },
+        {
+          "word": "政權",
+          "translation": "political power, regime",
+          "romanization": "zing3 kyun4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "只有...就...",
+          "explanation": "This pattern emphasizes a small/limited condition followed by an unexpected or ambitious action. 只有 (only have) sets up the limitation, while 就 (already/then) emphasizes that despite this limitation, the action still follows.",
+          "example": "只有三十多人，你們就想奪取政權"
+        }
+      ]
+    },
+    {
+      "chinese_text": "的確膽量過人。",
+      "english_translation": "That's truly remarkable courage.",
+      "vocabulary": [
+        {
+          "word": "的確",
+          "translation": "indeed, truly",
+          "romanization": "dik1 kok3"
+        },
+        {
+          "word": "膽量",
+          "translation": "courage, guts",
+          "romanization": "daam2 loeng6"
+        },
+        {
+          "word": "過人",
+          "translation": "extraordinary, surpassing others",
+          "romanization": "gwo3 jan4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "過人",
+          "explanation": "The word 過人 literally means 'surpass people' and is used as an adjective meaning 'exceptional' or 'extraordinary'. It follows the noun it modifies.",
+          "example": "膽量過人"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This translation captures the sarcastic or skeptical tone of the speaker questioning the rebels' ambitious plan to seize power with such a small force, while acknowledging their audacity.
+
+

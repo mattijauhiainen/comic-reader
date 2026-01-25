@@ -1,0 +1,86 @@
+=== API Response for Bubble 5 ===
+Timestamp: 2026-01-25T17:51:00.274Z
+
+--- Raw Response Text ---
+Here's the translation aid for the speech bubble text:
+
+```json
+{
+  "chinese_text": "夠了！！！誰敢带頭再喝，我就斃了他！！！",
+  "translation": "Enough!!! Whoever dares to take the lead and drink again, I'll shoot him!!!",
+  "sentences": [
+    {
+      "chinese_text": "夠了！！！",
+      "english_translation": "Enough!!!",
+      "vocabulary": [
+        {
+          "word": "夠",
+          "translation": "enough",
+          "romanization": "gau3"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating change of state or completion",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "誰敢带頭再喝，我就斃了他！！！",
+      "english_translation": "Whoever dares to take the lead and drink again, I'll shoot him!!!",
+      "vocabulary": [
+        {
+          "word": "誰",
+          "translation": "who, whoever",
+          "romanization": "seoi4"
+        },
+        {
+          "word": "敢",
+          "translation": "dare to",
+          "romanization": "gam2"
+        },
+        {
+          "word": "带頭",
+          "translation": "take the lead, be the first",
+          "romanization": "daai3 tau4"
+        },
+        {
+          "word": "再",
+          "translation": "again",
+          "romanization": "zoi3"
+        },
+        {
+          "word": "喝",
+          "translation": "drink",
+          "romanization": "hot3"
+        },
+        {
+          "word": "就",
+          "translation": "then, immediately",
+          "romanization": "zau6"
+        },
+        {
+          "word": "斃",
+          "translation": "shoot dead, kill",
+          "romanization": "bai6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "誰 + Verb, Subject + 就 + Consequence",
+          "explanation": "This is a conditional pattern meaning 'whoever does X, then Y will happen'. The structure creates a threat or warning about consequences.",
+          "example": "誰敢带頭再喝，我就斃了他"
+        },
+        {
+          "pattern": "Verb + 了 + Object",
+          "explanation": "The perfective aspect marker 了 after the verb indicates completed action or determination to complete the action.",
+          "example": "斃了他"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

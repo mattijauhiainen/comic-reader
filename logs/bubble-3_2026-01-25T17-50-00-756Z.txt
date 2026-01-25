@@ -1,0 +1,94 @@
+=== API Response for Bubble 3 ===
+Timestamp: 2026-01-25T17:50:00.756Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for the Chinese text from Tintin and the Picaros:
+
+```json
+{
+  "chinese_text": "為了慶祝你回來,我們應該再喝一杯!兄弟,對不對?",
+  "translation": "To celebrate your return, we should have another drink! Right, brother?",
+  "sentences": [
+    {
+      "chinese_text": "為了慶祝你回來,我們應該再喝一杯!",
+      "english_translation": "To celebrate your return, we should have another drink!",
+      "vocabulary": [
+        {
+          "word": "為了",
+          "translation": "in order to, for the purpose of",
+          "romanization": "wai4 liu5"
+        },
+        {
+          "word": "慶祝",
+          "translation": "celebrate",
+          "romanization": "hing3 zuk1"
+        },
+        {
+          "word": "回來",
+          "translation": "come back, return",
+          "romanization": "wui4 loi4"
+        },
+        {
+          "word": "應該",
+          "translation": "should, ought to",
+          "romanization": "jing1 goi1"
+        },
+        {
+          "word": "再",
+          "translation": "again, another",
+          "romanization": "zoi3"
+        },
+        {
+          "word": "喝",
+          "translation": "drink",
+          "romanization": "hot3"
+        },
+        {
+          "word": "一杯",
+          "translation": "one cup/glass",
+          "romanization": "jat1 bui1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "為了 + [purpose/goal]",
+          "explanation": "This pattern expresses purpose or reason, meaning 'in order to' or 'for the sake of'",
+          "example": "為了慶祝你回來 (in order to celebrate your return)"
+        },
+        {
+          "pattern": "應該 + [verb phrase]",
+          "explanation": "Expresses obligation or suggestion, similar to 'should' or 'ought to' in English",
+          "example": "應該再喝一杯 (should have another drink)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "兄弟,對不對?",
+      "english_translation": "Right, brother?",
+      "vocabulary": [
+        {
+          "word": "兄弟",
+          "translation": "brother, buddy",
+          "romanization": "hing1 dai6"
+        },
+        {
+          "word": "對不對",
+          "translation": "right or not, isn't it",
+          "romanization": "deoi3 bat1 deoi3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "對不對?",
+          "explanation": "A tag question pattern used to seek agreement or confirmation, similar to 'right?' or 'isn't it?' in English",
+          "example": "對不對? (Right?)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON provides a complete breakdown of the speech bubble text with translations, vocabulary with Jyutping romanization, and relevant grammar patterns for learning purposes.
+
+

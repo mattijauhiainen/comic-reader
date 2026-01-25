@@ -1,0 +1,30 @@
+=== API Response for Bubble 14 ===
+Timestamp: 2026-01-25T11:55:15.078Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Chinese text. This is a very simple exclamation, so the analysis will be straightforward.
+
+```json
+{
+  "chinese_text": "哇！",
+  "translation": "Wow!",
+  "sentences": [
+    {
+      "chinese_text": "哇！",
+      "english_translation": "Wow!",
+      "vocabulary": [
+        {
+          "word": "哇",
+          "translation": "wow (exclamation of surprise or amazement)",
+          "romanization": "waa1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+This is an interjection/exclamation, so there are no specific grammar points to note. It's simply an expression of surprise, amazement, or excitement.
+
+

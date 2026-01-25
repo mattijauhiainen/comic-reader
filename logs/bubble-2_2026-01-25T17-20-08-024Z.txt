@@ -1,0 +1,104 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T17:20:08.024Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Chinese text from the comic. Let me analyze the text and provide a structured JSON response.
+
+```json
+{
+  "chinese_text": "那瓶威士忌，到底你還不還給我？那是我找到的，是不是？",
+  "translation": "That bottle of whisky, are you going to give it back to me or not? I was the one who found it, wasn't I?",
+  "sentences": [
+    {
+      "chinese_text": "那瓶威士忌，到底你還不還給我？",
+      "english_translation": "That bottle of whisky, are you going to give it back to me or not?",
+      "vocabulary": [
+        {
+          "word": "那",
+          "translation": "that",
+          "romanization": "naa5"
+        },
+        {
+          "word": "瓶",
+          "translation": "bottle (measure word)",
+          "romanization": "ping4"
+        },
+        {
+          "word": "威士忌",
+          "translation": "whisky",
+          "romanization": "wai1 si6 gei2"
+        },
+        {
+          "word": "到底",
+          "translation": "in the end; after all (emphasizes impatience or insistence)",
+          "romanization": "dou3 dai2"
+        },
+        {
+          "word": "還",
+          "translation": "to return; to give back",
+          "romanization": "waan4"
+        },
+        {
+          "word": "給",
+          "translation": "to give",
+          "romanization": "bei2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "到底",
+          "explanation": "Used to emphasize a question, expressing impatience or strong desire for an answer. Often translates to 'after all' or 'in the end'.",
+          "example": "到底你還不還給我？"
+        },
+        {
+          "pattern": "Verb-不-Verb (還不還)",
+          "explanation": "A/B choice question pattern asking 'do you or don't you?' This creates an either/or question with the same verb repeated in positive and negative forms.",
+          "example": "你還不還給我？(Will you give it back or not?)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "那是我找到的，是不是？",
+      "english_translation": "I was the one who found it, wasn't I?",
+      "vocabulary": [
+        {
+          "word": "那",
+          "translation": "that",
+          "romanization": "naa5"
+        },
+        {
+          "word": "找到",
+          "translation": "to find; to discover",
+          "romanization": "zaau2 dou3"
+        },
+        {
+          "word": "的",
+          "translation": "(particle marking possession/attribution)",
+          "romanization": "dik1"
+        },
+        {
+          "word": "是不是",
+          "translation": "is it or isn't it; right?",
+          "romanization": "si6 bat1 si6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "是...的",
+          "explanation": "Used to emphasize when, where, how, or who performed a past action. Here it emphasizes that 'I' was the one who found it.",
+          "example": "那是我找到的 (It was I who found it)"
+        },
+        {
+          "pattern": "是不是？",
+          "explanation": "Tag question added at the end of a statement to seek confirmation, similar to 'right?' or 'isn't it?' in English.",
+          "example": "那是我找到的，是不是？"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON structure provides the complete translation aid with vocabulary in traditional Chinese characters, contextually relevant English meanings, Jyutping romanization, and relevant grammar patterns for this dialogue from Tintin.
+
+

@@ -1,0 +1,54 @@
+=== API Response for Bubble 14 ===
+Timestamp: 2026-01-25T17:30:49.724Z
+
+--- Raw Response Text ---
+Here's the translation aid for the speech bubble text:
+
+```json
+{
+  "chinese_text": "游擊隊的人多嗎？",
+  "translation": "Are there many people in the guerrilla force?",
+  "sentences": [
+    {
+      "chinese_text": "游擊隊的人多嗎？",
+      "english_translation": "Are there many people in the guerrilla force?",
+      "vocabulary": [
+        {
+          "word": "游擊隊",
+          "translation": "guerrilla force/guerrilla troops",
+          "romanization": "jau4 gik1 deoi6"
+        },
+        {
+          "word": "人",
+          "translation": "people/person",
+          "romanization": "jan4"
+        },
+        {
+          "word": "多",
+          "translation": "many/much",
+          "romanization": "do1"
+        },
+        {
+          "word": "嗎",
+          "translation": "question particle",
+          "romanization": "maa3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "的",
+          "explanation": "Possessive particle 的 (dik1) connects the noun 游擊隊 (guerrilla force) to 人 (people), forming a possessive relationship meaning 'the people of the guerrilla force'",
+          "example": "游擊隊的人"
+        },
+        {
+          "pattern": "Adjective + 嗎？",
+          "explanation": "嗎 is a question particle added to the end of a statement to form a yes/no question. Here 多 (many) + 嗎 asks 'are there many?'",
+          "example": "人多嗎？"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

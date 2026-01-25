@@ -1,0 +1,117 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T17:25:00.647Z
+
+--- Raw Response Text ---
+Here is the translation aid for the Tintin speech bubble text:
+
+```json
+{
+  "chinese_text": "船長，沒甚麼，只是一條很小的魚……一條小鰻魚鑽進你的上衣裡去了。",
+  "translation": "Captain, it's nothing, just a very small fish... a little eel has gotten into your jacket.",
+  "sentences": [
+    {
+      "chinese_text": "船長，沒甚麼，只是一條很小的魚……",
+      "english_translation": "Captain, it's nothing, just a very small fish...",
+      "vocabulary": [
+        {
+          "word": "船長",
+          "translation": "captain",
+          "romanization": "syun4 zoeng2"
+        },
+        {
+          "word": "沒甚麼",
+          "translation": "nothing; it's nothing",
+          "romanization": "mut6 sam6 mo1"
+        },
+        {
+          "word": "只是",
+          "translation": "just; only",
+          "romanization": "zi2 si6"
+        },
+        {
+          "word": "一條",
+          "translation": "one (classifier for fish)",
+          "romanization": "jat1 tiu4"
+        },
+        {
+          "word": "很",
+          "translation": "very",
+          "romanization": "han2"
+        },
+        {
+          "word": "小",
+          "translation": "small",
+          "romanization": "siu2"
+        },
+        {
+          "word": "魚",
+          "translation": "fish",
+          "romanization": "jyu4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "沒甚麼",
+          "explanation": "A colloquial expression meaning 'nothing' or 'it's nothing', often used to downplay a situation",
+          "example": "沒甚麼，只是一條很小的魚"
+        }
+      ]
+    },
+    {
+      "chinese_text": "一條小鰻魚鑽進你的上衣裡去了。",
+      "english_translation": "A little eel has gotten into your jacket.",
+      "vocabulary": [
+        {
+          "word": "一條",
+          "translation": "one (classifier for fish)",
+          "romanization": "jat1 tiu4"
+        },
+        {
+          "word": "小",
+          "translation": "little; small",
+          "romanization": "siu2"
+        },
+        {
+          "word": "鰻魚",
+          "translation": "eel",
+          "romanization": "maan4 jyu4"
+        },
+        {
+          "word": "鑽進",
+          "translation": "to get into; to slip into",
+          "romanization": "zyun3 zeon3"
+        },
+        {
+          "word": "你的",
+          "translation": "your",
+          "romanization": "nei5 dik1"
+        },
+        {
+          "word": "上衣",
+          "translation": "jacket; upper garment",
+          "romanization": "soeng6 ji1"
+        },
+        {
+          "word": "裡",
+          "translation": "inside",
+          "romanization": "leoi5"
+        },
+        {
+          "word": "去了",
+          "translation": "has gone (perfective marker)",
+          "romanization": "heoi3 liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "鑽進...裡去了",
+          "explanation": "Directional complement structure indicating movement into something. '進' (into) + '裡' (inside) + '去' (away from speaker) + '了' (completion)",
+          "example": "鑽進你的上衣裡去了"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

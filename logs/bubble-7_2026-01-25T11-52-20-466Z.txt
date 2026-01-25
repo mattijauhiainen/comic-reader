@@ -1,0 +1,73 @@
+=== API Response for Bubble 7 ===
+Timestamp: 2026-01-25T11:52:20.466Z
+
+--- Raw Response Text ---
+Here's the translation aid for this Tintin speech bubble text:
+
+```json
+{
+  "chinese_text": "站住！船長，\n別往前走！",
+  "translation": "Stop! Captain, don't go forward!",
+  "sentences": [
+    {
+      "chinese_text": "站住！",
+      "english_translation": "Stop!",
+      "vocabulary": [
+        {
+          "word": "站住",
+          "translation": "to stop (in place), to halt",
+          "romanization": "zaam6 zyu6"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "船長，別往前走！",
+      "english_translation": "Captain, don't go forward!",
+      "vocabulary": [
+        {
+          "word": "船長",
+          "translation": "captain",
+          "romanization": "syun4 zoeng2"
+        },
+        {
+          "word": "別",
+          "translation": "don't",
+          "romanization": "bit6"
+        },
+        {
+          "word": "往",
+          "translation": "toward, in the direction of",
+          "romanization": "wong5"
+        },
+        {
+          "word": "前",
+          "translation": "forward, front",
+          "romanization": "cin4"
+        },
+        {
+          "word": "走",
+          "translation": "to walk, to go",
+          "romanization": "zau2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "別 + verb",
+          "explanation": "Imperative negative construction meaning 'don't (do something)'. 別 is used to give commands or warnings not to do something.",
+          "example": "別往前走 (don't go forward)"
+        },
+        {
+          "pattern": "往 + direction/place + verb",
+          "explanation": "Directional construction where 往 indicates movement toward a direction or location, followed by a verb of motion.",
+          "example": "往前走 (go forward, walk forward)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON provides the complete translation, breaks down each sentence with relevant vocabulary in Traditional Chinese with Jyutping romanization, and highlights the important grammar patterns used in the imperative commands.
+
+

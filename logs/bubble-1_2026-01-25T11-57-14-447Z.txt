@@ -1,0 +1,107 @@
+=== API Response for Bubble 1 ===
+Timestamp: 2026-01-25T11:57:14.447Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "怎麼搞的？看不见那人了！可我剛才的確…",
+  "translation": "What's going on? I can't see that person anymore! But I definitely just now...",
+  "sentences": [
+    {
+      "chinese_text": "怎麼搞的？",
+      "english_translation": "What's going on?",
+      "vocabulary": [
+        {
+          "word": "怎麼",
+          "translation": "how, what",
+          "romanization": "zam2 mo1"
+        },
+        {
+          "word": "搞",
+          "translation": "to do, to make, to handle",
+          "romanization": "gaau2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "怎麼搞的",
+          "explanation": "A colloquial expression meaning 'what's going on?' or 'what happened?' The 的 at the end turns it into a noun phrase asking about the situation or reason.",
+          "example": "怎麼搞的？"
+        }
+      ]
+    },
+    {
+      "chinese_text": "看不见那人了！",
+      "english_translation": "I can't see that person anymore!",
+      "vocabulary": [
+        {
+          "word": "看",
+          "translation": "to see, to look",
+          "romanization": "hon3"
+        },
+        {
+          "word": "不见",
+          "translation": "can't see, not visible",
+          "romanization": "bat1 gin3"
+        },
+        {
+          "word": "那",
+          "translation": "that",
+          "romanization": "naa5"
+        },
+        {
+          "word": "人",
+          "translation": "person",
+          "romanization": "jan4"
+        },
+        {
+          "word": "了",
+          "translation": "(particle indicating change of state)",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "看不见",
+          "explanation": "Result complement construction: verb + 不 + result. Indicates the inability to achieve the result of the action. Here, 看不见 means 'cannot see' or 'unable to see'.",
+          "example": "看不见那人"
+        },
+        {
+          "pattern": "了",
+          "explanation": "The sentence-final particle 了 indicates a change of state - the person was visible before but now is not.",
+          "example": "看不见那人了"
+        }
+      ]
+    },
+    {
+      "chinese_text": "可我剛才的確…",
+      "english_translation": "But I definitely just now...",
+      "vocabulary": [
+        {
+          "word": "可",
+          "translation": "but, however",
+          "romanization": "ho2"
+        },
+        {
+          "word": "我",
+          "translation": "I, me",
+          "romanization": "ngo5"
+        },
+        {
+          "word": "剛才",
+          "translation": "just now, a moment ago",
+          "romanization": "gong1 coi4"
+        },
+        {
+          "word": "的確",
+          "translation": "indeed, definitely, really",
+          "romanization": "dik1 kok3"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+

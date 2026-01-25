@@ -1,0 +1,63 @@
+=== API Response for Bubble 1 ===
+Timestamp: 2026-01-25T17:19:30.028Z
+
+--- Raw Response Text ---
+Here's the JSON for the Chinese text from Tintin and the Picaros:
+
+```json
+{
+  "chinese_text": "怎麼樣，船長？好一點嗎？",
+  "translation": "How are you, Captain? Feeling a bit better?",
+  "sentences": [
+    {
+      "chinese_text": "怎麼樣，船長？",
+      "english_translation": "How are you, Captain?",
+      "vocabulary": [
+        {
+          "word": "怎麼樣",
+          "translation": "how; how are things",
+          "romanization": "zam2 mo1 joeng6"
+        },
+        {
+          "word": "船長",
+          "translation": "captain",
+          "romanization": "syun4 zoeng2"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "好一點嗎？",
+      "english_translation": "Feeling a bit better?",
+      "vocabulary": [
+        {
+          "word": "好",
+          "translation": "good; well; better",
+          "romanization": "hou2"
+        },
+        {
+          "word": "一點",
+          "translation": "a little; a bit",
+          "romanization": "jat1 dim2"
+        },
+        {
+          "word": "嗎",
+          "translation": "question particle",
+          "romanization": "maa3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "好一點",
+          "explanation": "This pattern uses 一點 (a little/a bit) after an adjective to mean 'a little more [adjective]'. In this case, 好一點 means 'a little better' or 'feeling better'.",
+          "example": "好一點嗎？"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This translation aid breaks down the speech bubble text into its two sentences, provides vocabulary with traditional Chinese characters, contextual English meanings, and Jyutping romanization. The grammar point highlights the common pattern of using 一點 after an adjective to indicate a slight degree of change.
+
+

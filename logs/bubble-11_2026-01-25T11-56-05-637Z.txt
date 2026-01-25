@@ -1,0 +1,51 @@
+=== API Response for Bubble 11 ===
+Timestamp: 2026-01-25T11:56:05.637Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Chinese text. Let me analyze "與此同時" and provide the structured JSON response.
+
+```json
+{
+  "chinese_text": "與此同時",
+  "translation": "At the same time / Meanwhile",
+  "sentences": [
+    {
+      "chinese_text": "與此同時",
+      "english_translation": "At the same time / Meanwhile",
+      "vocabulary": [
+        {
+          "word": "與",
+          "translation": "with, and",
+          "romanization": "jyu5"
+        },
+        {
+          "word": "此",
+          "translation": "this",
+          "romanization": "ci2"
+        },
+        {
+          "word": "同時",
+          "translation": "same time, simultaneously",
+          "romanization": "tung4 si4"
+        },
+        {
+          "word": "與此同時",
+          "translation": "at the same time, meanwhile",
+          "romanization": "jyu5 ci2 tung4 si4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "與此同時",
+          "explanation": "This is a fixed four-character phrase (成語 idiom) commonly used as a conjunction or transitional phrase to indicate that two events are happening simultaneously or to transition to a parallel narrative.",
+          "example": "與此同時"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This is a transitional phrase commonly used in narratives to shift the scene or indicate parallel action happening elsewhere - perfect for a comic book context where the story might be cutting between different locations or characters.
+
+

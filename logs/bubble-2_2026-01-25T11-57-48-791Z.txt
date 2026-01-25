@@ -1,0 +1,61 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T11:57:48.791Z
+
+--- Raw Response Text ---
+Here is the translation aid for the Chinese text from Tintin and the Picaros:
+
+```json
+{
+  "chinese_text": "好了，再飛回去看看！",
+  "translation": "Alright, fly back and take a look!",
+  "sentences": [
+    {
+      "chinese_text": "好了，再飛回去看看！",
+      "english_translation": "Alright, fly back and take a look!",
+      "vocabulary": [
+        {
+          "word": "好了",
+          "translation": "alright, okay (indicating completion or transition)",
+          "romanization": "hou2 liu5"
+        },
+        {
+          "word": "再",
+          "translation": "again, once more",
+          "romanization": "zoi3"
+        },
+        {
+          "word": "飛",
+          "translation": "to fly",
+          "romanization": "fei1"
+        },
+        {
+          "word": "回去",
+          "translation": "to go back, to return",
+          "romanization": "wui4 heoi3"
+        },
+        {
+          "word": "看看",
+          "translation": "to take a look, to have a look",
+          "romanization": "hon3 hon3"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb reduplication (看看)",
+          "explanation": "Reduplicating a verb (看 → 看看) indicates a casual, brief, or tentative action. It softens the tone and suggests 'give it a try' or 'take a quick look'.",
+          "example": "看看 (take a look) vs 看 (look)"
+        },
+        {
+          "pattern": "Directional complement (飛回去)",
+          "explanation": "飛 (fly) + 回去 (back/return) forms a directional complement indicating the direction of the action - flying back to a previous location away from the speaker.",
+          "example": "飛回去 (fly back there)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This text is a single sentence giving a command to fly back and check on something. The speaker uses casual, action-oriented language typical of adventure comics.
+
+

@@ -1,0 +1,107 @@
+=== API Response for Bubble 4 ===
+Timestamp: 2026-01-25T17:26:06.797Z
+
+--- Raw Response Text ---
+Here's the translation aid in JSON format:
+
+```json
+{
+  "chinese_text": "各位，該上路了·兵營離這裡還很遠，最好趕在天黑前到達。",
+  "translation": "Everyone, it's time to hit the road. The barracks are still very far from here, it's best to arrive before dark.",
+  "sentences": [
+    {
+      "chinese_text": "各位，該上路了。",
+      "english_translation": "Everyone, it's time to hit the road.",
+      "vocabulary": [
+        {
+          "word": "各位",
+          "translation": "everyone, ladies and gentlemen",
+          "romanization": "gok3 wai6"
+        },
+        {
+          "word": "該",
+          "translation": "should, ought to",
+          "romanization": "goi1"
+        },
+        {
+          "word": "上路",
+          "translation": "to set out on a journey, hit the road",
+          "romanization": "soeng5 lou6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "該 + verb + 了",
+          "explanation": "Expresses that it's time to do something or something should be done now. 該 means 'should/ought to' and 了 indicates a change of state or that the time has come.",
+          "example": "該上路了 (It's time to set out)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "兵營離這裡還很遠，最好趕在天黑前到達。",
+      "english_translation": "The barracks are still very far from here, it's best to arrive before dark.",
+      "vocabulary": [
+        {
+          "word": "兵營",
+          "translation": "barracks, military camp",
+          "romanization": "bing1 jing4"
+        },
+        {
+          "word": "離",
+          "translation": "from, away from",
+          "romanization": "lei4"
+        },
+        {
+          "word": "這裡",
+          "translation": "here",
+          "romanization": "ze5 leoi5"
+        },
+        {
+          "word": "還",
+          "translation": "still, yet",
+          "romanization": "waan4"
+        },
+        {
+          "word": "很遠",
+          "translation": "very far",
+          "romanization": "han2 jyun5"
+        },
+        {
+          "word": "最好",
+          "translation": "it's best, had better",
+          "romanization": "zeoi3 hou2"
+        },
+        {
+          "word": "趕",
+          "translation": "to rush, to hurry to catch",
+          "romanization": "gon2"
+        },
+        {
+          "word": "天黑",
+          "translation": "dark, nightfall",
+          "romanization": "tin1 hak1"
+        },
+        {
+          "word": "到達",
+          "translation": "to arrive, to reach",
+          "romanization": "dou3 daat6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "離 + place + 還很遠",
+          "explanation": "Used to express distance. 離 means 'from/away from', and 還很遠 means 'still very far'.",
+          "example": "兵營離這裡還很遠 (The barracks are still very far from here)"
+        },
+        {
+          "pattern": "趕在 + time + 前",
+          "explanation": "Means 'to rush to do something before a certain time'. 趕在 means 'to hurry to catch' and 前 means 'before'.",
+          "example": "趕在天黑前到達 (arrive before dark)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

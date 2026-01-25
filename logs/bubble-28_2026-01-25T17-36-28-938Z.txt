@@ -1,0 +1,56 @@
+=== API Response for Bubble 28 ===
+Timestamp: 2026-01-25T17:36:28.938Z
+
+--- Raw Response Text ---
+Here is the translation aid for the Chinese text:
+
+```json
+{
+  "chinese_text": "噢，有三十多人……",
+  "translation": "Oh, there are more than thirty people...",
+  "sentences": [
+    {
+      "chinese_text": "噢，有三十多人……",
+      "english_translation": "Oh, there are more than thirty people...",
+      "vocabulary": [
+        {
+          "word": "噢",
+          "translation": "oh (exclamation)",
+          "romanization": "o1"
+        },
+        {
+          "word": "有",
+          "translation": "have/there is/there are",
+          "romanization": "jau5"
+        },
+        {
+          "word": "三十",
+          "translation": "thirty",
+          "romanization": "saam1 sap6"
+        },
+        {
+          "word": "多",
+          "translation": "more than/over",
+          "romanization": "do1"
+        },
+        {
+          "word": "人",
+          "translation": "people/person",
+          "romanization": "jan4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "有 + number + 多 + measure word/noun",
+          "explanation": "The pattern 'number + 多' means 'more than [number]' or 'over [number]'. It indicates an approximate quantity slightly exceeding the stated number.",
+          "example": "三十多人 (more than thirty people)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON provides the complete translation, breaks down the sentence with its vocabulary (in Traditional Chinese with Jyutping romanization), and identifies the key grammar pattern for expressing approximate quantities.
+
+

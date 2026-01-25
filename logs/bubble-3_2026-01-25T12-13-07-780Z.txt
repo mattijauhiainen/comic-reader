@@ -1,0 +1,64 @@
+=== API Response for Bubble 3 ===
+Timestamp: 2026-01-25T12:13:07.780Z
+
+--- Raw Response Text ---
+Here's the translation aid for this text from Tintin and the Picaros:
+
+```json
+{
+  "chinese_text": "怎麼？甚麼？\n你說甚麼？",
+  "translation": "What? What?\nWhat did you say?",
+  "sentences": [
+    {
+      "chinese_text": "怎麼？",
+      "english_translation": "What? / How come?",
+      "vocabulary": [
+        {
+          "word": "怎麼",
+          "translation": "what / how / why",
+          "romanization": "zam2 mo1"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "甚麼？",
+      "english_translation": "What?",
+      "vocabulary": [
+        {
+          "word": "甚麼",
+          "translation": "what",
+          "romanization": "sam6 mo1"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "你說甚麼？",
+      "english_translation": "What did you say?",
+      "vocabulary": [
+        {
+          "word": "你",
+          "translation": "you",
+          "romanization": "nei5"
+        },
+        {
+          "word": "說",
+          "translation": "say / speak",
+          "romanization": "syut3"
+        },
+        {
+          "word": "甚麼",
+          "translation": "what",
+          "romanization": "sam6 mo1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+This text shows someone expressing surprise or confusion (怎麼/甚麼) and then asking for clarification about what was said. The text is straightforward conversational Cantonese without complex grammar patterns.
+
+

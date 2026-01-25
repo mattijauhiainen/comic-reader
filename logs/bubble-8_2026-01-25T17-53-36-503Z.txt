@@ -1,0 +1,101 @@
+=== API Response for Bubble 8 ===
+Timestamp: 2026-01-25T17:53:36.503Z
+
+--- Raw Response Text ---
+Here's the translation aid for this speech bubble text:
+
+```json
+{
+  "chinese_text": "馬上滾回營房！十五分鐘後集合，换上全副武装！解散！",
+  "translation": "Get back to the barracks immediately! Assemble in fifteen minutes, fully armed! Dismissed!",
+  "sentences": [
+    {
+      "chinese_text": "馬上滾回營房！",
+      "english_translation": "Get back to the barracks immediately!",
+      "vocabulary": [
+        {
+          "word": "馬上",
+          "translation": "immediately, at once",
+          "romanization": "maa5 soeng6"
+        },
+        {
+          "word": "滾回",
+          "translation": "get back (rudely), scram back",
+          "romanization": "gwan2 wui4"
+        },
+        {
+          "word": "營房",
+          "translation": "barracks, military quarters",
+          "romanization": "jing4 fong4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "verb + 回 (return to)",
+          "explanation": "The directional complement 回 indicates returning to a place. 滾回 means to roll/go back, with 滾 adding a brusque or urgent tone typical of military commands.",
+          "example": "滾回營房"
+        }
+      ]
+    },
+    {
+      "chinese_text": "十五分鐘後集合，换上全副武装！",
+      "english_translation": "Assemble in fifteen minutes, fully armed!",
+      "vocabulary": [
+        {
+          "word": "十五分鐘",
+          "translation": "fifteen minutes",
+          "romanization": "sap6 ng5 fan1 zung1"
+        },
+        {
+          "word": "後",
+          "translation": "after, later",
+          "romanization": "hau6"
+        },
+        {
+          "word": "集合",
+          "translation": "assemble, gather",
+          "romanization": "zaap6 hap6"
+        },
+        {
+          "word": "换上",
+          "translation": "change into, put on",
+          "romanization": "wun6 soeng6"
+        },
+        {
+          "word": "全副武装",
+          "translation": "fully armed, full battle gear",
+          "romanization": "cyun4 fu3 mou5 zong1"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "time phrase + 後 (after)",
+          "explanation": "後 placed after a time expression indicates 'after' that period of time has passed.",
+          "example": "十五分鐘後"
+        },
+        {
+          "pattern": "换上 + noun (put on/change into)",
+          "explanation": "The verb 换 (change) with directional complement 上 (on/up) means to put on or change into something.",
+          "example": "换上全副武装"
+        }
+      ]
+    },
+    {
+      "chinese_text": "解散！",
+      "english_translation": "Dismissed!",
+      "vocabulary": [
+        {
+          "word": "解散",
+          "translation": "dismiss, disband",
+          "romanization": "gaai2 saan3"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+This text is clearly a military command, with the commanding officer ordering soldiers to return to barracks, prepare for assembly in full gear, and then dismissing them. The language is direct and authoritative, typical of military speech.
+
+

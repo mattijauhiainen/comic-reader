@@ -1,0 +1,30 @@
+=== API Response for Bubble 22 ===
+Timestamp: 2026-01-25T12:09:58.262Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for "咕嚕":
+
+```json
+{
+  "chinese_text": "咕嚕",
+  "translation": "Gurgle / Rumble",
+  "sentences": [
+    {
+      "chinese_text": "咕嚕",
+      "english_translation": "Gurgle / Rumble",
+      "vocabulary": [
+        {
+          "word": "咕嚕",
+          "translation": "gurgling sound, rumbling sound (onomatopoeia for stomach rumbling or liquid gurgling)",
+          "romanization": "gu1 lou1"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+This is an onomatopoeia (sound effect word) commonly used in comics to represent a gurgling or rumbling sound, typically from someone's stomach when they're hungry. Since it's a standalone sound effect rather than a grammatical sentence, there are no grammar points to note.
+
+

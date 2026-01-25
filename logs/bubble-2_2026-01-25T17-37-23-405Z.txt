@@ -1,0 +1,54 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T17:37:23.405Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "兵營！有人襲擊兵營！",
+  "translation": "The barracks! Someone is attacking the barracks!",
+  "sentences": [
+    {
+      "chinese_text": "兵營！",
+      "english_translation": "The barracks!",
+      "vocabulary": [
+        {
+          "word": "兵營",
+          "translation": "barracks, military camp",
+          "romanization": "bing1 jing4"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "有人襲擊兵營！",
+      "english_translation": "Someone is attacking the barracks!",
+      "vocabulary": [
+        {
+          "word": "有人",
+          "translation": "someone, there is someone",
+          "romanization": "jau5 jan4"
+        },
+        {
+          "word": "襲擊",
+          "translation": "to attack, to assault",
+          "romanization": "zaap6 gik1"
+        },
+        {
+          "word": "兵營",
+          "translation": "barracks, military camp",
+          "romanization": "bing1 jing4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "有人 + Verb",
+          "explanation": "This pattern means 'someone is doing [verb]' or 'there is someone who [verb]'. 有人 (jau5 jan4) literally means 'have person' and is used to express an indefinite subject.",
+          "example": "有人襲擊兵營 (Someone is attacking the barracks)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

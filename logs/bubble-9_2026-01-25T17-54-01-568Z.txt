@@ -1,0 +1,59 @@
+=== API Response for Bubble 9 ===
+Timestamp: 2026-01-25T17:54:01.568Z
+
+--- Raw Response Text ---
+```json
+{
+  "chinese_text": "阿卡札爾！怎麼現在才回来？！",
+  "translation": "Alcazar! Why are you only coming back now?!",
+  "sentences": [
+    {
+      "chinese_text": "阿卡札爾！",
+      "english_translation": "Alcazar!",
+      "vocabulary": [
+        {
+          "word": "阿卡札爾",
+          "translation": "Alcazar (proper name)",
+          "romanization": "aa1 kaa1 zaat3 ji5"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "怎麼現在才回来？！",
+      "english_translation": "Why are you only coming back now?!",
+      "vocabulary": [
+        {
+          "word": "怎麼",
+          "translation": "how, why",
+          "romanization": "zam2 mo1"
+        },
+        {
+          "word": "現在",
+          "translation": "now",
+          "romanization": "jin6 zoi6"
+        },
+        {
+          "word": "才",
+          "translation": "only, just (implying lateness)",
+          "romanization": "coi4"
+        },
+        {
+          "word": "回来",
+          "translation": "come back, return",
+          "romanization": "wui4 loi4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "才 (coi4) - indicating lateness",
+          "explanation": "才 is used here to express that something happened later than expected or desired. It emphasizes the delay and often carries a tone of complaint or surprise.",
+          "example": "怎麼現在才回来 - Why are you only now coming back (implying: you should have come back earlier)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+

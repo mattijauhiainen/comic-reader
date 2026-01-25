@@ -1,0 +1,58 @@
+=== API Response for Bubble 7 ===
+Timestamp: 2026-01-25T12:01:05.243Z
+
+--- Raw Response Text ---
+Here's the translation aid in JSON format:
+
+```json
+{
+  "chinese_text": "哎呀！\n他們回來了！",
+  "translation": "Oh no! They're back!",
+  "sentences": [
+    {
+      "chinese_text": "哎呀！",
+      "english_translation": "Oh no!",
+      "vocabulary": [
+        {
+          "word": "哎呀",
+          "translation": "oh no (exclamation of surprise or dismay)",
+          "romanization": "aai1 jaa3"
+        }
+      ],
+      "grammar_points": []
+    },
+    {
+      "chinese_text": "他們回來了！",
+      "english_translation": "They're back!",
+      "vocabulary": [
+        {
+          "word": "他們",
+          "translation": "they, them",
+          "romanization": "taa1 mun4"
+        },
+        {
+          "word": "回來",
+          "translation": "come back, return",
+          "romanization": "wui4 loi4"
+        },
+        {
+          "word": "了",
+          "translation": "particle indicating completed action or change of state",
+          "romanization": "liu5"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb + 了",
+          "explanation": "The particle 了 (liu5) is used after the verb to indicate a completed action or a change of state. Here it emphasizes that the action of 'coming back' has just happened.",
+          "example": "回來了 (they have returned / they're back)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON provides the complete translation, breaks down each sentence with its vocabulary (in Traditional Chinese with Jyutping romanization), and identifies the relevant grammar pattern using the aspectual particle 了.
+
+

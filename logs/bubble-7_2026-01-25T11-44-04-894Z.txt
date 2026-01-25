@@ -1,0 +1,83 @@
+=== API Response for Bubble 7 ===
+Timestamp: 2026-01-25T11:44:04.895Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Chinese text from the comic. Let me analyze the text and provide the structured JSON response.
+
+```json
+{
+  "chinese_text": "站住！船長，\n別往前走！",
+  "translation": "Stop! Captain, don't go forward!",
+  "sentences": [
+    {
+      "chinese_text": "站住！",
+      "english_translation": "Stop!",
+      "vocabulary": [
+        {
+          "word": "站住",
+          "translation": "stop, halt",
+          "romanization": "zaam6 zyu6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "Verb + 住",
+          "explanation": "The complement 住 (zyu6) after a verb indicates a firm, stable result of the action. Here 站住 literally means 'stand firm' = 'stop'",
+          "example": "站住"
+        }
+      ]
+    },
+    {
+      "chinese_text": "船長，別往前走！",
+      "english_translation": "Captain, don't go forward!",
+      "vocabulary": [
+        {
+          "word": "船長",
+          "translation": "captain",
+          "romanization": "syun4 zoeng2"
+        },
+        {
+          "word": "別",
+          "translation": "don't",
+          "romanization": "bit6"
+        },
+        {
+          "word": "往",
+          "translation": "toward, in the direction of",
+          "romanization": "wong5"
+        },
+        {
+          "word": "前",
+          "translation": "forward, front",
+          "romanization": "cin4"
+        },
+        {
+          "word": "走",
+          "translation": "walk, go",
+          "romanization": "zau2"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "別 + Verb",
+          "explanation": "別 is used to form negative imperatives (commands not to do something). It's more polite than 不要.",
+          "example": "別往前走"
+        },
+        {
+          "pattern": "往 + Direction + Verb",
+          "explanation": "往 indicates movement in a particular direction. Structure: 往 + direction word + verb of motion.",
+          "example": "往前走 (go forward)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON structure provides:
+- The full Chinese text and its English translation
+- Sentence-by-sentence breakdown with vocabulary in traditional Chinese characters
+- Jyutping romanization for pronunciation
+- Relevant grammar points explaining the 住 resultative complement and the 別/往 patterns used in these imperative sentences
+
+

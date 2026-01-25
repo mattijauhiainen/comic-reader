@@ -1,0 +1,64 @@
+=== API Response for Bubble 9 ===
+Timestamp: 2026-01-25T17:17:30.766Z
+
+--- Raw Response Text ---
+Here's the JSON translation aid for the text "當心後面！有鱷魚！":
+
+```json
+{
+  "chinese_text": "當心後面！有鱷魚！",
+  "translation": "Watch out behind you! There's a crocodile!",
+  "sentences": [
+    {
+      "chinese_text": "當心後面！",
+      "english_translation": "Watch out behind you!",
+      "vocabulary": [
+        {
+          "word": "當心",
+          "translation": "watch out, be careful",
+          "romanization": "dong1 sam1"
+        },
+        {
+          "word": "後面",
+          "translation": "behind, back",
+          "romanization": "hau6 min6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "當心 + location/object",
+          "explanation": "當心 is an imperative expression meaning 'watch out' or 'be careful', often followed by what to watch out for or where",
+          "example": "當心後面"
+        }
+      ]
+    },
+    {
+      "chinese_text": "有鱷魚！",
+      "english_translation": "There's a crocodile!",
+      "vocabulary": [
+        {
+          "word": "有",
+          "translation": "there is/are, have",
+          "romanization": "jau5"
+        },
+        {
+          "word": "鱷魚",
+          "translation": "crocodile, alligator",
+          "romanization": "ngok6 jyu4"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "有 + noun",
+          "explanation": "有 used to indicate existence or presence of something, similar to 'there is/are' in English",
+          "example": "有鱷魚"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This is a warning phrase that someone would shout in an urgent situation - perfect for a Tintin adventure! The text consists of two short exclamatory sentences warning about a crocodile approaching from behind.
+
+

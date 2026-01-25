@@ -1,0 +1,35 @@
+=== API Response for Bubble 12 ===
+Timestamp: 2026-01-25T11:54:27.436Z
+
+--- Raw Response Text ---
+I'll help you create a translation aid for this Chinese text. Let me analyze it and provide the structured response you need.
+
+```json
+{
+  "chinese_text": "第二天早晨",
+  "translation": "The next morning",
+  "sentences": [
+    {
+      "chinese_text": "第二天早晨",
+      "english_translation": "The next morning",
+      "vocabulary": [
+        {
+          "word": "第二天",
+          "translation": "the next day",
+          "romanization": "dai6 ji6 tin1"
+        },
+        {
+          "word": "早晨",
+          "translation": "morning",
+          "romanization": "zou2 san4"
+        }
+      ],
+      "grammar_points": []
+    }
+  ]
+}
+```
+
+This is a simple time expression phrase. The text "第二天早晨" (dai6 ji6 tin1 zou2 san4) means "the next morning" and is commonly used as a temporal marker to indicate the start of a new scene or sequence of events. There are no special grammar patterns in this phrase - it's a straightforward time expression combining "第二天" (the next day) with "早晨" (morning).
+
+

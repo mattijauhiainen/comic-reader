@@ -1,0 +1,98 @@
+=== API Response for Bubble 2 ===
+Timestamp: 2026-01-25T17:49:10.578Z
+
+--- Raw Response Text ---
+Based on the Chinese text from Tintin and the Picaros, here's the translation aid in JSON format:
+
+```json
+{
+  "chinese_text": "啊！塔比奧卡空投威士忌，這一招還真見效！靠一群酒鬼，怎麼能鬧革命呢？",
+  "translation": "Ah! Tapioca airdropping whisky—that trick really works! How can you start a revolution relying on a bunch of drunkards?",
+  "sentences": [
+    {
+      "chinese_text": "啊！塔比奧卡空投威士忌，這一招還真見效！",
+      "english_translation": "Ah! Tapioca airdropping whisky—that trick really works!",
+      "vocabulary": [
+        {
+          "word": "塔比奧卡",
+          "translation": "Tapioca (character name)",
+          "romanization": "taap3 bei2 ou1 kaa1"
+        },
+        {
+          "word": "空投",
+          "translation": "airdrop",
+          "romanization": "hung1 tau4"
+        },
+        {
+          "word": "威士忌",
+          "translation": "whisky",
+          "romanization": "wai1 si6 gei6"
+        },
+        {
+          "word": "招",
+          "translation": "move, trick",
+          "romanization": "ziu1"
+        },
+        {
+          "word": "還真",
+          "translation": "really, indeed",
+          "romanization": "waan4 zan1"
+        },
+        {
+          "word": "見效",
+          "translation": "be effective, work",
+          "romanization": "gin3 haau6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "還真 + Verb",
+          "explanation": "Used to express that something is indeed/really the case, often with a sense of surprise or realization",
+          "example": "這一招還真見效 (this trick really works)"
+        }
+      ]
+    },
+    {
+      "chinese_text": "靠一群酒鬼，怎麼能鬧革命呢？",
+      "english_translation": "How can you start a revolution relying on a bunch of drunkards?",
+      "vocabulary": [
+        {
+          "word": "靠",
+          "translation": "rely on, depend on",
+          "romanization": "kaau3"
+        },
+        {
+          "word": "一群",
+          "translation": "a group of, a bunch of",
+          "romanization": "jat1 kwan4"
+        },
+        {
+          "word": "酒鬼",
+          "translation": "drunkard, alcoholic",
+          "romanization": "zau2 gwai2"
+        },
+        {
+          "word": "鬧革命",
+          "translation": "start a revolution, revolt",
+          "romanization": "naau6 gaak3 ming6"
+        }
+      ],
+      "grammar_points": [
+        {
+          "pattern": "怎麼能...呢？",
+          "explanation": "A rhetorical question pattern expressing 'how can/could...?' with the implication that something is impossible or unreasonable",
+          "example": "怎麼能鬧革命呢？(how can [they] start a revolution?)"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This JSON structure provides:
+- The full Chinese text and its English translation
+- Sentence-by-sentence breakdown
+- Key vocabulary with traditional Chinese characters, contextual English meanings, and Jyutping romanization
+- Relevant grammar points for each sentence (還真 pattern and 怎麼能...呢 rhetorical question pattern)
+
+
