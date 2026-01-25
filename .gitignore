@@ -27,6 +27,7 @@ Thumbs.db
 
 # Translation logs
 translator/logs
+logs
 
 # Generated page HTML files
 reader/*/page*.html

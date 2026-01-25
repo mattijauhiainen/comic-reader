@@ -1,6 +1,7 @@
 import type { AnthropicResponse } from "./types";
 import * as path from "node:path";
 import { existsSync, mkdirSync } from "node:fs";
+import { callClaudeCli } from "./claude-cli";
 
 const ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages";
 const ANTHROPIC_VERSION = "2023-06-01";
@@ -130,7 +131,7 @@ async function logApiResponse(
     await Bun.write(filepath, logContent);
     console.log(`  📝 Logged response to: ${filepath}`);
   } catch (logError) {
-    console.warn(`  ⚠️  Failed to log response: ${logError}`);
+    console.warn(`  !  Failed to log response: ${logError}`);
   }
 }
 
@@ -179,7 +180,7 @@ async function parseJsonResponse(
   const jsonMatch = jsonText.match(/\{[\s\S]*\}/);
   if (jsonMatch && jsonMatch.index !== undefined && jsonMatch.index > 0) {
     console.log(
-      "  ⚠️  Found extra text before JSON, extracting JSON object only",
+      "  !  Found extra text before JSON, extracting JSON object only",
     );
     jsonText = jsonMatch[0];
   }
@@ -192,7 +193,7 @@ async function parseJsonResponse(
     // Try to fix quote escaping and parse again
     try {
       console.log(
-        "  ⚠️  JSON parse failed, attempting to fix quote escaping...",
+        "  !  JSON parse failed, attempting to fix quote escaping...",
       );
       const fixedJson = fixQuoteEscaping(jsonText);
       const result = JSON.parse(fixedJson) as AnthropicResponse;
@@ -280,40 +281,71 @@ async function callAnthropicWithRetry(
 }
 
 /**
- * Translate Chinese text using Anthropic API
+ * Handle debug mode - log prompt and return mock data
  */
-export async function translateText(
+async function translateWithDebug(
   text: string,
-  apiKey: string,
-  album?: string,
-  model: string = DEFAULT_MODEL,
+  prompt: string,
   bubbleNum?: number,
-  debug?: boolean,
 ): Promise<{
   translation: AnthropicResponse;
   tokens: { input: number; output: number };
 }> {
-  const prompt = buildPrompt(text, album);
+  console.log(`\n${"=".repeat(80)}`);
+  console.log(`DEBUG: Prompt for bubble ${bubbleNum || "unknown"}`);
+  console.log("=".repeat(80));
+  console.log(prompt);
+  console.log(`${"=".repeat(80)}\n`);
 
-  // In debug mode, just log the prompt and return mock data
-  if (debug) {
-    console.log("\n" + "=".repeat(80));
-    console.log(`DEBUG: Prompt for bubble ${bubbleNum || "unknown"}`);
-    console.log("=".repeat(80));
-    console.log(prompt);
-    console.log("=".repeat(80) + "\n");
+  return {
+    translation: {
+      chinese_text: text,
+      translation: "[DEBUG MODE - NO TRANSLATION]",
+      sentences: [],
+    },
+    tokens: { input: 0, output: 0 },
+  };
+}
 
-    // Return mock response
-    return {
-      translation: {
-        chinese_text: text,
-        translation: "[DEBUG MODE - NO TRANSLATION]",
-        sentences: [],
-      },
-      tokens: { input: 0, output: 0 },
-    };
+/**
+ * Handle CLI mode - use Claude CLI for translation
+ */
+async function translateWithCli(
+  prompt: string,
+  model: string,
+  bubbleNum?: number,
+): Promise<{
+  translation: AnthropicResponse;
+  tokens: { input: number; output: number };
+}> {
+  console.log("  🖥  Using Claude CLI...");
+  const cliResponse = await callClaudeCli(prompt, model);
+
+  // Log CLI response for debugging
+  if (bubbleNum !== undefined) {
+    await logApiResponse(bubbleNum, cliResponse);
   }
 
+  const translation = await parseJsonResponse(cliResponse, bubbleNum);
+
+  return {
+    translation,
+    tokens: { input: 0, output: 0 }, // CLI doesn't report token usage
+  };
+}
+
+/**
+ * Handle API mode - use Anthropic API for translation
+ */
+async function translateWithApi(
+  prompt: string,
+  apiKey: string,
+  model: string,
+  bubbleNum?: number,
+): Promise<{
+  translation: AnthropicResponse;
+  tokens: { input: number; output: number };
+}> {
   const apiResponse = await callAnthropicWithRetry(prompt, apiKey, model);
 
   // Extract text content from response
@@ -336,4 +368,32 @@ export async function translateText(
       output: apiResponse.usage.output_tokens,
     },
   };
+}
+
+/**
+ * Translate Chinese text using Anthropic API or Claude CLI
+ */
+export async function translateText(
+  text: string,
+  apiKey: string,
+  album?: string,
+  model: string = DEFAULT_MODEL,
+  bubbleNum?: number,
+  debug?: boolean,
+  useCli?: boolean,
+): Promise<{
+  translation: AnthropicResponse;
+  tokens: { input: number; output: number };
+}> {
+  const prompt = buildPrompt(text, album);
+
+  if (debug) {
+    return translateWithDebug(text, prompt, bubbleNum);
+  }
+
+  if (useCli) {
+    return translateWithCli(prompt, model, bubbleNum);
+  }
+
+  return translateWithApi(prompt, apiKey, model, bubbleNum);
 }

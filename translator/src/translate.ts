@@ -17,6 +17,7 @@ export async function processOcrFile(
   album?: string,
   model?: string,
   debug?: boolean,
+  useCli?: boolean,
 ): Promise<TranslationJson> {
   // Load and parse OCR JSON
   console.log(`Loading OCR file: ${inputPath}`);
@@ -27,7 +28,6 @@ export async function processOcrFile(
   let totalBubbles = 0;
   let translatedBubbles = 0;
   let skippedBubbles = 0;
-  let totalTokens = 0;
 
   // Filter detections with valid OCR results
   const validDetections = ocrData.detections.filter(
@@ -55,7 +55,7 @@ export async function processOcrFile(
     }
 
     try {
-      // Call Anthropic API
+      // Call Anthropic API or CLI
       console.log(
         debug ? "  🐛 Debug mode: Logging prompt..." : "  🔄 Translating...",
       );
@@ -66,6 +66,7 @@ export async function processOcrFile(
         model,
         bubbleNum,
         debug,
+        useCli,
       );
 
       // Store translation result
@@ -79,12 +80,8 @@ export async function processOcrFile(
         },
       });
 
-      totalTokens += result.tokens.input + result.tokens.output;
       translatedBubbles++;
-
-      console.log(
-        `  ✓ Translated (${result.tokens.input + result.tokens.output} tokens)`,
-      );
+      console.log("  ✓ Translated");
 
       // Add a small delay between requests to be respectful of API limits
       if (bubbleNum < totalBubbles) {
@@ -105,7 +102,6 @@ export async function processOcrFile(
     total_bubbles: totalBubbles,
     translated_bubbles: translatedBubbles,
     skipped_bubbles: skippedBubbles,
-    total_tokens: totalTokens,
   };
 
   // Build output JSON

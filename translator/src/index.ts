@@ -36,10 +36,15 @@ function parseArgs(): CliArgs {
       case "-d":
         parsed.debug = true;
         break;
+      case "--cli":
+      case "-c":
+        parsed.useCli = true;
+        break;
       case "--help":
       case "-h":
         printHelp();
         process.exit(0);
+        break;
       default:
         if (!arg.startsWith("-")) {
           // Assume it's the input file if not already set
@@ -72,6 +77,7 @@ Options:
   -o, --output <file>    Output path (default: <input>-translation.json)
   -a, --album <name>     Comic album/series name (optional, adds context to prompt)
   -m, --model <model>    Anthropic model to use (default: claude-sonnet-4-5-20250929)
+  -c, --cli              Use Claude CLI instead of API (no API key required)
   -d, --debug            Debug mode: log prompts, skip API calls, don't save output
   -h, --help             Show this help message
 
@@ -107,9 +113,9 @@ async function main() {
     process.exit(1);
   }
 
-  // Load API key from environment (not required in debug mode)
+  // Load API key from environment (not required in debug or CLI mode)
   const apiKey = process.env.ANTHROPIC_API_KEY || "";
-  if (!apiKey && !args.debug) {
+  if (!apiKey && !args.debug && !args.useCli) {
     console.error("Error: ANTHROPIC_API_KEY environment variable not set\n");
     console.error("Please create a .env file with:");
     console.error("  ANTHROPIC_API_KEY=sk-ant-api03-your-key-here\n");
@@ -129,6 +135,9 @@ async function main() {
   if (args.model) {
     console.log(`Model:  ${args.model}`);
   }
+  if (args.useCli) {
+    console.log(`Mode:   CLI (using Claude CLI instead of API)`);
+  }
   if (args.debug) {
     console.log(`Mode:   DEBUG (no API calls, no output file)`);
   }
@@ -142,6 +151,7 @@ async function main() {
       args.album,
       args.model,
       args.debug,
+      args.useCli,
     );
 
     // Write output JSON (skip in debug mode)
@@ -157,13 +167,6 @@ async function main() {
     console.log(`Total bubbles:      ${result.metadata.total_bubbles}`);
     console.log(`Translated:         ${result.metadata.translated_bubbles}`);
     console.log(`Skipped:            ${result.metadata.skipped_bubbles}`);
-    console.log(`Total tokens used:  ${result.metadata.total_tokens}`);
-
-    // Calculate estimated cost (approximate)
-    const inputCost = (result.metadata.total_tokens * 0.4 * 3) / 1_000_000;
-    const outputCost = (result.metadata.total_tokens * 0.6 * 15) / 1_000_000;
-    const totalCost = inputCost + outputCost;
-    console.log(`Estimated cost:     $${totalCost.toFixed(4)}`);
     console.log("=".repeat(50));
     if (args.debug) {
       console.log(

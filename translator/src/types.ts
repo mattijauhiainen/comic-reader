@@ -94,7 +94,6 @@ export interface TranslationMetadata {
   total_bubbles: number;
   translated_bubbles: number;
   skipped_bubbles: number;
-  total_tokens: number;
 }
 
 export interface TranslationJson {
@@ -110,4 +109,5 @@ export interface CliArgs {
   album?: string;
   model?: string;
   debug?: boolean;
+  useCli?: boolean;
 }
