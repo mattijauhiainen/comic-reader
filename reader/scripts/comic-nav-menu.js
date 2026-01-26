@@ -14,6 +14,7 @@ class ComicNavMenu extends HTMLElement {
 
   connectedCallback() {
     this.render();
+    this.populatePageSelect();
     this.attachEventListeners();
     this.restoreMenuState();
     this.setupPageSwapListener();
@@ -62,30 +63,39 @@ class ComicNavMenu extends HTMLElement {
       </svg>
 
       <nav class="nav-buttons">
-        <button id="expandableNavBtn" class="nav-btn" aria-label="Navigation menu">
+        <button id="expandableNavBtn" class="nav-button-base nav-btn" aria-label="Navigation menu">
           <span class="nav-btn-icon"><svg width="24" height="24"><use href="#icon-hamburger"/></svg></span>
         </button>
         <div id="expandedNavMenu" class="expanded-nav-menu">
           <div class="nav-menu-item">
             <span class="nav-menu-label">Back to Albums</span>
-            <button id="backToIndexBtn" class="nav-btn" aria-label="Back to Albums">
+            <button id="backToIndexBtn" class="nav-button-base nav-btn" aria-label="Back to Albums">
               <span class="nav-btn-icon"><svg width="24" height="24"><use href="#icon-home"/></svg></span>
             </button>
           </div>
           <div class="nav-menu-item">
+            <span class="nav-menu-label">Go to page</span>
+            <div class="nav-page-select-wrapper">
+              <select id="goToPageSelect" class="nav-button-base nav-page-select" aria-label="Go to page">
+                <!-- Options will be populated dynamically -->
+              </select>
+              <span class="nav-page-select-label">#</span>
+            </div>
+          </div>
+          <div class="nav-menu-item">
             <span class="nav-menu-label">Previous page</span>
-            <button id="prevPageBtn" class="nav-btn" aria-label="Previous page">
+            <button id="prevPageBtn" class="nav-button-base nav-btn" aria-label="Previous page">
               <span class="nav-btn-icon"><svg width="24" height="24"><use href="#icon-prev-page"/></svg></span>
             </button>
           </div>
           <div class="nav-menu-item">
             <span class="nav-menu-label">Next page</span>
-            <button id="nextPageBtn" class="nav-btn" aria-label="Next page">
+            <button id="nextPageBtn" class="nav-button-base nav-btn" aria-label="Next page">
               <span class="nav-btn-icon"><svg width="24" height="24"><use href="#icon-next-page"/></svg></span>
             </button>
           </div>
         </div>
-        <button id="nextBtn" class="nav-btn" aria-label="Next">
+        <button id="nextBtn" class="nav-button-base nav-btn" aria-label="Next">
           <span class="nav-btn-icon"><svg width="24" height="24"><use href="#icon-next"/></svg></span>
         </button>
       </nav>
@@ -96,6 +106,7 @@ class ComicNavMenu extends HTMLElement {
     const expandableBtn = this.querySelector("#expandableNavBtn");
     const nextBtn = this.querySelector("#nextBtn");
     const backToIndexBtn = this.querySelector("#backToIndexBtn");
+    const goToPageSelect = this.querySelector("#goToPageSelect");
     const prevPageBtn = this.querySelector("#prevPageBtn");
     const nextPageBtn = this.querySelector("#nextPageBtn");
 
@@ -115,21 +126,31 @@ class ComicNavMenu extends HTMLElement {
       }
     });
 
-    // Next button
     nextBtn.addEventListener("click", () => {
       this.dispatchEvent(
         new CustomEvent("nav-next", { bubbles: true, composed: true }),
       );
     });
 
-    // Back to index button
     backToIndexBtn.addEventListener("click", () => {
       this.dispatchEvent(
         new CustomEvent("nav-home", { bubbles: true, composed: true }),
       );
     });
 
-    // Page navigation buttons
+    goToPageSelect.addEventListener("change", (e) => {
+      const targetPage = Number.parseInt(e.target.value, 10);
+      if (targetPage && targetPage !== this.currentPage) {
+        this.dispatchEvent(
+          new CustomEvent("nav-go-to-page", {
+            bubbles: true,
+            composed: true,
+            detail: { page: targetPage },
+          }),
+        );
+      }
+    });
+
     prevPageBtn.addEventListener("click", () => {
       this.dispatchEvent(
         new CustomEvent("nav-prev-page", { bubbles: true, composed: true }),
@@ -205,11 +226,28 @@ class ComicNavMenu extends HTMLElement {
     btnIcon.querySelector("use").setAttribute("href", "#icon-hamburger");
   }
 
+  populatePageSelect() {
+    const select = this.querySelector("#goToPageSelect");
+
+    // Clear existing options
+    select.innerHTML = "";
+
+    // Populate with page numbers
+    for (let i = 1; i <= this.totalPages; i++) {
+      const option = document.createElement("option");
+      option.value = i;
+      option.textContent = `Page ${i}`;
+      if (i === this.currentPage) {
+        option.selected = true;
+      }
+      select.appendChild(option);
+    }
+  }
+
   updateNavigationUI() {
     const prevPageBtn = this.querySelector("#prevPageBtn");
     const nextPageBtn = this.querySelector("#nextPageBtn");
-
-    if (!prevPageBtn || !nextPageBtn) return;
+    const goToPageSelect = this.querySelector("#goToPageSelect");
 
     // Update button states based on attributes
     prevPageBtn.classList.toggle("disabled", this.currentPage === 1);
@@ -217,6 +255,7 @@ class ComicNavMenu extends HTMLElement {
       "disabled",
       this.currentPage === this.totalPages,
     );
+    goToPageSelect.value = this.currentPage;
   }
 
   /**

@@ -1,3 +1,7 @@
+:root {
+  --nav-menu-size: 56px;
+}
+
 comic-nav-menu {
   display: contents;
 }
@@ -17,35 +21,44 @@ comic-nav-menu .nav-buttons {
   view-transition-name: no-transition;
 }
 
-comic-nav-menu .nav-btn {
-  width: 56px;
-  height: 56px;
+/* Base styles for all circular nav buttons */
+comic-nav-menu .nav-button-base {
+  width: var(--nav-menu-size);
+  height: var(--nav-menu-size);
   border-radius: 50%;
   background: var(--color-surface-overlay);
   border: none;
   box-shadow: 0 2px 8px var(--color-shadow);
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s, transform 0.2s;
-  color: var(--color-text-body);
   font-size: var(--font-xl);
+  transition: background 0.2s, transform 0.2s;
 }
 
-comic-nav-menu .nav-btn:hover:not(.disabled) {
+comic-nav-menu .nav-button-base:hover,
+comic-nav-menu .nav-page-select-wrapper:hover .nav-button-base {
   background: var(--color-surface-base);
   transform: scale(1.05);
 }
 
-comic-nav-menu .nav-btn:active:not(.disabled) {
+comic-nav-menu .nav-button-base:active,
+comic-nav-menu .nav-page-select-wrapper:active .nav-button-base {
   transform: scale(0.95);
+}
+
+/* Regular navigation button */
+comic-nav-menu .nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-body);
 }
 
 comic-nav-menu .nav-btn.disabled {
   color: var(--color-text-disabled);
   pointer-events: none;
   opacity: 0.5;
+  background: var(--color-surface-overlay);
+  transform: none;
 }
 
 comic-nav-menu .nav-btn-icon {
@@ -90,4 +103,40 @@ comic-nav-menu .nav-menu-label {
   white-space: nowrap;
   font-weight: 500;
   text-align: right;
+}
+
+/* Page select dropdown wrapper */
+comic-nav-menu .nav-page-select-wrapper {
+  position: relative;
+  width: var(--nav-menu-size);
+  height: var(--nav-menu-size);
+}
+
+/* Page select dropdown. This is transparent but will
+   handle user clicking the component.
+*/
+comic-nav-menu .nav-page-select {
+  color: transparent;
+  text-align: center;
+  appearance: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Label that shows # symbol. This is rendered on top
+   of a invisible select because we don't want to show
+   the normal select GUI when it is closed.
+*/
+comic-nav-menu .nav-page-select-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-text-body);
+  font-size: var(--font-xl);
+  pointer-events: none;
 }

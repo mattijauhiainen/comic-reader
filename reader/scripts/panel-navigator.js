@@ -240,6 +240,10 @@ class PanelNavigator {
     document.addEventListener("nav-back", () => this.goBack());
     document.addEventListener("nav-prev-page", () => this.goToPreviousPage());
     document.addEventListener("nav-next-page", () => this.goToNextPage());
+    document.addEventListener("nav-go-to-page", (e) => {
+      const targetPage = e.detail?.page;
+      this.navigateToPage(targetPage);
+    });
     document.addEventListener("nav-home", () => {
       window.location.href = "../index.html";
     });
