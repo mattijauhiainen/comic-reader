@@ -39,7 +39,12 @@
 
   /* Accent Colors */
   --color-accent-primary: #4a90e2; /* Primary brand blue */
+  --color-accent-primary-hover: #3a7bc8; /* Hover state */
   --color-accent-primary-subtle: rgba(74, 144, 226, 0.4); /* 40% opacity variant */
+
+  /* Success Colors */
+  --color-success: #2e7d32; /* Green text - available, complete states */
+  --color-success-subtle: #e8f5e9; /* Light green background */
 
   /* Border Colors */
   --color-border-default: #e0e0e0; /* Standard dividers */

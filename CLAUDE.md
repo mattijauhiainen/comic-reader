@@ -85,3 +85,8 @@ bun run format
 ```
 
 This formats all files across all projects (panelExtractor, generator, etc.) using the shared biome.json configuration.
+
+## Code best practices
+
+1. Avoid defensive practises, opt to fail fast instead.
+2. When adding a new source file or asset to the reader, make sure it is referenced in 'generateManifest' so that it is properly cached.

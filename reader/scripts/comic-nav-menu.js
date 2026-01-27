@@ -33,7 +33,7 @@ class ComicNavMenu extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (oldValue !== newValue) {
+    if (oldValue !== newValue && this.isConnected) {
       this.updateNavigationUI();
     }
   }
@@ -248,6 +248,9 @@ class ComicNavMenu extends HTMLElement {
     const prevPageBtn = this.querySelector("#prevPageBtn");
     const nextPageBtn = this.querySelector("#nextPageBtn");
     const goToPageSelect = this.querySelector("#goToPageSelect");
+
+    // Guard against being called before render
+    if (!prevPageBtn || !nextPageBtn || !goToPageSelect) return;
 
     // Update button states based on attributes
     prevPageBtn.classList.toggle("disabled", this.currentPage === 1);

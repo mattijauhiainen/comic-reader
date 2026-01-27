@@ -1,5 +1,6 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
+import crypto from "node:crypto";
 
 interface PageInfo {
   pageNum: number;
@@ -126,6 +127,21 @@ interface AlbumConfig {
   albumTitle: string; // Display title (e.g., "Pizarro")
 }
 
+interface CacheManifest {
+  shared: {
+    version: string;
+    files: string[];
+  };
+  albums: {
+    [key: string]: {
+      version: string;
+      title: string;
+      totalPages: number;
+      files: string[];
+    };
+  };
+}
+
 function readPanelData(albumFolder: string, pageNum: number): PanelData | null {
   const panelPath = `./assets/${albumFolder}/page${pageNum}.json`;
   try {
@@ -249,6 +265,11 @@ function generatePageHTML(
   ${preloadLink}
 
   <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+  <script>
     // Embed page metadata for panel navigator
     window.COMIC_PAGE_DATA = {
       pageNum: ${info.pageNum},
@@ -314,6 +335,138 @@ function copyAssets(albumFolder: string): void {
   console.log(`✓ Copied ${copiedCount} files`);
 }
 
+function computeFilesHash(filePaths: string[]): string {
+  const hash = crypto.createHash("md5");
+  for (const filePath of filePaths.sort()) {
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath);
+      hash.update(filePath);
+      hash.update(content);
+    }
+  }
+  return hash.digest("hex").slice(0, 12);
+}
+
+function generateManifest(
+  config: AlbumConfig,
+  totalPages: number,
+): CacheManifest {
+  const sharedFiles = [
+    "cache-manifest.json",
+    "index.html",
+    "favicon.svg",
+    "styles/variables.css",
+    "styles/reader.css",
+    "styles/view-transitions.css",
+    "styles/comic-nav-menu.css",
+    "styles/translation-overlay.css",
+    "styles/offline-ui.css",
+    "scripts/navigation-state.js",
+    "scripts/comic-nav-menu.js",
+    "scripts/panel-navigator.js",
+    "scripts/spacing-utils.js",
+    "scripts/translation-overlay.js",
+    "scripts/translation-bubbles.js",
+    "scripts/offline-manager.js",
+    "scripts/offline-ui.js",
+  ];
+
+  const albumFiles = [
+    // All HTML pages
+    ...Array.from(
+      { length: totalPages },
+      (_, i) => `${config.albumFolder}/page${i + 1}.html`,
+    ),
+    // All images
+    ...Array.from(
+      { length: totalPages },
+      (_, i) => `${config.albumFolder}/page${i + 1}.avif`,
+    ),
+  ];
+
+  // Compute hash for shared files
+  const sharedHash = computeFilesHash(sharedFiles.map((f) => `reader/${f}`));
+
+  // Compute hash for album files
+  const albumHash = computeFilesHash(albumFiles.map((f) => `reader/${f}`));
+
+  const manifest: CacheManifest = {
+    shared: {
+      version: sharedHash,
+      files: sharedFiles,
+    },
+    albums: {
+      [config.albumFolder]: {
+        version: albumHash,
+        title: config.albumTitle,
+        totalPages,
+        files: albumFiles,
+      },
+    },
+  };
+
+  return manifest;
+}
+
+function generateIndexHTML(config: AlbumConfig, totalPages: number): string {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comic Reader</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/reader.css">
+  <link rel="stylesheet" href="styles/view-transitions.css">
+  <link rel="stylesheet" href="styles/offline-ui.css">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</head>
+<body>
+  <main class="landing">
+    <h1>Comic Reader</h1>
+    <div class="album-list">
+      <div class="album-card">
+        <a href="${config.albumFolder}/page1.html">
+          <h2>${config.albumTitle}</h2>
+          <p>${totalPages} pages</p>
+        </a>
+        <div class="album-card__offline" data-album="${config.albumFolder}">
+          <button class="download-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download for Offline</span>
+          </button>
+          <span class="offline-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Available Offline</span>
+          </span>
+          <div class="download-progress">
+            <div class="download-progress__bar">
+              <div class="download-progress__fill"></div>
+            </div>
+            <span class="download-progress__text">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="scripts/offline-ui.js"></script>
+</body>
+</html>
+`;
+}
+
 function generateAllPages(): void {
   // CONFIGURATION - Edit these values for different albums
   const config: AlbumConfig = {
@@ -355,8 +508,20 @@ function generateAllPages(): void {
       console.log(`✓ Generated ${outputPath}`);
     }
   }
-
   console.log(`✓ Generated ${totalPages} pages successfully!`);
+
+  console.log("Generating cache manifest...");
+  const manifest = generateManifest(config, totalPages);
+  fs.writeFileSync(
+    "reader/cache-manifest.json",
+    JSON.stringify(manifest, null, 2),
+  );
+  console.log("✓ Generated reader/cache-manifest.json");
+
+  console.log("Generating index.html...");
+  const indexHTML = generateIndexHTML(config, totalPages);
+  fs.writeFileSync("reader/index.html", indexHTML);
+  console.log("✓ Generated reader/index.html");
 }
 
 // Run the generator

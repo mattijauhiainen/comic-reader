@@ -1,0 +1,123 @@
+/**
+ * Offline UI Styles
+ * Download button, progress indicator, and status badges
+ */
+
+/* Download button */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-2);
+  background: var(--color-accent-primary);
+  color: var(--color-surface-base);
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-family);
+  font-size: var(--font-sm);
+  cursor: pointer;
+  transition: background var(--transition-duration);
+}
+
+.download-btn:hover {
+  background: var(--color-accent-primary-hover);
+}
+
+.download-btn:disabled {
+  background: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+.download-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Offline status badge */
+.offline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-0-5);
+  padding: var(--spacing-0-5) var(--spacing-1);
+  background: var(--color-surface-subtle);
+  border-radius: var(--radius);
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+}
+
+.offline-badge--available {
+  background: var(--color-success-subtle);
+  color: var(--color-success);
+}
+
+.offline-badge svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Progress container */
+.download-progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-0-5);
+  width: 100%;
+  max-width: 200px;
+}
+
+.download-progress__bar {
+  height: 8px;
+  background: var(--color-border-default);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.download-progress__fill {
+  height: 100%;
+  background: var(--color-accent-primary);
+  transition: width 0.2s ease-out;
+}
+
+.download-progress__text {
+  font-size: var(--font-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* Album card offline controls */
+.album-card__offline {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  margin-top: var(--spacing-1);
+}
+
+/* All controls hidden by default (transparent + non-interactive) */
+.album-card__offline .download-btn,
+.album-card__offline .offline-badge {
+  opacity: 0;
+  /* Take the button off the layout calculation */
+  position: absolute;
+  pointer-events: none;
+  transition: opacity var(--transition-duration) ease-in;
+}
+
+.album-card__offline .download-progress {
+  display: none;
+}
+
+/* Show controls based on status class */
+.album-card__offline.status-download .download-btn,
+.album-card__offline.status-available .offline-badge {
+  opacity: 1;
+  position: unset;
+  pointer-events: auto;
+}
+
+.album-card__offline.status-downloading .download-progress {
+  display: flex;
+}
+
+/* Hide download UI entirely when not supported */
+.no-offline-support .album-card__offline {
+  display: none;
+}
