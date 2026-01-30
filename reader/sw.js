@@ -24,36 +24,74 @@ self.addEventListener("install", () => {
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     (async () => {
-      const manifest = await getManifest();
-
-      // Pre-cache all shared assets
-      const sharedCacheName = getSharedCacheName(manifest.shared.version);
-      const sharedCache = await caches.open(sharedCacheName);
-      for (const file of manifest.shared.files) {
-        const response = await fetch(`/${file}`);
-        if (response.ok) {
-          await sharedCache.put(`/${file}`, response);
-        }
-      }
-
-      // Delete old shared caches
-      const allCacheNames = await caches.keys();
-      for (const name of allCacheNames) {
-        if (name.startsWith("comics-shared-") && name !== sharedCacheName) {
-          await caches.delete(name);
-        }
-      }
-
       await self.clients.claim();
-      await refreshStaleAlbums();
+      await refreshStaleCaches();
     })(),
   );
 });
 
-async function refreshStaleAlbums() {
+/**
+ * Check for stale caches and refresh them if needed.
+ * Called on activate (when SW updates).
+ */
+async function refreshStaleCaches() {
   const manifest = await getManifest();
   const allCacheNames = await caches.keys();
 
+  // Check if user has any cached albums
+  const hasAnyCachedAlbums = allCacheNames.some((n) =>
+    n.startsWith("comics-album-"),
+  );
+
+  // If user has cached albums, ensure shared assets are up to date
+  if (hasAnyCachedAlbums) {
+    await refreshSharedAssets(manifest, allCacheNames);
+  }
+
+  // Refresh any stale album caches
+  await refreshStaleAlbums(manifest, allCacheNames);
+}
+
+/**
+ * Refresh shared assets if version has changed.
+ */
+async function refreshSharedAssets(manifest, allCacheNames) {
+  const currentSharedCacheName = getSharedCacheName(manifest.shared.version);
+  const staleSharedCaches = allCacheNames.filter(
+    (n) => n.startsWith("comics-shared-") && n !== currentSharedCacheName,
+  );
+
+  // Only refresh if we have stale shared caches (version changed)
+  if (staleSharedCaches.length > 0) {
+    console.log("Refreshing stale shared assets");
+    await cacheSharedAssets(manifest);
+
+    // Delete old shared caches
+    for (const name of staleSharedCaches) {
+      await caches.delete(name);
+    }
+  }
+}
+
+/**
+ * Cache all shared assets.
+ */
+async function cacheSharedAssets(manifest) {
+  const sharedCacheName = getSharedCacheName(manifest.shared.version);
+  const sharedCache = await caches.open(sharedCacheName);
+
+  for (const file of manifest.shared.files) {
+    const response = await fetch(`/${file}`);
+    if (response.ok) {
+      await sharedCache.put(`/${file}`, response);
+    }
+  }
+}
+
+/**
+ * Refresh any stale album caches.
+ */
+async function refreshStaleAlbums(manifest, allCacheNames) {
   for (const [albumId, album] of Object.entries(manifest.albums)) {
     const currentCacheName = getAlbumCacheName(albumId, album.version);
     const staleCaches = allCacheNames.filter(
@@ -118,24 +156,7 @@ async function handleFetch(request, url) {
 
   // NETWORK-FIRST for shared assets (HTML, JS, CSS)
   try {
-    const response = await fetch(request);
-
-    // Cache shared assets for offline fallback
-    const manifest = await getManifest();
-    const pathname = url.pathname.replace(/^\//, "");
-    const isShared =
-      manifest.shared.files.some((f) => f === pathname) ||
-      url.pathname === "/" ||
-      url.pathname === "/index.html";
-
-    if (isShared) {
-      const sharedCache = await caches.open(
-        getSharedCacheName(manifest.shared.version),
-      );
-      sharedCache.put(request, response.clone());
-    }
-
-    return response;
+    return await fetch(request);
   } catch (error) {
     // Network failed - try shared cache as fallback
     const sharedCacheNames = allCacheNames.filter((n) =>
@@ -171,6 +192,19 @@ async function downloadAlbum(albumId, client) {
     return;
   }
 
+  // Cache shared assets first (needed for offline reading)
+  await cacheSharedAssets(manifest);
+
+  // Delete old shared caches
+  const allCacheNames = await caches.keys();
+  const currentSharedCacheName = getSharedCacheName(manifest.shared.version);
+  for (const name of allCacheNames) {
+    if (name.startsWith("comics-shared-") && name !== currentSharedCacheName) {
+      await caches.delete(name);
+    }
+  }
+
+  // Cache album files
   const cacheName = getAlbumCacheName(albumId, album.version);
   const cache = await caches.open(cacheName);
 
@@ -202,7 +236,6 @@ async function downloadAlbum(albumId, client) {
   }
 
   // Delete old version caches for this album
-  const allCacheNames = await caches.keys();
   for (const name of allCacheNames) {
     if (name.startsWith(`comics-album-${albumId}-`) && name !== cacheName) {
       await caches.delete(name);
