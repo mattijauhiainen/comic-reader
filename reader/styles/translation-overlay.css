@@ -78,6 +78,14 @@
 /* Content container */
 .translation-content {
   padding: var(--spacing-3);
+  /* Apply the top padding to sentence-text instead of here.
+   * Sentence text block has position sticky so that it sticks
+   * to the top of the container when we scroll down. Padding
+   * is applied to sentence-text instead, so that the content
+   * that scrolls underneath it doesn't become visible when
+   * is passes from above sentente-text.
+   */
+  padding-top: 0;
   font-family: var(--font-family);
   line-height: 1.5;
 }
@@ -95,6 +103,10 @@
   flex-direction: column;
   gap: var(--spacing-1);
   margin-bottom: var(--spacing-2);
+  background-color: var(--color-surface-base);
+  position: sticky;
+  top: 0;
+  padding-top: var(--spacing-3);
 }
 
 .sentence-text .chinese {
