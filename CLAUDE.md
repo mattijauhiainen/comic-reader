@@ -74,6 +74,8 @@ Reader code is in the `reader` directory. Some of the reader code is created by 
 
 The reader has `variables.css` file which contains common design tokens, which should be used when writing reader code. Human should always be consulted when adding new tokens.
 
+The reader has full offline support implemented by service worker. `generate-pages.ts` creates a manifest file, which has to contain a reference too all files that the reader uses, so that it can be reliably cached.
+
 ## Development Guidelines
 
 ### Code Formatting

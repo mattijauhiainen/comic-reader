@@ -30,7 +30,7 @@ A web interface that uses the extracted data to create a guided reading experien
 - Presents vocabulary with Jyutping romanization and individual word translations
 - Highlights relevant grammar patterns with examples
 
-The web interface is a static site which is generated with TypeScript.
+The web interface is a static multipage application created by Typescript. Reader has full offline support.
 
 ## Why
 
