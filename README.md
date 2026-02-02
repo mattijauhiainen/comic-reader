@@ -32,7 +32,40 @@ A web interface that uses the extracted data to create a guided reading experien
 
 The web interface is a static multipage application created by Typescript. Reader has full offline support.
 
+## Usage
+
+To process a comic album for the web reader:
+
+1. Place your comic pages (as .avif images) in `assets/<album-name>/`
+
+2. Run the processing pipeline:
+   ```bash
+   bun run extract:panels --album <album-name>
+   bun run extract:bubbles --album <album-name>
+   bun run extract:ocr --album <album-name>
+   bun run translate --album <album-name> --album-name "<Album Title> --cli"
+   ```
+
+3. Generate the web pages:
+   ```bash
+   bun run generate
+   ```
+
+4. Test locally:
+   ```bash
+   bun run serve
+   ```
+
+Example:
+```bash
+bun run extract:panels --album blue-lotus
+bun run extract:bubbles --album blue-lotus
+bun run extract:ocr --album blue-lotus
+bun run translate --album blue-lotus --album-name "The Blue Lotus"
+bun run generate
+```
+
 ## Why
 
-- **Why did I build this?**: Mostly for fun, but also to be able to more conveniently read comics that are above my level of Chinese comprehension.
+- **Why did I build this?**: Mostly for fun, and to be able to more conveniently read comics that are above my level of Chinese comprehension. There were also few learning goals: I wanted to build a multi-page application with view transition and offline support, and to better understand what I can do with computer vision and OCR.
 - **Why did I use Jyutping and not Pinyin?**: I study Cantonese which is often romanized with Jyutping.

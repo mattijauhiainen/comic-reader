@@ -47,6 +47,42 @@ To translate the text items, we need to read them from images and convert them t
 
 Translator module translates the detected text using Anthropics API, and produces a JSON file which contains the bounding boxes of the bubbles we detected earlier, and its translation, some keywords from translated text, and grammar notes where applicable.
 
+### Batch Processing
+
+To process an entire comic album, use the batch processing scripts from the project root. These scripts process all pages in an album folder sequentially.
+
+Extract panel bounding boxes for all pages:
+```bash
+bun run extract:panels --album <album-name>
+```
+
+Extract text bubble bounding boxes for all pages:
+```bash
+bun run extract:bubbles --album <album-name>
+```
+
+Run OCR on all extracted bubbles:
+```bash
+bun run extract:ocr --album <album-name>
+```
+
+Translate all OCR results:
+```bash
+bun run translate --album <album-name> --album-name "<Album Title>"
+```
+
+Optional translation parameters:
+- `--start <N>`: Start page number (default: 1)
+- `--end <N>`: End page number (default: 999)
+- `--cli`: Run the translations using claude CLI instead of anthropic API
+
+Example workflow for a new album:
+```bash
+bun run extract:panels --album blue-lotus
+bun run extract:bubbles --album blue-lotus
+bun run extract:ocr --album blue-lotus
+bun run translate --album blue-lotus --album-name "The Blue Lotus"
+```
 
 ### Static site generator
 

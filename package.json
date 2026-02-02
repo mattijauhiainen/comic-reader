@@ -9,17 +9,20 @@
     "format:check": "bun run biome format .",
     "lint": "bun run biome lint .",
     "check": "bun run biome check --write .",
-    "extract:panels": "for f in assets/pizarro/*.avif; do bun run panelExtractor/src/index.ts \"$f\" -o \"${f%.avif}.json\"; done",
-    "extract:bubbles": "for f in assets/pizarro/*.avif; do (cd bubbleExtractor && uv run python extract.py \"../$f\" --output-dir ../assets/pizarro --no-visualize); done",
-    "extract:ocr": "for f in assets/pizarro/*.avif; do base=$(basename \"$f\" .avif); (cd ocr && uv run python run_ocr.py --image \"../$f\" --bubbles \"../assets/pizarro/${base}-bubbles.json\" --output \"../assets/pizarro/${base}-ocr.json\"); done",
+    "extract:panels": "bun run extract-panels.ts",
+    "extract:bubbles": "bun run extract-bubbles.ts",
+    "extract:ocr": "bun run extract-ocr.ts",
     "extract:all": "bun run extract:panels && bun run extract:bubbles && bun run extract:ocr",
-    "translate": "bash -c 'start=${1:-1}; end=${2:-999}; for i in $(seq $start $end); do f=\"assets/pizarro/page${i}-ocr.json\"; [ -f \"$f\" ] && bun run translator/src/index.ts --input \"$f\" --output \"assets/pizarro/page${i}-translation.json\" --album \"Tintin and the Picaros\"; done' _",
-    "translate:cli": "bash -c 'start=${1:-1}; end=${2:-999}; for i in $(seq $start $end); do f=\"assets/pizarro/page${i}-ocr.json\"; [ -f \"$f\" ] && bun run translator/src/index.ts --cli --input \"$f\" --output \"assets/pizarro/page${i}-translation.json\" --album \"Tintin and the Picaros\"; done' _",
+    "translate": "bun run translate.ts",
+    "translate:cli": "bun run translate.ts --cli",
     "generate": "bun run generator/generate-pages.ts",
     "serve": "bun run generator/serve.ts",
     "build": "bun run extract:all && bun run generate"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4"
+  },
+  "dependencies": {
+    "glob": "^13.0.0"
   }
 }
