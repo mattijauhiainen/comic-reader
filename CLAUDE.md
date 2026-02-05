@@ -86,7 +86,21 @@ bun run translate --album blue-lotus --album-name "The Blue Lotus"
 
 ### Static site generator
 
-The generator produces static HTML pages for the web reader. `generate-pages.ts` scans the assets folder for comic pages, generates individual HTML files for each page with navigation, and copies assets to the reader directory. `serve.ts` provides a local development server at port 3000 for testing the generated pages.
+The generator produces static HTML pages for the web reader. `generate-pages.ts` reads album configuration from `albums.json`, generates individual HTML files for each page with navigation, and copies assets to the reader directory. `serve.ts` provides a local development server at port 3000 for testing the generated pages.
+
+Album configuration is defined in `albums.json` at the project root:
+```json
+{
+  "pizarro": {
+    "title": "Tintin and the Picaros"
+  },
+  "blue-lotus": {
+    "title": "The Blue Lotus"
+  }
+}
+```
+
+When adding a new album, add an entry to `albums.json` with the folder name (matching the folder in `assets/`) and the display title.
 
 To generate static pages:
 ```bash

@@ -38,7 +38,16 @@ To process a comic album for the web reader:
 
 1. Place your comic pages (as .avif images) in `assets/<album-name>/`
 
-2. Run the processing pipeline:
+2. Add the album to `albums.json`:
+   ```json
+   {
+     "album-name": {
+       "title": "Album Display Title"
+     }
+   }
+   ```
+
+3. Run the processing pipeline:
    ```bash
    bun run extract:panels --album <album-name>
    bun run extract:bubbles --album <album-name>

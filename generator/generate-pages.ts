@@ -1,6 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import type { AlbumConfig } from "./album-config";
+import { loadAlbumConfigs } from "./album-config";
 
 interface PageInfo {
   pageNum: number;
@@ -120,11 +122,6 @@ interface TranslationData {
     total_tokens: number;
   };
   translations: TranslationResult[];
-}
-
-interface AlbumConfig {
-  albumFolder: string; // Subfolder name (e.g., "pizarro")
-  albumTitle: string; // Display title (e.g., "Pizarro")
 }
 
 interface CacheManifest {
@@ -305,13 +302,6 @@ function generatePageHTML(
 `;
 }
 
-function scanAssets(albumFolder: string): number {
-  const assetsDir = `./assets/${albumFolder}`;
-  const files = fs.readdirSync(assetsDir);
-  const jsonFiles = files.filter((f) => /^page\d+\.json$/.test(f));
-  return jsonFiles.length;
-}
-
 function copyAssets(albumFolder: string): void {
   const sourceDir = `./assets/${albumFolder}`;
   const destDir = `./reader/${albumFolder}`;
@@ -347,10 +337,7 @@ function computeFilesHash(filePaths: string[]): string {
   return hash.digest("hex").slice(0, 12);
 }
 
-function generateManifest(
-  config: AlbumConfig,
-  totalPages: number,
-): CacheManifest {
+function generateManifest(configs: AlbumConfig[]): CacheManifest {
   const sharedFiles = [
     "cache-manifest.json",
     "index.html",
@@ -371,69 +358,55 @@ function generateManifest(
     "scripts/offline-ui.js",
   ];
 
-  const albumFiles = [
-    // All HTML pages
-    ...Array.from(
-      { length: totalPages },
-      (_, i) => `${config.albumFolder}/page${i + 1}.html`,
-    ),
-    // All images
-    ...Array.from(
-      { length: totalPages },
-      (_, i) => `${config.albumFolder}/page${i + 1}.avif`,
-    ),
-  ];
-
   // Compute hash for shared files
   const sharedHash = computeFilesHash(sharedFiles.map((f) => `reader/${f}`));
 
-  // Compute hash for album files
-  const albumHash = computeFilesHash(albumFiles.map((f) => `reader/${f}`));
+  // Build albums object with all albums
+  const albums: CacheManifest["albums"] = {};
+
+  for (const config of configs) {
+    const albumFiles = [
+      // All HTML pages
+      ...Array.from(
+        { length: config.totalPages },
+        (_, i) => `${config.albumFolder}/page${i + 1}.html`,
+      ),
+      // All images
+      ...Array.from(
+        { length: config.totalPages },
+        (_, i) => `${config.albumFolder}/page${i + 1}.avif`,
+      ),
+    ];
+
+    // Compute hash for this album's files
+    const albumHash = computeFilesHash(albumFiles.map((f) => `reader/${f}`));
+
+    albums[config.albumFolder] = {
+      version: albumHash,
+      title: config.albumTitle,
+      totalPages: config.totalPages,
+      files: albumFiles,
+    };
+  }
 
   const manifest: CacheManifest = {
     shared: {
       version: sharedHash,
       files: sharedFiles,
     },
-    albums: {
-      [config.albumFolder]: {
-        version: albumHash,
-        title: config.albumTitle,
-        totalPages,
-        files: albumFiles,
-      },
-    },
+    albums,
   };
 
   return manifest;
 }
 
-function generateIndexHTML(config: AlbumConfig, totalPages: number): string {
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comic Reader</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles/variables.css">
-  <link rel="stylesheet" href="styles/reader.css">
-  <link rel="stylesheet" href="styles/view-transitions.css">
-  <link rel="stylesheet" href="styles/offline-ui.css">
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js');
-    }
-  </script>
-</head>
-<body>
-  <main class="landing">
-    <h1>Comic Reader</h1>
-    <div class="album-list">
-      <div class="album-card">
+function generateIndexHTML(configs: AlbumConfig[]): string {
+  const albumCards = configs
+    .map(
+      (config) => `      <div class="album-card">
         <a href="${config.albumFolder}/page1.html">
           <h2>${config.albumTitle}</h2>
-          <p>${totalPages} pages</p>
+          <p>${config.totalPages} pages</p>
         </a>
         <div class="album-card__offline" data-album="${config.albumFolder}">
           <button class="download-btn">
@@ -457,7 +430,32 @@ function generateIndexHTML(config: AlbumConfig, totalPages: number): string {
             <span class="download-progress__text">0%</span>
           </div>
         </div>
-      </div>
+      </div>`,
+    )
+    .join("\n");
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comic Reader</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/reader.css">
+  <link rel="stylesheet" href="styles/view-transitions.css">
+  <link rel="stylesheet" href="styles/offline-ui.css">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</head>
+<body>
+  <main class="landing">
+    <h1>Comic Reader</h1>
+    <div class="album-list">
+${albumCards}
     </div>
   </main>
 
@@ -468,50 +466,51 @@ function generateIndexHTML(config: AlbumConfig, totalPages: number): string {
 }
 
 function generateAllPages(): void {
-  // CONFIGURATION - Edit these values for different albums
-  const config: AlbumConfig = {
-    albumFolder: "pizarro", // Subfolder in assets/ and reader/
-    albumTitle: "Tintin and the Picaros", // Title shown in pages
-  };
+  const configs = loadAlbumConfigs();
 
-  const totalPages = scanAssets(config.albumFolder);
+  console.log(`Found ${configs.length} albums to generate`);
 
-  console.log(
-    `Found ${totalPages} pages to generate for "${config.albumTitle}"`,
-  );
-
-  // Ensure output directory exists
-  fs.mkdirSync(`reader/${config.albumFolder}`, { recursive: true });
-
-  // Copy assets
-  copyAssets(config.albumFolder);
-
-  // Generate pages
-  console.log("Generating page HTML files...");
-  for (let i = 1; i <= totalPages; i++) {
-    const html = generatePageHTML(
-      {
-        pageNum: i,
-        imagePath: `./page${i}.avif`,
-        hasPrev: i > 1,
-        hasNext: i < totalPages,
-        totalPages,
-        albumTitle: config.albumTitle,
-      },
-      config.albumFolder,
-      i,
+  // Process each album
+  for (const config of configs) {
+    console.log(
+      `\nProcessing "${config.albumTitle}" (${config.totalPages} pages)...`,
     );
 
-    const outputPath = `reader/${config.albumFolder}/page${i}.html`;
-    fs.writeFileSync(outputPath, html);
-    if (i === 1 || i === totalPages || i % 10 === 0) {
-      console.log(`✓ Generated ${outputPath}`);
-    }
-  }
-  console.log(`✓ Generated ${totalPages} pages successfully!`);
+    // Ensure output directory exists
+    fs.mkdirSync(`reader/${config.albumFolder}`, { recursive: true });
 
-  console.log("Generating cache manifest...");
-  const manifest = generateManifest(config, totalPages);
+    // Copy assets
+    copyAssets(config.albumFolder);
+
+    // Generate pages
+    console.log("Generating page HTML files...");
+    for (let i = 1; i <= config.totalPages; i++) {
+      const html = generatePageHTML(
+        {
+          pageNum: i,
+          imagePath: `./page${i}.avif`,
+          hasPrev: i > 1,
+          hasNext: i < config.totalPages,
+          totalPages: config.totalPages,
+          albumTitle: config.albumTitle,
+        },
+        config.albumFolder,
+        i,
+      );
+
+      const outputPath = `reader/${config.albumFolder}/page${i}.html`;
+      fs.writeFileSync(outputPath, html);
+      if (i === 1 || i === config.totalPages || i % 10 === 0) {
+        console.log(`  ✓ Generated ${outputPath}`);
+      }
+    }
+    console.log(
+      `  ✓ Generated ${config.totalPages} pages for ${config.albumTitle}`,
+    );
+  }
+
+  console.log("\nGenerating cache manifest...");
+  const manifest = generateManifest(configs);
   fs.writeFileSync(
     "reader/cache-manifest.json",
     JSON.stringify(manifest, null, 2),
@@ -519,7 +518,7 @@ function generateAllPages(): void {
   console.log("✓ Generated reader/cache-manifest.json");
 
   console.log("Generating index.html...");
-  const indexHTML = generateIndexHTML(config, totalPages);
+  const indexHTML = generateIndexHTML(configs);
   fs.writeFileSync("reader/index.html", indexHTML);
   console.log("✓ Generated reader/index.html");
 }
