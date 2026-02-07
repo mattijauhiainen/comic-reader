@@ -201,7 +201,7 @@ function readTranslationData(
     const data: TranslationData = JSON.parse(content);
     return data.translations || [];
   } catch (error) {
-    // Translation file doesn't exist yet - this is normal for pages 2+
+    console.warn(`No translation data for ${albumFolder} page ${pageNum}`);
     return [];
   }
 }
