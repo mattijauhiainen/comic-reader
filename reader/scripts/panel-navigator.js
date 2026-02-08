@@ -1,4 +1,5 @@
 import { getSpacing } from "./spacing-utils.js";
+import { saveProgress } from "./reading-progress.js";
 
 class PanelNavigator {
   constructor() {
@@ -56,6 +57,7 @@ class PanelNavigator {
     const targetX = viewportCenterX - imageOffsetX;
     const targetY = viewportCenterY - imageOffsetY;
 
+    // Calculate translation needed
     const translateX = targetX - panelCenterX * scale;
     const translateY = targetY - panelCenterY * scale;
 
@@ -215,6 +217,9 @@ class PanelNavigator {
     // Get page metadata from embedded data
     this.currentPage = window.COMIC_PAGE_DATA.pageNum;
     this.totalPages = window.COMIC_PAGE_DATA.totalPages;
+
+    // Track reading progress
+    saveProgress(window.COMIC_PAGE_DATA.album, window.COMIC_PAGE_DATA.pageNum);
 
     // Load panel data from embedded data
     this.panels = window.COMIC_PAGE_DATA.panels || [];

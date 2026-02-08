@@ -356,6 +356,8 @@ function generateManifest(configs: AlbumConfig[]): CacheManifest {
     "scripts/translation-bubbles.js",
     "scripts/offline-manager.js",
     "scripts/offline-ui.js",
+    "scripts/reading-progress.js",
+    "scripts/reading-progress-ui.js",
   ];
 
   // Compute hash for shared files
@@ -403,7 +405,9 @@ function generateManifest(configs: AlbumConfig[]): CacheManifest {
 function generateIndexHTML(configs: AlbumConfig[]): string {
   const albumCards = configs
     .map(
-      (config) => `      <div class="album-card">
+      (
+        config,
+      ) => `      <div class="album-card" data-album="${config.albumFolder}">
         <a href="${config.albumFolder}/page1.html">
           <h2>${config.albumTitle}</h2>
           <p>${config.totalPages} pages</p>
@@ -460,6 +464,7 @@ ${albumCards}
   </main>
 
   <script type="module" src="scripts/offline-ui.js"></script>
+  <script type="module" src="scripts/reading-progress-ui.js"></script>
 </body>
 </html>
 `;
