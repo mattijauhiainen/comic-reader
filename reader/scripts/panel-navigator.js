@@ -1,13 +1,9 @@
 import { getSpacing } from "./spacing-utils.js";
 
-/**
- * PanelNavigator class - manages comic page navigation and panel zooming
- */
 class PanelNavigator {
   constructor() {
-    // Navigation state
     this.currentPage = 1;
-    this.currentPanel = null; // null = full page view, number = panel ID
+    this.currentPanel = null;
     this.totalPages = 1;
     this.panels = [];
     this.imageSize = { width: 0, height: 0 };
@@ -18,24 +14,20 @@ class PanelNavigator {
     return document.querySelector(".viewport img");
   }
 
-  /**
-   * Calculate transform values to zoom to a panel
-   */
   calculateZoomTransform(panel, imageSize, viewportSize) {
-    const padding = getSpacing(3); // --spacing-3 (24px) padding around panel
+    const padding = getSpacing(3);
 
-    // Get the actual rendered size of the image (after CSS object-fit: contain)
     const img = this.getImage();
     const renderedWidth = img.clientWidth;
     const renderedHeight = img.clientHeight;
 
-    // Calculate the current CSS scale (how much the image is already scaled)
+    // Calculate the current CSS scale applied to the image
     const currentScale = Math.min(
       renderedWidth / imageSize.width,
       renderedHeight / imageSize.height,
     );
 
-    // Panel coordinates are in original image space, convert to rendered space
+    // Convert panel coordinates to rendered (CSS) pixels
     const renderedPanel = {
       x: panel.x * currentScale,
       y: panel.y * currentScale,
@@ -43,25 +35,24 @@ class PanelNavigator {
       height: panel.height * currentScale,
     };
 
-    // Calculate scale needed to fit the rendered panel in viewport
+    // Calculate scale needed to fit panel in viewport with padding
     const targetScaleX =
       (viewportSize.width - padding * 2) / renderedPanel.width;
     const targetScaleY =
       (viewportSize.height - padding * 2) / renderedPanel.height;
     const scale = Math.min(targetScaleX, targetScaleY);
 
-    // Calculate the image element's offset within the viewport (due to flexbox centering)
+    // Calculate image offset (centered)
     const imageOffsetX = (viewportSize.width - renderedWidth) / 2;
     const imageOffsetY = (viewportSize.height - renderedHeight) / 2;
 
-    // Calculate translation to center the panel in viewport
-    // The transform works in image-relative coordinates, so we need to account for the image offset
+    // Calculate panel and viewport centers
     const panelCenterX = renderedPanel.x + renderedPanel.width / 2;
     const panelCenterY = renderedPanel.y + renderedPanel.height / 2;
     const viewportCenterX = viewportSize.width / 2;
     const viewportCenterY = viewportSize.height / 2;
 
-    // Target position in image-relative coordinates
+    // Calculate target position to center panel
     const targetX = viewportCenterX - imageOffsetX;
     const targetY = viewportCenterY - imageOffsetY;
 
@@ -71,9 +62,6 @@ class PanelNavigator {
     return { scale, translateX, translateY };
   }
 
-  /**
-   * Zoom viewport to show a specific panel
-   */
   zoomToPanel(panelId) {
     const panel = this.panels[panelId];
     const { scale, translateX, translateY } = this.calculateZoomTransform(
@@ -87,27 +75,21 @@ class PanelNavigator {
     img.style.scale = scale;
   }
 
-  /**
-   * Reset zoom to show full page
-   */
   zoomToFullPage() {
     const img = this.getImage();
     img.style.translate = "0px 0px";
     img.style.scale = "1";
   }
 
-  /**
-   * Trigger navigation callbacks after zoom animation completes
-   */
   triggerNavigationCallbacks() {
     const img = this.getImage();
+    // Wait for the transition to finish before calling callbacks
     const onTransitionEnd = (e) => {
       // Only respond to translate or scale transitions on the image element
       if (
         e.target === img &&
         (e.propertyName === "translate" || e.propertyName === "scale")
       ) {
-        // Remove listener to avoid firing multiple times
         img.removeEventListener("transitionend", onTransitionEnd);
         this.executeCallbacks();
       }
@@ -116,22 +98,12 @@ class PanelNavigator {
     img.addEventListener("transitionend", onTransitionEnd);
   }
 
-  /**
-   * Execute all registered callbacks
-   */
   executeCallbacks() {
     for (const callback of this.navigationCallbacks) {
-      try {
-        callback();
-      } catch (error) {
-        console.error("Navigation callback error:", error);
-      }
+      callback();
     }
   }
 
-  /**
-   * Navigate to next panel or page
-   */
   goNext() {
     this.triggerNavigationCallbacks();
 
@@ -158,9 +130,6 @@ class PanelNavigator {
     }
   }
 
-  /**
-   * Navigate to previous panel or page
-   */
   goBack() {
     this.triggerNavigationCallbacks();
 
@@ -186,44 +155,30 @@ class PanelNavigator {
     window.location.href = `page${pageNum}.html`;
   }
 
-  /**
-   * Navigate to next page (skipping panels)
-   */
   goToNextPage() {
     if (this.currentPage < this.totalPages) {
       this.navigateToPage(this.currentPage + 1);
     }
   }
 
-  /**
-   * Navigate to previous page (skipping panels)
-   */
   goToPreviousPage() {
     if (this.currentPage > 1) {
       this.navigateToPage(this.currentPage - 1);
     }
   }
 
-  /**
-   * Check if back action is available
-   */
   canGoBack() {
     return !(this.currentPage === 1 && this.currentPanel === null);
   }
 
-  /**
-   * Update navigation UI (button states)
-   */
   updateNavigationUI() {
     const navMenu = document.querySelector("comic-nav-menu");
     if (!navMenu) return;
 
-    // Update component attributes
     navMenu.setAttribute("current-page", this.currentPage.toString());
     navMenu.setAttribute("total-pages", this.totalPages.toString());
     navMenu.setAttribute("can-go-back", this.canGoBack().toString());
 
-    // Update next button state based on panel position using public API
     const isLastPosition =
       this.currentPage === this.totalPages &&
       (this.panels.length === 0 ||
@@ -231,9 +186,6 @@ class PanelNavigator {
     navMenu.setNextButtonDisabled(isLastPosition);
   }
 
-  /**
-   * Attach event handlers for navigation
-   */
   attachEventHandlers() {
     // Listen for custom events from comic-nav-menu component
     document.addEventListener("nav-next", () => this.goNext());
@@ -248,7 +200,6 @@ class PanelNavigator {
       window.location.href = "../index.html";
     });
 
-    // Handle window resize - recalculate zoom
     let resizeTimeout;
     window.addEventListener("resize", () => {
       clearTimeout(resizeTimeout);
@@ -260,9 +211,6 @@ class PanelNavigator {
     });
   }
 
-  /**
-   * Initialize the panel navigator
-   */
   initialize() {
     // Get page metadata from embedded data
     this.currentPage = window.COMIC_PAGE_DATA.pageNum;
@@ -292,10 +240,8 @@ class PanelNavigator {
   }
 }
 
-// Create and export singleton instance
 const panelNavigator = new PanelNavigator();
 
-// Initialize when DOM is ready
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () =>
     panelNavigator.initialize(),
