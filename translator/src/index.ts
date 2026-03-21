@@ -147,6 +147,7 @@ async function main() {
     // Process OCR file
     const result = await processOcrFile(
       args.input,
+      outputPath,
       apiKey,
       args.album,
       args.model,
@@ -154,7 +155,7 @@ async function main() {
       args.useCli,
     );
 
-    // Write output JSON (skip in debug mode)
+    // Write final output JSON (skip in debug mode)
     if (!args.debug) {
       console.log(`\nWriting output to: ${outputPath}`);
       await Bun.write(outputPath, JSON.stringify(result, null, 2));
